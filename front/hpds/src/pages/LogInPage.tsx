@@ -9,17 +9,12 @@ function LogInPage() {
         <div className="header">Log in</div>
         <div className="inputs">
           <div className="input">
-            <input
-              type="text"
-              placeholder="Enter login"
-              name="login"
-              required
-            />
+            <input type="text" placeholder="Login" name="login" required />
           </div>
           <div className="input">
             <input
               type="password"
-              placeholder="Enter password"
+              placeholder="Password"
               name="password"
               required
             />

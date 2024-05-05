@@ -1,5 +1,12 @@
+import NavBarLoggedIn from "../components/NavBarLoggedIn";
+
 function ReservationPage() {
-  return <h1>Reservation</h1>;
+  return (
+    <div>
+      <NavBarLoggedIn />
+      <h1>Reservation Page</h1>
+    </div>
+  );
 }
 
 export default ReservationPage;

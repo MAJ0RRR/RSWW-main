@@ -18,7 +18,7 @@ function NavBarLoggedIn() {
       </ul>
       <ul className="nav justify-content-right">
         <li className="nav-item">
-          <Link to="/logout" className="nav-link">
+          <Link to="/home" className="nav-link">
             Log out
           </Link>
         </li>

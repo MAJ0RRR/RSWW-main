@@ -1,5 +1,12 @@
+import NavBarLoggedIn from "../components/NavBarLoggedIn";
+
 function MyTripsPage() {
-  return <h1>My trips</h1>;
+  return (
+    <div>
+      <NavBarLoggedIn />
+      <h1>My trips</h1>
+    </div>
+  );
 }
 
 export default MyTripsPage;
