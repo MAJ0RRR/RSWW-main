@@ -9,7 +9,6 @@ function LogInPage() {
         <div className="header">Log in</div>
         <div className="inputs">
           <div className="input">
-            <label htmlFor="login">Login</label>
             <input
               type="text"
               placeholder="Enter login"
@@ -18,7 +17,6 @@ function LogInPage() {
             />
           </div>
           <div className="input">
-            <label htmlFor="password">Password</label>
             <input
               type="password"
               placeholder="Enter password"

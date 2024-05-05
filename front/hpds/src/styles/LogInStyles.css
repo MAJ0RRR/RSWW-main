@@ -8,7 +8,8 @@ body {
     margin: auto;
     margin-top: 100px;
     background-color: #FFFFFF;
-    padding-bottom: 30px;
+    width: 500px;
+    height: 450px;
 }
 
 .header {
@@ -32,17 +33,23 @@ body {
     display: flex;
     align-items: center;
     margin: auto;
-    width: 480px;
-    height: 80px;
+    width: 400px;
+    height: 50px;
     background-color: #F6F6F6;
     border-radius: 15px;
 }
 
 .input input {
-    height: 50px;
+    height: 40px;
     width: 400px;
     background: transparent;
     border: none;
     outline: none;
-    color: #f6f6f6;
+    color: #000000;
+    padding: 20px;
+}
+
+.submit-container {
+    align-items: right;
+    margin: auto;
 }

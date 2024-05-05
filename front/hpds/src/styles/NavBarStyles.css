@@ -1,0 +1,8 @@
+.nav {
+    display: flex;
+    background-color: #E7E5E5;
+}
+
+.nav-link {
+    color: #000000;
+}

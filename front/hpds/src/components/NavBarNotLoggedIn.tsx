@@ -1,6 +1,8 @@
+import "../styles/NavBarStyles.css";
+
 function NavBarNotLoggedIn() {
   return (
-    <div style={{ display: "flex" }}>
+    <div className="nav">
       <ul className="nav justify-content-left" style={{ flexGrow: 1 }}>
         <li className="nav-item">
           <a className="nav-link" href="#">
