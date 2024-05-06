@@ -6,7 +6,7 @@ function NavBarNotLoggedIn() {
     <div className="nav">
       <ul className="nav justify-content-left" style={{ flexGrow: 1 }}>
         <li className="nav-item">
-          <Link to="/home" className="nav-link">
+          <Link to="/" className="nav-link">
             Home
           </Link>
         </li>

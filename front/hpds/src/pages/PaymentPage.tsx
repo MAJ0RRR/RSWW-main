@@ -1,5 +1,5 @@
 import NavBarLoggedIn from "../components/NavBarLoggedIn";
-import "../styles/LogInStyles.css";
+import "../styles/FormStyles.css";
 
 function PaymentPage() {
   return (
@@ -34,9 +34,12 @@ function PaymentPage() {
           </div>
         </div>
         <div className="submit-container">
-          <button type="button" className="btn btn-light">
-            Pay
-          </button>
+          <div className="time-left">Time left: 00:12</div>
+          <div className="buttons">
+            <button type="button" className="btn btn-light">
+              Log in
+            </button>
+          </div>
         </div>
       </div>
     </div>

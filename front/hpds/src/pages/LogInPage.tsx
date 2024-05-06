@@ -1,5 +1,5 @@
 import NavBarNotLoggedIn from "../components/NavBarNotLoggedIn";
-import "../styles/LogInStyles.css";
+import "../styles/FormStyles.css";
 
 function LogInPage() {
   return (
@@ -21,9 +21,11 @@ function LogInPage() {
           </div>
         </div>
         <div className="submit-container">
-          <button type="button" className="btn btn-light">
-            Log in
-          </button>
+          <div className="buttons">
+            <button type="button" className="btn btn-light">
+              Log in
+            </button>
+          </div>
         </div>
       </div>
     </div>

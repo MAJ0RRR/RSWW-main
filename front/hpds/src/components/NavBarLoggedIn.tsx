@@ -6,7 +6,7 @@ function NavBarLoggedIn() {
     <div className="nav">
       <ul className="nav justify-content-left" style={{ flexGrow: 1 }}>
         <li className="nav-item">
-          <Link to="/home" className="nav-link">
+          <Link to="/" className="nav-link">
             Home
           </Link>
         </li>
@@ -18,7 +18,7 @@ function NavBarLoggedIn() {
       </ul>
       <ul className="nav justify-content-right">
         <li className="nav-item">
-          <Link to="/home" className="nav-link">
+          <Link to="/" className="nav-link">
             Log out
           </Link>
         </li>

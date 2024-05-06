@@ -12,7 +12,7 @@ import SearchResultPage from "./pages/SearchResultPage";
 
 const router = createBrowserRouter([
   {
-    path: "/home",
+    path: "/",
     element: <HomePage />,
     errorElement: <div>404 Not Found</div>,
   },
