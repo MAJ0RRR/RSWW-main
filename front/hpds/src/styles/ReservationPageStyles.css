@@ -1,0 +1,46 @@
+body {
+    background-color: #F6F6F6;
+}
+
+.page-content {
+    background-color: #FFFFFF;
+    margin: auto;
+    margin-top: 50px;
+    width: 80%; 
+    max-width: 1200px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.page-title {
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.page-section {
+    background-color: #F0F0F0;
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.page-section-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.page-section-content {
+    margin-top: 15px; 
+}
+
+.page-section-content-title {
+    font-size: 20px;
+    margin-bottom: 5px; 
+}
+
+.page-section-content-content {
+    font-size: 16px;
+    line-height: 1.6; 
+}
