@@ -29,7 +29,12 @@ function ReservationPage() {
           </div>
         </div>
         <div className="page-section">
-          <div className="page-section-title">Transport</div>
+          <div className="two-elements">
+            <div className="left">
+              <div className="page-section-title">Transport</div>
+            </div>
+            <div className="right">31231 PLN</div>
+          </div>
           <div className="page-section-content">
             <div className="page-section-content-title">
               From Berlin to Gdańsk
@@ -56,7 +61,12 @@ function ReservationPage() {
           </div>
         </div>
         <div className="page-section">
-          <div className="page-section-title">Hotel</div>
+          <div className="two-elements">
+            <div className="left">
+              <div className="page-section-title">Hotel</div>
+            </div>
+            <div className="right">31231 PLN</div>
+          </div>
           <div className="page-section-content">
             <div className="page-section-content-title">Details</div>
             <div className="page-section-content-content">
@@ -121,11 +131,12 @@ function ReservationPage() {
             </div>
           </div>
         </div>
-        <div className="total">
+        <div className="two-elements">
           <div className="left">Total: 1231231 PLN</div>
           <div className="right">
+            Time left: 00:00
             <button type="button" className="btn btn-light custom">
-              Reserve
+              Buy
             </button>
           </div>
         </div>

@@ -28,7 +28,6 @@ body {
 
 .page-section-title {
     font-size: 36px;
-    margin-bottom: 10px;
 }
 
 .page-section-content {
@@ -88,12 +87,12 @@ body {
     text-align: right;
 }
 
-.total {
+.two-elements {
     display: flex;
     justify-content: space-between;
     font-size: 36px;
 }
-
 .btn {
     font-size: 36px;
+    margin-left: 20px;
 }
