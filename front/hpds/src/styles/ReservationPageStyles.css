@@ -89,3 +89,22 @@ body {
     text-align: right;
 }
 
+.total {
+    display: flex;
+    justify-content: space-between;
+    font-size: 36px;
+}
+
+.total-left {
+    width: 50%;
+    text-align: left;
+}
+
+.total-right {
+    width: 50%;
+    text-align: right;
+}
+
+.btn {
+    font-size: 36px;
+}
