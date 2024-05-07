@@ -6,7 +6,7 @@ body {
     background-color: #FFFFFF;
     margin: auto;
     margin-top: 50px;
-    width: 80%; 
+    width: 80%;
     max-width: 1200px;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -27,20 +27,65 @@ body {
 }
 
 .page-section-title {
-    font-size: 24px;
+    font-size: 36px;
     margin-bottom: 10px;
 }
 
 .page-section-content {
-    margin-top: 15px; 
+    margin-top: 15px;
+    background-color: #F6F6F6;
 }
 
 .page-section-content-title {
-    font-size: 20px;
-    margin-bottom: 5px; 
+    font-size: 30px;
+    margin-bottom: 5px;
 }
 
 .page-section-content-content {
     font-size: 16px;
-    line-height: 1.6; 
+    line-height: 1.6;
 }
+
+.user-input {
+    display: flex;
+    justify-content: space-between;
+    background-color: #E6E6E6;
+    padding: 10px;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.left {
+    width: 20%;
+    text-align: left;
+}
+
+.right {
+    width: 80%;
+    text-align: right;
+}
+
+.user-input-result-one {
+    text-align: right;
+    font-size: 20px;
+    padding: 10px;
+}
+
+.user-input-result-two {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    font-size: 20px;
+}
+
+.user-input-result-two-left {
+    width: 30%;
+    text-align: left;
+}
+
+.user-input-result-two-right {
+    width: 70%;
+    text-align: right;
+}
+
