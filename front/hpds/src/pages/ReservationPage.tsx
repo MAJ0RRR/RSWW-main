@@ -135,7 +135,7 @@ function ReservationPage() {
           <div className="left">Total: 1231231 PLN</div>
           <div className="right">
             Time left: 00:00
-            <button type="button" className="btn btn-light custom">
+            <button type="button" className="btn btn-light custom button-style">
               Buy
             </button>
           </div>
