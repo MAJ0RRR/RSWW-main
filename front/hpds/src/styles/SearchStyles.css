@@ -1,0 +1,18 @@
+.label-style {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.search-container {
+  display: "flex";
+  flex-direction: "row";
+  align-items: "center";
+}
+
+.input-group {
+  display: flex;
+}
+
+.input-field {
+  margin-right: 20px;
+}

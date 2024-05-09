@@ -45,8 +45,18 @@ body {
     text-align: left;
 }
 
+.left-80 {
+    width: 80%;
+    text-align: left;
+}
+
 .right-50-relative {
     width: 50%;
+    position: relative;
+}
+
+.right-20-relative {
+    width: 20%;
     position: relative;
 }
 

@@ -2,7 +2,6 @@ import NavBarLoggedIn from "../components/NavBarLoggedIn";
 import "../styles/MyTripPageStyles.css";
 
 function MyTripsPage() {
-  const spanstyle = { fontSize: "24px" };
   return (
     <>
       <NavBarLoggedIn />
@@ -25,7 +24,7 @@ function MyTripsPage() {
             </div>
             <div className="right-50-relative">
               <div className="bottom-right">
-                <span style={spanstyle}>Time left: 00:02</span>
+                <span style={{ fontSize: "24px" }}>Time left: 00:02</span>
                 <button
                   type="button"
                   className="btn btn-light custom button-style"
