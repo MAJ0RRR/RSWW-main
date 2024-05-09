@@ -57,10 +57,22 @@ body {
 }
 
 .button-style {
-    background-color: rgb(147, 224, 79);
+    background-color: #E4E4E4;
     font-size: 24px;
 }
 
 .font-size-36 {
     font-size: 36px;
+}
+
+.color-red {
+    color: #FF5252;
+}
+
+.color-green {
+    color: #009718;
+}
+
+.color-orange {
+    color: #DDB117;
 }
