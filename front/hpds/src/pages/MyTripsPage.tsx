@@ -23,7 +23,10 @@ function MyTripsPage() {
             <div className="right-50-relative">
               <div className="bottom-right">
                 Time left: 00:02
-                <button type="button" className="btn btn-light custom">
+                <button
+                  type="button"
+                  className="btn btn-light custom button-style"
+                >
                   Details
                 </button>
               </div>

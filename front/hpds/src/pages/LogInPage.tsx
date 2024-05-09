@@ -3,7 +3,7 @@ import "../styles/FormStyles.css";
 
 function LogInPage() {
   return (
-    <div>
+    <>
       <NavBarNotLoggedIn />
       <div className="container">
         <div className="header">Log in</div>
@@ -28,7 +28,7 @@ function LogInPage() {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
 

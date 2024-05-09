@@ -3,7 +3,7 @@ import "../styles/FormStyles.css";
 
 function PaymentPage() {
   return (
-    <div>
+    <>
       <NavBarLoggedIn />
       <div className="container">
         <div className="header">Payment</div>
@@ -42,7 +42,7 @@ function PaymentPage() {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
 

@@ -19,32 +19,26 @@ const router = createBrowserRouter([
   {
     path: "/login",
     element: <LogInPage />,
-    errorElement: <div>404 Not Found</div>,
   },
   {
     path: "/mytrips",
     element: <MyTripsPage />,
-    errorElement: <div>404 Not Found</div>,
   },
   {
     path: "/payment",
     element: <PaymentPage />,
-    errorElement: <div>404 Not Found</div>,
   },
   {
     path: "/reservation",
     element: <ReservationPage />,
-    errorElement: <div>404 Not Found</div>,
   },
   {
     path: "/resultdetail",
     element: <ResultDetailPage />,
-    errorElement: <div>404 Not Found</div>,
   },
   {
     path: "/searchresult",
     element: <SearchResultPage />,
-    errorElement: <div>404 Not Found</div>,
   },
 ]);
 

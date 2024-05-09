@@ -56,8 +56,9 @@ body {
     right: 0;
 }
 
-.button-custon-styles {
-    background-color: gray;
+.button-style {
+    background-color: rgb(147, 224, 79);
+    font-size: 24px;
 }
 
 .font-size-36 {
