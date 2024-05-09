@@ -9,10 +9,10 @@
   align-items: "center";
 }
 
-.input-group {
+.search-input-group {
   display: flex;
 }
 
-.input-field {
+.search-input-field {
   margin-right: 20px;
 }

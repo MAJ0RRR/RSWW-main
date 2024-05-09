@@ -7,50 +7,40 @@ function Search() {
         <div className="page-section-content">
           <div className="elements">
             <div className="left-80">
-              <div
-                style={{
-                  display: "flex",
-                  flexDirection: "row",
-                  alignItems: "center",
-                }}
-              >
-                <div style={{ marginRight: "20px" }}>
-                  <label htmlFor="inputField1">Where:</label>
-                  <br />
-                  <input type="text" id="inputField1" />
+              <div className="search-container">
+                <div className="search-input-group">
+                  <div className="search-input-field">
+                    <label htmlFor="inputField1">Where:</label>
+                    <br />
+                    <input type="text" id="inputField1" />
+                  </div>
+                  <div className="search-input-field">
+                    <label htmlFor="inputField1">When:</label>
+                    <br />
+                    <input type="text" id="inputField1" />
+                  </div>
+                  <div className="search-input-field">
+                    <label htmlFor="inputField1">How long:</label>
+                    <br />
+                    <input type="text" id="inputField1" />
+                  </div>
+                  <div className="search-input-field">
+                    <label htmlFor="inputField1">From:</label>
+                    <br />
+                    <input type="text" id="inputField1" />
+                  </div>
                 </div>
-                <div style={{ marginRight: "20px" }}>
-                  <label htmlFor="inputField2">When:</label>
-                  <br />
-                  <input type="text" id="inputField2" />
-                </div>
-                <div style={{ marginRight: "20px" }}>
-                  <label htmlFor="inputField2">How long:</label>
-                  <br />
-                  <input type="text" id="inputField2" />
-                </div>
-                <div>
-                  <label htmlFor="inputField2">From:</label>
-                  <br />
-                  <input type="text" id="inputField2" />
-                </div>
-              </div>
-              <div
-                style={{
-                  display: "flex",
-                  flexDirection: "row",
-                  alignItems: "center",
-                }}
-              >
-                <div style={{ marginRight: "20px" }}>
-                  <label htmlFor="inputField1">Type of transport:</label>
-                  <br />
-                  <input type="text" id="inputField1" />
-                </div>
-                <div style={{ marginRight: "20px" }}>
-                  <label htmlFor="inputField2">Pepole:</label>
-                  <br />
-                  <input type="text" id="inputField2" />
+                <div className="search-input-group">
+                  <div className="search-input-field">
+                    <label htmlFor="inputField1">Type of transport:</label>
+                    <br />
+                    <input type="text" id="inputField1" />
+                  </div>
+                  <div className="search-input-field">
+                    <label htmlFor="inputField1">People:</label>
+                    <br />
+                    <input type="text" id="inputField1" />
+                  </div>
                 </div>
               </div>
             </div>
