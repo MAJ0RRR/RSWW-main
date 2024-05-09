@@ -37,7 +37,7 @@ function PaymentPage() {
           <div className="time-left">Time left: 00:12</div>
           <div className="buttons">
             <button type="button" className="btn btn-light">
-              Log in
+              Pay
             </button>
           </div>
         </div>
