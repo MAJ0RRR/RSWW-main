@@ -1,5 +1,6 @@
 import NavBarLoggedIn from "../components/NavBarLoggedIn";
 import "../styles/ReservationPageStyles.css";
+import Button from "react-bootstrap/Button";
 
 function ReservationPage() {
   return (
@@ -135,9 +136,9 @@ function ReservationPage() {
           <div className="left">Total: 1231231 PLN</div>
           <div className="right">
             Time left: 00:00
-            <button type="button" className="btn btn-light custom button-style">
+            <Button variant="secondary" className="button-style">
               Buy
-            </button>
+            </Button>
           </div>
         </div>
       </div>

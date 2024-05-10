@@ -1,4 +1,5 @@
 import NavBarNotLoggedIn from "../components/NavBarNotLoggedIn";
+import Button from "react-bootstrap/Button";
 import "../styles/FormStyles.css";
 
 function LogInPage() {
@@ -22,9 +23,7 @@ function LogInPage() {
         </div>
         <div className="submit-container">
           <div className="buttons">
-            <button type="button" className="btn btn-light">
-              Log in
-            </button>
+            <Button variant="secondary">Log in</Button>
           </div>
         </div>
       </div>

@@ -1,5 +1,6 @@
 import NavBarNotLoggedIn from "../components/NavBarNotLoggedIn";
 import Search from "../components/Search";
+import Button from "react-bootstrap/Button";
 
 function HomePage() {
   return (
@@ -12,12 +13,9 @@ function HomePage() {
           <div className="elements">
             <div className="left-50 font-size-36">Greece</div>
             <div className="right-50 font-size-36">
-              <button
-                type="button"
-                className="btn btn-light custom button-style"
-              >
+              <Button variant="secondary" className="font-size-36">
                 Check offers
-              </button>
+              </Button>
             </div>
           </div>
         </div>
@@ -25,12 +23,9 @@ function HomePage() {
           <div className="elements">
             <div className="left-50 font-size-36">Greece</div>
             <div className="right-50 font-size-36">
-              <button
-                type="button"
-                className="btn btn-light custom button-style"
-              >
+              <Button variant="secondary" className="font-size-36">
                 Check offers
-              </button>
+              </Button>
             </div>
           </div>
         </div>
@@ -38,12 +33,9 @@ function HomePage() {
           <div className="elements">
             <div className="left-50 font-size-36">Greece</div>
             <div className="right-50 font-size-36">
-              <button
-                type="button"
-                className="btn btn-light custom button-style"
-              >
+              <Button variant="secondary" className="font-size-36">
                 Check offers
-              </button>
+              </Button>
             </div>
           </div>
         </div>

@@ -1,5 +1,6 @@
 import NavBarLoggedIn from "../components/NavBarLoggedIn";
 import "../styles/FormStyles.css";
+import Button from "react-bootstrap/Button";
 
 function PaymentPage() {
   return (
@@ -36,9 +37,7 @@ function PaymentPage() {
         <div className="submit-container">
           <div className="time-left">Time left: 00:12</div>
           <div className="buttons">
-            <button type="button" className="btn btn-light">
-              Pay
-            </button>
+            <Button variant="secondary">Pay</Button>
           </div>
         </div>
       </div>

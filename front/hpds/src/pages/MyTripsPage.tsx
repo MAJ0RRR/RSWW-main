@@ -1,5 +1,6 @@
 import NavBarLoggedIn from "../components/NavBarLoggedIn";
 import "../styles/MyTripPageStyles.css";
+import Button from "react-bootstrap/Button";
 
 function MyTripsPage() {
   return (
@@ -25,12 +26,9 @@ function MyTripsPage() {
             <div className="right-50-relative">
               <div className="bottom-right">
                 <span style={{ fontSize: "24px" }}>Time left: 00:02</span>
-                <button
-                  type="button"
-                  className="btn btn-light custom button-style"
-                >
+                <Button variant="secondary" className="button-style">
                   Details
-                </button>
+                </Button>
               </div>
             </div>
           </div>
@@ -52,12 +50,9 @@ function MyTripsPage() {
             </div>
             <div className="right-50-relative">
               <div className="bottom-right">
-                <button
-                  type="button"
-                  className="btn btn-light custom button-style"
-                >
+                <Button variant="secondary" className="button-style">
                   Details
-                </button>
+                </Button>
               </div>
             </div>
           </div>
@@ -79,12 +74,9 @@ function MyTripsPage() {
             </div>
             <div className="right-50-relative">
               <div className="bottom-right">
-                <button
-                  type="button"
-                  className="btn btn-light custom button-style"
-                >
+                <Button variant="secondary" className="button-style">
                   Details
-                </button>
+                </Button>
               </div>
             </div>
           </div>

@@ -16,3 +16,13 @@
 .search-input-field {
   margin-right: 20px;
 }
+
+.list-item:active {
+  background-color: #FFFFFF;
+  color: #000000;
+}
+
+.dropdown-button {
+  background-color: #F6F6F6;
+  width: 200px;
+}
