@@ -1,12 +1,12 @@
 import NavBarNotLoggedIn from "../components/NavBarNotLoggedIn";
-import Search from "../components/Search";
+import SearchBar from "../components/SearchBar";
 import Button from "react-bootstrap/Button";
 
 function SearchResultPage() {
   return (
     <>
       <NavBarNotLoggedIn />
-      <Search />
+      <SearchBar />
       <div className="page-content">
         <div className="page-title">Holidays Poland</div>
         <div className="page-section-content">

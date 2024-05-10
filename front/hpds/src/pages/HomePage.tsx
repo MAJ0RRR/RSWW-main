@@ -1,12 +1,12 @@
 import NavBarNotLoggedIn from "../components/NavBarNotLoggedIn";
-import Search from "../components/Search";
+import SearchBar from "../components/SearchBar";
 import Button from "react-bootstrap/Button";
 
 function HomePage() {
   return (
     <>
       <NavBarNotLoggedIn />
-      <Search />
+      <SearchBar />
       <div className="page-content">
         <div className="page-title">Popular directions</div>
         <div className="page-section-content">

@@ -1,8 +1,22 @@
 import "../styles/SearchStyles.css";
 import Dropdown from "react-bootstrap/Dropdown";
 import Button from "react-bootstrap/Button";
+import { useState } from "react";
 
-function Search() {
+function SearchBar() {
+  const [country, setCountry] = useState("");
+  const [city, setCity] = useState("");
+  const [whenFrom, setWhenFrom] = useState("");
+  const [whenTo, setWhenTo] = useState("");
+  const [howLongFrom, setHowLongFrom] = useState(0);
+  const [howLongTo, setHowLongTo] = useState(7);
+  const [from, setFrom] = useState("");
+  const [typeOfTransport, setTypeOfTransport] = useState("");
+  const [adults, setAdults] = useState(2);
+  const [upTo3, setUpTo3] = useState(0);
+  const [upTo10, setUpTo10] = useState(0);
+  const [upTo18, setUpTo18] = useState(0);
+
   return (
     <div className="page-content">
       <div className="elements">
@@ -18,16 +32,25 @@ function Search() {
                     id="dropdown-basic"
                     className="dropdown-button"
                   >
-                    country
+                    {country ? country : "country"}
                   </Dropdown.Toggle>
                   <Dropdown.Menu>
-                    <Dropdown.Item className="list-item" href="#/action-1">
+                    <Dropdown.Item
+                      className="list-item"
+                      onClick={() => setCountry("Cuba")}
+                    >
                       Cuba
                     </Dropdown.Item>
-                    <Dropdown.Item className="list-item" href="#/action-2">
+                    <Dropdown.Item
+                      className="list-item"
+                      onClick={() => setCountry("Peru")}
+                    >
                       Peru
                     </Dropdown.Item>
-                    <Dropdown.Item className="list-item" href="#/action-3">
+                    <Dropdown.Item
+                      className="list-item"
+                      onClick={() => setCountry("Thailand")}
+                    >
                       Thailand
                     </Dropdown.Item>
                   </Dropdown.Menu>
@@ -42,16 +65,25 @@ function Search() {
                     id="dropdown-basic"
                     className="dropdown-button"
                   >
-                    city
+                    {city ? city : "city"}
                   </Dropdown.Toggle>
                   <Dropdown.Menu>
-                    <Dropdown.Item className="list-item" href="#/action-1">
+                    <Dropdown.Item
+                      className="list-item"
+                      onClick={() => setCity("Havana")}
+                    >
                       Havana
                     </Dropdown.Item>
-                    <Dropdown.Item className="list-item" href="#/action-2">
+                    <Dropdown.Item
+                      className="list-item"
+                      onClick={() => setCity("Havana")}
+                    >
                       Havana
                     </Dropdown.Item>
-                    <Dropdown.Item className="list-item" href="#/action-3">
+                    <Dropdown.Item
+                      className="list-item"
+                      onClick={() => setCity("Havana")}
+                    >
                       Havana
                     </Dropdown.Item>
                   </Dropdown.Menu>
@@ -66,18 +98,28 @@ function Search() {
                     id="dropdown-basic"
                     className="dropdown-button"
                   >
-                    when
+                    {whenFrom.length > 0 && whenTo.length > 0
+                      ? whenFrom + " - " + whenTo
+                      : "when"}
                   </Dropdown.Toggle>
                   <Dropdown.Menu>
-                    <Dropdown.Item className="list-item" href="#/action-1">
+                    <Dropdown.Item className="list-item">
                       <label>From:</label>
                       <br />
-                      <input type="text" placeholder="DD-MM-RRRR"></input>
+                      <input
+                        type="text"
+                        placeholder="DD.MM.RRRR"
+                        onChange={(event) => setWhenFrom(event.target.value)}
+                      ></input>
                     </Dropdown.Item>
-                    <Dropdown.Item className="list-item" href="#/action-2">
+                    <Dropdown.Item className="list-item">
                       <label>To:</label>
                       <br />
-                      <input type="text" placeholder="DD-MM-RRRR"></input>
+                      <input
+                        type="text"
+                        placeholder="DD.MM.RRRR"
+                        onChange={(event) => setWhenTo(event.target.value)}
+                      ></input>
                     </Dropdown.Item>
                   </Dropdown.Menu>
                 </Dropdown>
@@ -91,18 +133,30 @@ function Search() {
                     id="dropdown-basic"
                     className="dropdown-button"
                   >
-                    how long
+                    {howLongFrom} - {howLongTo}
                   </Dropdown.Toggle>
                   <Dropdown.Menu>
-                    <Dropdown.Item className="list-item" href="#/action-1">
+                    <Dropdown.Item className="list-item">
                       <label>From:</label>
                       <br />
-                      <input type="text" placeholder="number of days"></input>
+                      <input
+                        type="text"
+                        placeholder="number of days"
+                        onChange={(event) =>
+                          setHowLongFrom(parseInt(event.target.value))
+                        }
+                      ></input>
                     </Dropdown.Item>
-                    <Dropdown.Item className="list-item" href="#/action-2">
+                    <Dropdown.Item className="list-item">
                       <label>To:</label>
                       <br />
-                      <input type="text" placeholder="number of days"></input>
+                      <input
+                        type="text"
+                        placeholder="number of days"
+                        onChange={(event) =>
+                          setHowLongTo(parseInt(event.target.value))
+                        }
+                      ></input>
                     </Dropdown.Item>
                   </Dropdown.Menu>
                 </Dropdown>
@@ -118,16 +172,25 @@ function Search() {
                     id="dropdown-basic"
                     className="dropdown-button"
                   >
-                    from
+                    {from ? from : "from"}
                   </Dropdown.Toggle>
                   <Dropdown.Menu>
-                    <Dropdown.Item className="list-item" href="#/action-1">
+                    <Dropdown.Item
+                      className="list-item"
+                      onClick={() => setFrom("Havana")}
+                    >
                       Havana
                     </Dropdown.Item>
-                    <Dropdown.Item className="list-item" href="#/action-2">
+                    <Dropdown.Item
+                      className="list-item"
+                      onClick={() => setFrom("Havana")}
+                    >
                       Havana
                     </Dropdown.Item>
-                    <Dropdown.Item className="list-item" href="#/action-3">
+                    <Dropdown.Item
+                      className="list-item"
+                      onClick={() => setFrom("Havana")}
+                    >
                       Havana
                     </Dropdown.Item>
                   </Dropdown.Menu>
@@ -142,16 +205,25 @@ function Search() {
                     id="dropdown-basic"
                     className="dropdown-button"
                   >
-                    type of transport
+                    {typeOfTransport ? typeOfTransport : "type of transport"}
                   </Dropdown.Toggle>
                   <Dropdown.Menu>
-                    <Dropdown.Item className="list-item" href="#/action-1">
+                    <Dropdown.Item
+                      className="list-item"
+                      onClick={() => setTypeOfTransport("Havana")}
+                    >
                       Havana
                     </Dropdown.Item>
-                    <Dropdown.Item className="list-item" href="#/action-2">
+                    <Dropdown.Item
+                      className="list-item"
+                      onClick={() => setTypeOfTransport("Havana")}
+                    >
                       Havana
                     </Dropdown.Item>
-                    <Dropdown.Item className="list-item" href="#/action-3">
+                    <Dropdown.Item
+                      className="list-item"
+                      onClick={() => setTypeOfTransport("Havana")}
+                    >
                       Havana
                     </Dropdown.Item>
                   </Dropdown.Menu>
@@ -166,28 +238,52 @@ function Search() {
                     id="dropdown-basic"
                     className="dropdown-button"
                   >
-                    people
+                    {adults} + {upTo3} + {upTo10} + {upTo18}
                   </Dropdown.Toggle>
                   <Dropdown.Menu>
-                    <Dropdown.Item className="list-item" href="#/action-1">
+                    <Dropdown.Item className="list-item">
                       <label>Adults:</label>
                       <br />
-                      <input type="text" placeholder="number"></input>
+                      <input
+                        type="text"
+                        placeholder="number"
+                        onChange={(event) =>
+                          setAdults(parseInt(event.target.value))
+                        }
+                      ></input>
                     </Dropdown.Item>
-                    <Dropdown.Item className="list-item" href="#/action-2">
+                    <Dropdown.Item className="list-item">
                       <label>Up to 3 years old:</label>
                       <br />
-                      <input type="text" placeholder="number"></input>
+                      <input
+                        type="text"
+                        placeholder="number"
+                        onChange={(event) =>
+                          setUpTo3(parseInt(event.target.value))
+                        }
+                      ></input>
                     </Dropdown.Item>
-                    <Dropdown.Item className="list-item" href="#/action-2">
+                    <Dropdown.Item className="list-item">
                       <label>Up to 10 years old:</label>
                       <br />
-                      <input type="text" placeholder="number"></input>
+                      <input
+                        type="text"
+                        placeholder="number"
+                        onChange={(event) =>
+                          setUpTo10(parseInt(event.target.value))
+                        }
+                      ></input>
                     </Dropdown.Item>
-                    <Dropdown.Item className="list-item" href="#/action-2">
+                    <Dropdown.Item className="list-item">
                       <label>Up to 18 years old:</label>
                       <br />
-                      <input type="text" placeholder="number"></input>
+                      <input
+                        type="text"
+                        placeholder="number"
+                        onChange={(event) =>
+                          setUpTo18(parseInt(event.target.value))
+                        }
+                      ></input>
                     </Dropdown.Item>
                   </Dropdown.Menu>
                 </Dropdown>
@@ -207,4 +303,4 @@ function Search() {
   );
 }
 
-export default Search;
+export default SearchBar;
