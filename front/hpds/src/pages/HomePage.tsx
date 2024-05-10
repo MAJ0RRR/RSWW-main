@@ -3,6 +3,14 @@ import SearchBar from "../components/SearchBar";
 import Button from "react-bootstrap/Button";
 
 function HomePage() {
+  // mocked variables
+  const mocked_popular_destinations = [
+    "Destination1",
+    "Destination2",
+    "Destination3",
+    "Destination4",
+  ];
+
   return (
     <>
       <NavBarNotLoggedIn />

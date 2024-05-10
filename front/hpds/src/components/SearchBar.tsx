@@ -4,6 +4,7 @@ import Button from "react-bootstrap/Button";
 import { useState } from "react";
 
 function SearchBar() {
+  // variables
   const [country, setCountry] = useState("");
   const [city, setCity] = useState("");
   const [whenFrom, setWhenFrom] = useState("");
@@ -16,6 +17,13 @@ function SearchBar() {
   const [upTo3, setUpTo3] = useState(0);
   const [upTo10, setUpTo10] = useState(0);
   const [upTo18, setUpTo18] = useState(0);
+
+  const possibleTypesOfTransport = ["Plane", "Bus", "Own"];
+
+  // mock data
+  const mocked_countries = ["Country1", "Country2", "Country3", "Country4"];
+  const mocked_cities = ["City1", "City2", "City3", "City4"];
+  const mocked_from = ["City1", "City2", "City3", "City4"];
 
   return (
     <div className="page-content">
@@ -35,24 +43,14 @@ function SearchBar() {
                     {country ? country : "country"}
                   </Dropdown.Toggle>
                   <Dropdown.Menu>
-                    <Dropdown.Item
-                      className="list-item"
-                      onClick={() => setCountry("Cuba")}
-                    >
-                      Cuba
-                    </Dropdown.Item>
-                    <Dropdown.Item
-                      className="list-item"
-                      onClick={() => setCountry("Peru")}
-                    >
-                      Peru
-                    </Dropdown.Item>
-                    <Dropdown.Item
-                      className="list-item"
-                      onClick={() => setCountry("Thailand")}
-                    >
-                      Thailand
-                    </Dropdown.Item>
+                    {mocked_countries.map((item) => (
+                      <Dropdown.Item
+                        className="list-item"
+                        onClick={() => setCountry(item)}
+                      >
+                        {item}
+                      </Dropdown.Item>
+                    ))}
                   </Dropdown.Menu>
                 </Dropdown>
               </div>
@@ -68,24 +66,14 @@ function SearchBar() {
                     {city ? city : "city"}
                   </Dropdown.Toggle>
                   <Dropdown.Menu>
-                    <Dropdown.Item
-                      className="list-item"
-                      onClick={() => setCity("Havana")}
-                    >
-                      Havana
-                    </Dropdown.Item>
-                    <Dropdown.Item
-                      className="list-item"
-                      onClick={() => setCity("Havana")}
-                    >
-                      Havana
-                    </Dropdown.Item>
-                    <Dropdown.Item
-                      className="list-item"
-                      onClick={() => setCity("Havana")}
-                    >
-                      Havana
-                    </Dropdown.Item>
+                    {mocked_cities.map((item) => (
+                      <Dropdown.Item
+                        className="list-item"
+                        onClick={() => setCity(item)}
+                      >
+                        {item}
+                      </Dropdown.Item>
+                    ))}
                   </Dropdown.Menu>
                 </Dropdown>
               </div>
@@ -175,24 +163,14 @@ function SearchBar() {
                     {from ? from : "from"}
                   </Dropdown.Toggle>
                   <Dropdown.Menu>
-                    <Dropdown.Item
-                      className="list-item"
-                      onClick={() => setFrom("Havana")}
-                    >
-                      Havana
-                    </Dropdown.Item>
-                    <Dropdown.Item
-                      className="list-item"
-                      onClick={() => setFrom("Havana")}
-                    >
-                      Havana
-                    </Dropdown.Item>
-                    <Dropdown.Item
-                      className="list-item"
-                      onClick={() => setFrom("Havana")}
-                    >
-                      Havana
-                    </Dropdown.Item>
+                    {mocked_from.map((item) => (
+                      <Dropdown.Item
+                        className="list-item"
+                        onClick={() => setFrom(item)}
+                      >
+                        {item}
+                      </Dropdown.Item>
+                    ))}
                   </Dropdown.Menu>
                 </Dropdown>
               </div>
@@ -208,24 +186,14 @@ function SearchBar() {
                     {typeOfTransport ? typeOfTransport : "type of transport"}
                   </Dropdown.Toggle>
                   <Dropdown.Menu>
-                    <Dropdown.Item
-                      className="list-item"
-                      onClick={() => setTypeOfTransport("Havana")}
-                    >
-                      Havana
-                    </Dropdown.Item>
-                    <Dropdown.Item
-                      className="list-item"
-                      onClick={() => setTypeOfTransport("Havana")}
-                    >
-                      Havana
-                    </Dropdown.Item>
-                    <Dropdown.Item
-                      className="list-item"
-                      onClick={() => setTypeOfTransport("Havana")}
-                    >
-                      Havana
-                    </Dropdown.Item>
+                    {possibleTypesOfTransport.map((item) => (
+                      <Dropdown.Item
+                        className="list-item"
+                        onClick={() => setTypeOfTransport(item)}
+                      >
+                        {item}
+                      </Dropdown.Item>
+                    ))}
                   </Dropdown.Menu>
                 </Dropdown>
               </div>
