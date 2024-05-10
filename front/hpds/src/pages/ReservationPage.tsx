@@ -3,6 +3,9 @@ import "../styles/ReservationPageStyles.css";
 import Button from "react-bootstrap/Button";
 
 function ReservationPage() {
+  //mocked vairables
+  const page_status = "noPayment";
+
   return (
     <>
       <NavBarLoggedIn />
@@ -135,10 +138,20 @@ function ReservationPage() {
         <div className="two-elements">
           <div className="left">Total: 1231231 PLN</div>
           <div className="right">
-            Time left: 00:00
-            <Button variant="secondary" className="button-style">
-              Buy
-            </Button>
+            {page_status === "toBuy" && (
+              <>
+                Time left: 00:00
+                <Button variant="secondary" className="button-style">
+                  Buy
+                </Button>
+              </>
+            )}
+            {page_status === "paymentDone" && (
+              <span style={{ color: "green" }}>Paid</span>
+            )}
+            {page_status === "noPayment" && (
+              <span style={{ color: "red" }}>No payment</span>
+            )}
           </div>
         </div>
       </div>
