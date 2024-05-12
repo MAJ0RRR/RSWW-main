@@ -5,20 +5,30 @@ import { useState } from "react";
 
 function SearchBar() {
   // variables
-  const [country, setCountry] = useState("");
-  const [city, setCity] = useState("");
-  const [whenFrom, setWhenFrom] = useState("");
-  const [whenTo, setWhenTo] = useState("");
-  const [howLongFrom, setHowLongFrom] = useState(0);
-  const [howLongTo, setHowLongTo] = useState(7);
-  const [from, setFrom] = useState("");
-  const [typeOfTransport, setTypeOfTransport] = useState("");
-  const [adults, setAdults] = useState(2);
-  const [upTo3, setUpTo3] = useState(0);
-  const [upTo10, setUpTo10] = useState(0);
-  const [upTo18, setUpTo18] = useState(0);
-
+  const [seachBarData, setSearchBarData] = useState({
+    country: "",
+    city: "",
+    whenFrom: "",
+    whenTo: "",
+    howLongFrom: 0,
+    howLongTo: 7,
+    from: "",
+    typeOfTransport: "",
+    adults: 2,
+    upTo3: 0,
+    upTo10: 0,
+    upTo18: 0,
+  });
   const possibleTypesOfTransport = ["Plane", "Bus", "Own"];
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setSearchBarData({ ...seachBarData, [name]: value });
+  };
+
+  const handleClick = (e, name: string) => {
+    setSearchBarData({ ...seachBarData, [name]: e.target.innerText });
+  };
 
   // mock data
   const mocked_countries = ["Country1", "Country2", "Country3", "Country4"];
@@ -40,13 +50,13 @@ function SearchBar() {
                     id="dropdown-basic"
                     className="dropdown-button"
                   >
-                    {country ? country : "country"}
+                    {seachBarData.country ? seachBarData.country : "country"}
                   </Dropdown.Toggle>
                   <Dropdown.Menu>
                     {mocked_countries.map((item) => (
                       <Dropdown.Item
                         className="list-item"
-                        onClick={() => setCountry(item)}
+                        onClick={(event) => handleClick(event, "country")}
                       >
                         {item}
                       </Dropdown.Item>
@@ -63,13 +73,13 @@ function SearchBar() {
                     id="dropdown-basic"
                     className="dropdown-button"
                   >
-                    {city ? city : "city"}
+                    {seachBarData.city ? seachBarData.city : "city"}
                   </Dropdown.Toggle>
                   <Dropdown.Menu>
                     {mocked_cities.map((item) => (
                       <Dropdown.Item
                         className="list-item"
-                        onClick={() => setCity(item)}
+                        onClick={(event) => handleClick(event, "city")}
                       >
                         {item}
                       </Dropdown.Item>
@@ -86,8 +96,9 @@ function SearchBar() {
                     id="dropdown-basic"
                     className="dropdown-button"
                   >
-                    {whenFrom.length > 0 && whenTo.length > 0
-                      ? whenFrom + " - " + whenTo
+                    {seachBarData.whenFrom.length > 0 &&
+                    seachBarData.whenTo.length > 0
+                      ? seachBarData.whenFrom + " - " + seachBarData.whenTo
                       : "when"}
                   </Dropdown.Toggle>
                   <Dropdown.Menu>
@@ -97,7 +108,8 @@ function SearchBar() {
                       <input
                         type="text"
                         placeholder="DD.MM.RRRR"
-                        onChange={(event) => setWhenFrom(event.target.value)}
+                        name="whenFrom"
+                        onChange={handleChange}
                       ></input>
                     </Dropdown.Item>
                     <Dropdown.Item className="list-item">
@@ -106,7 +118,8 @@ function SearchBar() {
                       <input
                         type="text"
                         placeholder="DD.MM.RRRR"
-                        onChange={(event) => setWhenTo(event.target.value)}
+                        name="whenTo"
+                        onChange={handleChange}
                       ></input>
                     </Dropdown.Item>
                   </Dropdown.Menu>
@@ -121,7 +134,7 @@ function SearchBar() {
                     id="dropdown-basic"
                     className="dropdown-button"
                   >
-                    {howLongFrom} - {howLongTo}
+                    {seachBarData.howLongFrom} - {seachBarData.howLongTo}
                   </Dropdown.Toggle>
                   <Dropdown.Menu>
                     <Dropdown.Item className="list-item">
@@ -130,9 +143,8 @@ function SearchBar() {
                       <input
                         type="text"
                         placeholder="number of days"
-                        onChange={(event) =>
-                          setHowLongFrom(parseInt(event.target.value))
-                        }
+                        name="howLongFrom"
+                        onChange={handleChange}
                       ></input>
                     </Dropdown.Item>
                     <Dropdown.Item className="list-item">
@@ -141,9 +153,8 @@ function SearchBar() {
                       <input
                         type="text"
                         placeholder="number of days"
-                        onChange={(event) =>
-                          setHowLongTo(parseInt(event.target.value))
-                        }
+                        name="howLongTo"
+                        onChange={handleChange}
                       ></input>
                     </Dropdown.Item>
                   </Dropdown.Menu>
@@ -160,13 +171,13 @@ function SearchBar() {
                     id="dropdown-basic"
                     className="dropdown-button"
                   >
-                    {from ? from : "from"}
+                    {seachBarData.from ? seachBarData.from : "from"}
                   </Dropdown.Toggle>
                   <Dropdown.Menu>
                     {mocked_from.map((item) => (
                       <Dropdown.Item
                         className="list-item"
-                        onClick={() => setFrom(item)}
+                        onClick={(event) => handleClick(event, "from")}
                       >
                         {item}
                       </Dropdown.Item>
@@ -183,13 +194,17 @@ function SearchBar() {
                     id="dropdown-basic"
                     className="dropdown-button"
                   >
-                    {typeOfTransport ? typeOfTransport : "type of transport"}
+                    {seachBarData.typeOfTransport
+                      ? seachBarData.typeOfTransport
+                      : "type of transport"}
                   </Dropdown.Toggle>
                   <Dropdown.Menu>
                     {possibleTypesOfTransport.map((item) => (
                       <Dropdown.Item
                         className="list-item"
-                        onClick={() => setTypeOfTransport(item)}
+                        onClick={(event) =>
+                          handleClick(event, "typeOfTransport")
+                        }
                       >
                         {item}
                       </Dropdown.Item>
@@ -206,7 +221,8 @@ function SearchBar() {
                     id="dropdown-basic"
                     className="dropdown-button"
                   >
-                    {adults} + {upTo3} + {upTo10} + {upTo18}
+                    {seachBarData.adults} + {seachBarData.upTo3} +{" "}
+                    {seachBarData.upTo10} + {seachBarData.upTo18}
                   </Dropdown.Toggle>
                   <Dropdown.Menu>
                     <Dropdown.Item className="list-item">
@@ -215,10 +231,9 @@ function SearchBar() {
                       <input
                         type="text"
                         placeholder="number"
-                        onChange={(event) =>
-                          setAdults(parseInt(event.target.value))
-                        }
-                      ></input>
+                        name="adults"
+                        onChange={handleChange}
+                      />
                     </Dropdown.Item>
                     <Dropdown.Item className="list-item">
                       <label>Up to 3 years old:</label>
@@ -226,9 +241,8 @@ function SearchBar() {
                       <input
                         type="text"
                         placeholder="number"
-                        onChange={(event) =>
-                          setUpTo3(parseInt(event.target.value))
-                        }
+                        name="upTo3"
+                        onChange={handleChange}
                       ></input>
                     </Dropdown.Item>
                     <Dropdown.Item className="list-item">
@@ -237,9 +251,8 @@ function SearchBar() {
                       <input
                         type="text"
                         placeholder="number"
-                        onChange={(event) =>
-                          setUpTo10(parseInt(event.target.value))
-                        }
+                        name="upTo10"
+                        onChange={handleChange}
                       ></input>
                     </Dropdown.Item>
                     <Dropdown.Item className="list-item">
@@ -248,9 +261,8 @@ function SearchBar() {
                       <input
                         type="text"
                         placeholder="number"
-                        onChange={(event) =>
-                          setUpTo18(parseInt(event.target.value))
-                        }
+                        name="upTo18"
+                        onChange={handleChange}
                       ></input>
                     </Dropdown.Item>
                   </Dropdown.Menu>

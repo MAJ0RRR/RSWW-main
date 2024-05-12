@@ -9,6 +9,7 @@ import PaymentPage from "./pages/PaymentPage";
 import ReservationPage from "./pages/ReservationPage";
 import ResultDetailPage from "./pages/ResultDetailPage";
 import SearchResultPage from "./pages/SearchResultPage";
+import Test from "./pages/Test";
 
 const router = createBrowserRouter([
   {
