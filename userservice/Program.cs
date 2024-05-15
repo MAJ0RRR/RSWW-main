@@ -20,8 +20,8 @@ builder.ConfigureServices((hostContext, services) =>
         busConfigurator.UsingRabbitMq((context,cfg) =>
         {
             cfg.Host("localhost", "/", h => {
-                h.Username("guest");
-                h.Password("guest");
+                h.Username("user_rabbitmq");
+                h.Password("password_rabbitmq");
             });
             cfg.ConfigureEndpoints(context);
         });
