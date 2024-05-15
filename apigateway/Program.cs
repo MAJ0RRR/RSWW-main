@@ -30,7 +30,7 @@ builder.Services.AddMassTransit(busConfigurator =>
     
     busConfigurator.UsingRabbitMq((context,cfg) =>
     {
-        cfg.Host("localhost", "/", h => {
+        cfg.Host("rabbitmq", "/", h => {
             h.Username("user_rabbitmq");
             h.Password("password_rabbitmq");
         });
@@ -49,12 +49,16 @@ builder.Services.AddAuthorization(options =>
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+// REENABLE LATER
+// // Configure the HTTP request pipeline.
+// if (app.Environment.IsDevelopment())
+// {
+//     app.UseSwagger();
+//     app.UseSwaggerUI();
+// }
+
+app.UseSwagger();
+app.UseSwaggerUI();
 
 app.UseHttpsRedirection();
 

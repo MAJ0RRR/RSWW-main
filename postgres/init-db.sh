@@ -5,7 +5,11 @@ set -u
 
 # Array of databases and corresponding users and passwords
 declare -A db_users
-db_users=( ["userservice_db"]="user_userservice_db:password_userservice_db" ["db2"]="user2:password2" ["db3"]="user3:password3" )
+db_users=( 
+  ["userservice_db"]="user_userservice_db:password_userservice_db" 
+  ["db2"]="user2:password2" 
+  ["db3"]="user3:password3" 
+)
 
 function create_database() {
   local database=$1
@@ -15,8 +19,7 @@ function create_database() {
   echo "Creating database '$database'"
   psql -v ON_ERROR_STOP=1 --username "$POSTGRES_USER" <<-EOSQL
     CREATE USER $user WITH ENCRYPTED PASSWORD '$password';
-    CREATE DATABASE $database;
-    GRANT ALL PRIVILEGES ON DATABASE $database TO $user;
+    CREATE DATABASE $database OWNER = $user;
 EOSQL
 }
 
