@@ -1,6 +1,6 @@
 {
   "profiles": {
-    "userservice": {
+    "transportservice": {
       "commandName": "Project",
       "dotnetRunMessages": "true",
       "environmentVariables": {
