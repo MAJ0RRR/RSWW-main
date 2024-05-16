@@ -7,7 +7,7 @@ set -u
 declare -A db_users
 db_users=( 
   ["userservice_db"]="user_userservice_db:password_userservice_db" 
-  ["db2"]="user2:password2" 
+  ["reservationservice_db"]="user_reservationservice_db:password_reservationservice_db" 
   ["db3"]="user3:password3" 
 )
 
