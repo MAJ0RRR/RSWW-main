@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Security.Claims;
 using System.Threading.Tasks;
 using apigateway.Dtos.Reservations;
 using contracts;
@@ -48,7 +49,7 @@ public class ReservationsController : ControllerBase
     {
         var reservationDto = new CreateReservationDto
         {
-            UserId = Guid.NewGuid(), // Replace with actual UserId
+            UserId = Guid.Parse(User.FindFirstValue(ClaimTypes.Name)),
             NumAdults = reservationCreate.NumberOfAdults,
             NumUnder3 = reservationCreate.NumberOfUnder3,
             NumUnder10 = reservationCreate.NumberOfUnder10,

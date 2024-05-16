@@ -1,20 +1,40 @@
 ﻿using System;
 using System.Collections.Generic;using contracts;
 using contracts.Dtos;
+using MassTransit;
 using reservationservice.Persistence;
 
-namespace reservationservice.Services.Reservation
-{
+namespace reservationservice.Services.Reservation;
+
     public class ReservationService
     {
         private readonly ReservationDbContext _dbContext;
+        private readonly IRequestClient<GetTransportOptionRequest> _getTransportOptionClient;
+        private readonly IRequestClient<GetTransportOptionsRequest> _getTransportOptionsClient;
+        private readonly IRequestClient<GetHotelRequest> _getHotelClient;
+        private readonly IRequestClient<GetHotelsRequest> _getHotelsClient;
+        private readonly IRequestClient<HotelGetAvailableRoomsRequest> _getAvailableRoomsClient;
+        private readonly ILogger<ReservationService> _logger;
 
-        public ReservationService(ReservationDbContext dbContext)
+        public ReservationService(ReservationDbContext dbContext,
+            IRequestClient<GetTransportOptionRequest> getTransportOptionClient,
+            IRequestClient<GetTransportOptionsRequest> getTransportOptionsClient,
+            IRequestClient<GetHotelRequest> getHotelClient,
+            IRequestClient<GetHotelsRequest> getHotelsClient,
+            IRequestClient<HotelGetAvailableRoomsRequest> getAvailableRoomsClient,
+            ILogger<ReservationService> logger)
         {
             _dbContext = dbContext;
+            _getTransportOptionClient = getTransportOptionClient;
+            _getTransportOptionsClient = getTransportOptionsClient;
+            _getHotelClient = getHotelClient;
+            _getHotelsClient = getHotelsClient;
+            _getAvailableRoomsClient = getAvailableRoomsClient;
+            _logger = logger;
         }
-        
-        public GetAvailableDestinationsResponse GetAvailableDestinations(GetAvailableDestinationsRequest GetAvailableDestinationsRequest)
+
+        public GetAvailableDestinationsResponse GetAvailableDestinations(
+            GetAvailableDestinationsRequest GetAvailableDestinationsRequest)
         {
             var destinations = new Dictionary<string, List<string>>
             {
@@ -52,7 +72,8 @@ namespace reservationservice.Services.Reservation
             return new GetReservationsResponse(reservations);
         }
 
-        public GetSingleReservationResponse GetSingleReservation(GetSingleReservationRequest getSingleReservationRequest)
+        public GetSingleReservationResponse GetSingleReservation(
+            GetSingleReservationRequest getSingleReservationRequest)
         {
             var reservation = new ReservationDto
             {
@@ -106,7 +127,7 @@ namespace reservationservice.Services.Reservation
                     }
                 }
             };
-            
+
             return new GetPopularOffersResponse(offers);
         }
 
@@ -154,116 +175,43 @@ namespace reservationservice.Services.Reservation
             return new GetAvailableToursResponse(tours);
         }
 
-        public ReservationGetTransportOptionResponse ReservationGetTransportOption(ReservationGetTransportOptionRequest getTransportOptionRequest)
+        public async Task<ReservationGetTransportOptionResponse> ReservationGetTransportOption(
+            ReservationGetTransportOptionRequest getTransportOptionRequest)
         {
-            var transportOption = new TransportOptionDto
-            {
-                Id = getTransportOptionRequest.Id,
-                Discounts = new List<DiscountDto> { new DiscountDto { Id = Guid.NewGuid(), Value = 10, Start = DateTime.UtcNow, End = DateTime.UtcNow.AddDays(30) } },
-                SeatsAvailable = 50,
-                From = new AddressDto { City = "Warsaw", Country = "Poland", Street = "Main St" },
-                To = new AddressDto { City = "Berlin", Country = "Germany", Street = "Second St" },
-                Start = DateTime.UtcNow,
-                End = DateTime.UtcNow.AddHours(6),
-                PriceAdult = 100.00m,
-                PriceUnder3 = 50.00m,
-                PriceUnder10 = 75.00m,
-                PriceUnder18 = 80.00m,
-                Type = "Bus"
-            };
-            return new ReservationGetTransportOptionResponse(transportOption);
+            var response =
+                await _getTransportOptionClient.GetResponse<GetTransportOptionResponse>(
+                    new GetTransportOptionRequest(getTransportOptionRequest.Id));
+            return new ReservationGetTransportOptionResponse(response.Message.TransportOption);
         }
 
-        public ReservationGetTransportOptionsResponse ReservationGetTransportOptions(ReservationGetTransportOptionsRequest getTransportOptionsRequest)
+        public async Task<ReservationGetTransportOptionsResponse> ReservationGetTransportOptions(
+            ReservationGetTransportOptionsRequest getTransportOptionsRequest)
         {
-            var transportOptions = new List<TransportOptionDto>
-            {
-                new TransportOptionDto
-                {
-                    Id = Guid.NewGuid(),
-                    Discounts = new List<DiscountDto> { new DiscountDto { Id = Guid.NewGuid(), Value = 10, Start = DateTime.UtcNow, End = DateTime.UtcNow.AddDays(30) } },
-                    SeatsAvailable = 50,
-                    From = new AddressDto { City = "Warsaw", Country = "Poland", Street = "Main St" },
-                    To = new AddressDto { City = "Berlin", Country = "Germany", Street = "Second St" },
-                    Start = DateTime.UtcNow,
-                    End = DateTime.UtcNow.AddHours(6),
-                    PriceAdult = 100.00m,
-                    PriceUnder3 = 50.00m,
-                    PriceUnder10 = 75.00m,
-                    PriceUnder18 = 80.00m,
-                    Type = "Bus"
-                }
-            };
-            return new ReservationGetTransportOptionsResponse(transportOptions);
+            var response =
+                await _getTransportOptionsClient.GetResponse<GetTransportOptionsResponse>(
+                    new GetTransportOptionsRequest());
+            return new ReservationGetTransportOptionsResponse(response.Message.TransportOptions);
         }
 
-        public ReservationGetHotelResponse ReservationGetHotel(ReservationGetHotelRequest getHotelRequest)
+        public async Task<ReservationGetHotelResponse> ReservationGetHotel(ReservationGetHotelRequest getHotelRequest)
         {
-            var hotel = new HotelDto
-            {
-                Id = getHotelRequest.Id,
-                Name = "Grand Hotel",
-                Rooms = new Dictionary<int, Tuple<decimal, int>>
-                {
-                    { 1, Tuple.Create(100.00m, 10) },
-                    { 2, Tuple.Create(150.00m, 5) }
-                },
-                Bookings = new List<RoomReservationDto>
-                {
-                    new RoomReservationDto
-                    {
-                        Id = Guid.NewGuid(),
-                        Size = 1,
-                        Start = DateTime.UtcNow,
-                        End = DateTime.UtcNow.AddDays(7)
-                    }
-                },
-                Address = new AddressDto { City = "Berlin", Country = "Germany", Street = "Main St" },
-                Discounts = new List<DiscountDto> { new DiscountDto { Id = Guid.NewGuid(), Value = 15, Start = DateTime.UtcNow, End = DateTime.UtcNow.AddDays(10) } },
-                FoodPricePerPerson = 20.00m
-            };
-            return new ReservationGetHotelResponse(hotel);
+            var response = await _getHotelClient.GetResponse<GetHotelResponse>(new GetHotelRequest(getHotelRequest.Id));
+            return new ReservationGetHotelResponse(response.Message.Hotel);
         }
 
-        public ReservationGetHotelsResponse ReservationGetHotels(ReservationGetHotelsRequest getHotelsRequest)
+        public async Task<ReservationGetHotelsResponse> ReservationGetHotels(ReservationGetHotelsRequest getHotelsRequest)
         {
-            var hotels = new List<HotelDto>
-            {
-                new HotelDto
-                {
-                    Id = Guid.NewGuid(),
-                    Name = "Grand Hotel",
-                    Rooms = new Dictionary<int, Tuple<decimal, int>>
-                    {
-                        { 1, Tuple.Create(100.00m, 10) },
-                        { 2, Tuple.Create(150.00m, 5) }
-                    },
-                    Bookings = new List<RoomReservationDto>
-                    {
-                        new RoomReservationDto
-                        {
-                            Id = Guid.NewGuid(),
-                            Size = 1,
-                            Start = DateTime.UtcNow,
-                            End = DateTime.UtcNow.AddDays(7)
-                        }
-                    },
-                    Address = new AddressDto { City = "Berlin", Country = "Germany", Street = "Main St" },
-                    Discounts = new List<DiscountDto> { new DiscountDto { Id = Guid.NewGuid(), Value = 15, Start = DateTime.UtcNow, End = DateTime.UtcNow.AddDays(10) } },
-                    FoodPricePerPerson = 20.00m
-                }
-            };
-            return new ReservationGetHotelsResponse(hotels);
+            var response = await _getHotelsClient.GetResponse<GetHotelsResponse>(new GetHotelsRequest());
+            return new ReservationGetHotelsResponse(response.Message.Hotels);
         }
 
-        public GetAvailableRoomsResponse GetAvailableRooms(GetAvailableRoomsRequest getAvailableRoomsRequest)
+        public async Task<GetAvailableRoomsResponse> GetAvailableRooms(
+            GetAvailableRoomsRequest getAvailableRoomsRequest)
         {
-            var rooms = new Dictionary<int, int>
-            {
-                { 1, 10 },
-                { 2, 5 }
-            };
-            return new GetAvailableRoomsResponse(rooms);
+            var response = await _getAvailableRoomsClient.GetResponse<HotelGetAvailableRoomsResponse>(
+                new HotelGetAvailableRoomsRequest(getAvailableRoomsRequest.HotelId, getAvailableRoomsRequest.Start,
+                    getAvailableRoomsRequest.End));
+            return new GetAvailableRoomsResponse(response.Message.Rooms);
         }
     }
-}
+        

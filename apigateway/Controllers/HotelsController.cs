@@ -19,17 +19,23 @@ public class HotelsController : ControllerBase
     private readonly IRequestClient<ReservationGetHotelsRequest> _getHotelsClient;
     private readonly IRequestClient<ReservationGetHotelRequest> _getHotelClient;
     private readonly IRequestClient<GetAvailableRoomsRequest> _getAvailableRoomsClient;
+    private readonly IRequestClient<AddHotelRequest> _addHotelClient;
+    private readonly IRequestClient<HotelAddDiscountRequest> _addHotelDiscountClient;
 
     public HotelsController(
         ILogger<HotelsController> logger,
         IRequestClient<ReservationGetHotelsRequest> getHotelsClient,
         IRequestClient<ReservationGetHotelRequest> getHotelClient,
-        IRequestClient<GetAvailableRoomsRequest> getAvailableRoomsClient)
+        IRequestClient<GetAvailableRoomsRequest> getAvailableRoomsClient,
+        IRequestClient<AddHotelRequest> addHotelClient,
+        IRequestClient<HotelAddDiscountRequest> addHotelDiscountClient)
     {
         _logger = logger;
         _getHotelsClient = getHotelsClient;
         _getHotelClient = getHotelClient;
         _getAvailableRoomsClient = getAvailableRoomsClient;
+        _addHotelClient = addHotelClient;
+        _addHotelDiscountClient = addHotelDiscountClient;
     }
     
     [HttpGet(Name = "GetHotels")]
@@ -41,10 +47,31 @@ public class HotelsController : ControllerBase
     
     [Authorize("RequireAdmin")]
     [HttpPost(Name = "PostHotel")]
-    public Hotel Post(HotelCreate hotelCreate)
+    public async Task<ActionResult<Hotel>> Post(HotelCreate hotelCreate)
     {
-        // Implement create hotel logic
-        return new Hotel();
+        var hotelDto = new HotelDto
+        {
+            Id = Guid.NewGuid(),
+            Name = hotelCreate.Name,
+            Address = new AddressDto
+            {
+                City = hotelCreate.City,
+                Country = hotelCreate.Country,
+                Street = hotelCreate.Street
+            },
+            Rooms = new Dictionary<int, Tuple<decimal, int>>(),
+            Bookings = new List<RoomReservationDto>(),
+            Discounts = new List<DiscountDto>(),
+            FoodPricePerPerson = hotelCreate.FoodPricePerPerson
+        };
+
+        foreach (var room in hotelCreate.Rooms)
+        {
+            hotelDto.Rooms.Add(room.Size, new Tuple<decimal, int>(room.Price, room.Count));
+        }
+
+        var response = await _addHotelClient.GetResponse<AddHotelResponse>(new AddHotelRequest(hotelDto));
+        return Ok(response.Message.Hotel);
     }
     
     [HttpGet("{id}", Name = "GetHotel")]
@@ -63,8 +90,16 @@ public class HotelsController : ControllerBase
     
     [Authorize("RequireAdmin")]
     [HttpPost("{id}/Discount", Name = "PostHotelDiscount")]
-    public void PostHotelDiscount(Guid id, HotelDiscount hotelDiscount)
+    public async Task<IActionResult> PostHotelDiscount(Guid id, HotelDiscount hotelDiscount)
     {
-        // Implement post hotel discount logic
+        var discountDto = new DiscountDto
+        {
+            Value = hotelDiscount.Percentage,
+            Start = hotelDiscount.Start,
+            End = hotelDiscount.End
+        };
+
+        await _addHotelDiscountClient.GetResponse<HotelAddDiscountResponse>(new HotelAddDiscountRequest(id, discountDto));
+        return Ok();
     }
 }

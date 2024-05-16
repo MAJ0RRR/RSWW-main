@@ -17,6 +17,7 @@ public class ReservationGetHotelsRequestConsumer : IConsumer<ReservationGetHotel
     public async Task Consume(ConsumeContext<ReservationGetHotelsRequest> context)
     {
         _logger.LogInformation("{Consumer}: {Message}", nameof(ReservationGetHotelsRequestConsumer), context.Message);
-        await context.RespondAsync(_reservationService.ReservationGetHotels(context.Message));
+        var response = await _reservationService.ReservationGetHotels(context.Message);
+        await context.RespondAsync(response);
     }
 }

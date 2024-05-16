@@ -8,7 +8,8 @@ declare -A db_users
 db_users=( 
   ["userservice_db"]="user_userservice_db:password_userservice_db" 
   ["reservationservice_db"]="user_reservationservice_db:password_reservationservice_db" 
-  ["db3"]="user3:password3" 
+  ["transportservice_db"]="user_transportservice_db:password_transportservice_db" 
+  ["hotelservice_db"]="user_hotelservice_db:password_hotelservice_db" 
 )
 
 function create_database() {

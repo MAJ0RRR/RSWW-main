@@ -17,6 +17,7 @@ public class GetAvailableRoomsRequestConsumer : IConsumer<GetAvailableRoomsReque
     public async Task Consume(ConsumeContext<GetAvailableRoomsRequest> context)
     {
         _logger.LogInformation("{Consumer}: {Message}", nameof(GetAvailableRoomsRequestConsumer), context.Message);
-        await context.RespondAsync(_reservationService.GetAvailableRooms(context.Message));
+        var response = await _reservationService.GetAvailableRooms(context.Message);
+        await context.RespondAsync(response);
     }
 }

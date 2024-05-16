@@ -17,15 +17,21 @@ public class TransportOptionsController : ControllerBase
     private readonly ILogger<TransportOptionsController> _logger;
     private readonly IRequestClient<ReservationGetTransportOptionsRequest> _getTransportOptionsClient;
     private readonly IRequestClient<ReservationGetTransportOptionRequest> _getTransportOptionClient;
+    private readonly IRequestClient<AddTransportOptionRequest> _addTransportOptionClient;
+    private readonly IRequestClient<TransportOptionAddDiscountRequest> _addTransportDiscountClient;
 
     public TransportOptionsController(
         ILogger<TransportOptionsController> logger,
         IRequestClient<ReservationGetTransportOptionsRequest> getTransportOptionsClient,
-        IRequestClient<ReservationGetTransportOptionRequest> getTransportOptionClient)
+        IRequestClient<ReservationGetTransportOptionRequest> getTransportOptionClient,
+        IRequestClient<AddTransportOptionRequest> addTransportOptionClient,
+        IRequestClient<TransportOptionAddDiscountRequest> addTransportDiscountClient)
     {
         _logger = logger;
         _getTransportOptionsClient = getTransportOptionsClient;
         _getTransportOptionClient = getTransportOptionClient;
+        _addTransportOptionClient = addTransportOptionClient;
+        _addTransportDiscountClient = addTransportDiscountClient;
     }
     
     [HttpGet(Name = "GetTransportOptions")]
@@ -37,10 +43,38 @@ public class TransportOptionsController : ControllerBase
     
     [Authorize("RequireAdmin")]
     [HttpPost(Name = "PostTransportOption")]
-    public TransportOption Post(TransportOptionCreate transportOptionCreate)
+    public async Task<ActionResult<TransportOption>> Post(TransportOptionCreate transportOptionCreate)
     {
-        // Implement create transport option logic
-        return new TransportOption();
+        var transportOptionDto = new TransportOptionDto
+        {
+            Id = Guid.NewGuid(),
+            From = new AddressDto
+            {
+                City = transportOptionCreate.FromCity,
+                Country = transportOptionCreate.FromCountry,
+                Street = transportOptionCreate.FromStreet,
+                ShowName = transportOptionCreate.FromShowName
+            },
+            To = new AddressDto
+            {
+                City = transportOptionCreate.ToCity,
+                Country = transportOptionCreate.ToCountry,
+                Street = transportOptionCreate.ToStreet,
+                ShowName = transportOptionCreate.ToShowName
+            },
+            Start = transportOptionCreate.Start,
+            End = transportOptionCreate.End,
+            SeatsAvailable = transportOptionCreate.SeatsAvailable,
+            PriceAdult = transportOptionCreate.PriceAdult,
+            PriceUnder3 = transportOptionCreate.PriceUnder3,
+            PriceUnder10 = transportOptionCreate.PriceUnder10,
+            PriceUnder18 = transportOptionCreate.PriceUnder18,
+            Type = transportOptionCreate.Type.ToString(),
+            Discounts = new List<DiscountDto>()
+        };
+
+        var response = await _addTransportOptionClient.GetResponse<AddTransportOptionResponse>(new AddTransportOptionRequest(transportOptionDto));
+        return Ok(response.Message.TransportOption);
     }
     
     [HttpGet("{id}", Name = "GetTransportOption")]
@@ -52,8 +86,16 @@ public class TransportOptionsController : ControllerBase
     
     [Authorize("RequireAdmin")]
     [HttpPost("{id}/Discount", Name = "PostTransportOptionDiscount")]
-    public void PostTransportOptionDiscount(Guid id, TransportOptionDiscount transportOptionDiscount)
+    public async Task<IActionResult> PostTransportOptionDiscount(Guid id, TransportOptionDiscount transportOptionDiscount)
     {
-        // Implement post transport option discount logic
+        var discountDto = new DiscountDto
+        {
+            Value = transportOptionDiscount.Percentage,
+            Start = transportOptionDiscount.Start,
+            End = transportOptionDiscount.End
+        };
+
+        await _addTransportDiscountClient.GetResponse<TransportOptionAddDiscountResponse>(new TransportOptionAddDiscountRequest(id, discountDto));
+        return Ok();
     }
 }
