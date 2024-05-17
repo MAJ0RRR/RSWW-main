@@ -17,6 +17,6 @@ public class GetAvailableToursRequestConsumer : IConsumer<GetAvailableToursReque
     public async Task Consume(ConsumeContext<GetAvailableToursRequest> context)
     {
         _logger.LogInformation("{Consumer}: {Message}", nameof(GetAvailableToursRequestConsumer), context.Message);
-        await context.RespondAsync(_reservationService.GetAvailableTours(context.Message));
+        await context.RespondAsync(_reservationService.GetAvailableTours());
     }
 }

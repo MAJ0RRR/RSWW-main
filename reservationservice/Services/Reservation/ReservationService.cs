@@ -2,42 +2,190 @@
 using System.Collections.Generic;using contracts;
 using contracts.Dtos;
 using MassTransit;
+using Microsoft.EntityFrameworkCore;
+using reservationservice.Models;
 using reservationservice.Persistence;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace reservationservice.Services.Reservation;
 
-    public class ReservationService
+    public class ReservationService : IDisposable
     {
         private readonly ReservationDbContext _dbContext;
+        private readonly IDbContextFactory<ReservationDbContext> _dbContextFactory;
         private readonly IRequestClient<GetTransportOptionRequest> _getTransportOptionClient;
         private readonly IRequestClient<GetTransportOptionsRequest> _getTransportOptionsClient;
         private readonly IRequestClient<GetHotelRequest> _getHotelClient;
         private readonly IRequestClient<GetHotelsRequest> _getHotelsClient;
         private readonly IRequestClient<HotelGetAvailableRoomsRequest> _getAvailableRoomsClient;
         private readonly IRequestClient<GetPopularDestinationsRequest> _getPopularDestinationsClient;
+        private readonly IRequestClient<HotelBookRoomsRequest> _bookRoomsClient;
+        private readonly IRequestClient<TransportOptionSubtractSeatsRequest> _subtractSeatsClient;
+        private readonly IRequestClient<TransportOptionAddSeatsRequest> _addSeatsClient;
+        private readonly IRequestClient<HotelCancelBookRoomsRequest> _cancelBookRoomsClient;
         private readonly ILogger<ReservationService> _logger;
+        private readonly int ReservationDurationMinutes = 5;
+        private bool _disposed;
 
-        public ReservationService(ReservationDbContext dbContext,
+        public ReservationService(
+            IDbContextFactory<ReservationDbContext> dbContextFactory,
             IRequestClient<GetTransportOptionRequest> getTransportOptionClient,
             IRequestClient<GetTransportOptionsRequest> getTransportOptionsClient,
             IRequestClient<GetHotelRequest> getHotelClient,
             IRequestClient<GetHotelsRequest> getHotelsClient,
             IRequestClient<HotelGetAvailableRoomsRequest> getAvailableRoomsClient,
             IRequestClient<GetPopularDestinationsRequest> getPopularDestinationsClient,
+            IRequestClient<HotelBookRoomsRequest> bookRoomsClient,
+            IRequestClient<TransportOptionSubtractSeatsRequest> subtractSeatsClient,
+            IRequestClient<TransportOptionAddSeatsRequest> addSeatsClient,
+            IRequestClient<HotelCancelBookRoomsRequest> cancelBookRoomsClient,
             ILogger<ReservationService> logger)
         {
-            _dbContext = dbContext;
+            _dbContextFactory = dbContextFactory;
+            _dbContext = _dbContextFactory.CreateDbContext();
             _getTransportOptionClient = getTransportOptionClient;
             _getTransportOptionsClient = getTransportOptionsClient;
             _getHotelClient = getHotelClient;
             _getHotelsClient = getHotelsClient;
             _getAvailableRoomsClient = getAvailableRoomsClient;
             _getPopularDestinationsClient = getPopularDestinationsClient;
+            _bookRoomsClient = bookRoomsClient;
+            _subtractSeatsClient = subtractSeatsClient;
+            _addSeatsClient = addSeatsClient;
+            _cancelBookRoomsClient = cancelBookRoomsClient;
             _logger = logger;
         }
+        
+        private int GetTotalNumberOfPeople(CreateReservationDto reservation)
+        {
+            return reservation.NumAdults + reservation.NumUnder3 + reservation.NumUnder10 + reservation.NumUnder18;
+        }
+        
+        private async Task<Models.Reservation> ReservationFromDtos(CreateReservationRequest createReservationRequest,
+            Response<HotelBookRoomsResponse> hotelBookRoomsResponse)
+        {
+            var toTransportOptionResponse =
+                await _getTransportOptionClient.GetResponse<GetTransportOptionResponse>(
+                    new GetTransportOptionRequest(createReservationRequest.Reservation.ToDestinationTransport));
+            var fromTransportOptionResponse =
+                await _getTransportOptionClient.GetResponse<GetTransportOptionResponse>(
+                    new GetTransportOptionRequest(createReservationRequest.Reservation.FromDestinationTransport));
+            var fromHotelResponse = await _getHotelClient.GetResponse<GetHotelResponse>(
+                new GetHotelRequest(createReservationRequest.Reservation.Hotel));
+            
+            var newReservationGuid = Guid.NewGuid();
+            var reservation = new Models.Reservation
+            {
+                Id = newReservationGuid,
+                UserId = createReservationRequest.Reservation.UserId,
+                NumAdults = createReservationRequest.Reservation.NumAdults,
+                NumUnder3 = createReservationRequest.Reservation.NumUnder3,
+                NumUnder10 = createReservationRequest.Reservation.NumUnder10,
+                NumUnder18 = createReservationRequest.Reservation.NumUnder18,
+                ToDestinationTransport = createReservationRequest.Reservation.ToDestinationTransport,
+                HotelRoomReservations = hotelBookRoomsResponse.Message.RoomReservations.Select(rr => new Models.HotelRoomReservation
+                {
+                    Id = Guid.NewGuid(),
+                    HotelRoomReservationObjectId = rr.Id,
+                    ReservationId = newReservationGuid
+                }).ToList(),
+                FromDestinationTransport = createReservationRequest.Reservation.FromDestinationTransport,
+                Finalized = false,
+                StartDate = createReservationRequest.Reservation.StartDate,
+                EndDate = createReservationRequest.Reservation.EndDate,
+                Price = CalculatePrice(
+                    createReservationRequest.Reservation, 
+                    fromHotelResponse.Message.Hotel,
+                    toTransportOptionResponse.Message.TransportOption,
+                    fromTransportOptionResponse.Message.TransportOption
+                ),
+                ToCity = toTransportOptionResponse.Message.TransportOption.To.City,
+                FromCity = toTransportOptionResponse.Message.TransportOption.From.City,
+                TransportType = toTransportOptionResponse.Message.TransportOption.Type,
+                ReservedUntil = DateTime.Now.AddMinutes(ReservationDurationMinutes),
+                BeingPaidFors = new List<BeingPaidFor>()
+            };
+            return reservation;
+        }
 
-        public async Task<GetAvailableDestinationsResponse> GetAvailableDestinations(
-            GetAvailableDestinationsRequest GetAvailableDestinationsRequest)
+        private async Task RevertHotelBooking(Guid hotelId, IEnumerable<RoomReservationDto> roomReservations)
+        {
+            // Implement logic to revert hotel booking based on roomReservations
+            await _cancelBookRoomsClient.GetResponse<HotelCancelBookRoomsResponse>(
+                new HotelCancelBookRoomsRequest(hotelId, roomReservations.Select(room => room.Id).ToList()));
+        }
+
+        private async Task RevertTransportBooking(Guid transportOptionId, int seats)
+        {
+            // Implement logic to add back seats to the transport option
+            await _addSeatsClient.GetResponse<TransportOptionAddSeatsResponse>(
+                new TransportOptionAddSeatsRequest(transportOptionId, seats));
+        }
+
+        private decimal CalculatePrice(CreateReservationDto reservation, HotelDto hotel, TransportOptionDto toTransport, TransportOptionDto fromTransport)
+        {
+            decimal totalPrice = 0;
+
+            // Calculate the hotel room price
+            foreach (var room in reservation.Rooms)
+            {
+                int roomSize = room.Key;
+                int roomCount = room.Value;
+
+                if (hotel.Rooms.TryGetValue(roomSize, out var roomPriceAndCount))
+                {
+                    decimal roomPrice = roomPriceAndCount.Item1;
+                    totalPrice += roomPrice * roomCount;
+                }
+                else
+                {
+                    throw new Exception($"Hotel does not have rooms of size {roomSize}");
+                }
+            }
+
+            // Calculate the transport price for ToDestinationTransport
+            totalPrice += reservation.NumAdults * toTransport.PriceAdult;
+            totalPrice += reservation.NumUnder18 * toTransport.PriceUnder18;
+            totalPrice += reservation.NumUnder10 * toTransport.PriceUnder10;
+            totalPrice += reservation.NumUnder3 * toTransport.PriceUnder3;
+
+            // Calculate the transport price for FromDestinationTransport
+            totalPrice += reservation.NumAdults * fromTransport.PriceAdult;
+            totalPrice += reservation.NumUnder18 * fromTransport.PriceUnder18;
+            totalPrice += reservation.NumUnder10 * fromTransport.PriceUnder10;
+            totalPrice += reservation.NumUnder3 * fromTransport.PriceUnder3;
+
+            return totalPrice;
+        }
+
+        private async Task SetCancellationTimer(Guid reservationId)
+        {
+            var timer = new System.Timers.Timer(ReservationDurationMinutes * 60 * 1000); // 5 minutes in milliseconds
+            timer.Elapsed += async (sender, e) => await OnTimerElapsed(reservationId, timer);
+            timer.AutoReset = false; // Make sure it only runs once
+            timer.Start();
+        }
+
+        private async Task OnTimerElapsed(Guid reservationId, System.Timers.Timer timer)
+        {
+            timer.Stop();
+            timer.Dispose();
+            
+            using (var dbContext = _dbContextFactory.CreateDbContext())
+            {
+                var reservation = await dbContext.Reservations.FindAsync(reservationId);
+                if (reservation != null)
+                {
+                    reservation.CancellationDate = DateTime.UtcNow;
+                    reservation.Finalized = false;
+
+                    dbContext.Reservations.Update(reservation);
+                    await dbContext.SaveChangesAsync();
+                }
+            }
+        }
+        
+        public async Task<GetAvailableDestinationsResponse> GetAvailableDestinations()
         {
             // Fetch all hotels
             var hotelsResponse = await _getHotelsClient.GetResponse<GetHotelsResponse>(new GetHotelsRequest());
@@ -72,66 +220,35 @@ namespace reservationservice.Services.Reservation;
             return new GetAvailableDestinationsResponse(commonDestinations);
         }
 
-        public GetReservationsResponse GetReservations(GetReservationsRequest getReservationsRequest)
+        public async Task<GetReservationsResponse> GetReservations(GetReservationsRequest request)
         {
-            var reservations = new List<ReservationDto>
-            {
-                new ReservationDto
-                {
-                    Id = Guid.NewGuid(),
-                    UserId = getReservationsRequest.UserId,
-                    NumAdults = 2,
-                    NumUnder3 = 0,
-                    NumUnder10 = 1,
-                    NumUnder18 = 0,
-                    ToDestinationTransport = Guid.NewGuid(),
-                    HotelRoomReservations = new List<Guid> { Guid.NewGuid() },
-                    FromDestinationTransport = Guid.NewGuid(),
-                    Finalized = true,
-                    StartDate = DateTime.UtcNow,
-                    EndDate = DateTime.UtcNow.AddDays(7),
-                    Price = 1500.00m,
-                    ToCity = "Berlin",
-                    FromCity = "Warsaw",
-                    TransportType = "Train",
-                    ReservedUntil = DateTime.UtcNow.AddMonths(1)
-                }
-            };
-            return new GetReservationsResponse(reservations);
+            var reservations = await _dbContext.Reservations
+                .Include(r => r.HotelRoomReservations)
+                .Include(r => r.BeingPaidFors)
+                .Where(r => r.UserId == request.UserId)
+                .ToListAsync();
+
+            return new GetReservationsResponse(reservations.Select(r => r.ToDto()).ToList());
         }
 
-        public GetSingleReservationResponse GetSingleReservation(
+        public async Task<GetSingleReservationResponse> GetSingleReservation(
             GetSingleReservationRequest getSingleReservationRequest)
         {
-            var reservation = new ReservationDto
-            {
-                Id = getSingleReservationRequest.ReservationId,
-                UserId = Guid.NewGuid(),
-                NumAdults = 2,
-                NumUnder3 = 0,
-                NumUnder10 = 1,
-                NumUnder18 = 0,
-                ToDestinationTransport = Guid.NewGuid(),
-                HotelRoomReservations = new List<Guid> { Guid.NewGuid() },
-                FromDestinationTransport = Guid.NewGuid(),
-                Finalized = true,
-                StartDate = DateTime.UtcNow,
-                EndDate = DateTime.UtcNow.AddDays(7),
-                Price = 1500.00m,
-                ToCity = "Berlin",
-                FromCity = "Warsaw",
-                TransportType = "Train",
-                ReservedUntil = DateTime.UtcNow.AddMonths(1)
-            };
-            return new GetSingleReservationResponse(reservation);
+            var reservation = await _dbContext.Reservations
+                .Include(r => r.HotelRoomReservations)
+                .Include(r => r.BeingPaidFors)
+                .FirstOrDefaultAsync(r => r.Id == getSingleReservationRequest.ReservationId);
+
+            return new GetSingleReservationResponse(reservation?.ToDto());
         }
 
         public BuyResponse Buy(BuyRequest buyRequest)
         {
+            // TODO
             return new BuyResponse(true);
         }
 
-        public async Task<GetPopularOffersResponse> GetPopularOffers(GetPopularOffersRequest GetPopularOffersRequest)
+        public async Task<GetPopularOffersResponse> GetPopularOffers()
         {
             var destinationsResponse = await _getPopularDestinationsClient.GetResponse<GetPopularDestinationsResponse>(
                 new GetPopularDestinationsRequest());
@@ -162,57 +279,80 @@ namespace reservationservice.Services.Reservation;
                 .Where(hotel => offers.ContainsKey(hotel.Address.Country) && offers[hotel.Address.Country].ContainsKey(hotel.Address.City))
                 .ToList()
                 .ForEach(hotel => offers[hotel.Address.Country][hotel.Address.City].Add(hotel.Name));
-
+            // TODO: do not return destinations with 0 hotels
             return new GetPopularOffersResponse(offers);
         }
-
-        public CreateReservationResponse CreateReservation(CreateReservationRequest createReservationRequest)
+        
+        public async Task<CreateReservationResponse> CreateReservation(CreateReservationRequest createReservationRequest)
         {
-            /*
-             * public Guid UserId { get; set; }
-             * public int NumAdults { get; set; }
-             * public int NumUnder3 { get; set; }
-             * public int NumUnder10 { get; set; }
-             * public int NumUnder18 { get; set; }
-             * public Guid ToDestinationTransport { get; set; }
-             * public Guid Hotel { get; set; }
-             * public Dictionary<int, int> Rooms { get; set; }
-             * public Guid FromDestinationTransport { get; set; }
-             * public bool WithFood { get; set; }
-             * public DateTime StartDate { get; set; }
-             * public DateTime EndDate { get; set; }
-             */
-            // Implement the saga:
-            // 1. Try to book hotel with given number of rooms
-            // 2. Try to reserve ToDestinationTransport 
-            // 3. Try to reserve FromDestinationTransport
-            // 4. If all above were positive, create Reservation object and add it to database
-            //    otherwise, revert the transactions and return error code
-            var reservation = new ReservationDto
+            await using var transaction = await _dbContext.Database.BeginTransactionAsync();
+
+            try
             {
-                Id = Guid.NewGuid(),
-                UserId = createReservationRequest.Reservation.UserId,
-                NumAdults = createReservationRequest.Reservation.NumAdults,
-                NumUnder3 = createReservationRequest.Reservation.NumUnder3,
-                NumUnder10 = createReservationRequest.Reservation.NumUnder10,
-                NumUnder18 = createReservationRequest.Reservation.NumUnder18,
-                ToDestinationTransport = createReservationRequest.Reservation.ToDestinationTransport,
-                HotelRoomReservations = new List<Guid> { Guid.NewGuid() },
-                FromDestinationTransport = createReservationRequest.Reservation.FromDestinationTransport,
-                Finalized = true,
-                StartDate = createReservationRequest.Reservation.StartDate,
-                EndDate = createReservationRequest.Reservation.EndDate,
-                Price = 2000.00m,
-                ToCity = "Berlin",
-                FromCity = "Warsaw",
-                TransportType = "Train",
-                ReservedUntil = DateTime.UtcNow.AddMonths(1)
-            };
-            return new CreateReservationResponse(reservation);
-        }
+                // 1. Try to book hotel with given number of rooms
+                var hotelBookRoomsResponse = await _bookRoomsClient.GetResponse<HotelBookRoomsResponse>(
+                    new HotelBookRoomsRequest(new HotelBookRoomsDto
+                    {
+                        Id = createReservationRequest.Reservation.Hotel,
+                        Start = createReservationRequest.Reservation.StartDate,
+                        End = createReservationRequest.Reservation.EndDate,
+                        Sizes = createReservationRequest.Reservation.Rooms
+                    }));
 
-        public GetAvailableToursResponse GetAvailableTours(GetAvailableToursRequest getAvailableToursRequest)
+                if (hotelBookRoomsResponse.Message.RoomReservations == null)
+                {
+                    throw new Exception("Failed to book hotel rooms");
+                }
+
+                // 2. Try to reserve ToDestinationTransport
+                var toDestinationTransportResponse = await _subtractSeatsClient.GetResponse<TransportOptionSubtractSeatsResponse>(
+                    new TransportOptionSubtractSeatsRequest(createReservationRequest.Reservation.ToDestinationTransport, 
+                        GetTotalNumberOfPeople(createReservationRequest.Reservation)));
+
+                if (!toDestinationTransportResponse.Message.Success)
+                {
+                    // Revert hotel booking
+                    await RevertHotelBooking(createReservationRequest.Reservation.Hotel, hotelBookRoomsResponse.Message.RoomReservations);
+                    throw new Exception("Failed to reserve ToDestinationTransport");
+                }
+
+                // 3. Try to reserve FromDestinationTransport
+                var fromDestinationTransportResponse = await _subtractSeatsClient.GetResponse<TransportOptionSubtractSeatsResponse>(
+                    new TransportOptionSubtractSeatsRequest(createReservationRequest.Reservation.FromDestinationTransport, 
+                        GetTotalNumberOfPeople(createReservationRequest.Reservation)));
+
+                if (!fromDestinationTransportResponse.Message.Success)
+                {
+                    // Revert hotel booking
+                    await RevertHotelBooking(createReservationRequest.Reservation.Hotel, hotelBookRoomsResponse.Message.RoomReservations);
+                    // Revert ToDestinationTransport
+                    await RevertTransportBooking(createReservationRequest.Reservation.ToDestinationTransport, 
+                        GetTotalNumberOfPeople(createReservationRequest.Reservation));
+                    throw new Exception("Failed to reserve FromDestinationTransport");
+                }
+
+                // 4. If all above were positive, create Reservation object and add it to database
+                var reservation = await ReservationFromDtos(createReservationRequest, hotelBookRoomsResponse);
+
+                await _dbContext.Reservations.AddAsync(reservation);
+                await _dbContext.SaveChangesAsync();
+
+                await transaction.CommitAsync();
+                SetCancellationTimer(reservation.Id);
+                return new CreateReservationResponse(reservation.ToDto()); // Assuming you have a method to convert to DTO
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error occurred while creating reservation, reverting transactions");
+                await transaction.RollbackAsync();
+
+                return new CreateReservationResponse(null); // Returning null or appropriate error response
+            }
+        }
+        
+        public GetAvailableToursResponse GetAvailableTours()
         {
+            // TODO
             var tours = new List<TourDto>
             {
                 new TourDto
@@ -239,8 +379,7 @@ namespace reservationservice.Services.Reservation;
             return new ReservationGetTransportOptionResponse(response.Message.TransportOption);
         }
 
-        public async Task<ReservationGetTransportOptionsResponse> ReservationGetTransportOptions(
-            ReservationGetTransportOptionsRequest getTransportOptionsRequest)
+        public async Task<ReservationGetTransportOptionsResponse> ReservationGetTransportOptions()
         {
             var response =
                 await _getTransportOptionsClient.GetResponse<GetTransportOptionsResponse>(
@@ -254,7 +393,7 @@ namespace reservationservice.Services.Reservation;
             return new ReservationGetHotelResponse(response.Message.Hotel);
         }
 
-        public async Task<ReservationGetHotelsResponse> ReservationGetHotels(ReservationGetHotelsRequest getHotelsRequest)
+        public async Task<ReservationGetHotelsResponse> ReservationGetHotels()
         {
             var response = await _getHotelsClient.GetResponse<GetHotelsResponse>(new GetHotelsRequest());
             return new ReservationGetHotelsResponse(response.Message.Hotels);
@@ -267,6 +406,24 @@ namespace reservationservice.Services.Reservation;
                 new HotelGetAvailableRoomsRequest(getAvailableRoomsRequest.HotelId, getAvailableRoomsRequest.Start,
                     getAvailableRoomsRequest.End));
             return new GetAvailableRoomsResponse(response.Message.Rooms);
+        }
+        
+        protected virtual void Dispose(bool disposing)
+        {
+            if (!_disposed)
+            {
+                if (disposing)
+                {
+                    _dbContext?.Dispose();
+                }
+                _disposed = true;
+            }
+        }
+
+        public void Dispose()
+        {
+            Dispose(true);
+            GC.SuppressFinalize(this);
         }
     }
         

@@ -39,7 +39,8 @@ public class ReservationsController : ControllerBase
     [HttpGet(Name = "GetReservations")]
     public async Task<ActionResult<IEnumerable<Reservation>>> Get()
     {
-        var response = await _getReservationsClient.GetResponse<GetReservationsResponse>(new GetReservationsRequest(Guid.NewGuid())); // Replace with actual UserId
+        var response = await _getReservationsClient.GetResponse<GetReservationsResponse>(
+            new GetReservationsRequest(Guid.Parse(User.FindFirstValue(ClaimTypes.Name))));
         return Ok(response.Message.Reservations);
     }
     
