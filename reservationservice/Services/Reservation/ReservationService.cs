@@ -14,6 +14,7 @@ namespace reservationservice.Services.Reservation;
         private readonly IRequestClient<GetHotelRequest> _getHotelClient;
         private readonly IRequestClient<GetHotelsRequest> _getHotelsClient;
         private readonly IRequestClient<HotelGetAvailableRoomsRequest> _getAvailableRoomsClient;
+        private readonly IRequestClient<GetPopularDestinationsRequest> _getPopularDestinationsClient;
         private readonly ILogger<ReservationService> _logger;
 
         public ReservationService(ReservationDbContext dbContext,
@@ -22,6 +23,7 @@ namespace reservationservice.Services.Reservation;
             IRequestClient<GetHotelRequest> getHotelClient,
             IRequestClient<GetHotelsRequest> getHotelsClient,
             IRequestClient<HotelGetAvailableRoomsRequest> getAvailableRoomsClient,
+            IRequestClient<GetPopularDestinationsRequest> getPopularDestinationsClient,
             ILogger<ReservationService> logger)
         {
             _dbContext = dbContext;
@@ -30,18 +32,44 @@ namespace reservationservice.Services.Reservation;
             _getHotelClient = getHotelClient;
             _getHotelsClient = getHotelsClient;
             _getAvailableRoomsClient = getAvailableRoomsClient;
+            _getPopularDestinationsClient = getPopularDestinationsClient;
             _logger = logger;
         }
 
-        public GetAvailableDestinationsResponse GetAvailableDestinations(
+        public async Task<GetAvailableDestinationsResponse> GetAvailableDestinations(
             GetAvailableDestinationsRequest GetAvailableDestinationsRequest)
         {
-            var destinations = new Dictionary<string, List<string>>
-            {
-                { "Poland", new List<string> { "Warsaw", "Krakow" } },
-                { "Germany", new List<string> { "Berlin", "Munich" } }
-            };
-            return new GetAvailableDestinationsResponse(destinations);
+            // Fetch all hotels
+            var hotelsResponse = await _getHotelsClient.GetResponse<GetHotelsResponse>(new GetHotelsRequest());
+
+            // Create a dictionary of Country -> List of Cities from the hotels
+            var hotelDestinations = hotelsResponse.Message.Hotels
+                .GroupBy(hotel => hotel.Address.Country)
+                .ToDictionary(
+                    group => group.Key,
+                    group => group.Select(hotel => hotel.Address.City).Distinct().ToList()
+                );
+
+            // Fetch all transport options
+            var transportOptionsResponse = await _getTransportOptionsClient.GetResponse<GetTransportOptionsResponse>(new GetTransportOptionsRequest());
+
+            // Create a dictionary of Country -> List of Cities from the transport options
+            var transportDestinations = transportOptionsResponse.Message.TransportOptions
+                .GroupBy(option => option.To.Country)
+                .ToDictionary(
+                    group => group.Key,
+                    group => group.Select(option => option.To.City).Distinct().ToList()
+                );
+
+            // Find common destinations in both dictionaries
+            var commonDestinations = hotelDestinations
+                .Where(hotelCountry => transportDestinations.ContainsKey(hotelCountry.Key))
+                .ToDictionary(
+                    hotelCountry => hotelCountry.Key,
+                    hotelCountry => hotelCountry.Value.Intersect(transportDestinations[hotelCountry.Key]).ToList()
+                );
+
+            return new GetAvailableDestinationsResponse(commonDestinations);
         }
 
         public GetReservationsResponse GetReservations(GetReservationsRequest getReservationsRequest)
@@ -103,36 +131,63 @@ namespace reservationservice.Services.Reservation;
             return new BuyResponse(true);
         }
 
-        public GetPopularOffersResponse GetPopularOffers(GetPopularOffersRequest GetPopularOffersRequest)
+        public async Task<GetPopularOffersResponse> GetPopularOffers(GetPopularOffersRequest GetPopularOffersRequest)
         {
-            var offers = new Dictionary<string, Dictionary<string, List<string>>>
+            var destinationsResponse = await _getPopularDestinationsClient.GetResponse<GetPopularDestinationsResponse>(
+                new GetPopularDestinationsRequest());
+            
+            var offers = new Dictionary<string, Dictionary<string, List<string>>>();
+            
+            // iterate over destinationsResponse, extract To Address from each one and save City + Country
+            foreach (var transport in destinationsResponse.Message.TransportOptions)
             {
+                var country = transport.To.Country;
+                var city = transport.To.City;
+
+                if (!offers.ContainsKey(country))
                 {
-                    "Poland", new Dictionary<string, List<string>>
-                    {
-                        {
-                            "Warsaw", new List<string> { "HotelA1", "HotelA2", "HotelA3" }
-                        },
-                        {
-                            "Cracow", new List<string> { "HotelA4", "HotelA5" }
-                        }
-                    }
-                },
-                {
-                    "Germany", new Dictionary<string, List<string>>
-                    {
-                        {
-                            "Berlin", new List<string> { "HotelB1" }
-                        }
-                    }
+                    offers[country] = new Dictionary<string, List<string>>();
                 }
-            };
+
+                if (!offers[country].ContainsKey(city))
+                {
+                    offers[country][city] = new List<string>();
+                }
+            }
+            // Get all hotels
+            var hotelsResponse = await _getHotelsClient.GetResponse<GetHotelsResponse>(new GetHotelsRequest());
+            
+            // For each City + Country combination save list of hotels in this location
+            hotelsResponse.Message.Hotels
+                .Where(hotel => offers.ContainsKey(hotel.Address.Country) && offers[hotel.Address.Country].ContainsKey(hotel.Address.City))
+                .ToList()
+                .ForEach(hotel => offers[hotel.Address.Country][hotel.Address.City].Add(hotel.Name));
 
             return new GetPopularOffersResponse(offers);
         }
 
         public CreateReservationResponse CreateReservation(CreateReservationRequest createReservationRequest)
         {
+            /*
+             * public Guid UserId { get; set; }
+             * public int NumAdults { get; set; }
+             * public int NumUnder3 { get; set; }
+             * public int NumUnder10 { get; set; }
+             * public int NumUnder18 { get; set; }
+             * public Guid ToDestinationTransport { get; set; }
+             * public Guid Hotel { get; set; }
+             * public Dictionary<int, int> Rooms { get; set; }
+             * public Guid FromDestinationTransport { get; set; }
+             * public bool WithFood { get; set; }
+             * public DateTime StartDate { get; set; }
+             * public DateTime EndDate { get; set; }
+             */
+            // Implement the saga:
+            // 1. Try to book hotel with given number of rooms
+            // 2. Try to reserve ToDestinationTransport 
+            // 3. Try to reserve FromDestinationTransport
+            // 4. If all above were positive, create Reservation object and add it to database
+            //    otherwise, revert the transactions and return error code
             var reservation = new ReservationDto
             {
                 Id = Guid.NewGuid(),
