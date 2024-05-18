@@ -1,6 +1,7 @@
 ﻿using contracts;
 using contracts.Dtos;
 using hotelservice.Models;
+using Microsoft.EntityFrameworkCore;
 
 
 namespace hotelservice.Services.Hotel;
@@ -14,18 +15,38 @@ public class HotelService
         _dbContext = dbContext;
     }
     
-    public AddHotelResponse AddHotel(AddHotelRequest request)
+    public async Task<AddHotelResponse> AddHotel(AddHotelRequest request)
     {
-        return new AddHotelResponse(new HotelDto
+        var rooms = new List<Room>(); 
+        foreach (var roomDto in request.Hotel.Rooms)
+        {
+            var room = new Room
+            {
+                Id = Guid.NewGuid(),
+                Size = roomDto.Key,
+                Price = roomDto.Value.Item1,
+                Count = roomDto.Value.Item2,
+                Bookings = new List<RoomReservation>()
+            };
+            rooms.Add(room);
+        }
+            
+        var hotel = new Models.Hotel
         {
             Id = Guid.NewGuid(),
             Name = request.Hotel.Name,
-            Address = request.Hotel.Address,
-            Rooms = request.Hotel.Rooms,
-            Bookings = new List<RoomReservationDto>(),
-            Discounts = new List<DiscountDto>(),
-            FoodPricePerPerson = request.Hotel.FoodPricePerPerson
-        });
+            City = request.Hotel.Address.City,
+            Country = request.Hotel.Address.Country,
+            Street = request.Hotel.Address.Street,
+            FoodPricePerPerson = request.Hotel.FoodPricePerPerson,
+            Discounts = new List<Discount>(),
+            Rooms = rooms
+        };
+        
+        _dbContext.Hotels.Add(hotel);
+        await _dbContext.SaveChangesAsync();
+
+        return new AddHotelResponse(hotel.ToDto());
     }
 
     public HotelSearchResponse SearchHotels(HotelSearchRequest request)
@@ -45,56 +66,37 @@ public class HotelService
         });
     }
 
-    public GetHotelsResponse GetHotels(GetHotelsRequest request)
+    public async Task<GetHotelsResponse> GetHotels(GetHotelsRequest request)
     {
-        return new GetHotelsResponse(new List<HotelDto>
-        {
-            new HotelDto
-            {
-                Id = Guid.NewGuid(),
-                Name = "Sample Hotel 1",
-                Address = new AddressDto { City = "Berlin", Country = "Germany", Street = "Sample Street", ShowName = "Sample Show Name" },
-                Rooms = new Dictionary<int, Tuple<decimal, int>> { { 2, new Tuple<decimal, int>(100, 5) } },
-                Bookings = new List<RoomReservationDto>(),
-                Discounts = new List<DiscountDto>(),
-                FoodPricePerPerson = 20
-            },
-            new HotelDto
-            {
-                Id = Guid.NewGuid(),
-                Name = "Sample Hotel 2",
-                Address = new AddressDto { City = "Berlin", Country = "Germany", Street = "Sample Street", ShowName = "Sample Show Name" },
-                Rooms = new Dictionary<int, Tuple<decimal, int>> { { 2, new Tuple<decimal, int>(100, 5) } },
-                Bookings = new List<RoomReservationDto>(),
-                Discounts = new List<DiscountDto>(),
-                FoodPricePerPerson = 20
-            },
-            
-            new HotelDto
-            {
-                Id = Guid.NewGuid(),
-                Name = "Sample Hotel 3",
-                Address = new AddressDto { City = "Paris", Country = "France", Street = "Sample Street", ShowName = "Sample Show Name" },
-                Rooms = new Dictionary<int, Tuple<decimal, int>> { { 2, new Tuple<decimal, int>(100, 5) } },
-                Bookings = new List<RoomReservationDto>(),
-                Discounts = new List<DiscountDto>(),
-                FoodPricePerPerson = 20
-            }
-        });
+        var hotelsQuery = _dbContext.Hotels
+            .Include(h => h.Discounts)
+            .Include(h => h.Rooms)
+            .ThenInclude(r => r.Bookings)
+            .AsQueryable();
+        
+        var hotels = await hotelsQuery.ToListAsync();
+
+        var hotelsDto = hotels.Select(hotel => hotel.ToDto()).ToList();
+
+        return new GetHotelsResponse(hotelsDto);
     }
 
-    public GetHotelResponse GetHotel(GetHotelRequest request)
+    public async Task<GetHotelResponse> GetHotel(GetHotelRequest request)
     {
-        return new GetHotelResponse(new HotelDto
+        var hotel = await _dbContext.Hotels
+            .Include(h => h.Discounts)
+            .Include(h => h.Rooms)
+            .ThenInclude(r => r.Bookings)
+            .FirstOrDefaultAsync(h => h.Id == request.Id);
+
+        if (hotel == null)
         {
-            Id = request.Id,
-            Name = "Sample Hotel",
-            Address = new AddressDto { City = "Sample City", Country = "Sample Country", Street = "Sample Street", ShowName = "Sample Show Name" },
-            Rooms = new Dictionary<int, Tuple<decimal, int>> { { 2, new Tuple<decimal, int>(100, 5) } },
-            Bookings = new List<RoomReservationDto>(),
-            Discounts = new List<DiscountDto>(),
-            FoodPricePerPerson = 20
-        });
+            return null;
+        }
+
+        var hotelDto = hotel.ToDto();
+
+        return new GetHotelResponse(hotelDto);
     }
 
     public HotelBookRoomsResponse BookRooms(HotelBookRoomsRequest request)
