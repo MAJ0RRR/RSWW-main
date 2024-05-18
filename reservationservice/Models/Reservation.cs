@@ -14,6 +14,7 @@ public class Reservation
     public int NumUnder10 { get; init; }
     public int NumUnder18 { get; init; }
     public Guid ToDestinationTransport { get; init; }
+    public Guid HotelId { get; init; }
     public List<HotelRoomReservation> HotelRoomReservations { get; init; } = new();
     public Guid FromDestinationTransport { get; init; }
     public bool Finalized { get; set; }
@@ -26,7 +27,7 @@ public class Reservation
     public DateTime? ReservedUntil { get; init; }
     
     public DateTime? CancellationDate { get; set; }
-    public List<BeingPaidFor>? BeingPaidFors { get; init; }
+    public List<BeingPaidFor> BeingPaidFors { get; init; } = new List<BeingPaidFor>();
     
     public ReservationDto ToDto()
     {
@@ -39,6 +40,7 @@ public class Reservation
             NumUnder10 = this.NumUnder10,
             NumUnder18 = this.NumUnder18,
             ToDestinationTransport = this.ToDestinationTransport,
+            HotelId = this.HotelId,
             HotelRoomReservations = this.HotelRoomReservations.Select(hr => hr.Id).ToList(),
             FromDestinationTransport = this.FromDestinationTransport,
             Finalized = this.Finalized,
@@ -48,6 +50,7 @@ public class Reservation
             ToCity = this.ToCity,
             FromCity = this.FromCity,
             TransportType = this.TransportType,
+            CancellationDate = this.CancellationDate,
             ReservedUntil = this.ReservedUntil
         };
     }
@@ -64,5 +67,5 @@ public class BeingPaidFor
 {
     public Guid Id { get; init; }
     public Guid ReservationId { get; init; } // Foreign key property
-    public DateTime? CancellationDate { get; init; }
+    public DateTime? CancellationDate { get; set; }
 }

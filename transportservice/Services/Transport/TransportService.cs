@@ -41,8 +41,8 @@ public class TransportService
             new TransportOptionDto
             {
                 Id = Guid.NewGuid(),
-                From = new AddressDto { City = "Sample City", Country = "Sample Country", Street = "Sample Street", ShowName = "Sample Show Name" },
-                To = new AddressDto { City = "Destination City", Country = "Destination Country", Street = "Destination Street", ShowName = "Destination Show Name" },
+                From = new AddressDto { City = "Warsaw", Country = "Poland", Street = "Sample Street", ShowName = "Sample Show Name" },
+                To = new AddressDto { City = "Berlin", Country = "Germany", Street = "Destination Street", ShowName = "Destination Show Name" },
                 Start = DateTime.Now.AddHours(1),
                 End = DateTime.Now.AddHours(5),
                 SeatsAvailable = 50,
@@ -51,6 +51,86 @@ public class TransportService
                 PriceUnder10 = 70,
                 PriceUnder18 = 80,
                 Type = "Airplane",
+                Discounts = new List<DiscountDto>()
+            },
+            
+            new TransportOptionDto
+            {
+                Id = Guid.NewGuid(),
+                From = new AddressDto { City = "Berlin", Country = "Germany", Street = "Destination Street", ShowName = "Destination Show Name" },
+                To = new AddressDto { City = "Warsaw", Country = "Poland", Street = "Sample Street", ShowName = "Sample Show Name" },
+                Start = DateTime.Now.AddHours(10),
+                End = DateTime.Now.AddHours(14),
+                SeatsAvailable = 50,
+                PriceAdult = 100,
+                PriceUnder3 = 50,
+                PriceUnder10 = 70,
+                PriceUnder18 = 80,
+                Type = "Airplane",
+                Discounts = new List<DiscountDto>()
+            },
+            
+            new TransportOptionDto
+            {
+                Id = Guid.NewGuid(),
+                From = new AddressDto { City = "Gdansk", Country = "Poland", Street = "Sample Street", ShowName = "Sample Show Name" },
+                To = new AddressDto { City = "Berlin", Country = "Germany", Street = "Destination Street", ShowName = "Destination Show Name" },
+                Start = DateTime.Now.AddHours(3),
+                End = DateTime.Now.AddHours(9),
+                SeatsAvailable = 50,
+                PriceAdult = 100,
+                PriceUnder3 = 50,
+                PriceUnder10 = 70,
+                PriceUnder18 = 80,
+                Type = "Bus",
+                Discounts = new List<DiscountDto>()
+            },
+            
+            new TransportOptionDto
+            {
+                Id = Guid.NewGuid(),
+                From = new AddressDto { City = "Berlin", Country = "Germany", Street = "Destination Street", ShowName = "Destination Show Name" },
+                To = new AddressDto { City = "Gdansk", Country = "Poland", Street = "Sample Street", ShowName = "Sample Show Name" },
+                Start = DateTime.Now.AddHours(10),
+                End = DateTime.Now.AddHours(16),
+                SeatsAvailable = 50,
+                PriceAdult = 100,
+                PriceUnder3 = 50,
+                PriceUnder10 = 70,
+                PriceUnder18 = 80,
+                Type = "Bus",
+                Discounts = new List<DiscountDto>()
+            },
+            
+            new TransportOptionDto
+            {
+                Id = Guid.NewGuid(),
+                From = new AddressDto { City = "Tokyo", Country = "Japan", Street = "Sample Street", ShowName = "Sample Show Name" },
+                To = new AddressDto { City = "Berlin", Country = "Germany", Street = "Destination Street", ShowName = "Destination Show Name" },
+                Start = DateTime.Now.AddHours(3),
+                End = DateTime.Now.AddHours(9),
+                SeatsAvailable = 50,
+                PriceAdult = 100,
+                PriceUnder3 = 50,
+                PriceUnder10 = 70,
+                PriceUnder18 = 80,
+                Type = "Bus",
+                Discounts = new List<DiscountDto>()
+            },
+            
+            new TransportOptionDto
+            {
+                Id = Guid.NewGuid(),
+                From = new AddressDto { City = "Berlin", Country = "Germany", Street = "Destination Street", ShowName = "Destination Show Name" },
+                To = new AddressDto { City = "Tokyo", Country = "Japan", Street = "Sample Street", ShowName = "Sample Show Name" },
+                Start = DateTime.Now.AddHours(10),
+                End = DateTime.Now.AddHours(16),
+                SeatsAvailable = 50,
+                PriceAdult = 100,
+                PriceUnder3 = 50,
+                PriceUnder10 = 70,
+                PriceUnder18 = 80,
+                Type = "Bus",
                 Discounts = new List<DiscountDto>()
             }
         });

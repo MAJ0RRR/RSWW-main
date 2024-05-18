@@ -10,6 +10,7 @@ public class ReservationDto
     public int NumUnder18 { get; set; }
     public Guid ToDestinationTransport { get; set; }
     public List<Guid> HotelRoomReservations { get; set; }
+    public Guid HotelId { get; set; }
     public Guid FromDestinationTransport { get; set; }
     public bool Finalized { get; set; }
     public DateTime StartDate { get; set; }
@@ -18,5 +19,6 @@ public class ReservationDto
     public string ToCity { get; set; }
     public string? FromCity { get; set; }
     public string TransportType { get; set; } // "Airplane", "Train", "Bus"
+    public DateTime? CancellationDate { get; set; }
     public DateTime? ReservedUntil { get; set; }
 }

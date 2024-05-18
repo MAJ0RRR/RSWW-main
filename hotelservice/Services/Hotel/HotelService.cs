@@ -35,8 +35,28 @@ public class HotelService
             new HotelDto
             {
                 Id = Guid.NewGuid(),
-                Name = "Sample Hotel",
-                Address = new AddressDto { City = "Sample City", Country = "Sample Country", Street = "Sample Street", ShowName = "Sample Show Name" },
+                Name = "G Hotel",
+                Address = new AddressDto { City = "Gdansk", Country = "Poland", Street = "Sample Street", ShowName = "Sample Show Name" },
+                Rooms = new Dictionary<int, Tuple<decimal, int>> { { 2, new Tuple<decimal, int>(100, 5) } },
+                Bookings = new List<RoomReservationDto>(),
+                Discounts = new List<DiscountDto>(),
+                FoodPricePerPerson = 20
+            },
+            new HotelDto
+            {
+                Id = Guid.NewGuid(),
+                Name = "W Hotel",
+                Address = new AddressDto { City = "Warsaw", Country = "Poland", Street = "Sample Street", ShowName = "Sample Show Name" },
+                Rooms = new Dictionary<int, Tuple<decimal, int>> { { 2, new Tuple<decimal, int>(100, 5) } },
+                Bookings = new List<RoomReservationDto>(),
+                Discounts = new List<DiscountDto>(),
+                FoodPricePerPerson = 20
+            },
+            new HotelDto
+            {
+                Id = Guid.NewGuid(),
+                Name = "B Hotel",
+                Address = new AddressDto { City = "Berlin", Country = "Germany", Street = "Sample Street", ShowName = "Sample Show Name" },
                 Rooms = new Dictionary<int, Tuple<decimal, int>> { { 2, new Tuple<decimal, int>(100, 5) } },
                 Bookings = new List<RoomReservationDto>(),
                 Discounts = new List<DiscountDto>(),
