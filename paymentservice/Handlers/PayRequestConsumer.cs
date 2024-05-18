@@ -16,7 +16,7 @@ public class PayRequestConsumer : IConsumer<PayRequest>
     
     public async Task Consume(ConsumeContext<PayRequest> context)
     {
-        _logger.LogInformation("{Consumer}: {Message}", nameof(LoginRequestConsumer), context.Message);
+        _logger.LogInformation("{Consumer}: {Message}", nameof(PayRequestConsumer), context.Message);
         await context.RespondAsync(_paymentService.Pay(context.Message));
     }
 }
