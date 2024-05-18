@@ -1,6 +1,6 @@
-﻿using hotelservice.Persistence;
-using contracts;
+﻿using contracts;
 using contracts.Dtos;
+using hotelservice.Models;
 
 
 namespace hotelservice.Services.Hotel;
