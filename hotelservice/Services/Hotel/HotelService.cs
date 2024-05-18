@@ -49,21 +49,53 @@ public class HotelService
         return new AddHotelResponse(hotel.ToDto());
     }
 
-    public HotelSearchResponse SearchHotels(HotelSearchRequest request)
+    public async Task<HotelSearchResponse> SearchHotels(HotelSearchRequest request)
     {
-        return new HotelSearchResponse(new List<HotelDto>
+        var searchCriteria = request.SearchCriteria;
+        var hotelsQuery = _dbContext.Hotels
+            .Include(h => h.Discounts)
+            .Include(h => h.Rooms)
+                .ThenInclude(r => r.Bookings)
+            .AsQueryable();
+
+        if (!string.IsNullOrEmpty(searchCriteria.City))
         {
-            new HotelDto
-            {
-                Id = Guid.NewGuid(),
-                Name = "Sample Hotel",
-                Address = new AddressDto { City = "Sample City", Country = "Sample Country", Street = "Sample Street", ShowName = "Sample Show Name" },
-                Rooms = new Dictionary<int, Tuple<decimal, int>> { { 2, new Tuple<decimal, int>(100, 5) } },
-                Bookings = new List<RoomReservationDto>(),
-                Discounts = new List<DiscountDto>(),
-                FoodPricePerPerson = 20
-            }
-        });
+            hotelsQuery = hotelsQuery.Where(h => h.City == searchCriteria.City);
+        }
+
+        if (!string.IsNullOrEmpty(searchCriteria.Country))
+        {
+            hotelsQuery = hotelsQuery.Where(h => h.Country == searchCriteria.Country);
+        }
+
+        if (searchCriteria.MinimumGuests.HasValue)
+        {
+            hotelsQuery = hotelsQuery.Where(h =>
+                h.Rooms.Sum(r => r.Count * r.Size) >= searchCriteria.MinimumGuests.Value);
+        }
+
+        if (searchCriteria.MinStart.HasValue || searchCriteria.MaxEnd.HasValue)
+        {
+            hotelsQuery = hotelsQuery.Where(h =>
+                h.Rooms.Any(r =>
+                    r.Bookings.Any(b =>
+                        (!searchCriteria.MinStart.HasValue || b.Start >= searchCriteria.MinStart.Value) &&
+                        (!searchCriteria.MaxEnd.HasValue || b.End <= searchCriteria.MaxEnd.Value))));
+        }
+
+        if (searchCriteria.MinDuration.HasValue || searchCriteria.MaxDuration.HasValue)
+        {
+            hotelsQuery = hotelsQuery.Where(h =>
+                h.Rooms.Any(r =>
+                    r.Bookings.Any(b =>
+                        (!searchCriteria.MinDuration.HasValue || EF.Functions.DateDiffDay(b.Start, b.End) >= searchCriteria.MinDuration.Value) &&
+                        (!searchCriteria.MaxDuration.HasValue || EF.Functions.DateDiffDay(b.Start, b.End) <= searchCriteria.MaxDuration.Value))));
+        }
+
+        var hotels = await hotelsQuery.ToListAsync();
+        var hotelsDto = hotels.Select(hotel => hotel.ToDto()).ToList();
+
+        return new HotelSearchResponse(hotelsDto);
     }
 
     public async Task<GetHotelsResponse> GetHotels(GetHotelsRequest request)
