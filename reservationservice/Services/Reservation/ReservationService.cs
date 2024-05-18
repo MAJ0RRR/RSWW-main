@@ -9,9 +9,8 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace reservationservice.Services.Reservation;
 
-    public class ReservationService : IDisposable
+    public class ReservationService
     {
-        private readonly ReservationDbContext _dbContext;
         private readonly IDbContextFactory<ReservationDbContext> _dbContextFactory;
         private readonly IRequestClient<GetTransportOptionRequest> _getTransportOptionClient;
         private readonly IRequestClient<GetTransportOptionsRequest> _getTransportOptionsClient;
@@ -28,7 +27,6 @@ namespace reservationservice.Services.Reservation;
         private readonly IRequestClient<PayRequest> _payRequestClient;
         private readonly ILogger<ReservationService> _logger;
         private readonly int ReservationDurationMinutes = 1;
-        private bool _disposed;
 
         public ReservationService(
             IDbContextFactory<ReservationDbContext> dbContextFactory,
@@ -48,7 +46,6 @@ namespace reservationservice.Services.Reservation;
             ILogger<ReservationService> logger)
         {
             _dbContextFactory = dbContextFactory;
-            _dbContext = _dbContextFactory.CreateDbContext();
             _getTransportOptionClient = getTransportOptionClient;
             _getTransportOptionsClient = getTransportOptionsClient;
             _getHotelClient = getHotelClient;
@@ -78,6 +75,7 @@ namespace reservationservice.Services.Reservation;
         private async Task<Models.Reservation> ReservationFromDtos(CreateReservationRequest createReservationRequest,
             Response<HotelBookRoomsResponse> hotelBookRoomsResponse)
         {
+            // Create reservation form request and booked rooms
             var toTransportOptionResponse =
                 await _getTransportOptionClient.GetResponse<GetTransportOptionResponse>(
                     new GetTransportOptionRequest(createReservationRequest.Reservation.ToDestinationTransport));
@@ -183,53 +181,55 @@ namespace reservationservice.Services.Reservation;
 
         private async Task OnTimerElapsed(Guid reservationId, System.Timers.Timer timer)
         {
+            await using var dbContext = _dbContextFactory.CreateDbContext();
+            
             // Todo?: add some kind of lock guard for timer (if it is not automagically disposed) 
             timer.Stop();
             
-            using (var dbContext = _dbContextFactory.CreateDbContext())
+            var reservation = await dbContext.Reservations
+                .Include(r => r.BeingPaidFors)
+                .Include(r => r.HotelRoomReservations)
+                .FirstOrDefaultAsync(r => r.Id == reservationId);
+            
+            if (reservation == null || reservation.Finalized)
             {
-                var reservation = await dbContext.Reservations.FindAsync(reservationId);
-                if (reservation != null)
-                {
-                    // check if reservation has non cancelled BeingPayedFor object
-                    // if yes, restart the timer and exit
-                    var nonCancelledBeingPaidFor = reservation.BeingPaidFors.Any(bp => !bp.CancellationDate.HasValue);
-
-                    if (nonCancelledBeingPaidFor)
-                    {
-                        // Restart the timer and exit
-                        timer.Start();
-                        return;
-                    }
-
-                    // otherwise (meaning there's no objects or all have cancellation date), dispose timer and cancel reservation 
-                    timer.Dispose();
-                    reservation.CancellationDate = DateTime.UtcNow;
-                    reservation.Finalized = true;
-                    // Revert hotel booking
-                    await RevertHotelBooking(reservation.HotelId, reservation.HotelRoomReservations.Select(room => room.Id).ToList());
-                    // Revert ToDestinationTransport
-                    await RevertTransportBooking(reservation.ToDestinationTransport, 
-                        GetTotalNumberOfPeople(reservation));
-                    
-                    await RevertTransportBooking(reservation.ToDestinationTransport, 
-                        GetTotalNumberOfPeople(reservation));
-                    
-
-                    dbContext.Reservations.Update(reservation);
-                    await dbContext.SaveChangesAsync();
-                }
-                else
-                {
-                    timer.Dispose();
-                }
+                timer.Dispose();
+                return;
             }
+
+            // check if reservation has non cancelled BeingPayedFor object
+            // if yes, restart the timer and exit
+            var nonCancelledBeingPaidFor = reservation.BeingPaidFors.Any(bp => !bp.CancellationDate.HasValue);
+
+            if (nonCancelledBeingPaidFor)
+            {
+                // Restart the timer and exit
+                timer.Start();
+                return;
+            }
+
+            // otherwise (meaning there's no objects or all have cancellation date), dispose timer and cancel reservation 
+            timer.Dispose();
+            reservation.CancellationDate = DateTime.UtcNow;
+            reservation.Finalized = true;
+            // Revert hotel booking
+            await RevertHotelBooking(reservation.HotelId, reservation.HotelRoomReservations.Select(room => room.Id).ToList());
+            // Revert ToDestinationTransport
+            await RevertTransportBooking(reservation.ToDestinationTransport, 
+                GetTotalNumberOfPeople(reservation));
+            
+            await RevertTransportBooking(reservation.ToDestinationTransport, 
+                GetTotalNumberOfPeople(reservation));
+            
+
+            dbContext.Reservations.Update(reservation);
+            await dbContext.SaveChangesAsync();
         }
         
         private async Task<bool> CallPaymentService(PaymentInfoDto paymentInfo)
         {
             var response = await _payRequestClient.GetResponse<PayResponse>(new PayRequest(paymentInfo));
-            return response.Message.result;
+            return response.Message.success;
         }
         public async Task<GetAvailableDestinationsResponse> GetAvailableDestinations()
         {
@@ -268,7 +268,8 @@ namespace reservationservice.Services.Reservation;
 
         public async Task<GetReservationsResponse> GetReservations(GetReservationsRequest request)
         {
-            var reservations = await _dbContext.Reservations
+            await using var dbContext = _dbContextFactory.CreateDbContext();
+            var reservations = await dbContext.Reservations
                 .Include(r => r.HotelRoomReservations)
                 .Include(r => r.BeingPaidFors)
                 .Where(r => r.UserId == request.UserId)
@@ -280,7 +281,8 @@ namespace reservationservice.Services.Reservation;
         public async Task<GetSingleReservationResponse> GetSingleReservation(
             GetSingleReservationRequest getSingleReservationRequest)
         {
-            var reservation = await _dbContext.Reservations
+            await using var dbContext = _dbContextFactory.CreateDbContext();
+            var reservation = await dbContext.Reservations
                 .Include(r => r.HotelRoomReservations)
                 .Include(r => r.BeingPaidFors)
                 .FirstOrDefaultAsync(r => r.Id == getSingleReservationRequest.ReservationId);
@@ -290,16 +292,17 @@ namespace reservationservice.Services.Reservation;
 
         public async Task<BuyResponse> Buy(BuyRequest buyRequest)
         {
+            await using var dbContext = _dbContextFactory.CreateDbContext();
             try
             {
                 // Fetch reservation
-                var reservation = await _dbContext.Reservations
+                var reservation = await dbContext.Reservations
                     .Include(r => r.BeingPaidFors)
                     .FirstOrDefaultAsync(r => r.Id == buyRequest.ReservationId);
 
-                if (reservation == null)
+                if (reservation == null || reservation.Finalized)
                 {
-                    return new BuyResponse(false); // Reservation not found
+                    return new BuyResponse(false);
                 }
 
                 // Mark reservation as being paid for in database
@@ -310,24 +313,23 @@ namespace reservationservice.Services.Reservation;
                     CancellationDate = null
                 };
 
-                await _dbContext.BeingPaidFors.AddAsync(beingPaidFor);
-                await _dbContext.SaveChangesAsync();
-
-                // Call payment service with payment info
+                await dbContext.BeingPaidFors.AddAsync(beingPaidFor);
+                await dbContext.SaveChangesAsync();
+                
                 var paymentResponse = await CallPaymentService(buyRequest.PaymentInfo);
 
                 if (paymentResponse)
                 {
                     // If payment service returned True, mark as finalized
                     reservation.Finalized = true;
-                    await _dbContext.SaveChangesAsync();
+                    await dbContext.SaveChangesAsync();
                     return new BuyResponse(true);
                 }
                 else
                 {
                     // Otherwise, modify active BeingPaidFor as cancelled
                     beingPaidFor.CancellationDate = DateTime.UtcNow;
-                    await _dbContext.SaveChangesAsync();
+                    await dbContext.SaveChangesAsync();
                     return new BuyResponse(false);
                 }
             }
@@ -375,11 +377,12 @@ namespace reservationservice.Services.Reservation;
         
         public async Task<CreateReservationResponse> CreateReservation(CreateReservationRequest createReservationRequest)
         {
-            await using var transaction = await _dbContext.Database.BeginTransactionAsync();
+            await using var dbContext = _dbContextFactory.CreateDbContext();
+            await using var transaction = await dbContext.Database.BeginTransactionAsync();
 
             try
             {
-                // 1. Try to book hotel with given number of rooms
+                // Try to book hotel with given number of rooms
                 var hotelBookRoomsResponse = await _bookRoomsClient.GetResponse<HotelBookRoomsResponse>(
                     new HotelBookRoomsRequest(new HotelBookRoomsDto
                     {
@@ -394,7 +397,7 @@ namespace reservationservice.Services.Reservation;
                     throw new Exception("Failed to book hotel rooms");
                 }
 
-                // 2. Try to reserve ToDestinationTransport
+                // Try to reserve ToDestinationTransport
                 var toDestinationTransportResponse = await _subtractSeatsClient.GetResponse<TransportOptionSubtractSeatsResponse>(
                     new TransportOptionSubtractSeatsRequest(createReservationRequest.Reservation.ToDestinationTransport, 
                         GetTotalNumberOfPeople(createReservationRequest.Reservation)));
@@ -424,8 +427,8 @@ namespace reservationservice.Services.Reservation;
                 // 4. If all above were positive, create Reservation object and add it to database
                 var reservation = await ReservationFromDtos(createReservationRequest, hotelBookRoomsResponse);
 
-                await _dbContext.Reservations.AddAsync(reservation);
-                await _dbContext.SaveChangesAsync();
+                await dbContext.Reservations.AddAsync(reservation);
+                await dbContext.SaveChangesAsync();
 
                 await transaction.CommitAsync();
                 SetCancellationTimer(reservation.Id);
@@ -545,23 +548,6 @@ namespace reservationservice.Services.Reservation;
                     getAvailableRoomsRequest.End));
             return new GetAvailableRoomsResponse(response.Message.Rooms);
         }
-        
-        protected virtual void Dispose(bool disposing)
-        {
-            if (!_disposed)
-            {
-                if (disposing)
-                {
-                    _dbContext?.Dispose();
-                }
-                _disposed = true;
-            }
-        }
 
-        public void Dispose()
-        {
-            Dispose(true);
-            GC.SuppressFinalize(this);
-        }
     }
         

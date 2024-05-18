@@ -1,3 +1,3 @@
 namespace contracts;
 
-public record PayResponse(bool result);
+public record PayResponse(bool success);

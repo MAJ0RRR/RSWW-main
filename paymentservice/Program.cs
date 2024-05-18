@@ -24,7 +24,7 @@ builder.ConfigureServices((hostContext, services) =>
             cfg.ConfigureEndpoints(context);
         });
     });
-    
+    services.AddLogging();
     services.AddScoped<PaymentService>();
 });
 
