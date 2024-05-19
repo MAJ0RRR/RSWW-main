@@ -20,11 +20,26 @@ public class TransportService
         var transport = new TransportOption
         {
             Id = Guid.NewGuid(),
+            FromCountry = request.TransportOption.FromCountry,
+            FromCity = request.TransportOption.FromCity,
+            FromStreet = request.TransportOption.FromStreet,
+            FromShowName = request.TransportOption.FromShowName,
+            ToCountry = request.TransportOption.ToCountry,
+            ToCity = request.TransportOption.ToCity,
+            ToStreet = request.TransportOption.ToStreet,
+            ToShowName = request.TransportOption.ToShowName,
             Start = request.TransportOption.Start,
             End = request.TransportOption.End,
             InitialSeats = request.TransportOption.SeatsAvailable,
             PriceAdult = request.TransportOption.PriceAdult,
-
+            Type = request.TransportOption.Type,
+            Discounts = new List<Discount>()
+        };
+        
+        _dbContext.TransportOptions.Add(transport);
+        await _dbContext.SaveChangesAsync();
+        
+        return new AddTransportOptionResponse(transport.ToDto());
     }
 
     public TransportOptionSearchResponse SearchTransportOptions(TransportOptionSearchRequest request)
@@ -77,7 +92,14 @@ public class TransportService
 
     public async Task<GetTransportOptionsResponse> GetTransportOptions(GetTransportOptionsRequest request)
     {
+        var transports = await _dbContext.TransportOptions
+            .Include(to => to.Discounts)
+            .Include(to => to.SeatsChanges)
+            .ToListAsync();
 
+        var transportsDto = transports.Select(transport => transport.ToDto()).ToList();
+
+        return new GetTransportOptionsResponse(transportsDto);
     }
 
     public async Task<GetTransportOptionResponse> GetTransportOption(GetTransportOptionRequest request)
@@ -89,7 +111,12 @@ public class TransportService
 
         if (transportQuery == null)
         {
+            return null;
+        }
+        
+        var transportsDto = transportQuery.ToDto();
 
+        return new GetTransportOptionResponse(transportsDto);
     }
 
     public TransportOptionAddSeatsResponse AddSeats(TransportOptionAddSeatsRequest request)
@@ -199,6 +226,7 @@ public class TransportService
             }
         });
     }
-
-
 }
+
+
+

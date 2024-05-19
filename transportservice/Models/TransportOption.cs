@@ -34,20 +34,14 @@ public class TransportOption
             PriceUnder10 = PriceAdult * (decimal)0.5,
             PriceUnder18 = PriceAdult * (decimal)0.9,
             Type = this.Type,
-            From = new AddressDto
-            {
-                Street = this.FromStreet,
-                City = this.FromCity,
-                Country = this.FromCountry,
-                ShowName = this.FromShowName
-            },
-            To = new AddressDto
-            {
-                Street = this.ToStreet,
-                City = this.ToCity,
-                Country = this.ToCountry,
-                ShowName = this.ToShowName
-            }
+            FromStreet = this.FromStreet,
+            FromCity = this.FromCity,
+            FromCountry = this.FromCountry,
+            FromShowName = this.FromShowName,
+            ToStreet = this.ToStreet,
+            ToCity = this.ToCity,
+            ToCountry = this.ToCountry,
+            ToShowName = this.ToShowName
         };
     }
 }
