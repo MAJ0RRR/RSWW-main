@@ -4,10 +4,15 @@ volumes:
 
 name: hpds-production
 services:
+  front:
+    image: kepins/hpds:front
+    ports:
+      - ${EXPOSE_PORT}:80
+    depends_on:
+      - apigateway
+
   apigateway:
     image: kepins/hpds:apigateway
-    ports:
-      - 8001:80
     depends_on:
       rabbitmq:
         condition: service_healthy
