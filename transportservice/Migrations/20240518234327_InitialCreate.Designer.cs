@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using transportservice.Models;
@@ -11,9 +12,10 @@ using transportservice.Models;
 namespace transportservice.Migrations
 {
     [DbContext(typeof(TransportDbContext))]
-    partial class TransportDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240518234327_InitialCreate")]
+    partial class InitialCreate
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -42,6 +44,9 @@ namespace transportservice.Migrations
                     b.Property<string>("Street")
                         .IsRequired()
                         .HasColumnType("text");
+
+                    b.Property<Guid>("TransportId")
+                        .HasColumnType("uuid");
 
                     b.HasKey("Id");
 
@@ -98,25 +103,19 @@ namespace transportservice.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uuid");
 
+                    b.Property<decimal>("Adult")
+                        .HasColumnType("numeric");
+
                     b.Property<DateTime>("End")
                         .HasColumnType("timestamp with time zone");
 
                     b.Property<Guid>("FromAddressId")
                         .HasColumnType("uuid");
 
-                    b.Property<int>("InitialSeats")
-                        .HasColumnType("integer");
-
-                    b.Property<decimal>("PriceAdult")
-                        .HasColumnType("numeric");
-
                     b.Property<DateTime>("Start")
                         .HasColumnType("timestamp with time zone");
 
                     b.Property<Guid>("ToAddressId")
-                        .HasColumnType("uuid");
-
-                    b.Property<Guid>("ToAddressId1")
                         .HasColumnType("uuid");
 
                     b.Property<string>("Type")
@@ -129,15 +128,13 @@ namespace transportservice.Migrations
 
                     b.HasIndex("ToAddressId");
 
-                    b.HasIndex("ToAddressId1");
-
                     b.ToTable("TransportOptions");
                 });
 
             modelBuilder.Entity("transportservice.Models.Discount", b =>
                 {
                     b.HasOne("transportservice.Models.TransportOption", null)
-                        .WithMany("Discounts")
+                        .WithMany()
                         .HasForeignKey("TransportOptionId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -146,7 +143,7 @@ namespace transportservice.Migrations
             modelBuilder.Entity("transportservice.Models.SeatsChange", b =>
                 {
                     b.HasOne("transportservice.Models.TransportOption", null)
-                        .WithMany("SeatsChanges")
+                        .WithMany()
                         .HasForeignKey("TransportOptionId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -154,39 +151,17 @@ namespace transportservice.Migrations
 
             modelBuilder.Entity("transportservice.Models.TransportOption", b =>
                 {
-                    b.HasOne("transportservice.Models.Address", "FromAddress")
+                    b.HasOne("transportservice.Models.Address", null)
                         .WithMany()
                         .HasForeignKey("FromAddressId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("transportservice.Models.Address", null)
-                        .WithMany("TransportOptions")
+                        .WithMany()
                         .HasForeignKey("ToAddressId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-
-                    b.HasOne("transportservice.Models.Address", "ToAddress")
-                        .WithMany()
-                        .HasForeignKey("ToAddressId1")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("FromAddress");
-
-                    b.Navigation("ToAddress");
-                });
-
-            modelBuilder.Entity("transportservice.Models.Address", b =>
-                {
-                    b.Navigation("TransportOptions");
-                });
-
-            modelBuilder.Entity("transportservice.Models.TransportOption", b =>
-                {
-                    b.Navigation("Discounts");
-
-                    b.Navigation("SeatsChanges");
                 });
 #pragma warning restore 612, 618
         }

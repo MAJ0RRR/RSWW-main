@@ -2,36 +2,55 @@
 using contracts;
 using contracts.Dtos;
 using Microsoft.EntityFrameworkCore;
-using transportservice.Persistence;
+using transportservice.Models;
 
 namespace transportservice.Services.Transport;
 
 public class TransportService
 {
-    private readonly DbContextOptions _dbContext;
+    private readonly TransportDbContext _dbContext;
 
-    public TransportService(DbContextOptions dbContext)
+    public TransportService(TransportDbContext dbContext)
     {
         _dbContext = dbContext;
     }
     
-    public AddTransportOptionResponse AddTransportOption(AddTransportOptionRequest request)
+    public async Task<AddTransportOptionResponse> AddTransportOption(AddTransportOptionRequest request)
     {
-        return new AddTransportOptionResponse(new TransportOptionDto
+        var From = new Address
+        {
+            Id = new Guid(),
+            Country = request.TransportOption.From.Country,
+            City = request.TransportOption.From.City,
+            Street = request.TransportOption.From.Street,
+            ShowName = request.TransportOption.From.ShowName
+        };
+        
+        var To = new Address
+        {
+            Id = new Guid(),
+            Country = request.TransportOption.To.Country,
+            City = request.TransportOption.To.City,
+            Street = request.TransportOption.To.Street,
+            ShowName = request.TransportOption.To.ShowName
+        };
+        
+        var transport = new TransportOption
         {
             Id = Guid.NewGuid(),
-            From = request.TransportOption.From,
-            To = request.TransportOption.To,
+            FromAddressId = From.Id,
+            ToAddressId = To.Id,
             Start = request.TransportOption.Start,
             End = request.TransportOption.End,
-            SeatsAvailable = request.TransportOption.SeatsAvailable,
+            InitialSeats = request.TransportOption.SeatsAvailable,
             PriceAdult = request.TransportOption.PriceAdult,
-            PriceUnder3 = request.TransportOption.PriceUnder3,
-            PriceUnder10 = request.TransportOption.PriceUnder10,
-            PriceUnder18 = request.TransportOption.PriceUnder18,
             Type = request.TransportOption.Type,
-            Discounts = new List<DiscountDto>()
-        });
+        };
+        
+        _dbContext.TransportOptions.Add(transport);
+        await _dbContext.SaveChangesAsync();
+        
+        return new AddTransportOptionResponse(transport.ToDto());
     }
 
     public TransportOptionSearchResponse SearchTransportOptions(TransportOptionSearchRequest request)
