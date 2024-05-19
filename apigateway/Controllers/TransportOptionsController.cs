@@ -35,7 +35,7 @@ public class TransportOptionsController : ControllerBase
     }
     
     [HttpGet(Name = "GetTransportOptions")]
-    public async Task<ActionResult<IEnumerable<TransportOption>>> Get()
+    public async Task<ActionResult<IEnumerable<TransportOptionDto>>> Get()
     {
         var response = await _getTransportOptionsClient.GetResponse<ReservationGetTransportOptionsResponse>(new ReservationGetTransportOptionsRequest());
         return Ok(response.Message.TransportOptions);
@@ -43,7 +43,7 @@ public class TransportOptionsController : ControllerBase
     
     [Authorize("RequireAdmin")]
     [HttpPost(Name = "PostTransportOption")]
-    public async Task<ActionResult<TransportOption>> Post(TransportOptionCreate transportOptionCreate)
+    public async Task<ActionResult<TransportOptionDto>> Post(TransportOptionCreate transportOptionCreate)
     {
         var transportOptionDto = new TransportOptionDto
         {
@@ -71,7 +71,7 @@ public class TransportOptionsController : ControllerBase
     }
     
     [HttpGet("{id}", Name = "GetTransportOption")]
-    public async Task<ActionResult<TransportOption>> Get(Guid id, DateTime? fromTimeStamp)
+    public async Task<ActionResult<TransportOptionDto>> Get(Guid id, DateTime? fromTimeStamp)
     {
         var response = await _getTransportOptionClient.GetResponse<ReservationGetTransportOptionResponse>(new ReservationGetTransportOptionRequest(id));
         return Ok(response.Message.TransportOption);

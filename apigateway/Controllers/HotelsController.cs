@@ -39,7 +39,7 @@ public class HotelsController : ControllerBase
     }
     
     [HttpGet(Name = "GetHotels")]
-    public async Task<ActionResult<IEnumerable<Hotel>>> Get()
+    public async Task<ActionResult<IEnumerable<HotelDto>>> Get()
     {
         var response = await _getHotelsClient.GetResponse<ReservationGetHotelsResponse>(new ReservationGetHotelsRequest());
         return Ok(response.Message.Hotels);
@@ -47,7 +47,7 @@ public class HotelsController : ControllerBase
     
     [Authorize("RequireAdmin")]
     [HttpPost(Name = "PostHotel")]
-    public async Task<ActionResult<Hotel>> Post(HotelCreate hotelCreate)
+    public async Task<ActionResult<HotelDto>> Post(HotelCreate hotelCreate)
     {
         var rooms = new List<contracts.Dtos.RoomsCount>();
         
@@ -72,14 +72,14 @@ public class HotelsController : ControllerBase
     }
     
     [HttpGet("{id}", Name = "GetHotel")]
-    public async Task<ActionResult<Hotel>> Get(Guid id, DateTime? fromTimeStamp)
+    public async Task<ActionResult<HotelDto>> Get(Guid id, DateTime? fromTimeStamp)
     {
         var response = await _getHotelClient.GetResponse<ReservationGetHotelResponse>(new ReservationGetHotelRequest(id));
         return Ok(response.Message.Hotel);
     }
     
     [HttpGet("{id}/RoomsAvailability", Name = "GetHotelRoomsAvailability")]
-    public async Task<ActionResult<HotelRoomAvailability>> GetRoomsAvailability(Guid id)
+    public async Task<ActionResult<RoomAvailabilityDto>> GetRoomsAvailability(Guid id)
     {
         var response = await _getAvailableRoomsClient.GetResponse<GetAvailableRoomsResponse>(new GetAvailableRoomsRequest(id, DateTime.UtcNow, DateTime.UtcNow.AddDays(1)));
         return Ok(response.Message.Rooms);

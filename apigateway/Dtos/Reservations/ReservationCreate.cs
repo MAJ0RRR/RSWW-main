@@ -27,5 +27,5 @@ public class ReservationCreate
     public bool FoodIncluded { get; set; }
     
     [Required]
-    public IEnumerable<ReservationHotelRoom> Rooms { get; set; }
+    public IEnumerable<contracts.Dtos.ReservationHotelRoom> Rooms { get; set; }
 }

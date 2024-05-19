@@ -37,7 +37,7 @@ public class ReservationsController : ControllerBase
     
     [Authorize]
     [HttpGet(Name = "GetReservations")]
-    public async Task<ActionResult<IEnumerable<Reservation>>> Get()
+    public async Task<ActionResult<IEnumerable<ReservationDto>>> Get()
     {
         var response = await _getReservationsClient.GetResponse<GetReservationsResponse>(
             new GetReservationsRequest(Guid.Parse(User.FindFirstValue(ClaimTypes.Name))));
@@ -46,7 +46,7 @@ public class ReservationsController : ControllerBase
     
     [Authorize]
     [HttpPost(Name = "PostReservation")]
-    public async Task<ActionResult<Reservation>> Post(ReservationCreate reservationCreate)
+    public async Task<ActionResult<ReservationDto>> Post(ReservationCreate reservationCreate)
     {
         var reservationDto = new CreateReservationDto
         {
@@ -61,7 +61,7 @@ public class ReservationsController : ControllerBase
             FromDestinationTransport = reservationCreate.FromHotelTransportOptionId.GetValueOrDefault(),
             WithFood = reservationCreate.FoodIncluded,
             StartDate = reservationCreate.DateTime,
-            NumberOfNights = reservationCreate.NumberOfNights
+            NumberOfNights = reservationCreate.NumberOfNights,
         };
         var response = await _createReservationClient.GetResponse<CreateReservationResponse>(new CreateReservationRequest(reservationDto));
         return Ok(response.Message.Reservation);
@@ -69,7 +69,7 @@ public class ReservationsController : ControllerBase
     
     [Authorize]
     [HttpGet("{id}", Name = "GetReservation")]
-    public async Task<ActionResult<Reservation>> Get(Guid id)
+    public async Task<ActionResult<ReservationDto>> Get(Guid id)
     {
         var response = await _getSingleReservationClient.GetResponse<GetSingleReservationResponse>(new GetSingleReservationRequest(id));
         return Ok(response.Message.Reservation);
