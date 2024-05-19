@@ -76,7 +76,7 @@ public class HotelService
                 City = "Berlin",
                 Country = "Germany",
                 Street = "Sample Street",
-                Rooms = new List<RoomsCount>(){Price = 10, Size = 2, Count = 1},
+                Rooms = new List<RoomsCount>(){new RoomsCount{Price = 10, Size = 2, Count = 1}},
                 FoodPricePerPerson = 20
             },
             new HotelDto
@@ -86,7 +86,7 @@ public class HotelService
                 City = "Berlin",
                 Country = "Germany",
                 Street = "Sample Street",
-                Rooms = new List<RoomsCount>(){Price = 10, Size = 2, Count = 1},
+                Rooms = new List<RoomsCount>(){new RoomsCount{Price = 10, Size = 2, Count = 1}},
                 FoodPricePerPerson = 20
             },
             
@@ -97,7 +97,7 @@ public class HotelService
                 City = "Paris",
                 Country = "France",
                 Street = "Sample Street",
-                Rooms = new List<RoomsCount>(){Price = 10, Size = 2, Count = 1},
+                Rooms = new List<RoomsCount>(){new RoomsCount{Price = 10, Size = 2, Count = 1}},
                 FoodPricePerPerson = 20
             }
         });
@@ -133,7 +133,7 @@ public class HotelService
 
     public HotelGetAvailableRoomsResponse GetAvailableRooms(HotelGetAvailableRoomsRequest request)
     {
-        return new HotelGetAvailableRoomsResponse(new RoomAvailabilityDto {StartDate = DateTime.UtcNow, EndDate = DateTime.UtcNow.AddDays(1), Rooms = new List<RoomsCount>(){Price = 10, Size = 2, Count = 1}});
+        return new HotelGetAvailableRoomsResponse(new RoomAvailabilityDto {StartDate = DateTime.UtcNow, EndDate = DateTime.UtcNow.AddDays(1), Rooms = new List<RoomsCount>(){new RoomsCount{Price = 10, Size = 2, Count = 1}}});
     }
 
     public HotelAddDiscountResponse AddDiscount(HotelAddDiscountRequest request)
