@@ -113,12 +113,12 @@ public class TransportService
             new TransportOptionDto
             {
                 Id = Guid.NewGuid(),
-                FromCity = "Berlin",
-                FromCountry = "Germany",
+                FromCity = "Warsaw",
+                FromCountry = "Poland",
                 FromStreet = "Sample Street",
                 FromShowName = "Sample Show Name",
-                ToCity = "Warsaw",
-                ToCountry = "Poland",
+                ToCity = "Berlin",
+                ToCountry = "Germany",
                 ToStreet = "Destination Street",
                 ToShowName = "Destination Show Name",
                 Start = DateTime.Now.AddHours(1),
