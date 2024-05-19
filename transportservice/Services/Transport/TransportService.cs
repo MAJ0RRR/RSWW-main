@@ -99,11 +99,33 @@ public class TransportService
         return new TransportOptionAddSeatsResponse();
     }
 
-    public TransportOptionAddDiscountResponse AddDiscount(TransportOptionAddDiscountRequest request)
+    public async Task<TransportOptionAddDiscountResponse> AddDiscount(TransportOptionAddDiscountRequest request)
     {
+        var transportQuery = await _dbContext.TransportOptions
+            .Include(to => to.Discounts)
+            .Include(to => to.SeatsChanges)
+            .FirstOrDefaultAsync(to => to.Id == request.Id);
+
+        if(transportQuery == null)
+        {
+            return null;
+        }
+
+        var newDiscount = new Discount
+        {
+            Id = Guid.NewGuid(),
+            TransportOptionId = request.Id,
+            Value = request.Discount.Value,
+            Start = request.Discount.Start,
+            End = request.Discount.End
+        };
+
+        transportQuery.Discounts.Add(newDiscount);
+        await _dbContext.SaveChangesAsync();
+        
         return new TransportOptionAddDiscountResponse();
     }
-
+    
     public TransportOptionSubtractSeatsResponse SubtractSeats(TransportOptionSubtractSeatsRequest request)
     {
         return new TransportOptionSubtractSeatsResponse(true);

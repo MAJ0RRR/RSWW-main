@@ -45,16 +45,6 @@ services:
       postgres:
         condition: service_healthy
 
-  transportservice:
-    build:
-      context: .
-      dockerfile: transportservice/Dockerfile
-    depends_on:
-      rabbitmq:
-        condition: service_healthy
-      postgres:
-        condition: service_healthy
-
   postgres:
     build:
       context: .
