@@ -15,31 +15,24 @@ public class Hotel
 
     public HotelDto ToDto()
     {
-        var roomsDictionary = this.Rooms
-            .GroupBy(room => room.Size)
-            .ToDictionary(
-                group => group.Key,
-                group => Tuple.Create(group.First().Price, group.Sum(room => room.Count))
-            );
+        var RoomsCount = Rooms
+            .GroupBy(r => new { r.Price, r.Size })
+            .Select(g => new RoomsCount
+            {
+                Price = g.Key.Price,
+                Size = g.Key.Size,
+                Count = g.Sum(r => r.Count)
+            }).ToList();
         
         return new HotelDto
         {
             Id = this.Id,
             Name = this.Name,
             FoodPricePerPerson = this.FoodPricePerPerson,
-            Address = new AddressDto
-            {
-                City = this.City,
-                Country = this.Country,
-                Street = this.Street,
-                ShowName = this.Name
-            },
-            Discounts = this.Discounts.Select(discount => discount.ToDto()).ToList(),
-            Bookings = this.Rooms
-                .SelectMany(room => room.Bookings)
-                .Select(booking => booking.ToDto())
-                .ToList(),
-            Rooms = roomsDictionary
+            City = this.City,
+            Country = this.Country,
+            Street = this.Street,
+            Rooms = RoomsCount
         };
     }
 }
@@ -61,7 +54,6 @@ public class RoomReservation
             Id = this.Id,
             Size = this.Rooms.Size,
             Start = this.Start,
-            End = this.End,
         };
     }
 }
