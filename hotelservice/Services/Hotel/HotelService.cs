@@ -187,28 +187,28 @@ public class HotelService
             return configs;
         }
 
-        var allConfigs = new List<Dictionary<int, int>>();
+        var configs = new List<Dictionary<int, int>>();
+        var existingRecursiveConfigs = new List<Dictionary<int, int>>();
+
         for (int i = 0; i <= numRooms[rooms[0]]; i++)
         {
-            var subConfigs = GetConfigs(rooms.Skip(1).ToList(), numRooms, numPeople - i * rooms[0]);
-            foreach (var subConfig in subConfigs)
+            var recursiveConfigs = GetConfigs(rooms.Skip(1).ToList(), numRooms, numPeople - i * rooms[0]);
+            foreach (var rc in recursiveConfigs)
             {
-                var newConfig = new Dictionary<int, int> { { rooms[0], i } };
-                foreach (var kvp in subConfig)
+                if (!existingRecursiveConfigs.Any(c => c.SequenceEqual(rc)))
                 {
-                    if (newConfig.ContainsKey(kvp.Key))
-                    {
-                        newConfig[kvp.Key] += kvp.Value;
-                    }
-                    else
+                    existingRecursiveConfigs.Add(rc);
+                    var newConfig = new Dictionary<int, int> { { rooms[0], i } };
+                    foreach (var kvp in rc)
                     {
                         newConfig[kvp.Key] = kvp.Value;
                     }
+                    configs.Add(newConfig);
                 }
-                allConfigs.Add(newConfig);
             }
         }
-        return allConfigs;
+
+        return configs;
     }
 
     public bool IsAvailable(DateTime start, DateTime end, int minLength, int numPeople)
