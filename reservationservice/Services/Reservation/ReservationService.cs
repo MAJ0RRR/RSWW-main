@@ -395,7 +395,7 @@ namespace reservationservice.Services.Reservation;
                         Sizes = createReservationRequest.Reservation.Rooms
                     }));
 
-                if (hotelBookRoomsResponse.Message.RoomReservations == null)
+                if (hotelBookRoomsResponse.Message.RoomReservations == null || (!hotelBookRoomsResponse.Message.RoomReservations.Any()))
                 {
                     throw new Exception("Failed to book hotel rooms");
                 }

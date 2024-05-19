@@ -17,30 +17,38 @@ public class HotelService
 
     public async Task<AddHotelResponse> AddHotel(AddHotelRequest request)
     {
-        var hotel = new Models.Hotel
+        var hotelGuid = Guid.NewGuid();
+        
+        var rooms = request.Hotel.Rooms.Select(rc => new Room
         {
             Id = Guid.NewGuid(),
+            HotelId = hotelGuid,
+            Size = rc.Size,
+            Price = rc.Price,
+            Count = rc.Count,
+            Bookings = new List<RoomReservation>()
+        }).ToList();
+        
+        var hotel = new Models.Hotel
+        {
+            Id = hotelGuid,
             Name = request.Hotel.Name,
             City = request.Hotel.City,
             Country = request.Hotel.Country,
             Street = request.Hotel.Street,
             FoodPricePerPerson = request.Hotel.FoodPricePerPerson,
             Discounts = new List<Discount>(),
+            Rooms = rooms,
+            GuestConfigurations = new Dictionary<int, List<Dictionary<int, int>>>()
         };
-        
-        var Rooms = request.Hotel.Rooms.Select(rc => new Room
+
+        var roomCounts = hotel.GetRoomCounts();
+
+        for (int i = 1; i <= 10; i++)
         {
-            Id = Guid.NewGuid(),
-            HotelId = hotel.Id,
-            Size = rc.Size,
-            Price = rc.Price,
-            Count = rc.Count,
-            Bookings = new List<RoomReservation>()
-        }).ToList();
-
-
-        hotel.Rooms = Rooms;
-
+            hotel.GuestConfigurations[i] = GetConfigs(roomCounts.Keys.ToList(), roomCounts, i);
+        }
+        
         await _dbContext.Hotels.AddAsync(hotel);
         await _dbContext.SaveChangesAsync();
 
@@ -127,17 +135,65 @@ public class HotelService
         return new GetHotelResponse(hotelDto);
     }
 
-    public HotelBookRoomsResponse BookRooms(HotelBookRoomsRequest request)
+    public async Task<IEnumerable<RoomReservationDto>> BookRooms(HotelBookRoomsRequest request)
     {
-        return new HotelBookRoomsResponse(new List<RoomReservationDto>
+        var hotel = await _dbContext.Hotels
+            .Include(h => h.Rooms)
+            .ThenInclude(r => r.Bookings)
+            .FirstOrDefaultAsync(h => h.Id == request.BookingDetails.Id);
+
+        if (hotel == null)
         {
-            new RoomReservationDto
+            return Enumerable.Empty<RoomReservationDto>();
+        }
+
+        await using var transaction = await _dbContext.Database.BeginTransactionAsync();
+        try
+        {
+            var roomReservationDtos = new List<RoomReservationDto>();
+            var startDate = request.BookingDetails.Start;
+            var endDate = request.BookingDetails.Start.AddDays(request.BookingDetails.NumberOfNights);
+
+            foreach (var size in request.BookingDetails.Sizes)
             {
-                Id = Guid.NewGuid(),
-                Size = 2,
-                Start = request.BookingDetails.Start,
+                int roomSize = size.Key;
+                int nRooms = size.Value;
+
+                var room = hotel.Rooms.FirstOrDefault(r => r.Size == roomSize);
+                if (room == null)
+                {
+                    // Room of requested size does not exist in the hotel
+                    throw new InvalidOperationException("Requested room size not available");
+                }
+
+                if (!room.GetAvailability(startDate, endDate, nRooms).Any())
+                {
+                    // Not enough rooms available, rollback the transaction
+                    throw new InvalidOperationException("Not enough rooms available for requested size");
+                }
+                
+                var reservation = new RoomReservation
+                {
+                    Id = Guid.NewGuid(),
+                    RoomsId = room.Id,
+                    RoomsReserved = nRooms,
+                    Start = startDate,
+                    End = endDate,
+                };
+
+                _dbContext.RoomReservations.Add(reservation);
+                roomReservationDtos.Add(reservation.ToDto());
             }
-        });
+
+            await _dbContext.SaveChangesAsync();
+            await transaction.CommitAsync();
+            return roomReservationDtos;
+        }
+        catch (Exception)
+        {
+            await transaction.RollbackAsync();
+            return Enumerable.Empty<RoomReservationDto>();
+        }
     }
 
     public HotelGetAvailableRoomsResponse GetAvailableRooms(HotelGetAvailableRoomsRequest request)
@@ -154,29 +210,13 @@ public class HotelService
     {
         return new HotelCancelBookRoomsResponse();
     }
-    
-    private Dictionary<int, int> GetRoomCounts(List<Room> rooms)
-    {
-        var roomCounts = new Dictionary<int, int>();
-        foreach (var room in rooms)
-        {
-            if (roomCounts.ContainsKey(room.Size))
-            {
-                roomCounts[room.Size] += room.Count;
-            }
-            else
-            {
-                roomCounts[room.Size] = room.Count;
-            }
-        }
-        return roomCounts;
-    }
 
     private List<Dictionary<int, int>> GetConfigs(List<int> rooms, Dictionary<int, int> numRooms, int numPeople)
     {
+        var configs = new List<Dictionary<int, int>>();
+        
         if (rooms.Count == 1)
         {
-            var configs = new List<Dictionary<int, int>>();
             for (int i = 0; i <= numRooms[rooms[0]]; i++)
             {
                 if (rooms[0] * i >= numPeople)
@@ -187,7 +227,6 @@ public class HotelService
             return configs;
         }
 
-        var configs = new List<Dictionary<int, int>>();
         var existingRecursiveConfigs = new List<Dictionary<int, int>>();
 
         for (int i = 0; i <= numRooms[rooms[0]]; i++)
@@ -209,92 +248,6 @@ public class HotelService
         }
 
         return configs;
-    }
-
-    public bool IsAvailable(DateTime start, DateTime end, int minLength, int numPeople)
-    {
-        var roomCounts = GetRoomCounts(_dbContext.Rooms.ToList());
-        var bestConfigs = new Dictionary<int, List<Dictionary<int, int>>>();
-
-        for (int i = 1; i <= 10; i++)
-        {
-            bestConfigs[i] = GetConfigs(roomCounts.Keys.ToList(), roomCounts, i);
-        }
-
-        foreach (var config in bestConfigs[numPeople])
-        {
-            bool allAvailable = true;
-            foreach (var kvp in config)
-            {
-                int roomSize = kvp.Key;
-                int roomsRequired = kvp.Value;
-                if (roomsRequired == 0) continue;
-
-                var room = _dbContext.Rooms.FirstOrDefault(r => r.Size == roomSize);
-                if (room == null) continue;
-
-                var availability = GetAvailability(room, start, end, minLength, roomsRequired);
-                if (!availability.Any())
-                {
-                    allAvailable = false;
-                    break;
-                }
-            }
-            if (allAvailable)
-            {
-                return true;
-            }
-        }
-        return false;
-    }
-
-    private List<Tuple<DateTime, DateTime>> GetAvailability(Room room, DateTime rangeStart, DateTime rangeEnd, int minLength, int nRooms)
-    {
-        if ((rangeEnd - rangeStart).TotalDays < minLength || (rangeEnd - rangeStart).TotalDays >= 31)
-        {
-            throw new ArgumentException("Invalid range: minLength should be less than the range duration and the range should be less than 31 days.");
-        }
-
-        var rangeDays = (int)(rangeEnd - rangeStart).TotalDays + 1;
-        var freeRooms = Enumerable.Repeat(room.Count, rangeDays).ToArray();
-
-        foreach (var reservation in room.Bookings)
-        {
-            if (reservation.CancelationDate.HasValue) continue;
-            var resStart = reservation.Start > rangeStart ? reservation.Start : rangeStart;
-            var resEnd = reservation.End < rangeEnd ? reservation.End : rangeEnd;
-
-            if (resStart <= resEnd)
-            {
-                for (int i = 0; i <= (resEnd - resStart).TotalDays; i++)
-                {
-                    freeRooms[(resStart - rangeStart).Days + i] -= reservation.RoomsReserved;
-                }
-            }
-        }
-
-        var results = new List<Tuple<DateTime, DateTime>>();
-        int idx = 0;
-
-        while (idx <= rangeDays - minLength)
-        {
-            if (freeRooms.Skip(idx).Take(minLength).Any(fr => fr < nRooms))
-            {
-                idx++;
-                continue;
-            }
-
-            int endIdx = idx + minLength;
-            while (endIdx < rangeDays && freeRooms[endIdx] >= nRooms)
-            {
-                endIdx++;
-            }
-
-            results.Add(Tuple.Create(rangeStart.AddDays(idx), rangeStart.AddDays(endIdx - 1)));
-            idx = endIdx;
-        }
-
-        return results;
     }
 }
 
