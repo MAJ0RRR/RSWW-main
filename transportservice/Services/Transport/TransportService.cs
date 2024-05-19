@@ -60,7 +60,7 @@ public class TransportService
                 PriceUnder3 = 50,
                 PriceUnder10 = 70,
                 PriceUnder18 = 80,
-                Type = "Airplane",
+                Type = "Plane",
             },
             
             new TransportOptionDto
@@ -81,7 +81,7 @@ public class TransportService
                 PriceUnder3 = 50,
                 PriceUnder10 = 70,
                 PriceUnder18 = 80,
-                Type = "Airplane",
+                Type = "Plane",
             },
         });
     }
@@ -108,7 +108,7 @@ public class TransportService
                 PriceUnder3 = 50,
                 PriceUnder10 = 70,
                 PriceUnder18 = 80,
-                Type = "Airplane",
+                Type = "Plane",
             },
             new TransportOptionDto
             {
@@ -128,7 +128,7 @@ public class TransportService
                 PriceUnder3 = 50,
                 PriceUnder10 = 70,
                 PriceUnder18 = 80,
-                Type = "Airplane",
+                Type = "Plane",
             }
         });
     }
@@ -153,7 +153,7 @@ public class TransportService
             PriceUnder3 = 50,
             PriceUnder10 = 70,
             PriceUnder18 = 80,
-            Type = "Airplane",
+            Type = "Plane",
         });
     }
 
@@ -192,7 +192,7 @@ public class TransportService
             PriceUnder3 = 50,
             PriceUnder10 = 70,
             PriceUnder18 = 80,
-            Type = "Airplane",
+            Type = "Plane",
         });
     }
 
@@ -218,7 +218,7 @@ public class TransportService
                 PriceUnder3 = 50,
                 PriceUnder10 = 70,
                 PriceUnder18 = 80,
-                Type = "Airplane",
+                Type = "Plane",
             },
             new TransportOptionDto
             {
@@ -238,7 +238,7 @@ public class TransportService
                 PriceUnder3 = 50,
                 PriceUnder10 = 70,
                 PriceUnder18 = 80,
-                Type = "Airplane",
+                Type = "Plane",
             }
         });
     }
