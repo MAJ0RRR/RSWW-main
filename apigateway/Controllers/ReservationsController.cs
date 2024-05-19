@@ -60,8 +60,8 @@ public class ReservationsController : ControllerBase
             Rooms = new Dictionary<int, int>(reservationCreate.Rooms.Select(r => new KeyValuePair<int, int>(r.Size, r.Number))),
             FromDestinationTransport = reservationCreate.FromHotelTransportOptionId.GetValueOrDefault(),
             WithFood = reservationCreate.FoodIncluded,
-            StartDate = reservationCreate.DateTime.GetValueOrDefault(),
-            EndDate = reservationCreate.DateTime.GetValueOrDefault().AddDays(reservationCreate.NumberOfNights.GetValueOrDefault(1))
+            StartDate = reservationCreate.DateTime,
+            NumberOfNights = reservationCreate.NumberOfNights
         };
         var response = await _createReservationClient.GetResponse<CreateReservationResponse>(new CreateReservationRequest(reservationDto));
         return Ok(response.Message.Reservation);
@@ -82,8 +82,8 @@ public class ReservationsController : ControllerBase
         var paymentInfoDto = new PaymentInfoDto
         {
             CreditCardNumber = paymentInfo.CreditCardNumber,
-            CreditCardExpirationDate = new Tuple<string, string>(paymentInfo.ExpirationDate.Month.ToString(), paymentInfo.ExpirationDate.Year.ToString()),
-            CardSecurityCode = paymentInfo.SecurityNumber
+            ExpirationDate = paymentInfo.ExpirationDate,
+            SecurityNumber = paymentInfo.SecurityNumber
         };
         var response = await _buyClient.GetResponse<BuyResponse>(new BuyRequest(id, paymentInfoDto));
         return Ok(response.Message.Success);

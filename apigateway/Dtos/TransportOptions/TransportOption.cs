@@ -3,19 +3,13 @@ using System.Text.Json.Serialization;
 
 namespace apigateway.Dtos.TransportOptions;
 
-[JsonConverter(typeof(JsonStringEnumConverter))]
-public enum TypeOfTransport
-{
-    Plane, Bus, Own
-}
-
 public class TransportOption
 {
     [Required]
     public Guid Id { get; set; }
     
     [Required]
-    public TypeOfTransport Type { get; set; }
+    public string Type { get; set; }
     
     [Required]
     public DateTime Start { get; set; }

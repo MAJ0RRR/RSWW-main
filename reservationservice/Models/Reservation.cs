@@ -19,12 +19,14 @@ public class Reservation
     public Guid FromDestinationTransport { get; init; }
     public bool Finalized { get; set; }
     public DateTime StartDate { get; init; }
-    public DateTime EndDate { get; init; }
+    public int NumberOfNights { get; init; }
     public decimal Price { get; init; }
     public string ToCity { get; init; }
     public string? FromCity { get; init; }
     public string TransportType { get; init; }
-    public DateTime? ReservedUntil { get; init; }
+    public DateTime ReservedUntil { get; init; }
+    public bool FoodIncluded { get; set; }
+    public string HotelName { get; set; }
     
     public DateTime? CancellationDate { get; set; }
     public List<BeingPaidFor> BeingPaidFors { get; init; } = new List<BeingPaidFor>();
@@ -34,22 +36,28 @@ public class Reservation
         return new ReservationDto
         {
             Id = this.Id,
-            UserId = this.UserId,
-            NumAdults = this.NumAdults,
-            NumUnder3 = this.NumUnder3,
-            NumUnder10 = this.NumUnder10,
-            NumUnder18 = this.NumUnder18,
-            ToDestinationTransport = this.ToDestinationTransport,
+            NumberOfAdults = this.NumAdults,
+            NumberOfUnder3 = this.NumUnder3,
+            NumberOfUnder10 = this.NumUnder10,
+            NumberOfUnder18 = this.NumUnder18,
+            ToHotelTransportOptionId = this.ToDestinationTransport,
             HotelId = this.HotelId,
-            HotelRoomReservations = this.HotelRoomReservations.Select(hr => hr.Id).ToList(),
-            FromDestinationTransport = this.FromDestinationTransport,
+            Rooms = this.HotelRoomReservations.GroupBy
+                    (r =>  r.Size).Select(group => new ReservationHotelRoom
+                    {
+                        Size = group.Key,
+                        Number = group.Count() 
+                    })
+                    .ToList(),
+            FromHotelTransportOptionId = this.FromDestinationTransport,
             Finalized = this.Finalized,
-            StartDate = this.StartDate,
-            EndDate = this.EndDate,
+            DateTime = this.StartDate,
+            NumberOfNights = this.NumberOfNights,
+            FoodIncluded = this.FoodIncluded,
             Price = this.Price,
-            ToCity = this.ToCity,
+            HotelCity = this.ToCity,
+            TypeOfTransport = this.TransportType,
             FromCity = this.FromCity,
-            TransportType = this.TransportType,
             CancellationDate = this.CancellationDate,
             ReservedUntil = this.ReservedUntil
         };
@@ -58,6 +66,7 @@ public class Reservation
 
 public class HotelRoomReservation
 {
+    public int Size {get; set;}
     public Guid Id { get; init; }
     public Guid ReservationId { get; init; } // Foreign key property
     public Guid HotelRoomReservationObjectId { get; init; }

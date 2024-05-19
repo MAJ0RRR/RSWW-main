@@ -48,7 +48,7 @@ public class Reservation
     public string HotelCity { get; set; }
     
     [Required]
-    public TypeOfTransport TypeOfTransport { get; set; }
+    public string TypeOfTransport { get; set; }
     
     public string? FromCity { get; set; }
     

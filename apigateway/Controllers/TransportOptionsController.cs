@@ -48,20 +48,14 @@ public class TransportOptionsController : ControllerBase
         var transportOptionDto = new TransportOptionDto
         {
             Id = Guid.NewGuid(),
-            From = new AddressDto
-            {
-                City = transportOptionCreate.FromCity,
-                Country = transportOptionCreate.FromCountry,
-                Street = transportOptionCreate.FromStreet,
-                ShowName = transportOptionCreate.FromShowName
-            },
-            To = new AddressDto
-            {
-                City = transportOptionCreate.ToCity,
-                Country = transportOptionCreate.ToCountry,
-                Street = transportOptionCreate.ToStreet,
-                ShowName = transportOptionCreate.ToShowName
-            },
+            FromCity = transportOptionCreate.FromCity,
+            FromCountry = transportOptionCreate.FromCountry,
+            FromStreet = transportOptionCreate.FromStreet,
+            FromShowName = transportOptionCreate.FromShowName,
+            ToCity = transportOptionCreate.ToCity,
+            ToCountry = transportOptionCreate.ToCountry,
+            ToStreet = transportOptionCreate.ToStreet,
+            ToShowName = transportOptionCreate.ToShowName,
             Start = transportOptionCreate.Start,
             End = transportOptionCreate.End,
             SeatsAvailable = transportOptionCreate.SeatsAvailable,
@@ -69,8 +63,7 @@ public class TransportOptionsController : ControllerBase
             PriceUnder3 = transportOptionCreate.PriceUnder3,
             PriceUnder10 = transportOptionCreate.PriceUnder10,
             PriceUnder18 = transportOptionCreate.PriceUnder18,
-            Type = transportOptionCreate.Type.ToString(),
-            Discounts = new List<DiscountDto>()
+            Type = transportOptionCreate.Type.ToString()
         };
 
         var response = await _addTransportOptionClient.GetResponse<AddTransportOptionResponse>(new AddTransportOptionRequest(transportOptionDto));

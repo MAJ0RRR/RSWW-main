@@ -19,9 +19,9 @@ public class ReservationCreate
     [Required]
     public int NumberOfUnder18 { get; set; }
     
-    public DateTime? DateTime { get; set; }
+    public DateTime DateTime { get; set; }
     
-    public int? NumberOfNights { get; set; }
+    public int NumberOfNights { get; set; }
     
     [Required]
     public bool FoodIncluded { get; set; }

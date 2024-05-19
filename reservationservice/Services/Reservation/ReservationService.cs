@@ -96,8 +96,10 @@ namespace reservationservice.Services.Reservation;
                 NumUnder18 = createReservationRequest.Reservation.NumUnder18,
                 ToDestinationTransport = createReservationRequest.Reservation.ToDestinationTransport,
                 HotelId = hotelResponse.Message.Hotel.Id,
+                HotelName = hotelResponse.Message.Hotel.Name,
                 HotelRoomReservations = hotelBookRoomsResponse.Message.RoomReservations.Select(rr => new Models.HotelRoomReservation
                 {
+                    Size = rr.Size,
                     Id = Guid.NewGuid(),
                     HotelRoomReservationObjectId = rr.Id,
                     ReservationId = newReservationGuid
@@ -105,15 +107,16 @@ namespace reservationservice.Services.Reservation;
                 FromDestinationTransport = createReservationRequest.Reservation.FromDestinationTransport,
                 Finalized = false,
                 StartDate = createReservationRequest.Reservation.StartDate,
-                EndDate = createReservationRequest.Reservation.EndDate,
+                NumberOfNights = createReservationRequest.Reservation.NumberOfNights,
                 Price = CalculatePrice(
                     createReservationRequest.Reservation, 
                     hotelResponse.Message.Hotel,
                     toTransportOptionResponse.Message.TransportOption,
                     fromTransportOptionResponse.Message.TransportOption
                 ),
-                ToCity = toTransportOptionResponse.Message.TransportOption.To.City,
-                FromCity = toTransportOptionResponse.Message.TransportOption.From.City,
+                FromCity = toTransportOptionResponse.Message.TransportOption.FromCity,
+                ToCity = toTransportOptionResponse.Message.TransportOption.ToCity,
+                FoodIncluded = createReservationRequest.Reservation.WithFood,
                 TransportType = toTransportOptionResponse.Message.TransportOption.Type,
                 ReservedUntil = DateTime.Now.AddMinutes(ReservationDurationMinutes),
                 BeingPaidFors = new List<BeingPaidFor>()
@@ -144,10 +147,10 @@ namespace reservationservice.Services.Reservation;
             {
                 int roomSize = room.Key;
                 int roomCount = room.Value;
-
-                if (hotel.Rooms.TryGetValue(roomSize, out var roomPriceAndCount))
+                var hotelRoom = hotel.Rooms.FirstOrDefault(r => r.Size == roomSize);
+                if (hotelRoom != null)
                 {
-                    decimal roomPrice = roomPriceAndCount.Item1;
+                    decimal roomPrice = hotelRoom.Price;
                     totalPrice += roomPrice * roomCount;
                 }
                 else
@@ -238,10 +241,10 @@ namespace reservationservice.Services.Reservation;
 
             // Create a dictionary of Country -> List of Cities from the hotels
             var hotelDestinations = hotelsResponse.Message.Hotels
-                .GroupBy(hotel => hotel.Address.Country)
+                .GroupBy(hotel => hotel.Country)
                 .ToDictionary(
                     group => group.Key,
-                    group => group.Select(hotel => hotel.Address.City).Distinct().ToList()
+                    group => group.Select(hotel => hotel.City).Distinct().ToList()
                 );
 
             // Fetch all transport options
@@ -249,10 +252,10 @@ namespace reservationservice.Services.Reservation;
 
             // Create a dictionary of Country -> List of Cities from the transport options
             var transportDestinations = transportOptionsResponse.Message.TransportOptions
-                .GroupBy(option => option.To.Country)
+                .GroupBy(option => option.ToCountry)
                 .ToDictionary(
                     group => group.Key,
-                    group => group.Select(option => option.To.City).Distinct().ToList()
+                    group => group.Select(option => option.ToCity).Distinct().ToList()
                 );
 
             // Find common destinations in both dictionaries
@@ -350,8 +353,8 @@ namespace reservationservice.Services.Reservation;
             // iterate over destinationsResponse, extract To Address from each one and save City + Country
             foreach (var transport in destinationsResponse.Message.TransportOptions)
             {
-                var country = transport.To.Country;
-                var city = transport.To.City;
+                var country = transport.ToCountry;
+                var city = transport.ToCity;
 
                 if (!offers.ContainsKey(country))
                 {
@@ -368,9 +371,9 @@ namespace reservationservice.Services.Reservation;
             
             // For each City + Country combination save list of hotels in this location
             hotelsResponse.Message.Hotels
-                .Where(hotel => offers.ContainsKey(hotel.Address.Country) && offers[hotel.Address.Country].ContainsKey(hotel.Address.City))
+                .Where(hotel => offers.ContainsKey(hotel.Country) && offers[hotel.Country].ContainsKey(hotel.City))
                 .ToList()
-                .ForEach(hotel => offers[hotel.Address.Country][hotel.Address.City].Add(hotel.Name));
+                .ForEach(hotel => offers[hotel.Country][hotel.City].Add(hotel.Name));
             // TODO: do not return destinations with 0 hotels
             return new GetPopularOffersResponse(offers);
         }
@@ -388,7 +391,7 @@ namespace reservationservice.Services.Reservation;
                     {
                         Id = createReservationRequest.Reservation.Hotel,
                         Start = createReservationRequest.Reservation.StartDate,
-                        End = createReservationRequest.Reservation.EndDate,
+                        NumberOfNights = createReservationRequest.Reservation.NumberOfNights,
                         Sizes = createReservationRequest.Reservation.Rooms
                     }));
 
@@ -479,27 +482,27 @@ namespace reservationservice.Services.Reservation;
             {
                 foreach (var toTransportOption in allTransportOptions.Message.TransportOptions)
                 {
-                    if (toTransportOption.To.City == hotel.Address.City &&
-                        toTransportOption.To.Country == hotel.Address.Country)
+                    if (toTransportOption.ToCity == hotel.City &&
+                        toTransportOption.ToCountry == hotel.Country)
                     {
                         foreach (var fromTransportOption in allTransportOptions.Message.TransportOptions)
                         {
-                            if (fromTransportOption.From.City == hotel.Address.City &&
-                                fromTransportOption.From.Country == hotel.Address.Country &&
-                                fromTransportOption.To.City == toTransportOption.From.City &&
-                                fromTransportOption.To.Country == toTransportOption.From.Country &&
+                            if (fromTransportOption.FromCity == hotel.City &&
+                                fromTransportOption.FromCountry == hotel.Country &&
+                                fromTransportOption.ToCity == toTransportOption.FromCity &&
+                                fromTransportOption.ToCountry == toTransportOption.FromCountry &&
                                 fromTransportOption.Start > toTransportOption.End)
                             {
                                 var tour = new TourDto
                                 {
-                                    ToDestinationTransportOption = toTransportOption.Id,
-                                    Hotel = hotel.Id,
-                                    FromDestinationTransportOption = fromTransportOption.Id,
-                                    TransportType = toTransportOption.Type,
-                                    FromCity = toTransportOption.From.City,
-                                    ToCity = hotel.Address.City,
-                                    StartDate = toTransportOption.Start,
-                                    DurationDays = (fromTransportOption.Start - toTransportOption.Start).Days
+                                    ToHotelTransportOptionId = toTransportOption.Id,
+                                    HotelId = hotel.Id,
+                                    FromHotelTransportOptionId = fromTransportOption.Id,
+                                    TypeOfTransport = toTransportOption.Type,
+                                    HotelCity = hotel.City,
+                                    FromCity = fromTransportOption.FromCity,
+                                    DateTime = toTransportOption.Start,
+                                    NumberOfNights = (fromTransportOption.Start - toTransportOption.Start).Days
                                 };
                                 tours.Add(tour);
                             }

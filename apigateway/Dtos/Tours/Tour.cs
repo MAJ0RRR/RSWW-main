@@ -6,8 +6,7 @@ namespace apigateway.Dtos.Tours;
 public class Tour
 {
     public Guid? ToHotelTransportOptionId { get; set; }
-    [Required]
-    public Guid FromHotelTransportOptionId { get; set; }
+    public Guid? FromHotelTransportOptionId { get; set; }
     public Guid? HotelId { get; set; }
     
     [Required]
@@ -17,7 +16,7 @@ public class Tour
     public string HotelCity { get; set; }
     
     [Required]
-    public TypeOfTransport TypeOfTransport { get; set; }
+    public string TypeOfTransport { get; set; }
     
     public string? FromCity { get; set; }
     

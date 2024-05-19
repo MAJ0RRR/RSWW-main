@@ -49,26 +49,23 @@ public class HotelsController : ControllerBase
     [HttpPost(Name = "PostHotel")]
     public async Task<ActionResult<Hotel>> Post(HotelCreate hotelCreate)
     {
+        var rooms = new List<contracts.Dtos.RoomsCount>();
+        
+        foreach (var room in hotelCreate.Rooms)
+        {
+            rooms.Add(new contracts.Dtos.RoomsCount { Size = room.Size, Price = room.Price,  Count = room.Count});
+        }
         var hotelDto = new HotelDto
         {
             Id = Guid.NewGuid(),
             Name = hotelCreate.Name,
-            Address = new AddressDto
-            {
-                City = hotelCreate.City,
-                Country = hotelCreate.Country,
-                Street = hotelCreate.Street
-            },
-            Rooms = new Dictionary<int, Tuple<decimal, int>>(),
-            Bookings = new List<RoomReservationDto>(),
-            Discounts = new List<DiscountDto>(),
+            City = hotelCreate.City,
+            Country = hotelCreate.Country,
+            Street = hotelCreate.Street,
+            Rooms = rooms,
             FoodPricePerPerson = hotelCreate.FoodPricePerPerson
         };
 
-        foreach (var room in hotelCreate.Rooms)
-        {
-            hotelDto.Rooms.Add(room.Size, new Tuple<decimal, int>(room.Price, room.Count));
-        }
 
         var response = await _addHotelClient.GetResponse<AddHotelResponse>(new AddHotelRequest(hotelDto));
         return Ok(response.Message.Hotel);
