@@ -207,53 +207,20 @@ public class TransportService
         });
     }
 
-    public GetPopularDestinationsResponse GetPopularDestinations(GetPopularDestinationsRequest request)
+    public async Task<GetPopularDestinationsResponse> GetPopularDestinations(GetPopularDestinationsRequest request)
     {
-        return new GetPopularDestinationsResponse(new List<TransportOptionDto>
-        {
-            new TransportOptionDto
-            {
-                Id = Guid.NewGuid(),
-                FromCity = "Berlin",
-                FromCountry = "Germany",
-                FromStreet = "Sample Street",
-                FromShowName = "Sample Show Name",
-                ToCity = "Warsaw",
-                ToCountry = "Poland",
-                ToStreet = "Destination Street",
-                ToShowName = "Destination Show Name",
-                Start = DateTime.Now.AddHours(1),
-                End = DateTime.Now.AddHours(5),
-                SeatsAvailable = 50,
-                PriceAdult = 100,
-                PriceUnder3 = 50,
-                PriceUnder10 = 70,
-                PriceUnder18 = 80,
-                Type = "Plane",
-            },
-            new TransportOptionDto
-            {
-                Id = Guid.NewGuid(),
-                FromCity = "Berlin",
-                FromCountry = "Germany",
-                FromStreet = "Sample Street",
-                FromShowName = "Sample Show Name",
-                ToCity = "Warsaw",
-                ToCountry = "Poland",
-                ToStreet = "Destination Street",
-                ToShowName = "Destination Show Name",
-                Start = DateTime.Now.AddHours(1),
-                End = DateTime.Now.AddHours(5),
-                SeatsAvailable = 50,
-                PriceAdult = 100,
-                PriceUnder3 = 50,
-                PriceUnder10 = 70,
-                PriceUnder18 = 80,
-                Type = "Plane",
-            }
-        });
+        var transportOptions = await _dbContext.Set<TransportOption>()
+            .Include(t => t.Discounts)
+            .Include(t => t.SeatsChanges)
+            .Take(10)
+            .ToListAsync();
+
+        var transportOptionsDto = transportOptions.Select(t => t.ToDto()).ToList();
+
+        return new GetPopularDestinationsResponse(transportOptionsDto);
     }
 }
+
 
 
 
