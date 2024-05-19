@@ -42,54 +42,45 @@ public class TransportService
         return new AddTransportOptionResponse(transport.ToDto());
     }
 
-    public TransportOptionSearchResponse SearchTransportOptions(TransportOptionSearchRequest request)
+    public async Task<TransportOptionSearchResponse> SearchTransportOptions(TransportOptionSearchRequest request)
     {
-        return new TransportOptionSearchResponse(new List<TransportOptionDto>
-        {
-            new TransportOptionDto
-            {
-                Id = Guid.NewGuid(),
-                FromCity = "Warsaw",
-                FromCountry = "Poland",
-                FromStreet = "Sample Street",
-                FromShowName = "Sample Show Name",
-                ToCity = "Berlin",
-                ToCountry = "Germany",
-                ToStreet = "Destination Street",
-                ToShowName = "Destination Show Name",
-                Start = DateTime.Now.AddHours(1),
-                End = DateTime.Now.AddHours(5),
-                SeatsAvailable = 50,
-                PriceAdult = 100,
-                PriceUnder3 = 50,
-                PriceUnder10 = 70,
-                PriceUnder18 = 80,
-                Type = "Plane",
-            },
-            
-            new TransportOptionDto
-            {
-                Id = Guid.NewGuid(),
-                FromCity = "Berlin",
-                FromCountry = "Germany",
-                FromStreet = "Sample Street",
-                FromShowName = "Sample Show Name",
-                ToCity = "Warsaw",
-                ToCountry = "Poland",
-                ToStreet = "Destination Street",
-                ToShowName = "Destination Show Name",
-                Start = DateTime.Now.AddHours(10),
-                End = DateTime.Now.AddHours(14),
-                SeatsAvailable = 50,
-                PriceAdult = 100,
-                PriceUnder3 = 50,
-                PriceUnder10 = 70,
-                PriceUnder18 = 80,
-                Type = "Plane",
-            },
-        });
-    }
+        var searchCriteria = request.SearchCriteria;
+        var transportOptionsQuery = _dbContext.Set<TransportOption>()
+            .Include(t => t.Discounts)
+            .Include(t => t.SeatsChanges)
+            .AsQueryable();
 
+        if (!string.IsNullOrEmpty(searchCriteria.SourceCountry))
+        {
+            transportOptionsQuery = transportOptionsQuery.Where(t => t.FromCity == searchCriteria.SourceCountry);
+        }
+
+        if (!string.IsNullOrEmpty(searchCriteria.DestinationCity))
+        {
+            transportOptionsQuery = transportOptionsQuery.Where(t => t.ToCity == searchCriteria.DestinationCity);
+        }
+
+        if (searchCriteria.MinStart.HasValue)
+        {
+            transportOptionsQuery = transportOptionsQuery.Where(t => t.Start >= searchCriteria.MinStart.Value);
+        }
+
+        if (searchCriteria.MaxEnd.HasValue)
+        {
+            transportOptionsQuery = transportOptionsQuery.Where(t => t.End <= searchCriteria.MaxEnd.Value);
+        }
+
+        if (!string.IsNullOrEmpty(searchCriteria.Type))
+        {
+            transportOptionsQuery = transportOptionsQuery.Where(t => t.Type == searchCriteria.Type);
+        }
+
+        var transportOptions = await transportOptionsQuery.ToListAsync();
+        var transportOptionsDto = transportOptions.Select(t => t.ToDto()).ToList();
+
+        return new TransportOptionSearchResponse(transportOptionsDto);
+    }
+    
     public async Task<GetTransportOptionsResponse> GetTransportOptions(GetTransportOptionsRequest request)
     {
         var transports = await _dbContext.TransportOptions
