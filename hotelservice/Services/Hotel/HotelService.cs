@@ -155,5 +155,146 @@ public class HotelService
         return new HotelCancelBookRoomsResponse();
     }
     
+    private Dictionary<int, int> GetRoomCounts(List<Room> rooms)
+    {
+        var roomCounts = new Dictionary<int, int>();
+        foreach (var room in rooms)
+        {
+            if (roomCounts.ContainsKey(room.Size))
+            {
+                roomCounts[room.Size] += room.Count;
+            }
+            else
+            {
+                roomCounts[room.Size] = room.Count;
+            }
+        }
+        return roomCounts;
+    }
+
+    private List<Dictionary<int, int>> GetConfigs(List<int> rooms, Dictionary<int, int> numRooms, int numPeople)
+    {
+        if (rooms.Count == 1)
+        {
+            var configs = new List<Dictionary<int, int>>();
+            for (int i = 0; i <= numRooms[rooms[0]]; i++)
+            {
+                if (rooms[0] * i >= numPeople)
+                {
+                    configs.Add(new Dictionary<int, int> { { rooms[0], i } });
+                }
+            }
+            return configs;
+        }
+
+        var allConfigs = new List<Dictionary<int, int>>();
+        for (int i = 0; i <= numRooms[rooms[0]]; i++)
+        {
+            var subConfigs = GetConfigs(rooms.Skip(1).ToList(), numRooms, numPeople - i * rooms[0]);
+            foreach (var subConfig in subConfigs)
+            {
+                var newConfig = new Dictionary<int, int> { { rooms[0], i } };
+                foreach (var kvp in subConfig)
+                {
+                    if (newConfig.ContainsKey(kvp.Key))
+                    {
+                        newConfig[kvp.Key] += kvp.Value;
+                    }
+                    else
+                    {
+                        newConfig[kvp.Key] = kvp.Value;
+                    }
+                }
+                allConfigs.Add(newConfig);
+            }
+        }
+        return allConfigs;
+    }
+
+    public bool IsAvailable(DateTime start, DateTime end, int minLength, int numPeople)
+    {
+        var roomCounts = GetRoomCounts(_dbContext.Rooms.ToList());
+        var bestConfigs = new Dictionary<int, List<Dictionary<int, int>>>();
+
+        for (int i = 1; i <= 10; i++)
+        {
+            bestConfigs[i] = GetConfigs(roomCounts.Keys.ToList(), roomCounts, i);
+        }
+
+        foreach (var config in bestConfigs[numPeople])
+        {
+            bool allAvailable = true;
+            foreach (var kvp in config)
+            {
+                int roomSize = kvp.Key;
+                int roomsRequired = kvp.Value;
+                if (roomsRequired == 0) continue;
+
+                var room = _dbContext.Rooms.FirstOrDefault(r => r.Size == roomSize);
+                if (room == null) continue;
+
+                var availability = GetAvailability(room, start, end, minLength, roomsRequired);
+                if (!availability.Any())
+                {
+                    allAvailable = false;
+                    break;
+                }
+            }
+            if (allAvailable)
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    private List<Tuple<DateTime, DateTime>> GetAvailability(Room room, DateTime rangeStart, DateTime rangeEnd, int minLength, int nRooms)
+    {
+        if ((rangeEnd - rangeStart).TotalDays < minLength || (rangeEnd - rangeStart).TotalDays >= 31)
+        {
+            throw new ArgumentException("Invalid range: minLength should be less than the range duration and the range should be less than 31 days.");
+        }
+
+        var rangeDays = (int)(rangeEnd - rangeStart).TotalDays + 1;
+        var freeRooms = Enumerable.Repeat(room.Count, rangeDays).ToArray();
+
+        foreach (var reservation in room.Bookings)
+        {
+            if (reservation.CancelationDate.HasValue) continue;
+            var resStart = reservation.Start > rangeStart ? reservation.Start : rangeStart;
+            var resEnd = reservation.End < rangeEnd ? reservation.End : rangeEnd;
+
+            if (resStart <= resEnd)
+            {
+                for (int i = 0; i <= (resEnd - resStart).TotalDays; i++)
+                {
+                    freeRooms[(resStart - rangeStart).Days + i] -= reservation.RoomsReserved;
+                }
+            }
+        }
+
+        var results = new List<Tuple<DateTime, DateTime>>();
+        int idx = 0;
+
+        while (idx <= rangeDays - minLength)
+        {
+            if (freeRooms.Skip(idx).Take(minLength).Any(fr => fr < nRooms))
+            {
+                idx++;
+                continue;
+            }
+
+            int endIdx = idx + minLength;
+            while (endIdx < rangeDays && freeRooms[endIdx] >= nRooms)
+            {
+                endIdx++;
+            }
+
+            results.Add(Tuple.Create(rangeStart.AddDays(idx), rangeStart.AddDays(endIdx - 1)));
+            idx = endIdx;
+        }
+
+        return results;
+    }
 }
 
