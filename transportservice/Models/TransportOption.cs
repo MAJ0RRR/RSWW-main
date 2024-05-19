@@ -18,7 +18,7 @@ public class TransportOption
     public string ToCountry { get; set; }
     public string ToStreet { get; set; }
     public string? ToShowName { get; set; }
-    public List<Discount> Discounts { get; set; } = new List<Discount>();
+    public List<Discount> Discounts { get; set; } = new();
     public List<SeatsChange> SeatsChanges { get; set; }
 
     public TransportOptionDto ToDto()

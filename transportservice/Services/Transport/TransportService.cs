@@ -33,6 +33,7 @@ public class TransportService
             InitialSeats = request.TransportOption.SeatsAvailable,
             PriceAdult = request.TransportOption.PriceAdult,
             Type = request.TransportOption.Type,
+            Discounts = new List<Discount>()
         };
         
         _dbContext.TransportOptions.Add(transport);
@@ -65,12 +66,10 @@ public class TransportService
 
     public async Task<GetTransportOptionsResponse> GetTransportOptions(GetTransportOptionsRequest request)
     {
-        var transportQuery = _dbContext.TransportOptions
+        var transports = await _dbContext.TransportOptions
             .Include(to => to.Discounts)
             .Include(to => to.SeatsChanges)
-            .AsQueryable();
-
-        var transports = await transportQuery.ToListAsync();
+            .ToListAsync();
 
         var transportsDto = transports.Select(transport => transport.ToDto()).ToList();
 
@@ -120,7 +119,7 @@ public class TransportService
             End = request.Discount.End
         };
 
-        transportQuery.Discounts.Add(newDiscount);
+        await _dbContext.Discounts.AddAsync(newDiscount);
         await _dbContext.SaveChangesAsync();
         
         return new TransportOptionAddDiscountResponse();
