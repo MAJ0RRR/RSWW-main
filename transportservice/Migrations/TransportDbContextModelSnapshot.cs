@@ -22,32 +22,6 @@ namespace transportservice.Migrations
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
-            modelBuilder.Entity("transportservice.Models.Address", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uuid");
-
-                    b.Property<string>("City")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<string>("Country")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<string>("ShowName")
-                        .HasColumnType("text");
-
-                    b.Property<string>("Street")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Addresses");
-                });
-
             modelBuilder.Entity("transportservice.Models.Discount", b =>
                 {
                     b.Property<Guid>("Id")
@@ -101,8 +75,20 @@ namespace transportservice.Migrations
                     b.Property<DateTime>("End")
                         .HasColumnType("timestamp with time zone");
 
-                    b.Property<Guid>("FromAddressId")
-                        .HasColumnType("uuid");
+                    b.Property<string>("FromCity")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("FromCountry")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("FromShowName")
+                        .HasColumnType("text");
+
+                    b.Property<string>("FromStreet")
+                        .IsRequired()
+                        .HasColumnType("text");
 
                     b.Property<int>("InitialSeats")
                         .HasColumnType("integer");
@@ -113,23 +99,26 @@ namespace transportservice.Migrations
                     b.Property<DateTime>("Start")
                         .HasColumnType("timestamp with time zone");
 
-                    b.Property<Guid>("ToAddressId")
-                        .HasColumnType("uuid");
+                    b.Property<string>("ToCity")
+                        .IsRequired()
+                        .HasColumnType("text");
 
-                    b.Property<Guid>("ToAddressId1")
-                        .HasColumnType("uuid");
+                    b.Property<string>("ToCountry")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("ToShowName")
+                        .HasColumnType("text");
+
+                    b.Property<string>("ToStreet")
+                        .IsRequired()
+                        .HasColumnType("text");
 
                     b.Property<string>("Type")
                         .IsRequired()
                         .HasColumnType("text");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("FromAddressId");
-
-                    b.HasIndex("ToAddressId");
-
-                    b.HasIndex("ToAddressId1");
 
                     b.ToTable("TransportOptions");
                 });
@@ -150,36 +139,6 @@ namespace transportservice.Migrations
                         .HasForeignKey("TransportOptionId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-                });
-
-            modelBuilder.Entity("transportservice.Models.TransportOption", b =>
-                {
-                    b.HasOne("transportservice.Models.Address", "FromAddress")
-                        .WithMany()
-                        .HasForeignKey("FromAddressId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("transportservice.Models.Address", null)
-                        .WithMany("TransportOptions")
-                        .HasForeignKey("ToAddressId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("transportservice.Models.Address", "ToAddress")
-                        .WithMany()
-                        .HasForeignKey("ToAddressId1")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("FromAddress");
-
-                    b.Navigation("ToAddress");
-                });
-
-            modelBuilder.Entity("transportservice.Models.Address", b =>
-                {
-                    b.Navigation("TransportOptions");
                 });
 
             modelBuilder.Entity("transportservice.Models.TransportOption", b =>

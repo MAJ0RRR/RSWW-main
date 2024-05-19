@@ -6,7 +6,6 @@ namespace transportservice.Models
     public class TransportDbContext : DbContext
     {
         public DbSet<TransportOption> TransportOptions { get; set; }
-        public DbSet<Address> Addresses { get; set; }
         public DbSet<Discount> Discounts { get; set; }
         public DbSet<SeatsChange> SeatsChanges { get; set; }
 
@@ -21,19 +20,6 @@ namespace transportservice.Models
 
             modelBuilder.Entity<TransportOption>()
                 .HasKey(to => to.Id);
-
-            modelBuilder.Entity<TransportOption>()
-                .HasOne<Address>()
-                .WithMany(a => a.TransportOptions)
-                .HasForeignKey(to => to.FromAddressId);
-
-            modelBuilder.Entity<TransportOption>()
-                .HasOne<Address>()
-                .WithMany(a => a.TransportOptions)
-                .HasForeignKey(to => to.ToAddressId);
-
-            modelBuilder.Entity<Address>()
-                .HasKey(a => a.Id);
 
             modelBuilder.Entity<Discount>()
                 .HasKey(d => d.Id);

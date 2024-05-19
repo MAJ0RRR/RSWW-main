@@ -5,53 +5,32 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace transportservice.Migrations
 {
-    public partial class InitialCreate : Migration
+    public partial class initial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.CreateTable(
-                name: "Addresses",
-                columns: table => new
-                {
-                    Id = table.Column<Guid>(type: "uuid", nullable: false),
-                    TransportId = table.Column<Guid>(type: "uuid", nullable: false),
-                    City = table.Column<string>(type: "text", nullable: false),
-                    Country = table.Column<string>(type: "text", nullable: false),
-                    Street = table.Column<string>(type: "text", nullable: false),
-                    ShowName = table.Column<string>(type: "text", nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Addresses", x => x.Id);
-                });
-
             migrationBuilder.CreateTable(
                 name: "TransportOptions",
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uuid", nullable: false),
-                    ToAddressId = table.Column<Guid>(type: "uuid", nullable: false),
-                    FromAddressId = table.Column<Guid>(type: "uuid", nullable: false),
                     Start = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
                     End = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
-                    Adult = table.Column<decimal>(type: "numeric", nullable: false),
-                    Type = table.Column<string>(type: "text", nullable: false)
+                    PriceAdult = table.Column<decimal>(type: "numeric", nullable: false),
+                    Type = table.Column<string>(type: "text", nullable: false),
+                    InitialSeats = table.Column<int>(type: "integer", nullable: false),
+                    FromCity = table.Column<string>(type: "text", nullable: false),
+                    FromCountry = table.Column<string>(type: "text", nullable: false),
+                    FromStreet = table.Column<string>(type: "text", nullable: false),
+                    FromShowName = table.Column<string>(type: "text", nullable: true),
+                    ToCity = table.Column<string>(type: "text", nullable: false),
+                    ToCountry = table.Column<string>(type: "text", nullable: false),
+                    ToStreet = table.Column<string>(type: "text", nullable: false),
+                    ToShowName = table.Column<string>(type: "text", nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_TransportOptions", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_TransportOptions_Addresses_FromAddressId",
-                        column: x => x.FromAddressId,
-                        principalTable: "Addresses",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_TransportOptions_Addresses_ToAddressId",
-                        column: x => x.ToAddressId,
-                        principalTable: "Addresses",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -103,16 +82,6 @@ namespace transportservice.Migrations
                 name: "IX_SeatsChanges_TransportOptionId",
                 table: "SeatsChanges",
                 column: "TransportOptionId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_TransportOptions_FromAddressId",
-                table: "TransportOptions",
-                column: "FromAddressId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_TransportOptions_ToAddressId",
-                table: "TransportOptions",
-                column: "ToAddressId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
@@ -125,9 +94,6 @@ namespace transportservice.Migrations
 
             migrationBuilder.DropTable(
                 name: "TransportOptions");
-
-            migrationBuilder.DropTable(
-                name: "Addresses");
         }
     }
 }

@@ -12,8 +12,8 @@ using transportservice.Models;
 namespace transportservice.Migrations
 {
     [DbContext(typeof(TransportDbContext))]
-    [Migration("20240518234327_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20240519115726_initial")]
+    partial class initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -23,35 +23,6 @@ namespace transportservice.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 63);
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
-
-            modelBuilder.Entity("transportservice.Models.Address", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uuid");
-
-                    b.Property<string>("City")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<string>("Country")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<string>("ShowName")
-                        .HasColumnType("text");
-
-                    b.Property<string>("Street")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<Guid>("TransportId")
-                        .HasColumnType("uuid");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Addresses");
-                });
 
             modelBuilder.Entity("transportservice.Models.Discount", b =>
                 {
@@ -103,20 +74,47 @@ namespace transportservice.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uuid");
 
-                    b.Property<decimal>("Adult")
-                        .HasColumnType("numeric");
-
                     b.Property<DateTime>("End")
                         .HasColumnType("timestamp with time zone");
 
-                    b.Property<Guid>("FromAddressId")
-                        .HasColumnType("uuid");
+                    b.Property<string>("FromCity")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("FromCountry")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("FromShowName")
+                        .HasColumnType("text");
+
+                    b.Property<string>("FromStreet")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<int>("InitialSeats")
+                        .HasColumnType("integer");
+
+                    b.Property<decimal>("PriceAdult")
+                        .HasColumnType("numeric");
 
                     b.Property<DateTime>("Start")
                         .HasColumnType("timestamp with time zone");
 
-                    b.Property<Guid>("ToAddressId")
-                        .HasColumnType("uuid");
+                    b.Property<string>("ToCity")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("ToCountry")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("ToShowName")
+                        .HasColumnType("text");
+
+                    b.Property<string>("ToStreet")
+                        .IsRequired()
+                        .HasColumnType("text");
 
                     b.Property<string>("Type")
                         .IsRequired()
@@ -124,17 +122,13 @@ namespace transportservice.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("FromAddressId");
-
-                    b.HasIndex("ToAddressId");
-
                     b.ToTable("TransportOptions");
                 });
 
             modelBuilder.Entity("transportservice.Models.Discount", b =>
                 {
                     b.HasOne("transportservice.Models.TransportOption", null)
-                        .WithMany()
+                        .WithMany("Discounts")
                         .HasForeignKey("TransportOptionId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -143,7 +137,7 @@ namespace transportservice.Migrations
             modelBuilder.Entity("transportservice.Models.SeatsChange", b =>
                 {
                     b.HasOne("transportservice.Models.TransportOption", null)
-                        .WithMany()
+                        .WithMany("SeatsChanges")
                         .HasForeignKey("TransportOptionId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -151,17 +145,9 @@ namespace transportservice.Migrations
 
             modelBuilder.Entity("transportservice.Models.TransportOption", b =>
                 {
-                    b.HasOne("transportservice.Models.Address", null)
-                        .WithMany()
-                        .HasForeignKey("FromAddressId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                    b.Navigation("Discounts");
 
-                    b.HasOne("transportservice.Models.Address", null)
-                        .WithMany()
-                        .HasForeignKey("ToAddressId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                    b.Navigation("SeatsChanges");
                 });
 #pragma warning restore 612, 618
         }
