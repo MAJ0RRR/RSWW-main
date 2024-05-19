@@ -119,9 +119,27 @@ public class TransportService
         return new GetTransportOptionResponse(transportsDto);
     }
 
-    public TransportOptionAddSeatsResponse AddSeats(TransportOptionAddSeatsRequest request)
+    public async  Task<TransportOptionAddSeatsResponse> AddSeats(TransportOptionAddSeatsRequest request)
     {
-        return new TransportOptionAddSeatsResponse();
+        var transportQuery = await _dbContext.TransportOptions
+            .Include(to => to.Discounts)
+            .Include(to => to.SeatsChanges)
+            .FirstOrDefaultAsync(to => to.Id == request.Id);
+        
+            if (transportQuery == null)
+            {
+                return null;
+            }
+
+            transportQuery.InitialSeats += request.SeatsAmount;
+            transportQuery.SeatsChanges.Add(new SeatsChange
+            {
+                Id = Guid.NewGuid(),
+                TransportOptionId = transportQuery.Id,
+                ChangeBy = request.SeatsAmount
+            });
+
+            return new TransportOptionAddSeatsResponse();
     }
 
     public async Task<TransportOptionAddDiscountResponse> AddDiscount(TransportOptionAddDiscountRequest request)
@@ -151,9 +169,29 @@ public class TransportService
         return new TransportOptionAddDiscountResponse();
     }
     
-    public TransportOptionSubtractSeatsResponse SubtractSeats(TransportOptionSubtractSeatsRequest request)
+    public async Task<TransportOptionSubtractSeatsResponse> SubtractSeats(TransportOptionSubtractSeatsRequest request)
     {
-        return new TransportOptionSubtractSeatsResponse(true);
+        var transportQuery = await _dbContext.TransportOptions
+            .Include(to => to.Discounts)
+            .Include(to => to.SeatsChanges)
+            .FirstOrDefaultAsync(to => to.Id == request.Id);
+        
+        if (transportQuery == null)
+        {
+            return null;
+        }
+
+        transportQuery.InitialSeats -= request.SeatsAmount;
+        transportQuery.SeatsChanges.Add(new SeatsChange
+        {
+            Id = Guid.NewGuid(),
+            TransportOptionId = transportQuery.Id,
+            ChangeBy = request.SeatsAmount
+        });
+
+        bool success = true;
+
+        return new TransportOptionSubtractSeatsResponse(success);
     }
 
     public GetTransportOptionWhenResponse GetTransportOptionWhen(GetTransportOptionWhenRequest request)
