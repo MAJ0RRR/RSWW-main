@@ -189,9 +189,7 @@ public class TransportService
             ChangeBy = request.SeatsAmount
         });
 
-        bool success = true;
-
-        return new TransportOptionSubtractSeatsResponse(success);
+        return new TransportOptionSubtractSeatsResponse();
     }
 
     public GetTransportOptionWhenResponse GetTransportOptionWhen(GetTransportOptionWhenRequest request)
