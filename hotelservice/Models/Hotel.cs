@@ -111,6 +111,7 @@ public class RoomReservation
             Id = this.Id,
             Size = size,
             Start = this.Start,
+            NumberOfNights = (int)(End - Start).TotalDays
         };
     }
 }

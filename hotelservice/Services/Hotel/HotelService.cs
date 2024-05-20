@@ -134,7 +134,7 @@ public class HotelService
         return new GetHotelResponse(hotelDto);
     }
 
-    public async Task<IEnumerable<RoomReservationDto>> BookRooms(HotelBookRoomsRequest request)
+    public async Task<HotelBookRoomsResponse> BookRooms(HotelBookRoomsRequest request)
     {
         var hotel = await _dbContext.Hotels
             .Include(h => h.Rooms)
@@ -143,7 +143,7 @@ public class HotelService
 
         if (hotel == null)
         {
-            return Enumerable.Empty<RoomReservationDto>();
+            return new HotelBookRoomsResponse(Enumerable.Empty<RoomReservationDto>());
         }
 
         await using var transaction = await _dbContext.Database.BeginTransactionAsync();
@@ -186,12 +186,12 @@ public class HotelService
 
             await _dbContext.SaveChangesAsync();
             await transaction.CommitAsync();
-            return roomReservationDtos;
+            return new HotelBookRoomsResponse(roomReservationDtos);
         }
         catch (Exception)
         {
             await transaction.RollbackAsync();
-            return Enumerable.Empty<RoomReservationDto>();
+            return new HotelBookRoomsResponse(Enumerable.Empty<RoomReservationDto>());
         }
     }
 

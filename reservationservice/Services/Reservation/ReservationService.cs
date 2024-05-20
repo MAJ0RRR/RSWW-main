@@ -26,7 +26,7 @@ namespace reservationservice.Services.Reservation;
         private readonly IRequestClient<TransportOptionSearchRequest> _transportSearchClient;
         private readonly IRequestClient<PayRequest> _payRequestClient;
         private readonly ILogger<ReservationService> _logger;
-        private readonly int ReservationDurationMinutes = 1;
+        private readonly int ReservationDurationMinutes = 5;
 
         public ReservationService(
             IDbContextFactory<ReservationDbContext> dbContextFactory,
@@ -73,15 +73,9 @@ namespace reservationservice.Services.Reservation;
         }
         
         private async Task<Models.Reservation> ReservationFromDtos(CreateReservationRequest createReservationRequest,
-            Response<HotelBookRoomsResponse> hotelBookRoomsResponse)
+            Response<HotelBookRoomsResponse> hotelBookRoomsResponse,
+            Response<GetTransportOptionResponse> toTransportOptionResponse, Response<GetTransportOptionResponse> fromTransportOptionResponse)
         {
-            // Create reservation form request and booked rooms
-            var toTransportOptionResponse =
-                await _getTransportOptionClient.GetResponse<GetTransportOptionResponse>(
-                    new GetTransportOptionRequest(createReservationRequest.Reservation.ToDestinationTransport));
-            var fromTransportOptionResponse =
-                await _getTransportOptionClient.GetResponse<GetTransportOptionResponse>(
-                    new GetTransportOptionRequest(createReservationRequest.Reservation.FromDestinationTransport));
             var hotelResponse = await _getHotelClient.GetResponse<GetHotelResponse>(
                 new GetHotelRequest(createReservationRequest.Reservation.Hotel));
             
@@ -99,6 +93,7 @@ namespace reservationservice.Services.Reservation;
                 HotelName = hotelResponse.Message.Hotel.Name,
                 HotelRoomReservations = hotelBookRoomsResponse.Message.RoomReservations.Select(rr => new Models.HotelRoomReservation
                 {
+                    nRooms = createReservationRequest.Reservation.Rooms[rr.Size],
                     Size = rr.Size,
                     Id = Guid.NewGuid(),
                     HotelRoomReservationObjectId = rr.Id,
@@ -106,8 +101,9 @@ namespace reservationservice.Services.Reservation;
                 }).ToList(),
                 FromDestinationTransport = createReservationRequest.Reservation.FromDestinationTransport,
                 Finalized = false,
-                StartDate = createReservationRequest.Reservation.StartDate,
-                NumberOfNights = createReservationRequest.Reservation.NumberOfNights,
+                StartDate = toTransportOptionResponse.Message.TransportOption.Start,
+                NumberOfNights = (int)(fromTransportOptionResponse.Message.TransportOption.Start
+                                       - toTransportOptionResponse.Message.TransportOption.End).TotalDays,
                 Price = CalculatePrice(
                     createReservationRequest.Reservation, 
                     hotelResponse.Message.Hotel,
@@ -385,13 +381,22 @@ namespace reservationservice.Services.Reservation;
 
             try
             {
+                
+                var toTransportOptionResponse =
+                    await _getTransportOptionClient.GetResponse<GetTransportOptionResponse>(
+                        new GetTransportOptionRequest(createReservationRequest.Reservation.ToDestinationTransport));
+                var fromTransportOptionResponse =
+                    await _getTransportOptionClient.GetResponse<GetTransportOptionResponse>(
+                        new GetTransportOptionRequest(createReservationRequest.Reservation.FromDestinationTransport));
+                
                 // Try to book hotel with given number of rooms
                 var hotelBookRoomsResponse = await _bookRoomsClient.GetResponse<HotelBookRoomsResponse>(
                     new HotelBookRoomsRequest(new HotelBookRoomsDto
                     {
                         Id = createReservationRequest.Reservation.Hotel,
-                        Start = createReservationRequest.Reservation.StartDate,
-                        NumberOfNights = createReservationRequest.Reservation.NumberOfNights,
+                        Start = toTransportOptionResponse.Message.TransportOption.Start,
+                        NumberOfNights = (int)(fromTransportOptionResponse.Message.TransportOption.Start
+                                               - toTransportOptionResponse.Message.TransportOption.End).TotalDays,
                         Sizes = createReservationRequest.Reservation.Rooms
                     }));
 
@@ -428,7 +433,8 @@ namespace reservationservice.Services.Reservation;
                 }
 
                 // 4. If all above were positive, create Reservation object and add it to database
-                var reservation = await ReservationFromDtos(createReservationRequest, hotelBookRoomsResponse);
+                var reservation = await ReservationFromDtos(createReservationRequest, hotelBookRoomsResponse,
+                    toTransportOptionResponse, fromTransportOptionResponse);
 
                 await dbContext.Reservations.AddAsync(reservation);
                 await dbContext.SaveChangesAsync();
