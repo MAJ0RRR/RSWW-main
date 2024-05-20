@@ -38,17 +38,16 @@ public class HotelService
             Street = request.Hotel.Street,
             FoodPricePerPerson = request.Hotel.FoodPricePerPerson,
             Discounts = new List<Discount>(),
-            Rooms = rooms,
+            Rooms = new List<Room>(),
             GuestConfigurations = new Dictionary<int, List<Dictionary<int, int>>>()
         };
-
+        
         var roomCounts = hotel.GetRoomCounts();
 
         for (int i = 1; i <= 10; i++)
         {
             hotel.GuestConfigurations[i] = GetConfigs(roomCounts.Keys.ToList(), roomCounts, i);
         }
-        
         await _dbContext.Hotels.AddAsync(hotel);
         await _dbContext.SaveChangesAsync();
 
@@ -196,9 +195,35 @@ public class HotelService
         }
     }
 
-    public HotelGetAvailableRoomsResponse GetAvailableRooms(HotelGetAvailableRoomsRequest request)
+    public async Task<HotelGetAvailableRoomsResponse> GetAvailableRooms(HotelGetAvailableRoomsRequest request)
     {
-        return new HotelGetAvailableRoomsResponse(new RoomAvailabilityDto {StartDate = DateTime.UtcNow, EndDate = DateTime.UtcNow.AddDays(1), Rooms = new List<RoomsCount>(){new RoomsCount{Price = 10, Size = 2, Count = 1}}});
+        var hotel = await _dbContext.Hotels
+            .Include(h => h.Rooms)
+            .ThenInclude(r => r.Bookings)
+            .FirstOrDefaultAsync(h => h.Id == request.HotelId);
+        if (hotel == null)
+        {
+            return new HotelGetAvailableRoomsResponse(new RoomAvailabilityDto
+            {
+                StartDate = request.Start,
+                EndDate = request.End,
+                Rooms = Enumerable.Empty<RoomsCount>()
+            });
+        }
+        
+        var roomCounts = new List<RoomsCount>();
+
+        foreach (var room in hotel.Rooms)
+        {
+           
+        }
+
+        return new HotelGetAvailableRoomsResponse(new RoomAvailabilityDto
+        {
+            StartDate = request.Start,
+            EndDate = request.End,
+            Rooms = roomCounts
+        });
     }
 
     public HotelAddDiscountResponse AddDiscount(HotelAddDiscountRequest request)
@@ -206,8 +231,21 @@ public class HotelService
         return new HotelAddDiscountResponse();
     }
 
-    public HotelCancelBookRoomsResponse CancelBookRooms(HotelCancelBookRoomsRequest request)
+    public async Task<HotelCancelBookRoomsResponse> CancelBookRooms(HotelCancelBookRoomsRequest request)
     {
+        foreach (var bookingId in request.Bookings)
+        {
+            var reservation = await _dbContext.RoomReservations
+                .Include(r => r.Rooms)
+                .FirstOrDefaultAsync(r => r.Id == bookingId && r.Rooms.HotelId == request.Id);
+            if (reservation != null)
+            {
+                reservation.CancelationDate = DateTime.UtcNow;
+            }
+            
+            await _dbContext.SaveChangesAsync();
+        }
+
         return new HotelCancelBookRoomsResponse();
     }
 
