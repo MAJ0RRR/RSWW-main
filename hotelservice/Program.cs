@@ -15,7 +15,7 @@ builder.ConfigureServices((hostContext, services) =>
             
         // Add consumers
         busConfigurator.AddConsumer<AddHotelRequestConsumer>();
-        busConfigurator.AddConsumer<HotelSearchRequestConsumer>();
+        busConfigurator.AddConsumer<HotelCheckAvailabilityRequestConsumer>();
         busConfigurator.AddConsumer<GetHotelsRequestConsumer>();
         busConfigurator.AddConsumer<GetHotelRequestConsumer>();
         busConfigurator.AddConsumer<HotelBookRoomsRequestConsumer>();
