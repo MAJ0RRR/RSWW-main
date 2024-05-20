@@ -176,12 +176,14 @@ public class HotelService
             });
         }
         
-        var roomCounts = new List<RoomsCount>();
-
-        foreach (var room in hotel.Rooms)
-        {
-           
-        }
+        var roomCounts = hotel.Rooms
+            .Select(room => new RoomsCount
+            {
+                Count = room.GetFreeRooms(request.Start, request.End).Min(),
+                Price = room.Price,
+                Size = room.Size
+            })
+            .ToList();
 
         return new HotelGetAvailableRoomsResponse(new RoomAvailabilityDto
         {

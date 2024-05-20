@@ -152,39 +152,15 @@ public class Room
         // 2) Create a list of free rooms - array of ints with self.count at each index - we start with all rooms available
         // 3) Iterate over reservations, for each reservation that has common part with current range decrease corresponding array elements
         // 4) Iterate over list of free rooms to find valid ranges of at least minLength, save them to results list
-        const int maxDays = 60;
-        int rangeDays = (int)(rangeEnd - rangeStart).TotalDays + 1;
-
-        if (rangeDays >= maxDays)
-        {
-            rangeEnd = rangeStart.AddDays(maxDays-1);
-            rangeDays = maxDays;
-        }
+        (rangeEnd, var rangeDays) = RangeDays(rangeStart, rangeEnd);
 
         if (minLength > rangeDays || minLength == 0)
         {
             minLength = rangeDays;
         }
 
-        var freeRooms = Enumerable.Repeat(Count, rangeDays).ToArray();
+        var freeRooms = GetFreeRooms(rangeStart, rangeEnd);
 
-        foreach (var reservation in Bookings)
-        {
-            if (reservation.CancelationDate.HasValue) continue;
-            // max(reservation.Start, rangeStart)
-            var resStart = reservation.Start > rangeStart ? reservation.Start : rangeStart;
-            // min(reservation.End, rangeEnd)
-            var resEnd = reservation.End < rangeEnd ? reservation.End : rangeEnd;
-
-            if (resStart <= resEnd)
-            {
-                for (int i = 0; i <= (resEnd - resStart).TotalDays; i++)
-                {
-                    freeRooms[(resStart - rangeStart).Days + i] -= reservation.RoomsReserved;
-                }
-            }
-        }
-        
         // List<Start, End>
         var results = new List<Tuple<DateTime, DateTime>>();
         int idx = 0;
@@ -208,6 +184,45 @@ public class Room
         }
 
         return results;
+    }
+
+    private static (DateTime rangeEnd, int rangeDays) RangeDays(DateTime rangeStart, DateTime rangeEnd)
+    {
+        const int maxDays = 60;
+        int rangeDays = (int)(rangeEnd - rangeStart).TotalDays + 1;
+
+        if (rangeDays >= maxDays)
+        {
+            rangeEnd = rangeStart.AddDays(maxDays-1);
+            rangeDays = maxDays;
+        }
+
+        return (rangeEnd, rangeDays);
+    }
+
+    public int[] GetFreeRooms(DateTime rangeStart, DateTime rangeEnd)
+    {
+        (rangeEnd, var rangeDays) = RangeDays(rangeStart, rangeEnd);
+        var freeRooms = Enumerable.Repeat(Count, rangeDays).ToArray();
+
+        foreach (var reservation in Bookings)
+        {
+            if (reservation.CancelationDate.HasValue) continue;
+            // max(reservation.Start, rangeStart)
+            var resStart = reservation.Start > rangeStart ? reservation.Start : rangeStart;
+            // min(reservation.End, rangeEnd)
+            var resEnd = reservation.End < rangeEnd ? reservation.End : rangeEnd;
+
+            if (resStart <= resEnd)
+            {
+                for (int i = 0; i <= (resEnd - resStart).TotalDays; i++)
+                {
+                    freeRooms[(resStart - rangeStart).Days + i] -= reservation.RoomsReserved;
+                }
+            }
+        }
+
+        return freeRooms;
     }
 }
 
