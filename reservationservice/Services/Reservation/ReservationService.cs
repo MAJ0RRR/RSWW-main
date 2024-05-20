@@ -247,13 +247,40 @@ namespace reservationservice.Services.Reservation;
             var transportOptionsResponse = await _getTransportOptionsClient.GetResponse<GetTransportOptionsResponse>(new GetTransportOptionsRequest());
 
             // Create a dictionary of Country -> List of Cities from the transport options
-            var transportDestinations = transportOptionsResponse.Message.TransportOptions
+            var transportDestinationsTo = transportOptionsResponse.Message.TransportOptions
                 .GroupBy(option => option.ToCountry)
                 .ToDictionary(
                     group => group.Key,
                     group => group.Select(option => option.ToCity).Distinct().ToList()
                 );
-
+            
+            // Create a dictionary of Country -> List of Cities from the transport options
+            var transportDestinationsFrom = transportOptionsResponse.Message.TransportOptions
+                .GroupBy(option => option.FromCountry)
+                .ToDictionary(
+                    group => group.Key,
+                    group => group.Select(option => option.FromCity).Distinct().ToList()
+                );
+            
+            // Merge To and From dicts
+            Dictionary<string, List<string>> transportDestinations =
+                new Dictionary<string, List<string>>(transportDestinationsTo);
+            
+            foreach (var kvp in transportDestinationsFrom)
+            {
+                if (transportDestinations.ContainsKey(kvp.Key))
+                {
+                    transportDestinations[kvp.Key] = transportDestinations[kvp.Key]
+                        .Concat(kvp.Value)
+                        .Distinct()
+                        .ToList();
+                }
+                else
+                {
+                    transportDestinations[kvp.Key] = kvp.Value;
+                }
+            }
+            
             // Find common destinations in both dictionaries
             var commonDestinations = hotelDestinations
                 .Where(hotelCountry => transportDestinations.ContainsKey(hotelCountry.Key))
