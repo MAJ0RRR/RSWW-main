@@ -12,7 +12,7 @@ using hotelservice.Models;
 namespace hotelservice.Migrations
 {
     [DbContext(typeof(HotelDbContext))]
-    [Migration("20240520005943_HotelMigration")]
+    [Migration("20240520010308_HotelMigration")]
     partial class HotelMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -85,8 +85,17 @@ namespace hotelservice.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uuid");
 
+                    b.Property<int>("Count")
+                        .HasColumnType("integer");
+
                     b.Property<Guid>("HotelId")
                         .HasColumnType("uuid");
+
+                    b.Property<decimal>("Price")
+                        .HasColumnType("numeric");
+
+                    b.Property<int>("Size")
+                        .HasColumnType("integer");
 
                     b.HasKey("Id");
 

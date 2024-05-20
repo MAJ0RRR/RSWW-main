@@ -83,8 +83,17 @@ namespace hotelservice.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uuid");
 
+                    b.Property<int>("Count")
+                        .HasColumnType("integer");
+
                     b.Property<Guid>("HotelId")
                         .HasColumnType("uuid");
+
+                    b.Property<decimal>("Price")
+                        .HasColumnType("numeric");
+
+                    b.Property<int>("Size")
+                        .HasColumnType("integer");
 
                     b.HasKey("Id");
 

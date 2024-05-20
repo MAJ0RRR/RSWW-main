@@ -51,7 +51,10 @@ namespace hotelservice.Migrations
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uuid", nullable: false),
-                    HotelId = table.Column<Guid>(type: "uuid", nullable: false)
+                    HotelId = table.Column<Guid>(type: "uuid", nullable: false),
+                    Size = table.Column<int>(type: "integer", nullable: false),
+                    Price = table.Column<decimal>(type: "numeric", nullable: false),
+                    Count = table.Column<int>(type: "integer", nullable: false)
                 },
                 constraints: table =>
                 {

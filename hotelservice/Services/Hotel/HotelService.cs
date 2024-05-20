@@ -38,7 +38,7 @@ public class HotelService
             Street = request.Hotel.Street,
             FoodPricePerPerson = request.Hotel.FoodPricePerPerson,
             Discounts = new List<Discount>(),
-            Rooms = new List<Room>(),
+            Rooms = rooms,
             GuestConfigurations = new Dictionary<int, List<Dictionary<int, int>>>()
         };
         

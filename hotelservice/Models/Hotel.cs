@@ -137,11 +137,11 @@ public class Discount
 
 public class Room
 {
-    public Guid Id;
-    public Guid HotelId; // Foreign key
-    public int Size;
-    public Decimal Price;
-    public int Count;
+    public Guid Id { get; set; }
+    public Guid HotelId { get; set; } // Foreign key
+    public int Size { get; set; }
+    public Decimal Price { get; set; }
+    public int Count { get; set; }
     public List<RoomReservation> Bookings { get; set; }
     public List<Tuple<DateTime, DateTime>> GetAvailability(DateTime rangeStart, DateTime rangeEnd, int nRooms, int minLength = 0)
     {
