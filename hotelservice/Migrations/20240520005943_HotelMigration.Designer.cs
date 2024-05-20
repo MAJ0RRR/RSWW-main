@@ -12,7 +12,7 @@ using hotelservice.Models;
 namespace hotelservice.Migrations
 {
     [DbContext(typeof(HotelDbContext))]
-    [Migration("20240519225824_HotelMigration")]
+    [Migration("20240520005943_HotelMigration")]
     partial class HotelMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -143,13 +143,11 @@ namespace hotelservice.Migrations
 
             modelBuilder.Entity("hotelservice.Models.RoomReservation", b =>
                 {
-                    b.HasOne("hotelservice.Models.Room", "Rooms")
+                    b.HasOne("hotelservice.Models.Room", null)
                         .WithMany("Bookings")
                         .HasForeignKey("RoomsId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-
-                    b.Navigation("Rooms");
                 });
 
             modelBuilder.Entity("hotelservice.Models.Hotel", b =>

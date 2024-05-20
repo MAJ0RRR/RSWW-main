@@ -141,13 +141,11 @@ namespace hotelservice.Migrations
 
             modelBuilder.Entity("hotelservice.Models.RoomReservation", b =>
                 {
-                    b.HasOne("hotelservice.Models.Room", "Rooms")
+                    b.HasOne("hotelservice.Models.Room", null)
                         .WithMany("Bookings")
                         .HasForeignKey("RoomsId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-
-                    b.Navigation("Rooms");
                 });
 
             modelBuilder.Entity("hotelservice.Models.Hotel", b =>

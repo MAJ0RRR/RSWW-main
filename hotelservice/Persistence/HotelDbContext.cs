@@ -16,6 +16,22 @@ namespace hotelservice.Models
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+
+            modelBuilder.Entity<Room>()
+                .HasOne<Hotel>()
+                .WithMany(r => r.Rooms)
+                .HasForeignKey(r => r.HotelId);
+
+            modelBuilder.Entity<Discount>()
+                .HasOne<Hotel>()
+                .WithMany(d => d.Discounts)
+                .HasForeignKey(d => d.HotelId);
+
+            modelBuilder.Entity<RoomReservation>()
+                .HasOne<Room>()
+                .WithMany(rr => rr.Bookings)
+                .HasForeignKey(rr => rr.RoomsId);
+
             modelBuilder.Entity<Hotel>()
                 .HasKey(h => h.Id);
 
@@ -27,21 +43,6 @@ namespace hotelservice.Models
 
             modelBuilder.Entity<Room>()
                 .HasKey(r => r.Id);
-
-            modelBuilder.Entity<Room>()
-                .HasOne<Hotel>()
-                .WithMany(h => h.Rooms)
-                .HasForeignKey(r => r.HotelId);
-
-            modelBuilder.Entity<Discount>()
-                .HasOne<Hotel>()
-                .WithMany(h => h.Discounts)
-                .HasForeignKey(d => d.HotelId);
-
-            modelBuilder.Entity<RoomReservation>()
-                .HasOne(rr => rr.Rooms)
-                .WithMany(r => r.Bookings)
-                .HasForeignKey(rr => rr.RoomsId);
 
 
             var dateTimeConverter = new ValueConverter<DateTime, DateTime>(

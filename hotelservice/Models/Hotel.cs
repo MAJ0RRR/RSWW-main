@@ -103,14 +103,13 @@ public class RoomReservation
     public DateTime Start { get; set; }
     public DateTime End { get; set; }
     public DateTime? CancelationDate { get; set; }
-    public Room Rooms { get; set; }
 
-    public RoomReservationDto ToDto()
+    public RoomReservationDto ToDto(int size)
     {
         return new RoomReservationDto
         {
             Id = this.Id,
-            Size = this.Rooms.Size,
+            Size = size,
             Start = this.Start,
         };
     }

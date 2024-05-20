@@ -181,7 +181,7 @@ public class HotelService
                 };
 
                 _dbContext.RoomReservations.Add(reservation);
-                roomReservationDtos.Add(reservation.ToDto());
+                roomReservationDtos.Add(reservation.ToDto(roomSize));
             }
 
             await _dbContext.SaveChangesAsync();
@@ -236,8 +236,7 @@ public class HotelService
         foreach (var bookingId in request.Bookings)
         {
             var reservation = await _dbContext.RoomReservations
-                .Include(r => r.Rooms)
-                .FirstOrDefaultAsync(r => r.Id == bookingId && r.Rooms.HotelId == request.Id);
+                .FirstOrDefaultAsync(r => r.Id == bookingId);
             if (reservation != null)
             {
                 reservation.CancelationDate = DateTime.UtcNow;
