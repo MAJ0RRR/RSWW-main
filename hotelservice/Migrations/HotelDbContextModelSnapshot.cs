@@ -75,6 +75,35 @@ namespace hotelservice.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Hotels");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("b9544f88-c68e-4dcf-8f0e-bce60b680468"),
+                            City = "Berlin",
+                            Country = "Germany",
+                            FoodPricePerPerson = 20m,
+                            Name = "Berlin Hotel",
+                            Street = "Alexanderplatz"
+                        },
+                        new
+                        {
+                            Id = new Guid("9cc84410-13da-4d10-b485-b053bc22ddfb"),
+                            City = "Gdansk",
+                            Country = "Poland",
+                            FoodPricePerPerson = 15m,
+                            Name = "Gdansk Hotel",
+                            Street = "Dluga"
+                        },
+                        new
+                        {
+                            Id = new Guid("52b1252e-9555-4933-a6e0-8b47477a133c"),
+                            City = "Tokyo",
+                            Country = "Japan",
+                            FoodPricePerPerson = 25m,
+                            Name = "Tokyo Hotel",
+                            Street = "Shinjuku"
+                        });
                 });
 
             modelBuilder.Entity("hotelservice.Models.Room", b =>
@@ -100,6 +129,56 @@ namespace hotelservice.Migrations
                     b.HasIndex("HotelId");
 
                     b.ToTable("Rooms");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("31990f0a-59b5-4cfb-968e-0676d9ce6108"),
+                            Count = 5,
+                            HotelId = new Guid("b9544f88-c68e-4dcf-8f0e-bce60b680468"),
+                            Price = 100m,
+                            Size = 25
+                        },
+                        new
+                        {
+                            Id = new Guid("19439c33-13f9-4a18-8dea-8c0ef418f3ca"),
+                            Count = 5,
+                            HotelId = new Guid("b9544f88-c68e-4dcf-8f0e-bce60b680468"),
+                            Price = 150m,
+                            Size = 35
+                        },
+                        new
+                        {
+                            Id = new Guid("8cb00db1-8309-47ee-b27b-87c23aacdcda"),
+                            Count = 5,
+                            HotelId = new Guid("9cc84410-13da-4d10-b485-b053bc22ddfb"),
+                            Price = 80m,
+                            Size = 20
+                        },
+                        new
+                        {
+                            Id = new Guid("4155fad1-de49-46ce-b850-d6d617355642"),
+                            Count = 5,
+                            HotelId = new Guid("9cc84410-13da-4d10-b485-b053bc22ddfb"),
+                            Price = 120m,
+                            Size = 30
+                        },
+                        new
+                        {
+                            Id = new Guid("7931e403-43df-4fce-9dd8-9a84fc84fcf3"),
+                            Count = 5,
+                            HotelId = new Guid("52b1252e-9555-4933-a6e0-8b47477a133c"),
+                            Price = 200m,
+                            Size = 22
+                        },
+                        new
+                        {
+                            Id = new Guid("a53bb938-91d1-4c65-9fec-ea81ce33cf61"),
+                            Count = 5,
+                            HotelId = new Guid("52b1252e-9555-4933-a6e0-8b47477a133c"),
+                            Price = 300m,
+                            Size = 40
+                        });
                 });
 
             modelBuilder.Entity("hotelservice.Models.RoomReservation", b =>
@@ -155,7 +234,6 @@ namespace hotelservice.Migrations
                         .HasForeignKey("RoomsId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-
                 });
 
             modelBuilder.Entity("hotelservice.Models.Hotel", b =>

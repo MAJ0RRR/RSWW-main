@@ -464,24 +464,39 @@ namespace reservationservice.Services.Reservation;
         
         public async Task<GetAvailableToursResponse> GetAvailableTours(GetAvailableToursRequest request)
         {
-            var transportSearchDto = new TransportOptionSearchDto
+            var numPeople = request.Tours.NumPeople == 0 ? 1 : request.Tours.NumPeople;
+            var minStart = request.Tours.MinStart?.ToUniversalTime();
+            var maxEnd = request.Tours.MaxEnd?.ToUniversalTime();
+            var toTransportSearchDto = new TransportOptionSearchDto
             {
-                SeatsMinimum = request.Tours.NumPeople,
+                SeatsMinimum = numPeople,
                 SourceCity = request.Tours.SourceCity,
                 SourceCountry = request.Tours.SourceCountry,
                 DestinationCity = request.Tours.DestinationCity,
                 DestinationCountry = request.Tours.DestinationCountry,
                 Type = request.Tours.Type,
-                MinStart = request.Tours.MinStart,
-                MaxEnd = request.Tours.MaxEnd
+                MinStart = minStart,
+                MaxEnd = maxEnd
+            };
+
+            var fromTransportSearchDto = new TransportOptionSearchDto
+            {
+                SeatsMinimum = numPeople,
+                SourceCity = request.Tours.DestinationCity,
+                SourceCountry = request.Tours.DestinationCountry,
+                DestinationCity = request.Tours.SourceCity,
+                DestinationCountry = request.Tours.SourceCountry,
+                Type = request.Tours.Type,
+                MinStart =  minStart,
+                MaxEnd = maxEnd
             };
             // Get all hotels, filter them by City and Country (if the properties are not null)
             // Iterate over the list of possible hotels, for each hotel construct all possible pairs of transport options
             // A pair is valid when:
-            // MaxDuration > FromTransportOption.End - ToTransportOption.Start > MinDuration
-            // ToTransportOption.From == FromTransportOption.To && ToTransportOption.To == FromTransportOption.From
+            // MaxDuration > fromHotelTransportOption.End - toHotelTransportOption.Start > MinDuration
+            // toHotelTransportOption.From == fromHotelTransportOption.To && toHotelTransportOption.To == fromHotelTransportOption.From
             // For each pair call HotelCheckIfAvailableForTours(pair)
-            // if response was True, this tuple (ToTransportOption, FromTransportOption, Hotel> is valid
+            // if response was True, this tuple (toHotelTransportOption, fromHotelTransportOption, Hotel> is valid
             // Construct tour from that tuple and add it to list
             var allHotelsResponse = await _getHotelsClient.GetResponse<GetHotelsResponse>(new GetHotelsRequest());
             
@@ -489,49 +504,56 @@ namespace reservationservice.Services.Reservation;
                 .Where(hotel => (request.Tours.DestinationCity == null || hotel.City == request.Tours.DestinationCity) &&
                                 (request.Tours.DestinationCountry == null || hotel.Country == request.Tours.DestinationCountry))
                 .ToList();
-            var allTransportOptions = await _transportSearchClient.GetResponse<TransportOptionSearchResponse>(
-                new TransportOptionSearchRequest(transportSearchDto));
             
+            var toHotelTransportOptionsResponse = await _transportSearchClient.GetResponse<TransportOptionSearchResponse>(
+                new TransportOptionSearchRequest(toTransportSearchDto));
+
+            var fromHotelTransportOptionsResponse = await _transportSearchClient.GetResponse<TransportOptionSearchResponse>(
+                new TransportOptionSearchRequest(fromTransportSearchDto));
+
+            var maxDuration = (request.Tours.MaxDuration == null || request.Tours.MaxDuration > 60)
+                ? 60
+                : request.Tours.MaxDuration;
             var tours = new List<TourDto>();
 
             foreach (var hotel in filteredResponses)
             {
-                foreach (var toTransportOption in allTransportOptions.Message.TransportOptions)
+                foreach (var toHotelTransportOption in toHotelTransportOptionsResponse.Message.TransportOptions)
                 {
-                    if (toTransportOption.ToCity == hotel.City &&
-                        toTransportOption.ToCountry == hotel.Country)
+                    if (toHotelTransportOption.ToCity == hotel.City && toHotelTransportOption.ToCountry == hotel.Country)
                     {
-                        foreach (var fromTransportOption in allTransportOptions.Message.TransportOptions)
+                        foreach (var fromHotelTransportOption in fromHotelTransportOptionsResponse.Message.TransportOptions)
                         {
-                            var duration = (int)(fromTransportOption.End - toTransportOption.Start).TotalDays;
-                            if (duration > request.Tours.MinDuration &&
-                                duration < request.Tours.MaxDuration &&
-                                toTransportOption.FromCity == fromTransportOption.ToCity &&
-                                toTransportOption.FromCountry == fromTransportOption.ToCountry &&
-                                toTransportOption.ToCity == fromTransportOption.FromCity &&
-                                toTransportOption.ToCountry == fromTransportOption.FromCountry)
+                            var duration = (int)(fromHotelTransportOption.End - toHotelTransportOption.Start).TotalDays;
+                            if (duration > (request.Tours.MinDuration ?? 0) &&
+                                duration < maxDuration &&
+                                toHotelTransportOption.FromCity == fromHotelTransportOption.ToCity &&
+                                toHotelTransportOption.FromCountry == fromHotelTransportOption.ToCountry &&
+                                toHotelTransportOption.ToCity == fromHotelTransportOption.FromCity &&
+                                toHotelTransportOption.ToCountry == fromHotelTransportOption.FromCountry)
                             {
-                                var hotelAvailable = 
-                                    await _hotelCheckAvailabilityClient.GetResponse<HotelCheckAvailabilityResponse>(
-                                        new HotelCheckAvailabilityRequest(
-                                            hotel.Id,
-                                            toTransportOption.End,
-                                            fromTransportOption.Start,
-                                            request.Tours.NumPeople));
-                                if (!hotelAvailable.Message.Found)
+                                var hotelAvailableResponse = await _hotelCheckAvailabilityClient.GetResponse<HotelCheckAvailabilityResponse>(
+                                    new HotelCheckAvailabilityRequest(
+                                        hotel.Id,
+                                        toHotelTransportOption.End,
+                                        fromHotelTransportOption.Start,
+                                        numPeople));
+
+                                if (!hotelAvailableResponse.Message.Found)
                                 {
                                     continue;
                                 }
+
                                 var tour = new TourDto
                                 {
-                                    ToHotelTransportOptionId = toTransportOption.Id,
+                                    ToHotelTransportOptionId = toHotelTransportOption.Id,
                                     HotelId = hotel.Id,
-                                    FromHotelTransportOptionId = fromTransportOption.Id,
-                                    TypeOfTransport = toTransportOption.Type,
+                                    FromHotelTransportOptionId = fromHotelTransportOption.Id,
+                                    TypeOfTransport = toHotelTransportOption.Type,
                                     HotelCity = hotel.City,
-                                    FromCity = fromTransportOption.FromCity,
-                                    DateTime = toTransportOption.Start,
-                                    NumberOfNights = (fromTransportOption.Start - toTransportOption.Start).Days
+                                    FromCity = toHotelTransportOption.FromCity,
+                                    DateTime = toHotelTransportOption.Start,
+                                    NumberOfNights = (fromHotelTransportOption.Start - toHotelTransportOption.Start).Days
                                 };
                                 tours.Add(tour);
                             }

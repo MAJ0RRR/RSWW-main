@@ -12,8 +12,8 @@ using hotelservice.Models;
 namespace hotelservice.Migrations
 {
     [DbContext(typeof(HotelDbContext))]
-    [Migration("20240519204540_2245")]
-    partial class _2245
+    [Migration("20240520185937_HotelMigration")]
+    partial class HotelMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -85,8 +85,17 @@ namespace hotelservice.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uuid");
 
+                    b.Property<int>("Count")
+                        .HasColumnType("integer");
+
                     b.Property<Guid>("HotelId")
                         .HasColumnType("uuid");
+
+                    b.Property<decimal>("Price")
+                        .HasColumnType("numeric");
+
+                    b.Property<int>("Size")
+                        .HasColumnType("integer");
 
                     b.HasKey("Id");
 
@@ -110,9 +119,6 @@ namespace hotelservice.Migrations
                     b.Property<Guid>("RoomsId")
                         .HasColumnType("uuid");
 
-                    b.Property<Guid>("RoomsId1")
-                        .HasColumnType("uuid");
-
                     b.Property<int>("RoomsReserved")
                         .HasColumnType("integer");
 
@@ -122,8 +128,6 @@ namespace hotelservice.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("RoomsId");
-
-                    b.HasIndex("RoomsId1");
 
                     b.ToTable("RoomReservations");
                 });
@@ -153,14 +157,6 @@ namespace hotelservice.Migrations
                         .HasForeignKey("RoomsId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-
-                    b.HasOne("hotelservice.Models.Room", "Rooms")
-                        .WithMany()
-                        .HasForeignKey("RoomsId1")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Rooms");
                 });
 
             modelBuilder.Entity("hotelservice.Models.Hotel", b =>

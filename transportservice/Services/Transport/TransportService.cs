@@ -52,7 +52,17 @@ public class TransportService
 
         if (!string.IsNullOrEmpty(searchCriteria.SourceCountry))
         {
-            transportOptionsQuery = transportOptionsQuery.Where(t => t.FromCity == searchCriteria.SourceCountry);
+            transportOptionsQuery = transportOptionsQuery.Where(t => t.FromCountry == searchCriteria.SourceCountry);
+        }
+
+        if (!string.IsNullOrEmpty(searchCriteria.SourceCity))
+        {
+            transportOptionsQuery = transportOptionsQuery.Where(t => t.FromCity == searchCriteria.SourceCity);
+        }
+
+        if (!string.IsNullOrEmpty(searchCriteria.DestinationCountry))
+        {
+            transportOptionsQuery = transportOptionsQuery.Where(t => t.ToCountry == searchCriteria.DestinationCountry);
         }
 
         if (!string.IsNullOrEmpty(searchCriteria.DestinationCity))
@@ -75,7 +85,18 @@ public class TransportService
             transportOptionsQuery = transportOptionsQuery.Where(t => t.Type == searchCriteria.Type);
         }
 
+        // Retrieve the filtered transport options from the database
         var transportOptions = await transportOptionsQuery.ToListAsync();
+
+        // Perform in-memory filtering for the seats criteria
+        if (searchCriteria.SeatsMinimum != 0)
+        {
+            transportOptions = transportOptions
+                .Where(t => t.GetSeats() > searchCriteria.SeatsMinimum)
+                .ToList();
+        }
+
+        // Convert to DTOs
         var transportOptionsDto = transportOptions.Select(t => t.ToDto()).ToList();
 
         return new TransportOptionSearchResponse(transportOptionsDto);
