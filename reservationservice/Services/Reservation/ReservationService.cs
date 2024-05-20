@@ -515,27 +515,14 @@ namespace reservationservice.Services.Reservation;
                                 toTransportOption.ToCity == fromTransportOption.FromCity &&
                                 toTransportOption.ToCountry == fromTransportOption.FromCountry)
                             {
-                                var hotelCheckAvailabilityRequest = new HotelCheckAvailabilityRequest(
-                                    hotel.Id,
-                                    toTransportOption.End,
-                                    fromTransportOption.Start,
-                                    numPeople);
-
-                                // Log the request details
-                                Console.WriteLine($"Checking hotel availability for: HotelId= {hotel.Id}, " +
-                                                  $"Start={hotelCheckAvailabilityRequest.Start}, " +
-                                                  $"End={hotelCheckAvailabilityRequest.End}, " +
-                                                  $"NumPeople={hotelCheckAvailabilityRequest.NumPeople}");
-                                
-                                var hotelAvailableResponse = await _hotelCheckAvailabilityClient.GetResponse<HotelCheckAvailabilityResponse>(hotelCheckAvailabilityRequest);
-
-                                if (hotelAvailableResponse == null || hotelAvailableResponse.Message == null)
-                                {
-                                    // Log the error details
-                                    throw new InvalidOperationException("Hotel availability response is null");
-                                }
-                                var hotelAvailable = hotelAvailableResponse.Message;
-                                if (!hotelAvailable.Found)
+                                var hotelAvailable = 
+                                    await _hotelCheckAvailabilityClient.GetResponse<HotelCheckAvailabilityResponse>(
+                                        new HotelCheckAvailabilityRequest(
+                                            hotel.Id,
+                                            toTransportOption.End,
+                                            fromTransportOption.Start,
+                                            numPeople));
+                                if (!hotelAvailable.Message.Found)
                                 {
                                     continue;
                                 }
