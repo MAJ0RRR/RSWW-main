@@ -182,20 +182,19 @@ public class TransportService
             .Include(to => to.SeatsChanges)
             .FirstOrDefaultAsync(to => to.Id == request.Id);
         
-        if (transportQuery == null)
+        if (transportQuery == null ||  transportQuery.GetSeats() < request.SeatsAmount)
         {
-            return null;
+            return TransportOptionSubtractSeatsResponse(false);
         }
 
-        transportQuery.InitialSeats -= request.SeatsAmount;
         transportQuery.SeatsChanges.Add(new SeatsChange
         {
             Id = Guid.NewGuid(),
             TransportOptionId = transportQuery.Id,
-            ChangeBy = request.SeatsAmount
+            ChangeBy = -request.SeatsAmount
         });
 
-        return new TransportOptionSubtractSeatsResponse();
+        return new TransportOptionSubtractSeatsResponse(true);
     }
 
     public GetTransportOptionWhenResponse GetTransportOptionWhen(GetTransportOptionWhenRequest request)

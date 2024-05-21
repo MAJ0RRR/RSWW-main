@@ -62,7 +62,12 @@ public class ReservationsController : ControllerBase
             WithFood = reservationCreate.FoodIncluded,
         };
         var response = await _createReservationClient.GetResponse<CreateReservationResponse>(new CreateReservationRequest(reservationDto));
-        return Ok(response.Message.Reservation);
+        return response == null ? ? BadRequest(new ProblemDetails()
+        {
+            Title = "Bad login credentials,",
+            Detail = "Provided credentials do not match any account in the system.",
+            Status = 400,
+        }) : Ok(response.Message.Reservation);
     }
     
     [Authorize]
