@@ -125,6 +125,11 @@ public class ReservationService
         var hotelResponse = await _getHotelClient.GetResponse<GetHotelResponse>(
             new GetHotelRequest(createReservationRequest.Reservation.Hotel));
 
+        if (hotelResponse.Message.Hotel == null || toTransportOptionResponse.Message.TransportOption == null ||
+            fromTransportOptionResponse.Message.TransportOption == null)
+        {
+            throw new Exception("Could not fetch hotel or transport option");
+        }
         var newReservationGuid = Guid.NewGuid();
         var reservation = new Models.Reservation
         {
@@ -396,6 +401,10 @@ public class ReservationService
             var fromTransportOptionResponse =
                 await _getTransportOptionClient.GetResponse<GetTransportOptionResponse>(
                     new GetTransportOptionRequest(createReservationRequest.Reservation.FromDestinationTransport));
+
+            if (toTransportOptionResponse.Message.TransportOption == null ||
+                fromTransportOptionResponse.Message.TransportOption == null)
+                throw new Exception("Transport options do not exist");
 
             // Try to book hotel with given number of rooms
             var hotelBookRoomsResponse = await _bookRoomsClient.GetResponse<HotelBookRoomsResponse>(
