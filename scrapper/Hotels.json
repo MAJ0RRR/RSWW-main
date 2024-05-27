@@ -1,59 +1,59 @@
 {
     "albania": [
-        "Pinea Resort & Spa",
-        "Diamma Resort",
-        "Bonita Luxury Hotel",
-        "Monte Carlo Vlora",
-        "MonteCarlo Lungomare",
-        "Mel Holidays",
-        "Casa Durres",
-        "Między niebem, ziemią a morzem (z przelotem do Podgoricy)"
+        "Pinea Resort & Spa#Durres#Rruga e Dibres",
+        "Diamma Resort#Durres#Rruga Abdyl Frasheri",
+        "Bonita Luxury Hotel#Durres#Rruga Abdyl Frasheri",
+        "Monte Carlo Vlora#Vlora#Rruga 28 Nentori",
+        "MonteCarlo Lungomare#Vlora#Rruga e Kavajes",
+        "Mel Holidays#Durres#Bulevardi Bajram Curri",
+        "Casa Durres#Durres#Rruga e Dibres"
     ],
     "grecja": [
-        "Rethymno Mare Water Park",
-        "Aldemar Olympian Village",
-        "White Olive Elite Laganas",
-        "Studia Katerina",
-        "Irini Studios",
-        "",
-        "Dias Apartments"
+        "Rethymno Mare Water Park#Chania#Leoforos Vasilissis Sofias",
+        "Aldemar Olympian Village#Peloponez#Leoforos Alexandras",
+        "Studia Katerina#Nero#Leoforos Vasilissis Sofias",
+        "Irini Studios#Heraklion#Plateia Syntagmatos",
+        "Studia Maria#Nero#Leoforos Alexandras",
+        "Dias Apartments#Olimpijska#Plateia Syntagmatos"
     ],
     "turcja": [
-        "Turunc Resort",
-        "Andriake Beach Club Hotel",
-        "Kimeros Park Holiday Village",
-        "Turcja Egejska - Sułtańskie Rarytasy",
-        "Kleopatra Micador",
-        "Melissa",
-        "Kolibri Hotel"
+        "Turunc Resort#Marmaris#Bağdat Caddesi",
+        "Andriake Beach Club Hotel#Turecka#Atatürk Caddesi",
+        "Kimeros Park Holiday Village#Turecka#Bağdat Caddesi",
+        "Kleopatra Micador#Turecka#Atatürk Caddesi",
+        "Melissa#Turecka#Halaskargazi Caddesi",
+        "Kolibri Hotel#Turecka#Atatürk Caddesi"
     ],
     "hiszpania": [
-        "Evenia Zoraida Beach Resort",
-        "Evenia Olympic Park",
-        "Estival Islantilla",
-        "Cartago Nova by Alegria",
-        "Reymar Playa",
-        "Catalonia",
-        "Palia Dolce Farniente"
+        "Evenia Zoraida Beach Resort#Almeria#Paseo del Prado",
+        "Evenia Olympic Park#Brava#Calle Mayor",
+        "Estival Islantilla#Luz#Calle Mayor",
+        "Cartago Nova by Alegria#Brava#Paseo del Prado",
+        "Catalonia#Brava#Calle de Alcalá",
+        "Reymar Playa#Maresme#Paseo del Prado",
+        "GHT Oasis Park & Spa#Brava#Gran Vía"
     ],
-    "egipt": [
-        "Marina Resort Port Ghalib",
-        "Barcelo Tiran Sharm Resort",
-        "Old Vic Resort Sharm",
-        "Marina Lodge Port Ghalib",
-        "Protels Crystal Beach Resort",
-        "Falcon Naama Star",
-        "",
-        "Bliss Nada Beach Resort"
+    "wlochy": [
+        "San Domenico#Kalabria#Via del Corso",
+        "Baia di Zambrone#Kalabria#Via Veneto",
+        "Rada Siri#Kalabria#Via Veneto",
+        "Hotel Orizzonte Blu#Kalabria#Via Nazionale"
     ],
     "chorwacja": [
-        "Osmine",
-        "Gradac",
-        "Villa Penava",
-        "Zapach wina i lawendy",
-        "Między niebem, ziemią a morzem (z przelotem do Podgoricy)",
-        "Apartamenty Omiś",
-        "Nano",
-        "Apartamenty Makarska"
+        "Gradac#Riwiera#Kapucinska ulica",
+        "Villa Penava#Riwiera#Trg bana Josipa Jelačića",
+        "Apartamenty Omiś#Riwiera#Vukovarska ulica",
+        "Nano#Riwiera#Maksimirska ulica",
+        "Apartamenty Makarska#Riwiera#Maksimirska ulica"
+    ],
+    "egipt": [
+        "Marina Resort Port Ghalib#Alam#Sharia Tahrir",
+        "Barcelo Tiran Sharm Resort#Sheikh#Sharia Tahrir",
+        "Old Vic Resort Sharm#Sheikh#Sharia Ramsis",
+        "Marina Lodge Port Ghalib#Alam#Sharia Ramsis",
+        "Falcon Naama Star#Sheikh#Sharia Salah Salem",
+        "Protels Crystal Beach Resort#Alam#Sharia Tahrir",
+        "MG Alexander The Great#Alam#Sharia Gamal Abdel Nasser",
+        "Bliss Nada Beach Resort#Alam#Sharia Tahrir"
     ]
 }
