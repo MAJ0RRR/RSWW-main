@@ -4,9 +4,9 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.common.action_chains import ActionChains
+import json
 import time
-from bs4 import BeautifulSoup
+
 
 def generate_hotel_dbcontext(n):
     with open('dbcontexts_template/hotel_db_context.txt', 'r') as template:
@@ -100,44 +100,49 @@ def create_hotel_migration(name):
     # Run the command
     subprocess.run(command)
 
-from selenium import webdriver
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-import csv
-
 def scrap_hotels():
     options = webdriver.ChromeOptions()
-    options.add_argument("--headless")
+    # options.add_argument("--headless")
     options.add_argument("--window-size=1920,1080")
     driver = webdriver.Chrome(options=options)
 
-    try:
+    COUNTRIES = ['albania','grecja','turcja','hiszpania','egipt','chorwacja']
+    # TRIP_TYPE_XPATH = '//*[@id="bloczkiHTMLID"]/a/div/div[2]/span'
+
+    country_hotels = {}
+
+    for country in COUNTRIES:
         # Load the webpage
-        driver.get("https://r.pl/")
+        driver.get(f"https://r.pl/{country}")
+        hotels_names = []
 
-        # Wait for the page to load and for span elements to be present
         WebDriverWait(driver, 20).until(
-            EC.presence_of_all_elements_located((By.TAG_NAME, "span"))
-        )
+                EC.presence_of_element_located((By.XPATH, '//*[@id="bloczkiHTMLID"]/a/div/div[2]/div[1]/span'))
+            )
 
-        # Find all span elements
-        span_elements = driver.find_elements(By.TAG_NAME, "span")
+        for i in range(1,9):
+            HOTEL_NAME_XPATH = f'//*[@id="bloczkiHTMLID"]/a[{i}]/div/div[2]/div[1]/span'
+            # Find hotels
+            try:
+                hotel = driver.find_element(By.XPATH, HOTEL_NAME_XPATH)
 
-        # Retrieve text from each span element
-        span_texts = [element.text for element in span_elements if element.text.strip()]
+                while hotel.text == "":
+                    time.sleep(1)
+                    driver.execute_script("window.scrollBy(0, window.innerHeight * 0.25)")
+                    # Find hotels again after scrolling
+                    hotel = driver.find_element(By.XPATH, HOTEL_NAME_XPATH)
+                    print("Waiting...")
 
-        # Save the span texts to a CSV file
-        with open('span_texts.csv', 'w', newline='', encoding='utf-8') as csv_file:
-            writer = csv.writer(csv_file)
-            writer.writerow(['Span Text'])
-            for text in span_texts:
-                writer.writerow([text])
-        print(f"Successfully saved {len(span_texts)} span texts to 'span_texts.csv'.")
+                print(hotel.text)
+                hotels_names.append(hotel.text)
 
-    except Exception as e:
-        print(f"An error occurred: {e}")
+            except Exception as e:
+                print(f"Error occurred: {str(e)}")
+        
+        country_hotels[country] = hotels_names
 
-    finally:
-        # Quit the driver
-        driver.quit()
+    # Save the dictionary to a JSON file
+    with open('Hotels.json', 'w') as json_file:
+        json.dump(country_hotels, json_file)
+
+    driver.quit()
