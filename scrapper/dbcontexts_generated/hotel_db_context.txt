@@ -72,7 +72,7 @@ namespace hotelservice.Models
                 }
             }
 
-            Guid[] hotelIds = new Guid[21];
+            Guid[] hotelIds = new Guid[43];
                     for (int i = 0; i < hotelIds.Length; i++)
                     {
                         hotelIds[i] = Guid.NewGuid();
@@ -82,111 +82,221 @@ namespace hotelservice.Models
             var hotels = new[]
             {
         
-            new Hotel
-                {
-                    Id = hotel1Is[0], Name = "Berlin Hotel", FoodPricePerPerson = 20, City = "Berlin", Country = "Germany", Street = "Alexanderplatz"
-                },
-            
-            new Hotel
-                {
-                    Id = hotel1Is[1], Name = "Berlin Hotel", FoodPricePerPerson = 20, City = "Berlin", Country = "Germany", Street = "Alexanderplatz"
-                },
-            
-            new Hotel
-                {
-                    Id = hotel1Is[2], Name = "Berlin Hotel", FoodPricePerPerson = 20, City = "Berlin", Country = "Germany", Street = "Alexanderplatz"
-                },
-            
-            new Hotel
-                {
-                    Id = hotel1Is[3], Name = "Berlin Hotel", FoodPricePerPerson = 20, City = "Berlin", Country = "Germany", Street = "Alexanderplatz"
-                },
-            
-            new Hotel
-                {
-                    Id = hotel1Is[4], Name = "Berlin Hotel", FoodPricePerPerson = 20, City = "Berlin", Country = "Germany", Street = "Alexanderplatz"
-                },
-            
-            new Hotel
-                {
-                    Id = hotel1Is[5], Name = "Berlin Hotel", FoodPricePerPerson = 20, City = "Berlin", Country = "Germany", Street = "Alexanderplatz"
-                },
-            
-            new Hotel
-                {
-                    Id = hotel1Is[6], Name = "Berlin Hotel", FoodPricePerPerson = 20, City = "Berlin", Country = "Germany", Street = "Alexanderplatz"
-                },
-            
-            new Hotel
-                {
-                    Id = hotel1Is[7], Name = "Berlin Hotel", FoodPricePerPerson = 20, City = "Berlin", Country = "Germany", Street = "Alexanderplatz"
-                },
-            
-            new Hotel
-                {
-                    Id = hotel1Is[8], Name = "Berlin Hotel", FoodPricePerPerson = 20, City = "Berlin", Country = "Germany", Street = "Alexanderplatz"
-                },
-            
-            new Hotel
-                {
-                    Id = hotel1Is[9], Name = "Berlin Hotel", FoodPricePerPerson = 20, City = "Berlin", Country = "Germany", Street = "Alexanderplatz"
-                },
-            
-            new Hotel
-                {
-                    Id = hotel1Is[10], Name = "Berlin Hotel", FoodPricePerPerson = 20, City = "Berlin", Country = "Germany", Street = "Alexanderplatz"
-                },
-            
-            new Hotel
-                {
-                    Id = hotel1Is[11], Name = "Berlin Hotel", FoodPricePerPerson = 20, City = "Berlin", Country = "Germany", Street = "Alexanderplatz"
-                },
-            
-            new Hotel
-                {
-                    Id = hotel1Is[12], Name = "Berlin Hotel", FoodPricePerPerson = 20, City = "Berlin", Country = "Germany", Street = "Alexanderplatz"
-                },
-            
-            new Hotel
-                {
-                    Id = hotel1Is[13], Name = "Berlin Hotel", FoodPricePerPerson = 20, City = "Berlin", Country = "Germany", Street = "Alexanderplatz"
-                },
-            
-            new Hotel
-                {
-                    Id = hotel1Is[14], Name = "Berlin Hotel", FoodPricePerPerson = 20, City = "Berlin", Country = "Germany", Street = "Alexanderplatz"
-                },
-            
-            new Hotel
-                {
-                    Id = hotel1Is[15], Name = "Berlin Hotel", FoodPricePerPerson = 20, City = "Berlin", Country = "Germany", Street = "Alexanderplatz"
-                },
-            
-            new Hotel
-                {
-                    Id = hotel1Is[16], Name = "Berlin Hotel", FoodPricePerPerson = 20, City = "Berlin", Country = "Germany", Street = "Alexanderplatz"
-                },
-            
-            new Hotel
-                {
-                    Id = hotel1Is[17], Name = "Berlin Hotel", FoodPricePerPerson = 20, City = "Berlin", Country = "Germany", Street = "Alexanderplatz"
-                },
-            
-            new Hotel
-                {
-                    Id = hotel1Is[18], Name = "Berlin Hotel", FoodPricePerPerson = 20, City = "Berlin", Country = "Germany", Street = "Alexanderplatz"
-                },
-            
-            new Hotel
-                {
-                    Id = hotel1Is[19], Name = "Berlin Hotel", FoodPricePerPerson = 20, City = "Berlin", Country = "Germany", Street = "Alexanderplatz"
-                },
-            
-            new Hotel
-                {
-                    Id = hotel1Is[20], Name = "Berlin Hotel", FoodPricePerPerson = 20, City = "Berlin", Country = "Germany", Street = "Alexanderplatz"
-                },
-            
+                new Hotel
+                    {
+                        Id = hotelIds[0], Name = "Pinea Resort & Spa", FoodPricePerPerson = 34, City = "Durres", Country = "albania", Street = "Rruga e Dibres"
+                    },
+                
+                new Hotel
+                    {
+                        Id = hotelIds[1], Name = "Diamma Resort", FoodPricePerPerson = 104, City = "Durres", Country = "albania", Street = "Rruga Abdyl Frasheri"
+                    },
+                
+                new Hotel
+                    {
+                        Id = hotelIds[2], Name = "Bonita Luxury Hotel", FoodPricePerPerson = 58, City = "Durres", Country = "albania", Street = "Rruga Abdyl Frasheri"
+                    },
+                
+                new Hotel
+                    {
+                        Id = hotelIds[3], Name = "Monte Carlo Vlora", FoodPricePerPerson = 65, City = "Vlora", Country = "albania", Street = "Rruga 28 Nentori"
+                    },
+                
+                new Hotel
+                    {
+                        Id = hotelIds[4], Name = "MonteCarlo Lungomare", FoodPricePerPerson = 60, City = "Vlora", Country = "albania", Street = "Rruga e Kavajes"
+                    },
+                
+                new Hotel
+                    {
+                        Id = hotelIds[5], Name = "Mel Holidays", FoodPricePerPerson = 95, City = "Durres", Country = "albania", Street = "Bulevardi Bajram Curri"
+                    },
+                
+                new Hotel
+                    {
+                        Id = hotelIds[6], Name = "Casa Durres", FoodPricePerPerson = 54, City = "Durres", Country = "albania", Street = "Rruga e Dibres"
+                    },
+                
+                new Hotel
+                    {
+                        Id = hotelIds[7], Name = "Rethymno Mare Water Park", FoodPricePerPerson = 115, City = "Chania", Country = "grecja", Street = "Leoforos Vasilissis Sofias"
+                    },
+                
+                new Hotel
+                    {
+                        Id = hotelIds[8], Name = "Aldemar Olympian Village", FoodPricePerPerson = 33, City = "Peloponez", Country = "grecja", Street = "Leoforos Alexandras"
+                    },
+                
+                new Hotel
+                    {
+                        Id = hotelIds[9], Name = "Studia Katerina", FoodPricePerPerson = 56, City = "Nero", Country = "grecja", Street = "Leoforos Vasilissis Sofias"
+                    },
+                
+                new Hotel
+                    {
+                        Id = hotelIds[10], Name = "Irini Studios", FoodPricePerPerson = 99, City = "Heraklion", Country = "grecja", Street = "Plateia Syntagmatos"
+                    },
+                
+                new Hotel
+                    {
+                        Id = hotelIds[11], Name = "Studia Maria", FoodPricePerPerson = 74, City = "Nero", Country = "grecja", Street = "Leoforos Alexandras"
+                    },
+                
+                new Hotel
+                    {
+                        Id = hotelIds[12], Name = "Dias Apartments", FoodPricePerPerson = 116, City = "Olimpijska", Country = "grecja", Street = "Plateia Syntagmatos"
+                    },
+                
+                new Hotel
+                    {
+                        Id = hotelIds[13], Name = "Turunc Resort", FoodPricePerPerson = 88, City = "Marmaris", Country = "turcja", Street = "Bağdat Caddesi"
+                    },
+                
+                new Hotel
+                    {
+                        Id = hotelIds[14], Name = "Andriake Beach Club Hotel", FoodPricePerPerson = 44, City = "Turecka", Country = "turcja", Street = "Atatürk Caddesi"
+                    },
+                
+                new Hotel
+                    {
+                        Id = hotelIds[15], Name = "Kimeros Park Holiday Village", FoodPricePerPerson = 66, City = "Turecka", Country = "turcja", Street = "Bağdat Caddesi"
+                    },
+                
+                new Hotel
+                    {
+                        Id = hotelIds[16], Name = "Kleopatra Micador", FoodPricePerPerson = 114, City = "Turecka", Country = "turcja", Street = "Atatürk Caddesi"
+                    },
+                
+                new Hotel
+                    {
+                        Id = hotelIds[17], Name = "Melissa", FoodPricePerPerson = 39, City = "Turecka", Country = "turcja", Street = "Halaskargazi Caddesi"
+                    },
+                
+                new Hotel
+                    {
+                        Id = hotelIds[18], Name = "Kolibri Hotel", FoodPricePerPerson = 37, City = "Turecka", Country = "turcja", Street = "Atatürk Caddesi"
+                    },
+                
+                new Hotel
+                    {
+                        Id = hotelIds[19], Name = "Evenia Zoraida Beach Resort", FoodPricePerPerson = 52, City = "Almeria", Country = "hiszpania", Street = "Paseo del Prado"
+                    },
+                
+                new Hotel
+                    {
+                        Id = hotelIds[20], Name = "Evenia Olympic Park", FoodPricePerPerson = 102, City = "Brava", Country = "hiszpania", Street = "Calle Mayor"
+                    },
+                
+                new Hotel
+                    {
+                        Id = hotelIds[21], Name = "Estival Islantilla", FoodPricePerPerson = 90, City = "Luz", Country = "hiszpania", Street = "Calle Mayor"
+                    },
+                
+                new Hotel
+                    {
+                        Id = hotelIds[22], Name = "Cartago Nova by Alegria", FoodPricePerPerson = 41, City = "Brava", Country = "hiszpania", Street = "Paseo del Prado"
+                    },
+                
+                new Hotel
+                    {
+                        Id = hotelIds[23], Name = "Catalonia", FoodPricePerPerson = 82, City = "Brava", Country = "hiszpania", Street = "Calle de Alcalá"
+                    },
+                
+                new Hotel
+                    {
+                        Id = hotelIds[24], Name = "Reymar Playa", FoodPricePerPerson = 53, City = "Maresme", Country = "hiszpania", Street = "Paseo del Prado"
+                    },
+                
+                new Hotel
+                    {
+                        Id = hotelIds[25], Name = "GHT Oasis Park & Spa", FoodPricePerPerson = 57, City = "Brava", Country = "hiszpania", Street = "Gran Vía"
+                    },
+                
+                new Hotel
+                    {
+                        Id = hotelIds[26], Name = "San Domenico", FoodPricePerPerson = 64, City = "Kalabria", Country = "wlochy", Street = "Via del Corso"
+                    },
+                
+                new Hotel
+                    {
+                        Id = hotelIds[27], Name = "Baia di Zambrone", FoodPricePerPerson = 33, City = "Kalabria", Country = "wlochy", Street = "Via Veneto"
+                    },
+                
+                new Hotel
+                    {
+                        Id = hotelIds[28], Name = "Rada Siri", FoodPricePerPerson = 81, City = "Kalabria", Country = "wlochy", Street = "Via Veneto"
+                    },
+                
+                new Hotel
+                    {
+                        Id = hotelIds[29], Name = "Hotel Orizzonte Blu", FoodPricePerPerson = 109, City = "Kalabria", Country = "wlochy", Street = "Via Nazionale"
+                    },
+                
+                new Hotel
+                    {
+                        Id = hotelIds[30], Name = "Gradac", FoodPricePerPerson = 43, City = "Riwiera", Country = "chorwacja", Street = "Kapucinska ulica"
+                    },
+                
+                new Hotel
+                    {
+                        Id = hotelIds[31], Name = "Villa Penava", FoodPricePerPerson = 50, City = "Riwiera", Country = "chorwacja", Street = "Trg bana Josipa Jelačića"
+                    },
+                
+                new Hotel
+                    {
+                        Id = hotelIds[32], Name = "Apartamenty Omiś", FoodPricePerPerson = 35, City = "Riwiera", Country = "chorwacja", Street = "Vukovarska ulica"
+                    },
+                
+                new Hotel
+                    {
+                        Id = hotelIds[33], Name = "Nano", FoodPricePerPerson = 112, City = "Riwiera", Country = "chorwacja", Street = "Maksimirska ulica"
+                    },
+                
+                new Hotel
+                    {
+                        Id = hotelIds[34], Name = "Apartamenty Makarska", FoodPricePerPerson = 109, City = "Riwiera", Country = "chorwacja", Street = "Maksimirska ulica"
+                    },
+                
+                new Hotel
+                    {
+                        Id = hotelIds[35], Name = "Marina Resort Port Ghalib", FoodPricePerPerson = 104, City = "Alam", Country = "egipt", Street = "Sharia Tahrir"
+                    },
+                
+                new Hotel
+                    {
+                        Id = hotelIds[36], Name = "Barcelo Tiran Sharm Resort", FoodPricePerPerson = 75, City = "Sheikh", Country = "egipt", Street = "Sharia Tahrir"
+                    },
+                
+                new Hotel
+                    {
+                        Id = hotelIds[37], Name = "Old Vic Resort Sharm", FoodPricePerPerson = 72, City = "Sheikh", Country = "egipt", Street = "Sharia Ramsis"
+                    },
+                
+                new Hotel
+                    {
+                        Id = hotelIds[38], Name = "Marina Lodge Port Ghalib", FoodPricePerPerson = 79, City = "Alam", Country = "egipt", Street = "Sharia Ramsis"
+                    },
+                
+                new Hotel
+                    {
+                        Id = hotelIds[39], Name = "Falcon Naama Star", FoodPricePerPerson = 91, City = "Sheikh", Country = "egipt", Street = "Sharia Salah Salem"
+                    },
+                
+                new Hotel
+                    {
+                        Id = hotelIds[40], Name = "Protels Crystal Beach Resort", FoodPricePerPerson = 69, City = "Alam", Country = "egipt", Street = "Sharia Tahrir"
+                    },
+                
+                new Hotel
+                    {
+                        Id = hotelIds[41], Name = "MG Alexander The Great", FoodPricePerPerson = 87, City = "Alam", Country = "egipt", Street = "Sharia Gamal Abdel Nasser"
+                    },
+                
+                new Hotel
+                    {
+                        Id = hotelIds[42], Name = "Bliss Nada Beach Resort", FoodPricePerPerson = 33, City = "Alam", Country = "egipt", Street = "Sharia Tahrir"
+                    },
+                
 
             modelBuilder.Entity<Hotel>().HasData(hotels);
         
@@ -198,48 +308,350 @@ namespace hotelservice.Models
             var rooms = new[]
             {
         
-            new Room { Id = Guid.NewGuid(), HotelId = hotel1Id, Size = 25, Price = 100, Count = 5 },
-            
-            new Room { Id = Guid.NewGuid(), HotelId = hotel1Id, Size = 25, Price = 100, Count = 5 },
-            
-            new Room { Id = Guid.NewGuid(), HotelId = hotel1Id, Size = 25, Price = 100, Count = 5 },
-            
-            new Room { Id = Guid.NewGuid(), HotelId = hotel1Id, Size = 25, Price = 100, Count = 5 },
-            
-            new Room { Id = Guid.NewGuid(), HotelId = hotel1Id, Size = 25, Price = 100, Count = 5 },
-            
-            new Room { Id = Guid.NewGuid(), HotelId = hotel1Id, Size = 25, Price = 100, Count = 5 },
-            
-            new Room { Id = Guid.NewGuid(), HotelId = hotel1Id, Size = 25, Price = 100, Count = 5 },
-            
-            new Room { Id = Guid.NewGuid(), HotelId = hotel1Id, Size = 25, Price = 100, Count = 5 },
-            
-            new Room { Id = Guid.NewGuid(), HotelId = hotel1Id, Size = 25, Price = 100, Count = 5 },
-            
-            new Room { Id = Guid.NewGuid(), HotelId = hotel1Id, Size = 25, Price = 100, Count = 5 },
-            
-            new Room { Id = Guid.NewGuid(), HotelId = hotel1Id, Size = 25, Price = 100, Count = 5 },
-            
-            new Room { Id = Guid.NewGuid(), HotelId = hotel1Id, Size = 25, Price = 100, Count = 5 },
-            
-            new Room { Id = Guid.NewGuid(), HotelId = hotel1Id, Size = 25, Price = 100, Count = 5 },
-            
-            new Room { Id = Guid.NewGuid(), HotelId = hotel1Id, Size = 25, Price = 100, Count = 5 },
-            
-            new Room { Id = Guid.NewGuid(), HotelId = hotel1Id, Size = 25, Price = 100, Count = 5 },
-            
-            new Room { Id = Guid.NewGuid(), HotelId = hotel1Id, Size = 25, Price = 100, Count = 5 },
-            
-            new Room { Id = Guid.NewGuid(), HotelId = hotel1Id, Size = 25, Price = 100, Count = 5 },
-            
-            new Room { Id = Guid.NewGuid(), HotelId = hotel1Id, Size = 25, Price = 100, Count = 5 },
-            
-            new Room { Id = Guid.NewGuid(), HotelId = hotel1Id, Size = 25, Price = 100, Count = 5 },
-            
-            new Room { Id = Guid.NewGuid(), HotelId = hotel1Id, Size = 25, Price = 100, Count = 5 },
-            
-            new Room { Id = Guid.NewGuid(), HotelId = hotel1Id, Size = 25, Price = 100, Count = 5 },
-            
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[0], Size = 2, Price = 80, Count = 2 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[0], Size = 3, Price = 61, Count = 1 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[0], Size = 4, Price = 143, Count = 3 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[0], Size = 5, Price = 70, Count = 2 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[1], Size = 2, Price = 197, Count = 2 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[1], Size = 3, Price = 87, Count = 3 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[1], Size = 4, Price = 59, Count = 2 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[1], Size = 5, Price = 239, Count = 3 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[2], Size = 2, Price = 247, Count = 2 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[2], Size = 3, Price = 52, Count = 3 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[2], Size = 4, Price = 224, Count = 3 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[2], Size = 5, Price = 161, Count = 1 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[3], Size = 2, Price = 210, Count = 3 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[3], Size = 3, Price = 212, Count = 3 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[3], Size = 4, Price = 208, Count = 3 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[3], Size = 5, Price = 184, Count = 2 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[4], Size = 2, Price = 121, Count = 1 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[4], Size = 3, Price = 55, Count = 3 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[4], Size = 4, Price = 100, Count = 3 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[4], Size = 5, Price = 55, Count = 1 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[5], Size = 2, Price = 145, Count = 1 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[5], Size = 3, Price = 76, Count = 2 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[5], Size = 4, Price = 205, Count = 2 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[5], Size = 5, Price = 167, Count = 2 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[6], Size = 2, Price = 157, Count = 2 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[6], Size = 3, Price = 58, Count = 3 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[6], Size = 4, Price = 228, Count = 3 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[6], Size = 5, Price = 104, Count = 2 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[7], Size = 2, Price = 133, Count = 1 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[7], Size = 3, Price = 162, Count = 1 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[7], Size = 4, Price = 77, Count = 2 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[7], Size = 5, Price = 54, Count = 3 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[8], Size = 2, Price = 229, Count = 2 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[8], Size = 3, Price = 87, Count = 3 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[8], Size = 4, Price = 221, Count = 1 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[8], Size = 5, Price = 65, Count = 2 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[9], Size = 2, Price = 158, Count = 3 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[9], Size = 3, Price = 197, Count = 3 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[9], Size = 4, Price = 110, Count = 2 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[9], Size = 5, Price = 81, Count = 1 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[10], Size = 2, Price = 244, Count = 1 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[10], Size = 3, Price = 181, Count = 1 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[10], Size = 4, Price = 157, Count = 1 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[10], Size = 5, Price = 234, Count = 3 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[11], Size = 2, Price = 86, Count = 3 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[11], Size = 3, Price = 114, Count = 2 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[11], Size = 4, Price = 200, Count = 1 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[11], Size = 5, Price = 149, Count = 1 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[12], Size = 2, Price = 137, Count = 1 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[12], Size = 3, Price = 187, Count = 2 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[12], Size = 4, Price = 158, Count = 2 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[12], Size = 5, Price = 121, Count = 1 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[13], Size = 2, Price = 142, Count = 2 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[13], Size = 3, Price = 168, Count = 1 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[13], Size = 4, Price = 108, Count = 3 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[13], Size = 5, Price = 119, Count = 1 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[14], Size = 2, Price = 93, Count = 3 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[14], Size = 3, Price = 215, Count = 1 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[14], Size = 4, Price = 188, Count = 2 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[14], Size = 5, Price = 195, Count = 1 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[15], Size = 2, Price = 196, Count = 3 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[15], Size = 3, Price = 177, Count = 3 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[15], Size = 4, Price = 82, Count = 3 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[15], Size = 5, Price = 181, Count = 1 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[16], Size = 2, Price = 123, Count = 2 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[16], Size = 3, Price = 152, Count = 1 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[16], Size = 4, Price = 62, Count = 3 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[16], Size = 5, Price = 104, Count = 1 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[17], Size = 2, Price = 130, Count = 1 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[17], Size = 3, Price = 77, Count = 1 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[17], Size = 4, Price = 86, Count = 2 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[17], Size = 5, Price = 74, Count = 3 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[18], Size = 2, Price = 111, Count = 2 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[18], Size = 3, Price = 96, Count = 1 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[18], Size = 4, Price = 132, Count = 3 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[18], Size = 5, Price = 102, Count = 1 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[19], Size = 2, Price = 109, Count = 2 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[19], Size = 3, Price = 118, Count = 3 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[19], Size = 4, Price = 236, Count = 3 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[19], Size = 5, Price = 115, Count = 3 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[20], Size = 2, Price = 162, Count = 3 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[20], Size = 3, Price = 105, Count = 3 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[20], Size = 4, Price = 119, Count = 2 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[20], Size = 5, Price = 225, Count = 3 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[21], Size = 2, Price = 169, Count = 3 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[21], Size = 3, Price = 211, Count = 2 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[21], Size = 4, Price = 186, Count = 1 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[21], Size = 5, Price = 193, Count = 2 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[22], Size = 2, Price = 94, Count = 1 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[22], Size = 3, Price = 103, Count = 3 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[22], Size = 4, Price = 150, Count = 2 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[22], Size = 5, Price = 159, Count = 3 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[23], Size = 2, Price = 58, Count = 2 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[23], Size = 3, Price = 155, Count = 1 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[23], Size = 4, Price = 116, Count = 1 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[23], Size = 5, Price = 191, Count = 2 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[24], Size = 2, Price = 173, Count = 2 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[24], Size = 3, Price = 167, Count = 1 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[24], Size = 4, Price = 249, Count = 3 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[24], Size = 5, Price = 124, Count = 3 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[25], Size = 2, Price = 126, Count = 2 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[25], Size = 3, Price = 200, Count = 3 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[25], Size = 4, Price = 213, Count = 2 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[25], Size = 5, Price = 79, Count = 3 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[26], Size = 2, Price = 120, Count = 1 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[26], Size = 3, Price = 223, Count = 2 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[26], Size = 4, Price = 160, Count = 2 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[26], Size = 5, Price = 240, Count = 1 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[27], Size = 2, Price = 196, Count = 3 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[27], Size = 3, Price = 89, Count = 2 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[27], Size = 4, Price = 76, Count = 2 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[27], Size = 5, Price = 225, Count = 3 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[28], Size = 2, Price = 211, Count = 2 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[28], Size = 3, Price = 157, Count = 2 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[28], Size = 4, Price = 171, Count = 2 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[28], Size = 5, Price = 245, Count = 1 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[29], Size = 2, Price = 149, Count = 3 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[29], Size = 3, Price = 175, Count = 3 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[29], Size = 4, Price = 202, Count = 1 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[29], Size = 5, Price = 195, Count = 1 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[30], Size = 2, Price = 169, Count = 2 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[30], Size = 3, Price = 231, Count = 3 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[30], Size = 4, Price = 229, Count = 1 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[30], Size = 5, Price = 149, Count = 3 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[31], Size = 2, Price = 139, Count = 2 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[31], Size = 3, Price = 235, Count = 3 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[31], Size = 4, Price = 89, Count = 1 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[31], Size = 5, Price = 94, Count = 3 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[32], Size = 2, Price = 74, Count = 1 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[32], Size = 3, Price = 157, Count = 1 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[32], Size = 4, Price = 216, Count = 2 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[32], Size = 5, Price = 183, Count = 2 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[33], Size = 2, Price = 151, Count = 2 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[33], Size = 3, Price = 225, Count = 1 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[33], Size = 4, Price = 110, Count = 2 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[33], Size = 5, Price = 122, Count = 2 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[34], Size = 2, Price = 91, Count = 2 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[34], Size = 3, Price = 103, Count = 1 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[34], Size = 4, Price = 66, Count = 3 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[34], Size = 5, Price = 169, Count = 1 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[35], Size = 2, Price = 59, Count = 2 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[35], Size = 3, Price = 118, Count = 2 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[35], Size = 4, Price = 61, Count = 2 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[35], Size = 5, Price = 162, Count = 3 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[36], Size = 2, Price = 116, Count = 3 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[36], Size = 3, Price = 176, Count = 1 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[36], Size = 4, Price = 177, Count = 1 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[36], Size = 5, Price = 60, Count = 3 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[37], Size = 2, Price = 84, Count = 3 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[37], Size = 3, Price = 178, Count = 2 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[37], Size = 4, Price = 188, Count = 2 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[37], Size = 5, Price = 153, Count = 3 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[38], Size = 2, Price = 62, Count = 3 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[38], Size = 3, Price = 84, Count = 1 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[38], Size = 4, Price = 50, Count = 1 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[38], Size = 5, Price = 182, Count = 1 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[39], Size = 2, Price = 157, Count = 1 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[39], Size = 3, Price = 80, Count = 2 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[39], Size = 4, Price = 205, Count = 1 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[39], Size = 5, Price = 102, Count = 3 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[40], Size = 2, Price = 125, Count = 3 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[40], Size = 3, Price = 181, Count = 2 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[40], Size = 4, Price = 128, Count = 2 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[40], Size = 5, Price = 108, Count = 2 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[41], Size = 2, Price = 146, Count = 1 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[41], Size = 3, Price = 223, Count = 3 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[41], Size = 4, Price = 100, Count = 1 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[41], Size = 5, Price = 134, Count = 1 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[42], Size = 2, Price = 113, Count = 3 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[42], Size = 3, Price = 246, Count = 2 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[42], Size = 4, Price = 50, Count = 3 },
+                
+                new Room { Id = Guid.NewGuid(), HotelId = hotel1Id[42], Size = 5, Price = 162, Count = 2 },
+                
             };
 
             modelBuilder.Entity<Room>().HasData(rooms);
