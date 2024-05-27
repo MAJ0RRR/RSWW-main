@@ -23,9 +23,9 @@ builder.ConfigureServices((hostContext, services) =>
     services.AddSingleton<IEventBus, InMemoryEventBus>();
 
     // Register event handlers
-    services.AddTransient<TransportOptionAddedEventHandler>();
-    services.AddTransient<SeatsChangedEventHandler>();
-    services.AddTransient<DiscountAddedEventHandler>();
+    services.AddScoped<TransportOptionAddedEventHandler>();
+    services.AddScoped<SeatsChangedEventHandler>();
+    services.AddScoped<DiscountAddedEventHandler>();
     
     // Add MassTransit
     services.AddMassTransit(busConfigurator =>
@@ -60,7 +60,7 @@ builder.ConfigureServices((hostContext, services) =>
     // Get the connection string from configuration
     var postgresConnectionString = configuration.GetConnectionString("PostgresConnectionString");
     
-    services.AddDbContext<TransportDbContext>(options => options.UseNpgsql(postgresConnectionString));
+    services.AddDbContextFactory<TransportDbContext>(options => options.UseNpgsql(postgresConnectionString));
     services.AddScoped<TransportService>();
 });
 
