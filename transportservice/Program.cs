@@ -19,6 +19,14 @@ builder.ConfigureServices((hostContext, services) =>
 {
     var configuration = hostContext.Configuration;
     
+    // Register InMemoryEventBus
+    services.AddSingleton<IEventBus, InMemoryEventBus>();
+
+    // Register event handlers
+    services.AddTransient<TransportOptionAddedEventHandler>();
+    services.AddTransient<SeatsChangedEventHandler>();
+    services.AddTransient<DiscountAddedEventHandler>();
+    
     // Add MassTransit
     services.AddMassTransit(busConfigurator =>
     {
@@ -62,6 +70,18 @@ using (var scope = app.Services.CreateScope())
 {
     var context = scope.ServiceProvider.GetRequiredService<TransportDbContext>();
     context.Database.Migrate();
+    
+    // Subscribe to events
+    var eventBus = scope.ServiceProvider.GetRequiredService<IEventBus>();
+
+    var transportOptionAddedHandler = scope.ServiceProvider.GetRequiredService<TransportOptionAddedEventHandler>();
+    eventBus.Subscribe<TransportOptionAddedEvent>(transportOptionAddedHandler.Handle);
+
+    var seatsChangedHandler = scope.ServiceProvider.GetRequiredService<SeatsChangedEventHandler>();
+    eventBus.Subscribe<SeatsChangedEvent>(seatsChangedHandler.Handle);
+
+    var discountAddedHandler = scope.ServiceProvider.GetRequiredService<DiscountAddedEventHandler>();
+    eventBus.Subscribe<DiscountAddedEvent>(discountAddedHandler.Handle);
 }
 
 await app.RunAsync();

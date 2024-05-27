@@ -7,22 +7,24 @@ namespace transportservice.Services.Transport;
 public class TransportService
 {
     private readonly TransportDbContext _dbContext;
+    private readonly IEventBus _eventBus;
 
-    public TransportService(TransportDbContext dbContext)
+    public TransportService(TransportDbContext dbContext, IEventBus eventBus)
     {
         _dbContext = dbContext;
+        _eventBus = eventBus;
     }
 
-    private IQueryable<TransportOption> FetchTransportOptions()
+    private IQueryable<CommandTransportOption> FetchTransportOptions()
     {
-        return _dbContext.TransportOptions
+        return _dbContext.CommandTransportOptions
             .Include(to => to.Discounts)
             .Include(to => to.SeatsChanges);
     }
 
     public async Task<AddTransportOptionResponse> AddTransportOption(AddTransportOptionRequest request)
     {
-        var transport = new TransportOption
+        var transport = new CommandTransportOption
         {
             Id = Guid.NewGuid(),
             FromCountry = request.TransportOption.FromCountry,
@@ -37,11 +39,14 @@ public class TransportService
             End = request.TransportOption.End,
             InitialSeats = request.TransportOption.SeatsAvailable,
             PriceAdult = request.TransportOption.PriceAdult,
+            PriceUnder3 = request.TransportOption.PriceUnder3,
+            PriceUnder10 = request.TransportOption.PriceUnder10,
+            PriceUnder18 = request.TransportOption.PriceUnder18,
             Type = request.TransportOption.Type,
             Discounts = new List<Discount>()
         };
 
-        _dbContext.TransportOptions.Add(transport);
+        _dbContext.CommandTransportOptions.Add(transport);
         await _dbContext.SaveChangesAsync();
 
         return new AddTransportOptionResponse(transport.ToDto());
@@ -50,7 +55,7 @@ public class TransportService
     public async Task<TransportOptionSearchResponse> SearchTransportOptions(TransportOptionSearchRequest request)
     {
         var searchCriteria = request.SearchCriteria;
-        var transportOptionsQuery = _dbContext.Set<TransportOption>()
+        var transportOptionsQuery = _dbContext.Set<CommandTransportOption>()
             .Include(t => t.Discounts)
             .Include(t => t.SeatsChanges)
             .AsQueryable();
@@ -142,7 +147,6 @@ public class TransportService
             TransportOptionId = request.Id,
             Value = request.Discount.Value,
             Start = request.Discount.Start,
-            End = request.Discount.End
         };
 
         await _dbContext.Discounts.AddAsync(newDiscount);
