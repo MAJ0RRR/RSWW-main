@@ -1,5 +1,12 @@
 import subprocess
 import os
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.common.action_chains import ActionChains
+import time
+from bs4 import BeautifulSoup
 
 def generate_hotel_dbcontext(n):
     with open('dbcontexts_template/hotel_db_context.txt', 'r') as template:
@@ -92,3 +99,30 @@ def create_hotel_migration(name):
 
     # Run the command
     subprocess.run(command)
+
+def scrap_hotels():
+    # Initialize a WebDriver (assuming Chrome for this example)
+    options = webdriver.ChromeOptions()
+
+    options.add_argument("--headless")
+    options.add_argument("--window-size=1920,1080")
+    driver = webdriver.Chrome(options=options)
+
+    # Load the webpage
+    driver.get("https://r.pl/")
+
+    # Wait for the website to fully load
+    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, "/html/body/div[1]/div/div[3]/div[1]/section[2]/div/div[2]/div/div/div/div[2]/a/div/div[2]/div[1]/span")))
+
+    # Find the element using XPath
+    element = driver.find_element(By.XPATH, "/html/body/div[1]/div/div[3]/div[1]/section[2]/div/div[2]/div/div/div/div[2]/a/div/div[2]/div[1]/span")
+
+    # Get the text of the element
+    hotel_name = element.text
+
+    # Save the hotel name to a CSV file
+    with open('hotel_names.csv', 'w') as csv_file:
+        csv_file.write(hotel_name + '\n')
+
+    # Quit the driver
+    driver.quit()
