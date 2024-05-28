@@ -91,11 +91,11 @@ def generate_transport_option(i):
     """
 
     querry = f"""
-    new QuerryTransportOption
+    new QueryTransportOption
     {{
         Id = TransportIds[{i}], Start = DateTime.UtcNow.AddDays({start_day}).AddHours({start_hour}), 
         End = DateTime.UtcNow.AddDays({end_day}).AddHours({end_hour}), 
-        PriceAdult = {price_adult}, Type = "{transport_type}", Seats = {initial_seats},
+        PriceAdult = {price_adult}, PriceUnder3 = {int(price_adult*0.2)}, PriceUnder12 = {int(price_adult*0.5)}, PriceUnder18 = {int(price_adult*0.9)},  Type = "{transport_type}", Seats = {initial_seats},
         FromCity = "{from_hotel['city']}", FromCountry = "{from_hotel['country']}", FromStreet = "{from_hotel['street_name']}",
         ToCity = "{to_hotel['city']}", ToCountry = "{to_hotel['country']}", ToStreet = "{to_hotel['street_name']}"
     }},
