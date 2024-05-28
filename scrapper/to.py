@@ -55,7 +55,7 @@ def find_hotels_by_city(city):
 def find_hotels_by_street(street_name):
     return [hotel for hotel in parsed_data if hotel["street_name"] == street_name]
 
-def generate_transport_option():
+def generate_transport_option(i):
     from_hotel = random.choice(parsed_data)
     to_hotel = random.choice(parsed_data)
 
@@ -82,7 +82,7 @@ def generate_transport_option():
     new_tour = f"""
     new CommandTransportOption
     {{
-        Id = Guid.NewGuid(), Start = DateTime.UtcNow.AddDays({start_day}).AddHours({start_hour}), 
+        Id = TransportIds[{i}], Start = DateTime.UtcNow.AddDays({start_day}).AddHours({start_hour}), 
         End = DateTime.UtcNow.AddDays({end_day}).AddHours({end_hour}), 
         PriceAdult = {price_adult}, Type = "{transport_type}", InitialSeats = {initial_seats},
         FromCity = "{from_hotel['city']}", FromCountry = "{from_hotel['country']}", FromStreet = "{from_hotel['street_name']}",
@@ -93,7 +93,7 @@ def generate_transport_option():
     querry = f"""
     new QuerryTransportOption
     {{
-        Id = Guid.NewGuid(), Start = DateTime.UtcNow.AddDays({start_day}).AddHours({start_hour}), 
+        Id = TransportIds[{i}], Start = DateTime.UtcNow.AddDays({start_day}).AddHours({start_hour}), 
         End = DateTime.UtcNow.AddDays({end_day}).AddHours({end_hour}), 
         PriceAdult = {price_adult}, Type = "{transport_type}", Seats = {initial_seats},
         FromCity = "{from_hotel['city']}", FromCountry = "{from_hotel['country']}", FromStreet = "{from_hotel['street_name']}",
@@ -110,7 +110,20 @@ def generate_to_dbcontext(n):
     with open('dbcontexts_generated/TransportDbContext.cs', 'w', encoding='utf-8') as dbcontext:
         dbcontext.write(template_content)
 
-        transport_options = """"
+        gen_guids = f"""
+
+            Guid[] TransportIds = new Guid[{n}];
+                    for (int i = 0; i < TransportIds.Length; i++)
+                    {{
+                        TransportIds[i] = Guid.NewGuid();
+                    }}
+
+        """
+
+        dbcontext.write(gen_guids)
+
+
+        transport_options = """
         var transportOptions = new[]
             {
                 """
@@ -119,7 +132,7 @@ def generate_to_dbcontext(n):
         tos = []
         querries = []
         for i in range(n):
-            new_to, querry = generate_transport_option()
+            new_to, querry = generate_transport_option(i)
             if new_to not in tos:
                 dbcontext.write(new_to)
                 tos.append(new_to)
