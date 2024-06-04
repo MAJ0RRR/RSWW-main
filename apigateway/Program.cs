@@ -1,4 +1,5 @@
 using apigateway.Authentication;
+using apigateway.Handlers;
 using apigateway.Swagger;
 using MassTransit;
 using Microsoft.OpenApi.Models;
@@ -35,6 +36,8 @@ builder.Services.AddSwaggerGen(options =>
 builder.Services.AddMassTransit(busConfigurator =>
 {
     busConfigurator.SetKebabCaseEndpointNameFormatter();
+    
+    busConfigurator.AddConsumer<TourBoughtConsumer>();
     
     busConfigurator.UsingRabbitMq((context,cfg) =>
     {

@@ -24,6 +24,7 @@ public class ReservationService
     private readonly IRequestClient<HotelCheckAvailabilityRequest> _hotelCheckAvailabilityClient;
     private readonly IRequestClient<TransportOptionSearchRequest> _transportSearchClient;
     private readonly IRequestClient<PayRequest> _payRequestClient;
+    private readonly IPublishEndpoint  _publishEndpoint;
     private readonly ILogger<ReservationService> _logger;
     private readonly TimerManager _timerManager;
 
@@ -42,6 +43,7 @@ public class ReservationService
         IRequestClient<TransportOptionSearchRequest> transportSearchClient,
         IRequestClient<HotelCancelBookRoomsRequest> cancelBookRoomsClient,
         IRequestClient<PayRequest> payRequestClient,
+        IPublishEndpoint  publishEndpoint,
         ILogger<ReservationService> logger)
     {
         _dbContextFactory = dbContextFactory;
@@ -58,6 +60,7 @@ public class ReservationService
         _hotelCheckAvailabilityClient = hotelCheckAvailabilityClient;
         _transportSearchClient = transportSearchClient;
         _payRequestClient = payRequestClient;
+        _publishEndpoint = publishEndpoint;
         _logger = logger;
         _timerManager = new TimerManager(OnTimerElapsed);
     }
@@ -348,6 +351,9 @@ public class ReservationService
                 // If payment service returned True, mark as finalized
                 reservation.Finalized = true;
                 await dbContext.SaveChangesAsync();
+                // Publish event about tour being bought
+                await _publishEndpoint.Publish(new TourBoughtEvent(reservation.HotelId,
+                    reservation.Id, reservation.ToDestinationTransport, reservation.FromDestinationTransport));
                 return new BuyResponse(true);
             }
 
