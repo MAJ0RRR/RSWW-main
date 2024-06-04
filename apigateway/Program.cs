@@ -76,7 +76,12 @@ app.UseCors("AllowAll");
 //     app.UseSwagger();
 //     app.UseSwaggerUI();
 // }
+var webSocketOptions = new WebSocketOptions
+{
+    KeepAliveInterval = TimeSpan.FromMinutes(1)
+};
 
+app.UseWebSockets(webSocketOptions);
 app.UseSwagger();
 app.UseSwaggerUI();
 
