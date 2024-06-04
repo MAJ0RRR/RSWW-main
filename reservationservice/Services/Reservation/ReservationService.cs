@@ -580,6 +580,7 @@ public class ReservationService
                             HotelCity = hotel.City,
                             FromCity = toHotelTransportOption.FromCity,
                             DateTime = toHotelTransportOption.Start,
+                            HotelName = hotel.Name,
                             NumberOfNights = duration
                         };
                         tours.Add(tour);
