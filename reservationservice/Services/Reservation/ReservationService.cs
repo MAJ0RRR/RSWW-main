@@ -134,8 +134,8 @@ public class ReservationService
             throw new Exception("Could not fetch hotel or transport option");
         }
         var newReservationGuid = Guid.NewGuid();
-        var nights = (int)(fromTransportOptionResponse.Message.TransportOption.End
-                           - toTransportOptionResponse.Message.TransportOption.Start).TotalDays;
+        var nights = GetStayDuration(toTransportOptionResponse.Message.TransportOption.Start,
+                                        fromTransportOptionResponse.Message.TransportOption.End);
         var reservation = new Models.Reservation
         {
             Id = newReservationGuid,
@@ -424,8 +424,8 @@ public class ReservationService
                 {
                     Id = createReservationRequest.Reservation.Hotel,
                     Start = toTransportOptionResponse.Message.TransportOption.Start,
-                    NumberOfNights = (int)(fromTransportOptionResponse.Message.TransportOption.Start - 
-                                           toTransportOptionResponse.Message.TransportOption.End).TotalDays,
+                    NumberOfNights = GetStayDuration(toTransportOptionResponse.Message.TransportOption.End,
+                                                     fromTransportOptionResponse.Message.TransportOption.Start),
                     Sizes = createReservationRequest.Reservation.Rooms
                 }));
 
@@ -493,6 +493,11 @@ public class ReservationService
         }
     }
 
+    private int GetStayDuration(DateTime start, DateTime end)
+    {
+        return (int)Math.Ceiling((end - start).TotalDays);
+
+    }
     public async Task<GetAvailableToursResponse> GetAvailableTours(GetAvailableToursRequest request)
     {
         var numPeople = request.Tours.NumPeople == 0 ? 1 : request.Tours.NumPeople;
@@ -553,9 +558,9 @@ public class ReservationService
             if (toHotelTransportOption.ToCity == hotel.City && toHotelTransportOption.ToCountry == hotel.Country)
                 foreach (var fromHotelTransportOption in fromHotelTransportOptionsResponse.Message.TransportOptions)
                 {
-                    var duration = (int)(fromHotelTransportOption.End - toHotelTransportOption.Start).TotalDays;
+                    var duration = GetStayDuration(fromHotelTransportOption.End, toHotelTransportOption.Start);
                     if (duration > (request.Tours.MinDuration ?? 0) &&
-                        duration < maxDuration &&
+                        duration <= maxDuration &&
                         fromHotelTransportOption.FromCity == toHotelTransportOption.ToCity &&
                         fromHotelTransportOption.FromCountry == toHotelTransportOption.ToCountry &&
                         fromHotelTransportOption.ToCity == toHotelTransportOption.FromCity &&
