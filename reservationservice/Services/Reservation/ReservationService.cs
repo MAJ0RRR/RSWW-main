@@ -348,9 +348,6 @@ public class ReservationService
                 // If payment service returned True, mark as finalized
                 reservation.Finalized = true;
                 await dbContext.SaveChangesAsync();
-                // Publish event about tour being bought
-                await _publishEndpoint.Publish(new TourBoughtEvent(reservation.HotelId,
-                    reservation.Id, reservation.ToDestinationTransport, reservation.FromDestinationTransport));
                 return new BuyResponse(true);
             }
 
@@ -438,6 +435,11 @@ public class ReservationService
 
             await transaction.CommitAsync();
             _timerManager.StartInitialTimer(reservation.Id);
+            
+            // Publish event about tour being reserved
+            await _publishEndpoint.Publish(new TourReservedEvent(reservation.HotelId,
+                reservation.Id, reservation.ToDestinationTransport, reservation.FromDestinationTransport));
+            
             return new CreateReservationResponse(reservation.ToDto());
         }
         catch (Exception ex)
@@ -524,7 +526,7 @@ public class ReservationService
             if (toHotelTransportOption.ToCity == hotel.City && toHotelTransportOption.ToCountry == hotel.Country)
                 foreach (var fromHotelTransportOption in fromHotelTransportOptionsResponse.Message.TransportOptions)
                 {
-                    var duration = GetStayDuration(fromHotelTransportOption.End, toHotelTransportOption.Start);
+                    var duration = GetStayDuration(toHotelTransportOption.Start, fromHotelTransportOption.End);
                     if (duration > (request.Tours.MinDuration ?? 0) &&
                         duration <= maxDuration &&
                         fromHotelTransportOption.FromCity == toHotelTransportOption.ToCity &&
