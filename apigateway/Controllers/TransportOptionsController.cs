@@ -16,18 +16,24 @@ public class TransportOptionsController : ControllerBase
     private readonly IRequestClient<ReservationGetTransportOptionRequest> _getTransportOptionClient;
     private readonly IRequestClient<AddTransportOptionRequest> _addTransportOptionClient;
     private readonly IRequestClient<TransportOptionAddDiscountRequest> _addTransportDiscountClient;
+    private readonly IRequestClient<GetPopularTransportDestinationsRequest> _getDestinations;
+    private readonly IRequestClient<GetPopularTransportTypesRequest> _getTypes;
 
     public TransportOptionsController(ILogger<TransportOptionsController> logger,
         IRequestClient<ReservationGetTransportOptionsRequest> getTransportOptionsClient,
         IRequestClient<ReservationGetTransportOptionRequest> getTransportOptionClient,
         IRequestClient<AddTransportOptionRequest> addTransportOptionClient,
-        IRequestClient<TransportOptionAddDiscountRequest> addTransportDiscountClient)
+        IRequestClient<TransportOptionAddDiscountRequest> addTransportDiscountClient,
+        IRequestClient<GetPopularTransportDestinationsRequest> getDestinations,
+        IRequestClient<GetPopularTransportTypesRequest> getTypes)
     {
         _logger = logger;
         _getTransportOptionsClient = getTransportOptionsClient;
         _getTransportOptionClient = getTransportOptionClient;
         _addTransportOptionClient = addTransportOptionClient;
         _addTransportDiscountClient = addTransportDiscountClient;
+        _getDestinations = getDestinations;
+        _getTypes = getTypes;
     }
 
     [HttpGet(Name = "GetTransportOptions")]
@@ -97,5 +103,23 @@ public class TransportOptionsController : ControllerBase
         await _addTransportDiscountClient.GetResponse<TransportOptionAddDiscountResponse>(
             new TransportOptionAddDiscountRequest(id, discountDto));
         return Ok();
+    }
+    
+    
+    
+    [HttpGet("PopularTransportDestinations", Name = "GetPopularTransportDestinations")]
+    public async Task<ActionResult<Dictionary<string, List<string>>>> GetPopularTransportDestinations()
+    {
+        var response = await _getDestinations.GetResponse<GetPopularTransportDestinationsResponse>(new GetPopularTransportDestinationsRequest());
+        return Ok(response.Message.PopularCities);
+    }
+    
+    
+    
+    [HttpGet("PopularTransportTypes", Name = "GetPopularTransportTypes")]
+    public async Task<ActionResult<List<string>>> GetPopularTransportTypes()
+    {
+        var response = await _getTypes.GetResponse<GetPopularTransportTypesResponse>(new GetPopularTransportTypesRequest());
+        return Ok(response.Message.Types);
     }
 }

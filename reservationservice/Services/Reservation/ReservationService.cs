@@ -16,7 +16,6 @@ public class ReservationService
     private readonly IRequestClient<GetHotelRequest> _getHotelClient;
     private readonly IRequestClient<GetHotelsRequest> _getHotelsClient;
     private readonly IRequestClient<HotelGetAvailableRoomsRequest> _getAvailableRoomsClient;
-    private readonly IRequestClient<GetPopularDestinationsRequest> _getPopularDestinationsClient;
     private readonly IRequestClient<HotelBookRoomsRequest> _bookRoomsClient;
     private readonly IRequestClient<TransportOptionSubtractSeatsRequest> _subtractSeatsClient;
     private readonly IRequestClient<TransportOptionAddSeatsRequest> _addSeatsClient;
@@ -35,7 +34,6 @@ public class ReservationService
         IRequestClient<GetHotelRequest> getHotelClient,
         IRequestClient<GetHotelsRequest> getHotelsClient,
         IRequestClient<HotelGetAvailableRoomsRequest> getAvailableRoomsClient,
-        IRequestClient<GetPopularDestinationsRequest> getPopularDestinationsClient,
         IRequestClient<HotelBookRoomsRequest> bookRoomsClient,
         IRequestClient<TransportOptionSubtractSeatsRequest> subtractSeatsClient,
         IRequestClient<TransportOptionAddSeatsRequest> addSeatsClient,
@@ -52,7 +50,6 @@ public class ReservationService
         _getHotelClient = getHotelClient;
         _getHotelsClient = getHotelsClient;
         _getAvailableRoomsClient = getAvailableRoomsClient;
-        _getPopularDestinationsClient = getPopularDestinationsClient;
         _bookRoomsClient = bookRoomsClient;
         _subtractSeatsClient = subtractSeatsClient;
         _addSeatsClient = addSeatsClient;
@@ -368,38 +365,7 @@ public class ReservationService
             return new BuyResponse(false);
         }
     }
-
-    public async Task<GetPopularOffersResponse> GetPopularOffers()
-    {
-        var destinationsResponse = await _getPopularDestinationsClient.GetResponse<GetPopularDestinationsResponse>(
-            new GetPopularDestinationsRequest());
-
-        // offer is a Dict<Country: Dict<City : List<Hotels>>>
-        var offers = new Dictionary<string, Dictionary<string, List<string>>>();
-
-        // iterate over destinationsResponse, extract To Address from each one and save City + Country
-        foreach (var transport in destinationsResponse.Message.TransportOptions)
-        {
-            var country = transport.ToCountry;
-            var city = transport.ToCity;
-
-            if (!offers.ContainsKey(country)) offers[country] = new Dictionary<string, List<string>>();
-
-            if (!offers[country].ContainsKey(city)) offers[country][city] = new List<string>();
-        }
-
-        // Get all hotels
-        var hotelsResponse = await _getHotelsClient.GetResponse<GetHotelsResponse>(new GetHotelsRequest());
-
-        // For each City + Country combination save list of hotels in this location
-        hotelsResponse.Message.Hotels
-            .Where(hotel => offers.ContainsKey(hotel.Country) && offers[hotel.Country].ContainsKey(hotel.City))
-            .ToList()
-            .ForEach(hotel => offers[hotel.Country][hotel.City].Add(hotel.Name));
-        // TODO: do not return destinations with 0 hotels
-        return new GetPopularOffersResponse(offers);
-    }
-
+    
     public async Task<CreateReservationResponse> CreateReservation(CreateReservationRequest createReservationRequest)
     {
         await using var dbContext = _dbContextFactory.CreateDbContext();

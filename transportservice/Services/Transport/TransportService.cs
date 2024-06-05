@@ -187,13 +187,23 @@ public class TransportService
         
         return new TransportOptionSubtractSeatsResponse(true);
     }
-
-    public async Task<GetPopularDestinationsResponse> GetPopularDestinations(GetPopularDestinationsRequest request)
+    
+    public async Task<GetPopularTransportDestinationsResponse> GetPopularTransportDestinations(GetPopularTransportDestinationsRequest request)
     {
-        using var dbContext = _dbContextFactory.CreateDbContext();
-        var transportOptions = await FetchQueryTransportOptions(dbContext).Take(10).ToListAsync();
-        var transportOptionsDto = transportOptions.Select(t => t.ToDto()).ToList();
+        var destinations = new Dictionary<string, List<string>>
+        {
+            { "USA", new List<string> { "New York", "Los Angeles", "Chicago" } },
+            { "Germany", new List<string> { "Berlin", "Munich", "Frankfurt" } },
+            { "Japan", new List<string> { "Tokyo", "Osaka", "Kyoto" } }
+        };
 
-        return new GetPopularDestinationsResponse(transportOptionsDto);
+        return new GetPopularTransportDestinationsResponse(destinations);
+    }
+
+    public async Task<GetPopularTransportTypesResponse> GetPopularTransportTypes(GetPopularTransportTypesRequest request)
+    {
+        var transportTypes = new List<string> { "Plane", "Bus", "Train" };
+
+        return new GetPopularTransportTypesResponse(transportTypes);
     }
 }

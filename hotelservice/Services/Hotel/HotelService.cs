@@ -200,4 +200,19 @@ public class HotelService
 
         return new HotelCancelBookRoomsResponse();
     }
+
+    public async Task<GetPopularHotelsResponse> GetPopularHotels(GetPopularHotelsRequest request)
+    {
+        var hotels = new List<Tuple<string, string, string>>
+        {
+            new Tuple<string, string, string>("USA", "New York", "Hotel Plaza"),
+            new Tuple<string, string, string>("USA", "Los Angeles", "Hotel California"),
+            new Tuple<string, string, string>("Germany", "Berlin", "Hotel Adlon"),
+            new Tuple<string, string, string>("Germany", "Munich", "Hotel Bayerischer Hof"),
+            new Tuple<string, string, string>("Japan", "Tokyo", "Park Hyatt Tokyo"),
+            new Tuple<string, string, string>("Japan", "Osaka", "Hotel Monterey Grasmere Osaka")
+        };
+
+        return new GetPopularHotelsResponse(hotels);
+    }
 }

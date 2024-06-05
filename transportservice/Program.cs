@@ -40,8 +40,9 @@ builder.ConfigureServices((hostContext, services) =>
         busConfigurator.AddConsumer<TransportOptionAddSeatsRequestConsumer>();
         busConfigurator.AddConsumer<TransportOptionAddDiscountRequestConsumer>();
         busConfigurator.AddConsumer<TransportOptionSubtractSeatsRequestConsumer>();
-        busConfigurator.AddConsumer<GetPopularDestinationsRequestConsumer>();
-
+        busConfigurator.AddConsumer<GetPopularTransportDestinationsRequestConsumer>();
+        busConfigurator.AddConsumer<GetPopularTransportTypesRequestConsumer>();
+        
         // Get the connection string from configuration
         var rabbitMQHost = configuration.GetConnectionString("RabbitMQHost");
         var rabbitMQUser = configuration.GetConnectionString("RabbitMQUser");
