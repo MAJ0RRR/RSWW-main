@@ -178,9 +178,8 @@ public class HotelService
         {
             Id = Guid.NewGuid(),
             HotelId = request.Id,
-            Value = request.Discount.Value,
-            Start = DateTime.SpecifyKind(request.Discount.Start, DateTimeKind.Utc),
-            End = DateTime.SpecifyKind(request.Discount.End, DateTimeKind.Utc)
+            Value = request.Discount,
+            Start = DateTime.SpecifyKind(DateTime.Now, DateTimeKind.Utc)
         };
 
         hotelQuery.Discounts.Add(newDiscount);

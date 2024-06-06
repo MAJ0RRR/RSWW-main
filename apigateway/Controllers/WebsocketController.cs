@@ -19,15 +19,15 @@ public interface ISubscription<T>
 
 public class TourReservedEventSubscription : ISubscription<TourReservedEvent>
 {
-    public Guid HotelId { get; set; }
+    public Guid? HotelId { get; set; }
     public Guid? ToTransportOptionId { get; set; }
     public Guid? FromTransportOptionId { get; set; }
 
     public bool Matches(TourReservedEvent @event)
     {
-        return @event.HotelId == HotelId &&
+        return !HotelId.HasValue || (@event.HotelId == HotelId &&
                (!ToTransportOptionId.HasValue || @event.ToTransportOptionId == ToTransportOptionId) &&
-               (!FromTransportOptionId.HasValue || @event.FromTransportOptionId == FromTransportOptionId);
+               (!FromTransportOptionId.HasValue || @event.FromTransportOptionId == FromTransportOptionId));
     }
 }
 
@@ -89,7 +89,7 @@ public class WebSocketController : ControllerBase
     {
         return new TourReservedEventSubscription
         {
-            HotelId = Guid.Parse(query["hotelId"]),
+            HotelId = query.ContainsKey("hotelId") ? Guid.Parse(query["hotelId"]) : (Guid?)null,
             ToTransportOptionId = query.ContainsKey("toTransportOptionId") ? Guid.Parse(query["toTransportOptionId"]) : (Guid?)null,
             FromTransportOptionId = query.ContainsKey("fromTransportOptionId") ? Guid.Parse(query["fromTransportOptionId"]) : (Guid?)null
         };

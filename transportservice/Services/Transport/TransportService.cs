@@ -152,14 +152,14 @@ public class TransportService
         {
             Id = Guid.NewGuid(),
             TransportOptionId = request.Id,
-            Value = request.Discount.Value,
-            Start = request.Discount.Start,
+            Value = request.Discount,
+            Start = DateTime.Now,
         };
 
         await dbContext.Discounts.AddAsync(newDiscount);
         await dbContext.SaveChangesAsync();
 
-        _eventBus.Publish(new TransportDiscountAddedEvent(request.Id, request.Discount.Value));
+        _eventBus.Publish(new TransportDiscountAddedEvent(request.Id, request.Discount));
         
         return new TransportOptionAddDiscountResponse();
     }

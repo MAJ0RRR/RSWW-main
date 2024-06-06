@@ -90,18 +90,10 @@ public class TransportOptionsController : ControllerBase
 
     [Authorize("RequireAdmin")]
     [HttpPost("{id}/Discount", Name = "PostTransportOptionDiscount")]
-    public async Task<IActionResult> PostTransportOptionDiscount(Guid id,
-        TransportOptionDiscount transportOptionDiscount)
+    public async Task<IActionResult> PostTransportOptionDiscount(Guid id,  decimal value)
     {
-        var discountDto = new DiscountDto
-        {
-            Value = transportOptionDiscount.Percentage,
-            Start = transportOptionDiscount.Start,
-            End = transportOptionDiscount.End
-        };
-
         await _addTransportDiscountClient.GetResponse<TransportOptionAddDiscountResponse>(
-            new TransportOptionAddDiscountRequest(id, discountDto));
+            new TransportOptionAddDiscountRequest(id, value));
         return Ok();
     }
     
