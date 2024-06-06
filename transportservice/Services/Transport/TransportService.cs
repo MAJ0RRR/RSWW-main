@@ -159,7 +159,7 @@ public class TransportService
         await dbContext.Discounts.AddAsync(newDiscount);
         await dbContext.SaveChangesAsync();
 
-        _eventBus.Publish(new DiscountAddedEvent(request.Id, request.Discount.Value));
+        _eventBus.Publish(new TransportDiscountAddedEvent(request.Id, request.Discount.Value));
         
         return new TransportOptionAddDiscountResponse();
     }

@@ -12,50 +12,57 @@ using Microsoft.Extensions.Hosting;
 
 namespace apigateway.Controllers;
 
+public interface ISubscription<T>
+{
+    bool Matches(T @event);
+}
 
-public class Subscription
+public class TourReservedEventSubscription : ISubscription<TourReservedEvent>
 {
     public Guid HotelId { get; set; }
     public Guid? ToTransportOptionId { get; set; }
     public Guid? FromTransportOptionId { get; set; }
+
+    public bool Matches(TourReservedEvent @event)
+    {
+        return @event.HotelId == HotelId &&
+               (!ToTransportOptionId.HasValue || @event.ToTransportOptionId == ToTransportOptionId) &&
+               (!FromTransportOptionId.HasValue || @event.FromTransportOptionId == FromTransportOptionId);
+    }
+}
+
+public class DiscountAddedEventSubscription : ISubscription<DiscountAddedEvent>
+{
+    public Guid? Id { get; set; }
+
+    public bool Matches(DiscountAddedEvent @event)
+    {
+        return !Id.HasValue || @event.Id == Id;
+    }
 }
 
 [ApiExplorerSettings(IgnoreApi = true)]
 public class WebSocketController : ControllerBase
 {
-    private readonly Channel<TourReservedEvent> _channel;
+    private readonly Channel<TourReservedEvent> _tourChannel;
+    private readonly Channel<DiscountAddedEvent> _discountChannel;
     private readonly ILogger<WebSocketController> _logger;
 
-    public WebSocketController(Channel<TourReservedEvent> channel, ILogger<WebSocketController> logger)
+    public WebSocketController(Channel<TourReservedEvent> tourChannel, Channel<DiscountAddedEvent> discountChannel, ILogger<WebSocketController> logger)
     {
-        _channel = channel;
+        _tourChannel = tourChannel;
+        _discountChannel = discountChannel;
         _logger = logger;
     }
 
-    [Route("/ws")]
-    public async Task GetWs(CancellationToken cancellationToken)
+    [Route("/ws/tours")]
+    public async Task GetTourWs(CancellationToken cancellationToken)
     {
         if (HttpContext.WebSockets.IsWebSocketRequest)
         {
-            var hotelId = HttpContext.Request.Query.ContainsKey("hotelId") 
-                ? Guid.Parse(HttpContext.Request.Query["hotelId"]) 
-                : (Guid?)null;
-            var toTransportOptionId = HttpContext.Request.Query.ContainsKey("toTransportOptionId") 
-                ? Guid.Parse(HttpContext.Request.Query["toTransportOptionId"]) 
-                : (Guid?)null;
-            var fromTransportOptionId = HttpContext.Request.Query.ContainsKey("fromTransportOptionId") 
-                ? Guid.Parse(HttpContext.Request.Query["fromTransportOptionId"]) 
-                : (Guid?)null;
-            
-            var subscription = !hotelId.HasValue ? null : new Subscription
-            {
-                HotelId = hotelId.Value,
-                ToTransportOptionId = toTransportOptionId,
-                FromTransportOptionId = fromTransportOptionId
-            };
+            var subscription = ExtractTourSubscriptionFromQuery(HttpContext.Request.Query);
 
-            using var webSocket = await HttpContext.WebSockets.AcceptWebSocketAsync();
-            await HandleWebSocketConnection(webSocket, subscription, cancellationToken);
+            await HandleWebSocketConnection(subscription, cancellationToken);
         }
         else
         {
@@ -63,11 +70,46 @@ public class WebSocketController : ControllerBase
         }
     }
 
-    private async Task HandleWebSocketConnection(WebSocket webSocket, Subscription? subscription, CancellationToken cancellationToken)
+    [Route("/ws/discounts")]
+    public async Task GetDiscountWs(CancellationToken cancellationToken)
     {
+        if (HttpContext.WebSockets.IsWebSocketRequest)
+        {
+            var subscription = ExtractDiscountSubscriptionFromQuery(HttpContext.Request.Query);
+
+            await HandleWebSocketConnection(subscription, cancellationToken);
+        }
+        else
+        {
+            HttpContext.Response.StatusCode = StatusCodes.Status400BadRequest;
+        }
+    }
+
+    private TourReservedEventSubscription ExtractTourSubscriptionFromQuery(IQueryCollection query)
+    {
+        return new TourReservedEventSubscription
+        {
+            HotelId = Guid.Parse(query["hotelId"]),
+            ToTransportOptionId = query.ContainsKey("toTransportOptionId") ? Guid.Parse(query["toTransportOptionId"]) : (Guid?)null,
+            FromTransportOptionId = query.ContainsKey("fromTransportOptionId") ? Guid.Parse(query["fromTransportOptionId"]) : (Guid?)null
+        };
+    }
+
+    private DiscountAddedEventSubscription ExtractDiscountSubscriptionFromQuery(IQueryCollection query)
+    {
+        return new DiscountAddedEventSubscription
+        {
+            Id = query.ContainsKey("Id") ? Guid.Parse(query["Id"]) : (Guid?)null
+        };
+    }
+
+    private async Task HandleWebSocketConnection<T>(ISubscription<T> subscription, CancellationToken cancellationToken) where T : class
+    {
+        using var webSocket = await HttpContext.WebSockets.AcceptWebSocketAsync();
+        
         try
         {
-            await BroadcastService.AddClientAsync(webSocket, subscription, cancellationToken);
+            await BroadcastService<T>.AddClientAsync(webSocket, subscription, cancellationToken);
 
             while (webSocket.State == WebSocketState.Open && !cancellationToken.IsCancellationRequested)
             {
@@ -80,7 +122,7 @@ public class WebSocketController : ControllerBase
         }
         finally
         {
-            BroadcastService.RemoveClient(webSocket);
+            BroadcastService<T>.RemoveClient(webSocket);
 
             if (webSocket.State == WebSocketState.Open || webSocket.State == WebSocketState.CloseReceived)
             {
@@ -89,20 +131,19 @@ public class WebSocketController : ControllerBase
         }
     }
 
-
-    public class BroadcastService : BackgroundService
+    public class BroadcastService<T> : BackgroundService where T : class
     {
-        private readonly Channel<TourReservedEvent> _channel;
-        private readonly ILogger<BroadcastService> _logger;
-        private static readonly ConcurrentDictionary<WebSocket, Subscription?> _subscriptions = new ConcurrentDictionary<WebSocket, Subscription?>();
+        private readonly Channel<T> _channel;
+        private readonly ILogger<BroadcastService<T>> _logger;
+        private static readonly ConcurrentDictionary<WebSocket, ISubscription<T>> _subscriptions = new ConcurrentDictionary<WebSocket, ISubscription<T>>();
 
-        public BroadcastService(Channel<TourReservedEvent> channel, ILogger<BroadcastService> logger)
+        public BroadcastService(Channel<T> channel, ILogger<BroadcastService<T>> logger)
         {
             _channel = channel;
             _logger = logger;
         }
 
-        public static Task AddClientAsync(WebSocket webSocket, Subscription? subscription, CancellationToken cancellationToken)
+        public static Task AddClientAsync(WebSocket webSocket, ISubscription<T> subscription, CancellationToken cancellationToken)
         {
             _subscriptions.TryAdd(webSocket, subscription);
             return Task.CompletedTask;
@@ -115,14 +156,12 @@ public class WebSocketController : ControllerBase
 
         protected override async Task ExecuteAsync(CancellationToken stoppingToken)
         {
-            var reader = _channel.Reader;
-
             while (!stoppingToken.IsCancellationRequested)
             {
                 try
                 {
-                    var reservedEvent = await reader.ReadAsync(stoppingToken);
-                    await BroadcastNotification(reservedEvent, stoppingToken);
+                    var incomingEvent = await _channel.Reader.ReadAsync(stoppingToken);
+                    await BroadcastNotification(incomingEvent, stoppingToken);
                 }
                 catch (OperationCanceledException)
                 {
@@ -135,7 +174,7 @@ public class WebSocketController : ControllerBase
             }
         }
 
-        private async Task BroadcastNotification(TourReservedEvent reservedEvent, CancellationToken cancellationToken)
+        private async Task BroadcastNotification(T reservedEvent, CancellationToken cancellationToken)
         {
             var message = JsonSerializer.Serialize(reservedEvent);
             var buffer = Encoding.UTF8.GetBytes(message);
@@ -143,23 +182,13 @@ public class WebSocketController : ControllerBase
 
             foreach (var (socket, subscription) in _subscriptions)
             {
-                if (socket.State == WebSocketState.Open && MatchesSubscription(reservedEvent, subscription))
+                if (socket.State == WebSocketState.Open && subscription.Matches(reservedEvent))
                 {
                     await socket.SendAsync(segment, WebSocketMessageType.Text, true, cancellationToken);
                     _logger.LogInformation("Sent: " + message);
                 }
             }
         }
-
-        private bool MatchesSubscription(TourReservedEvent reservedEvent, Subscription? subscription)
-        {
-            if (subscription == null)
-                return true;
-
-            return (reservedEvent.HotelId == subscription.HotelId) &&
-                   (!subscription.ToTransportOptionId.HasValue || reservedEvent.ToTransportOptionId == subscription.ToTransportOptionId) &&
-                   (!subscription.FromTransportOptionId.HasValue || reservedEvent.FromTransportOptionId == subscription.FromTransportOptionId);
-        }
     }
 }
-    
+

@@ -1,6 +1,7 @@
 ﻿using contracts;
 using contracts.Dtos;
 using hotelservice.Models;
+using MassTransit;
 using Microsoft.EntityFrameworkCore;
 
 namespace hotelservice.Services.Hotel;
@@ -8,10 +9,12 @@ namespace hotelservice.Services.Hotel;
 public class HotelService
 {
     private readonly HotelDbContext _dbContext;
+    private readonly IPublishEndpoint  _publishEndpoint;
 
-    public HotelService(HotelDbContext dbContext)
+    public HotelService(HotelDbContext dbContext, IPublishEndpoint  publishEndpoint)
     {
         _dbContext = dbContext;
+        _publishEndpoint = publishEndpoint;
     }
 
     private IQueryable<Models.Hotel> FetchHotels()
@@ -184,6 +187,9 @@ public class HotelService
         await _dbContext.Discounts.AddAsync(newDiscount);
         await _dbContext.SaveChangesAsync();
 
+        // Publish event about discount being added
+        await _publishEndpoint.Publish(new DiscountAddedEvent(request.Id));
+        
         return new HotelAddDiscountResponse();
     }
 
