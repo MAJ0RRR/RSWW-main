@@ -348,6 +348,11 @@ public class ReservationService
                 // If payment service returned True, mark as finalized
                 reservation.Finalized = true;
                 await dbContext.SaveChangesAsync();
+                
+                // Publish event about tour being bought
+                await _publishEndpoint.Publish(new TourBoughtEvent(reservation.HotelId,
+                    reservation.Id, reservation.ToDestinationTransport, reservation.FromDestinationTransport));
+
                 return new BuyResponse(true);
             }
 
