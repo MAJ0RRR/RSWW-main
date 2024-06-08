@@ -1,4 +1,5 @@
 ﻿using contracts;
+using contracts.Dtos;
 using Microsoft.EntityFrameworkCore;
 using transportservice.Models;
 
@@ -202,8 +203,13 @@ public class TransportService
 
     public async Task<GetPopularTransportTypesResponse> GetPopularTransportTypes(GetPopularTransportTypesRequest request)
     {
-        var transportTypes = new List<string> { "Plane", "Bus", "Train" };
-
+        using var dbContext = _dbContextFactory.CreateDbContext();
+    
+        var transportTypes = await dbContext.PopularTransportTypes
+            .OrderByDescending(pt => pt.Counter) 
+            .Select(pt=>pt.Type)
+            .ToListAsync();
+        
         return new GetPopularTransportTypesResponse(transportTypes);
     }
 }

@@ -100,6 +100,46 @@ public class SeatsChangedEventHandler
         if (queryTransportOption != null)
         {
             queryTransportOption.Seats += @event.ChangeBy;
+
+            if (@event.ChangeBy < 0)
+            {
+                var destination = dbContext.PopularDestinations
+                    .FirstOrDefault(pd => pd.Country == queryTransportOption.ToCountry && pd.City == queryTransportOption.ToCity);
+
+                var type = dbContext.PopularTransportTypes.FirstOrDefault(pdt => pdt.Type == queryTransportOption.Type);
+
+                if (destination == null)
+                {
+                    destination = new PopularDestination
+                    {
+                        Id = Guid.NewGuid(),
+                        Country = queryTransportOption.ToCountry,
+                        City = queryTransportOption.ToCity,
+                        Counter = 1
+                    };
+                    dbContext.PopularDestinations.Add(destination);
+                }
+                else
+                {
+                    destination.Counter++;
+                    dbContext.PopularDestinations.Update(destination);
+                }
+                
+                if (type == null)
+                {
+                    type = new PopularTransportType
+                    {
+                        Id = Guid.NewGuid(),
+                        Counter = 1
+                    };
+                    dbContext.PopularTransportTypes.Add(type);
+                }
+                else
+                {
+                    type.Counter++;
+                    dbContext.PopularTransportTypes.Update(type);
+                }
+            }
             await dbContext.SaveChangesAsync();
         }
     }
