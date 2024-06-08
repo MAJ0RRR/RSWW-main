@@ -87,6 +87,36 @@ public class HotelService
 
     public async Task<HotelBookRoomsResponse> BookRooms(HotelBookRoomsRequest request)
     {
+        
+        var hotelId = request.BookingDetails.Id;
+
+        var popularHotel = await _dbContext.PopularHotels
+            .FirstOrDefaultAsync(h => h.Id == hotelId);
+        
+        var popularHotelInfo = await _dbContext.Hotels
+            .FirstOrDefaultAsync(h => h.Id == hotelId);
+
+        
+        if (popularHotel == null && popularHotelInfo != null)
+        {
+            // Hotel does not exist, create a new record
+            popularHotel = new PopularHotel
+            {
+                Id = hotelId,
+                Name = popularHotelInfo.Name,
+                City = popularHotelInfo.City,
+                Country = popularHotelInfo.Country,
+                Counter = 1 
+            };
+            _dbContext.PopularHotels.Add(popularHotel);
+        }
+
+        else
+        {
+            popularHotel.Counter++;
+            _dbContext.PopularHotels.Update(popularHotel);
+        }
+
         var hotel = await FetchHotels()
             .FirstOrDefaultAsync(h => h.Id == request.BookingDetails.Id);
 
@@ -207,16 +237,16 @@ public class HotelService
 
     public async Task<GetPopularHotelsResponse> GetPopularHotels(GetPopularHotelsRequest request)
     {
-        var hotels = new List<Tuple<string, string, string>>
-        {
-            new Tuple<string, string, string>("USA", "New York", "Hotel Plaza"),
-            new Tuple<string, string, string>("USA", "Los Angeles", "Hotel California"),
-            new Tuple<string, string, string>("Germany", "Berlin", "Hotel Adlon"),
-            new Tuple<string, string, string>("Germany", "Munich", "Hotel Bayerischer Hof"),
-            new Tuple<string, string, string>("Japan", "Tokyo", "Park Hyatt Tokyo"),
-            new Tuple<string, string, string>("Japan", "Osaka", "Hotel Monterey Grasmere Osaka")
-        };
+        var hotels = await _dbContext.PopularHotels
+            .OrderByDescending(ph => ph.Counter)
+            .ToListAsync();
 
-        return new GetPopularHotelsResponse(hotels);
+        var popularHotels = hotels
+            .GroupBy(ph => ph.Name)
+            .Select(group => group.Select(hotel => Tuple.Create(hotel.Name, hotel.Country, hotel.City)).First())
+            .Take(10)
+            .ToList();
+
+        return new GetPopularHotelsResponse(popularHotels);
     }
 }
