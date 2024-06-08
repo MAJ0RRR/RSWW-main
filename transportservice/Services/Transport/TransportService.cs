@@ -191,14 +191,20 @@ public class TransportService
     
     public async Task<GetPopularTransportDestinationsResponse> GetPopularTransportDestinations(GetPopularTransportDestinationsRequest request)
     {
-        var destinations = new Dictionary<string, List<string>>
-        {
-            { "USA", new List<string> { "New York", "Los Angeles", "Chicago" } },
-            { "Germany", new List<string> { "Berlin", "Munich", "Frankfurt" } },
-            { "Japan", new List<string> { "Tokyo", "Osaka", "Kyoto" } }
-        };
+        using var dbContext = _dbContextFactory.CreateDbContext();
 
-        return new GetPopularTransportDestinationsResponse(destinations);
+        var destinations = await dbContext.PopularDestinations
+            .OrderByDescending(pd => pd.Counter)
+            .ToListAsync();
+
+        var groupedDestinations = destinations
+            .GroupBy(pd => pd.Country)
+            .ToDictionary(
+                g => g.Key,
+                g => g.Select(pd => pd.City).ToList()
+            );
+
+        return new GetPopularTransportDestinationsResponse(groupedDestinations);
     }
 
     public async Task<GetPopularTransportTypesResponse> GetPopularTransportTypes(GetPopularTransportTypesRequest request)
