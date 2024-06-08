@@ -147,13 +147,4 @@ public class PopularTransportType
     public Guid Id { get ; set; }
     public string Type { get; set; }
     public int Counter { get; set; }
-    public PopularTransportTypeDto ToDto()
-    {
-        return new PopularTransportTypeDto
-        {
-            Id = this.Id,
-            Type = this.Type,
-            Counter = this.Counter
-        };
-    }
 }

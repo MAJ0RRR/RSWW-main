@@ -130,6 +130,7 @@ public class SeatsChangedEventHandler
                     type = new PopularTransportType
                     {
                         Id = Guid.NewGuid(),
+                        Type = queryTransportOption.Type,
                         Counter = 1
                     };
                     dbContext.PopularTransportTypes.Add(type);

@@ -90,8 +90,8 @@ namespace transportservice.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("49427aa5-7573-4fe9-a99a-5ca97df04459"),
-                            End = new DateTime(2024, 8, 18, 4, 7, 13, 749, DateTimeKind.Utc).AddTicks(4463),
+                            Id = new Guid("a546e637-ebcd-4d3a-9924-8cfd289e58cc"),
+                            End = new DateTime(2024, 8, 29, 13, 10, 42, 766, DateTimeKind.Utc).AddTicks(2253),
                             FromCity = "Olimpijska",
                             FromCountry = "grecja",
                             FromStreet = "Plateia Syntagmatos",
@@ -100,7 +100,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 8, 17, 20, 7, 13, 749, DateTimeKind.Utc).AddTicks(4460),
+                            Start = new DateTime(2024, 8, 29, 5, 10, 42, 766, DateTimeKind.Utc).AddTicks(2249),
                             ToCity = "Turecka",
                             ToCountry = "turcja",
                             ToStreet = "Halaskargazi Caddesi",
@@ -108,8 +108,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("73331d99-edf6-4582-97a2-0354cd404dbf"),
-                            End = new DateTime(2024, 7, 18, 19, 7, 13, 749, DateTimeKind.Utc).AddTicks(4469),
+                            Id = new Guid("bff52d10-f52f-480b-8e4f-10d98b5e4e87"),
+                            End = new DateTime(2024, 7, 30, 4, 10, 42, 766, DateTimeKind.Utc).AddTicks(2260),
                             FromCity = "Brava",
                             FromCountry = "hiszpania",
                             FromStreet = "Calle de Alcalá",
@@ -118,7 +118,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 7, 18, 16, 7, 13, 749, DateTimeKind.Utc).AddTicks(4469),
+                            Start = new DateTime(2024, 7, 30, 1, 10, 42, 766, DateTimeKind.Utc).AddTicks(2260),
                             ToCity = "Kalabria",
                             ToCountry = "wlochy",
                             ToStreet = "Via del Corso",
@@ -126,8 +126,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("b6ac79a1-45bb-485c-8606-e9af88851c13"),
-                            End = new DateTime(2024, 6, 25, 11, 7, 13, 749, DateTimeKind.Utc).AddTicks(4472),
+                            Id = new Guid("8dfd09ec-6d47-46e8-9d61-aa29fea1934e"),
+                            End = new DateTime(2024, 7, 6, 20, 10, 42, 766, DateTimeKind.Utc).AddTicks(2264),
                             FromCity = "Durres",
                             FromCountry = "albania",
                             FromStreet = "Rruga Abdyl Frasheri",
@@ -136,7 +136,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 6, 25, 8, 7, 13, 749, DateTimeKind.Utc).AddTicks(4472),
+                            Start = new DateTime(2024, 7, 6, 17, 10, 42, 766, DateTimeKind.Utc).AddTicks(2263),
                             ToCity = "Maresme",
                             ToCountry = "hiszpania",
                             ToStreet = "Paseo del Prado",
@@ -144,8 +144,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("eafe123e-df09-4f1f-82a2-45a186d181be"),
-                            End = new DateTime(2024, 5, 29, 17, 7, 13, 749, DateTimeKind.Utc).AddTicks(4474),
+                            Id = new Guid("8e7af89b-36c5-4969-9326-bd295fe99586"),
+                            End = new DateTime(2024, 6, 10, 2, 10, 42, 766, DateTimeKind.Utc).AddTicks(2266),
                             FromCity = "Kalabria",
                             FromCountry = "wlochy",
                             FromStreet = "Via Veneto",
@@ -154,7 +154,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 5, 29, 13, 7, 13, 749, DateTimeKind.Utc).AddTicks(4473),
+                            Start = new DateTime(2024, 6, 9, 22, 10, 42, 766, DateTimeKind.Utc).AddTicks(2266),
                             ToCity = "Riwiera",
                             ToCountry = "chorwacja",
                             ToStreet = "Kapucinska ulica",
@@ -162,8 +162,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("53d4a04c-97a5-462d-a57f-b887a481d874"),
-                            End = new DateTime(2024, 8, 8, 16, 7, 13, 749, DateTimeKind.Utc).AddTicks(4476),
+                            Id = new Guid("c2af9c60-9000-4d03-b8e4-a5d0cd500836"),
+                            End = new DateTime(2024, 8, 20, 1, 10, 42, 766, DateTimeKind.Utc).AddTicks(2269),
                             FromCity = "Kalabria",
                             FromCountry = "wlochy",
                             FromStreet = "Via Veneto",
@@ -172,7 +172,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 8, 8, 9, 7, 13, 749, DateTimeKind.Utc).AddTicks(4475),
+                            Start = new DateTime(2024, 8, 19, 18, 10, 42, 766, DateTimeKind.Utc).AddTicks(2268),
                             ToCity = "Durres",
                             ToCountry = "albania",
                             ToStreet = "Rruga Abdyl Frasheri",
@@ -180,8 +180,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("e57dc91a-088f-4681-9a8d-b1c7cd2d84e9"),
-                            End = new DateTime(2024, 6, 9, 11, 7, 13, 749, DateTimeKind.Utc).AddTicks(4477),
+                            Id = new Guid("db80c9f8-7732-420f-9ec8-d6d144aa7ab7"),
+                            End = new DateTime(2024, 6, 20, 20, 10, 42, 766, DateTimeKind.Utc).AddTicks(2272),
                             FromCity = "Kalabria",
                             FromCountry = "wlochy",
                             FromStreet = "Via Nazionale",
@@ -190,7 +190,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 6, 9, 8, 7, 13, 749, DateTimeKind.Utc).AddTicks(4477),
+                            Start = new DateTime(2024, 6, 20, 17, 10, 42, 766, DateTimeKind.Utc).AddTicks(2272),
                             ToCity = "Riwiera",
                             ToCountry = "chorwacja",
                             ToStreet = "Maksimirska ulica",
@@ -198,8 +198,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("f0a42564-8eec-4136-8f5e-0c92c12e5408"),
-                            End = new DateTime(2024, 8, 1, 4, 7, 13, 749, DateTimeKind.Utc).AddTicks(4479),
+                            Id = new Guid("9a7db70b-d099-4c92-89df-85773bba2b21"),
+                            End = new DateTime(2024, 8, 12, 13, 10, 42, 766, DateTimeKind.Utc).AddTicks(2275),
                             FromCity = "Vlora",
                             FromCountry = "albania",
                             FromStreet = "Rruga 28 Nentori",
@@ -208,7 +208,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 8, 1, 0, 7, 13, 749, DateTimeKind.Utc).AddTicks(4479),
+                            Start = new DateTime(2024, 8, 12, 9, 10, 42, 766, DateTimeKind.Utc).AddTicks(2274),
                             ToCity = "Marmaris",
                             ToCountry = "turcja",
                             ToStreet = "Bağdat Caddesi",
@@ -216,8 +216,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("e8a0ba8d-68c8-4ec3-9464-f4f0773b9d8e"),
-                            End = new DateTime(2024, 6, 10, 18, 7, 13, 749, DateTimeKind.Utc).AddTicks(4481),
+                            Id = new Guid("834eecd5-551e-4409-923e-d0a6d7937404"),
+                            End = new DateTime(2024, 6, 22, 3, 10, 42, 766, DateTimeKind.Utc).AddTicks(2277),
                             FromCity = "Heraklion",
                             FromCountry = "grecja",
                             FromStreet = "Plateia Syntagmatos",
@@ -226,7 +226,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 6, 10, 10, 7, 13, 749, DateTimeKind.Utc).AddTicks(4481),
+                            Start = new DateTime(2024, 6, 21, 19, 10, 42, 766, DateTimeKind.Utc).AddTicks(2277),
                             ToCity = "Kalabria",
                             ToCountry = "wlochy",
                             ToStreet = "Via del Corso",
@@ -234,8 +234,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("9f9ba4aa-21d8-4595-8961-c05865363f2c"),
-                            End = new DateTime(2024, 8, 21, 23, 7, 13, 749, DateTimeKind.Utc).AddTicks(4483),
+                            Id = new Guid("152868d6-ddb5-4181-9133-2efec9e6d34d"),
+                            End = new DateTime(2024, 9, 2, 8, 10, 42, 766, DateTimeKind.Utc).AddTicks(2280),
                             FromCity = "Alam",
                             FromCountry = "egipt",
                             FromStreet = "Sharia Gamal Abdel Nasser",
@@ -244,7 +244,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 8, 21, 19, 7, 13, 749, DateTimeKind.Utc).AddTicks(4482),
+                            Start = new DateTime(2024, 9, 2, 4, 10, 42, 766, DateTimeKind.Utc).AddTicks(2279),
                             ToCity = "Turecka",
                             ToCountry = "turcja",
                             ToStreet = "Atatürk Caddesi",
@@ -252,8 +252,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("1dd3db80-2095-4e82-a87f-ea97c3e5ce3c"),
-                            End = new DateTime(2024, 8, 25, 17, 7, 13, 749, DateTimeKind.Utc).AddTicks(4484),
+                            Id = new Guid("85bc2905-de78-41bf-9014-029a1bc28359"),
+                            End = new DateTime(2024, 9, 6, 2, 10, 42, 766, DateTimeKind.Utc).AddTicks(2282),
                             FromCity = "Luz",
                             FromCountry = "hiszpania",
                             FromStreet = "Calle Mayor",
@@ -262,7 +262,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 8, 25, 7, 7, 13, 749, DateTimeKind.Utc).AddTicks(4484),
+                            Start = new DateTime(2024, 9, 5, 16, 10, 42, 766, DateTimeKind.Utc).AddTicks(2282),
                             ToCity = "Riwiera",
                             ToCountry = "chorwacja",
                             ToStreet = "Kapucinska ulica",
@@ -270,8 +270,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("d0dcc199-cd05-4a54-b75c-c751ca6e97b0"),
-                            End = new DateTime(2024, 6, 18, 23, 7, 13, 749, DateTimeKind.Utc).AddTicks(4486),
+                            Id = new Guid("1b700de1-5512-462c-82dc-1d366e713439"),
+                            End = new DateTime(2024, 6, 30, 8, 10, 42, 766, DateTimeKind.Utc).AddTicks(2285),
                             FromCity = "Riwiera",
                             FromCountry = "chorwacja",
                             FromStreet = "Kapucinska ulica",
@@ -280,7 +280,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 6, 18, 15, 7, 13, 749, DateTimeKind.Utc).AddTicks(4486),
+                            Start = new DateTime(2024, 6, 30, 0, 10, 42, 766, DateTimeKind.Utc).AddTicks(2284),
                             ToCity = "Nero",
                             ToCountry = "grecja",
                             ToStreet = "Leoforos Vasilissis Sofias",
@@ -288,8 +288,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("ed3e2233-4bc2-4bfd-acfb-3e098dbd51a9"),
-                            End = new DateTime(2024, 8, 25, 18, 7, 13, 749, DateTimeKind.Utc).AddTicks(4488),
+                            Id = new Guid("bbd0e2b6-2334-49a3-8d95-6150f66d674a"),
+                            End = new DateTime(2024, 9, 6, 3, 10, 42, 766, DateTimeKind.Utc).AddTicks(2287),
                             FromCity = "Olimpijska",
                             FromCountry = "grecja",
                             FromStreet = "Plateia Syntagmatos",
@@ -298,7 +298,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 8, 25, 12, 7, 13, 749, DateTimeKind.Utc).AddTicks(4487),
+                            Start = new DateTime(2024, 9, 5, 21, 10, 42, 766, DateTimeKind.Utc).AddTicks(2287),
                             ToCity = "Sheikh",
                             ToCountry = "egipt",
                             ToStreet = "Sharia Salah Salem",
@@ -306,8 +306,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("a842a718-90b0-405c-96ed-4ebd8112ef1d"),
-                            End = new DateTime(2024, 7, 24, 22, 7, 13, 749, DateTimeKind.Utc).AddTicks(4490),
+                            Id = new Guid("f22ae7dd-0c27-46cc-981b-ea822326e162"),
+                            End = new DateTime(2024, 8, 5, 7, 10, 42, 766, DateTimeKind.Utc).AddTicks(2290),
                             FromCity = "Alam",
                             FromCountry = "egipt",
                             FromStreet = "Sharia Tahrir",
@@ -316,7 +316,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 7, 24, 20, 7, 13, 749, DateTimeKind.Utc).AddTicks(4489),
+                            Start = new DateTime(2024, 8, 5, 5, 10, 42, 766, DateTimeKind.Utc).AddTicks(2289),
                             ToCity = "Riwiera",
                             ToCountry = "chorwacja",
                             ToStreet = "Vukovarska ulica",
@@ -324,8 +324,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("57ed07e1-9402-4045-84e5-011ba617040e"),
-                            End = new DateTime(2024, 6, 3, 10, 7, 13, 749, DateTimeKind.Utc).AddTicks(4491),
+                            Id = new Guid("300659cc-be4a-4310-8796-b3981c4481c7"),
+                            End = new DateTime(2024, 6, 14, 19, 10, 42, 766, DateTimeKind.Utc).AddTicks(2292),
                             FromCity = "Maresme",
                             FromCountry = "hiszpania",
                             FromStreet = "Paseo del Prado",
@@ -334,7 +334,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 6, 3, 7, 7, 13, 749, DateTimeKind.Utc).AddTicks(4491),
+                            Start = new DateTime(2024, 6, 14, 16, 10, 42, 766, DateTimeKind.Utc).AddTicks(2291),
                             ToCity = "Brava",
                             ToCountry = "hiszpania",
                             ToStreet = "Paseo del Prado",
@@ -342,8 +342,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("d973eeca-9dfa-41bb-9003-628176b9af1a"),
-                            End = new DateTime(2024, 6, 29, 10, 7, 13, 749, DateTimeKind.Utc).AddTicks(4493),
+                            Id = new Guid("190b1244-ef8d-4838-a9dc-74a9a73574cb"),
+                            End = new DateTime(2024, 7, 10, 19, 10, 42, 766, DateTimeKind.Utc).AddTicks(2295),
                             FromCity = "Kalabria",
                             FromCountry = "wlochy",
                             FromStreet = "Via Veneto",
@@ -352,7 +352,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 6, 29, 2, 7, 13, 749, DateTimeKind.Utc).AddTicks(4493),
+                            Start = new DateTime(2024, 7, 10, 11, 10, 42, 766, DateTimeKind.Utc).AddTicks(2295),
                             ToCity = "Nero",
                             ToCountry = "grecja",
                             ToStreet = "Leoforos Alexandras",
@@ -360,8 +360,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("739f7efd-1114-4987-8f12-fcdd52965f1e"),
-                            End = new DateTime(2024, 7, 13, 13, 7, 13, 749, DateTimeKind.Utc).AddTicks(4495),
+                            Id = new Guid("d1e3ca05-0278-4ab8-bd14-e593b28895e3"),
+                            End = new DateTime(2024, 7, 24, 22, 10, 42, 766, DateTimeKind.Utc).AddTicks(2298),
                             FromCity = "Almeria",
                             FromCountry = "hiszpania",
                             FromStreet = "Paseo del Prado",
@@ -370,7 +370,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 7, 13, 2, 7, 13, 749, DateTimeKind.Utc).AddTicks(4494),
+                            Start = new DateTime(2024, 7, 24, 11, 10, 42, 766, DateTimeKind.Utc).AddTicks(2297),
                             ToCity = "Sheikh",
                             ToCountry = "egipt",
                             ToStreet = "Sharia Ramsis",
@@ -378,8 +378,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("cf9948d1-fb35-4b8b-9e0d-726e98e1652d"),
-                            End = new DateTime(2024, 8, 17, 14, 7, 13, 749, DateTimeKind.Utc).AddTicks(4496),
+                            Id = new Guid("652670c2-f376-4564-b324-9ddd3893d7f4"),
+                            End = new DateTime(2024, 8, 28, 23, 10, 42, 766, DateTimeKind.Utc).AddTicks(2301),
                             FromCity = "Riwiera",
                             FromCountry = "chorwacja",
                             FromStreet = "Trg bana Josipa Jelačića",
@@ -388,7 +388,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 8, 17, 3, 7, 13, 749, DateTimeKind.Utc).AddTicks(4496),
+                            Start = new DateTime(2024, 8, 28, 12, 10, 42, 766, DateTimeKind.Utc).AddTicks(2300),
                             ToCity = "Vlora",
                             ToCountry = "albania",
                             ToStreet = "Rruga e Kavajes",
@@ -396,8 +396,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("d238185c-6282-4dd0-a1ad-e1393174daef"),
-                            End = new DateTime(2024, 7, 8, 21, 7, 13, 749, DateTimeKind.Utc).AddTicks(4524),
+                            Id = new Guid("1b18607a-17de-4675-b24b-c9c8a27ffc1d"),
+                            End = new DateTime(2024, 7, 20, 6, 10, 42, 766, DateTimeKind.Utc).AddTicks(2303),
                             FromCity = "Durres",
                             FromCountry = "albania",
                             FromStreet = "Rruga e Dibres",
@@ -406,7 +406,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 7, 8, 17, 7, 13, 749, DateTimeKind.Utc).AddTicks(4523),
+                            Start = new DateTime(2024, 7, 20, 2, 10, 42, 766, DateTimeKind.Utc).AddTicks(2303),
                             ToCity = "Chania",
                             ToCountry = "grecja",
                             ToStreet = "Leoforos Vasilissis Sofias",
@@ -414,8 +414,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("7fd36505-d5d7-4685-b8c7-79deb352e617"),
-                            End = new DateTime(2024, 8, 3, 20, 7, 13, 749, DateTimeKind.Utc).AddTicks(4526),
+                            Id = new Guid("947975b9-1dd1-40b2-9305-4ceb4dd6c574"),
+                            End = new DateTime(2024, 8, 15, 5, 10, 42, 766, DateTimeKind.Utc).AddTicks(2306),
                             FromCity = "Durres",
                             FromCountry = "albania",
                             FromStreet = "Bulevardi Bajram Curri",
@@ -424,7 +424,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 8, 3, 14, 7, 13, 749, DateTimeKind.Utc).AddTicks(4525),
+                            Start = new DateTime(2024, 8, 14, 23, 10, 42, 766, DateTimeKind.Utc).AddTicks(2305),
                             ToCity = "Sheikh",
                             ToCountry = "egipt",
                             ToStreet = "Sharia Tahrir",
@@ -432,8 +432,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("d88c0f60-3989-43b3-bfea-68973f0c4f8a"),
-                            End = new DateTime(2024, 8, 16, 9, 7, 13, 749, DateTimeKind.Utc).AddTicks(4528),
+                            Id = new Guid("a54b8f76-b15c-47e2-8446-5a16091a820a"),
+                            End = new DateTime(2024, 8, 27, 18, 10, 42, 766, DateTimeKind.Utc).AddTicks(2308),
                             FromCity = "Maresme",
                             FromCountry = "hiszpania",
                             FromStreet = "Paseo del Prado",
@@ -442,7 +442,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 8, 16, 7, 7, 13, 749, DateTimeKind.Utc).AddTicks(4527),
+                            Start = new DateTime(2024, 8, 27, 16, 10, 42, 766, DateTimeKind.Utc).AddTicks(2307),
                             ToCity = "Turecka",
                             ToCountry = "turcja",
                             ToStreet = "Atatürk Caddesi",
@@ -450,8 +450,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("9934d983-51f8-4a6b-9795-ed87f7e857e8"),
-                            End = new DateTime(2024, 7, 20, 6, 7, 13, 749, DateTimeKind.Utc).AddTicks(4530),
+                            Id = new Guid("72a1c7cc-226a-4a07-8f72-76c5d9188729"),
+                            End = new DateTime(2024, 7, 31, 15, 10, 42, 766, DateTimeKind.Utc).AddTicks(2310),
                             FromCity = "Turecka",
                             FromCountry = "turcja",
                             FromStreet = "Atatürk Caddesi",
@@ -460,7 +460,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 7, 19, 20, 7, 13, 749, DateTimeKind.Utc).AddTicks(4529),
+                            Start = new DateTime(2024, 7, 31, 5, 10, 42, 766, DateTimeKind.Utc).AddTicks(2310),
                             ToCity = "Turecka",
                             ToCountry = "turcja",
                             ToStreet = "Halaskargazi Caddesi",
@@ -468,8 +468,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("a7284800-726c-46a6-be20-0250fed834cf"),
-                            End = new DateTime(2024, 8, 18, 6, 7, 13, 749, DateTimeKind.Utc).AddTicks(4532),
+                            Id = new Guid("47e7ff51-9825-4070-b95b-7e39f56f2dfc"),
+                            End = new DateTime(2024, 8, 29, 15, 10, 42, 766, DateTimeKind.Utc).AddTicks(2313),
                             FromCity = "Brava",
                             FromCountry = "hiszpania",
                             FromStreet = "Paseo del Prado",
@@ -478,7 +478,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 8, 18, 1, 7, 13, 749, DateTimeKind.Utc).AddTicks(4531),
+                            Start = new DateTime(2024, 8, 29, 10, 10, 42, 766, DateTimeKind.Utc).AddTicks(2312),
                             ToCity = "Kalabria",
                             ToCountry = "wlochy",
                             ToStreet = "Via Nazionale",
@@ -486,8 +486,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("7efa7a99-a8ae-4ad0-a197-df7a1ba06483"),
-                            End = new DateTime(2024, 6, 12, 7, 7, 13, 749, DateTimeKind.Utc).AddTicks(4534),
+                            Id = new Guid("c2c2b435-f756-4b64-951b-923b5c0267ac"),
+                            End = new DateTime(2024, 6, 23, 16, 10, 42, 766, DateTimeKind.Utc).AddTicks(2315),
                             FromCity = "Alam",
                             FromCountry = "egipt",
                             FromStreet = "Sharia Ramsis",
@@ -496,7 +496,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 6, 12, 2, 7, 13, 749, DateTimeKind.Utc).AddTicks(4533),
+                            Start = new DateTime(2024, 6, 23, 11, 10, 42, 766, DateTimeKind.Utc).AddTicks(2315),
                             ToCity = "Brava",
                             ToCountry = "hiszpania",
                             ToStreet = "Calle de Alcalá",
@@ -504,8 +504,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("5b3fbe00-a503-4f9b-86f0-b61b2e63daec"),
-                            End = new DateTime(2024, 8, 23, 4, 7, 13, 749, DateTimeKind.Utc).AddTicks(4535),
+                            Id = new Guid("2004c61e-9d34-4fb8-976e-248f18b1dc25"),
+                            End = new DateTime(2024, 9, 3, 13, 10, 42, 766, DateTimeKind.Utc).AddTicks(2318),
                             FromCity = "Brava",
                             FromCountry = "hiszpania",
                             FromStreet = "Gran Vía",
@@ -514,7 +514,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 8, 22, 22, 7, 13, 749, DateTimeKind.Utc).AddTicks(4535),
+                            Start = new DateTime(2024, 9, 3, 7, 10, 42, 766, DateTimeKind.Utc).AddTicks(2317),
                             ToCity = "Alam",
                             ToCountry = "egipt",
                             ToStreet = "Sharia Tahrir",
@@ -522,8 +522,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("e3847334-bd5a-4bfc-960e-af7eb3382d12"),
-                            End = new DateTime(2024, 6, 16, 2, 7, 13, 749, DateTimeKind.Utc).AddTicks(4537),
+                            Id = new Guid("f9abdc3a-a575-4f21-96d7-ee68e5f362f2"),
+                            End = new DateTime(2024, 6, 27, 11, 10, 42, 766, DateTimeKind.Utc).AddTicks(2320),
                             FromCity = "Riwiera",
                             FromCountry = "chorwacja",
                             FromStreet = "Maksimirska ulica",
@@ -532,7 +532,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 6, 15, 16, 7, 13, 749, DateTimeKind.Utc).AddTicks(4537),
+                            Start = new DateTime(2024, 6, 27, 1, 10, 42, 766, DateTimeKind.Utc).AddTicks(2319),
                             ToCity = "Sheikh",
                             ToCountry = "egipt",
                             ToStreet = "Sharia Tahrir",
@@ -540,8 +540,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("56307abe-acc9-436b-aea3-db33442183d9"),
-                            End = new DateTime(2024, 8, 16, 15, 7, 13, 749, DateTimeKind.Utc).AddTicks(4539),
+                            Id = new Guid("80e2c1a7-c0e6-4b8f-8ff1-614df7fb2288"),
+                            End = new DateTime(2024, 8, 28, 0, 10, 42, 766, DateTimeKind.Utc).AddTicks(2322),
                             FromCity = "Turecka",
                             FromCountry = "turcja",
                             FromStreet = "Atatürk Caddesi",
@@ -550,7 +550,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 8, 16, 9, 7, 13, 749, DateTimeKind.Utc).AddTicks(4539),
+                            Start = new DateTime(2024, 8, 27, 18, 10, 42, 766, DateTimeKind.Utc).AddTicks(2322),
                             ToCity = "Olimpijska",
                             ToCountry = "grecja",
                             ToStreet = "Plateia Syntagmatos",
@@ -558,8 +558,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("a5d00daa-75a1-4176-aeec-303a87d03239"),
-                            End = new DateTime(2024, 6, 6, 3, 7, 13, 749, DateTimeKind.Utc).AddTicks(4541),
+                            Id = new Guid("e6dcb16f-573e-4d08-9a0e-e922db6667e6"),
+                            End = new DateTime(2024, 6, 17, 12, 10, 42, 766, DateTimeKind.Utc).AddTicks(2325),
                             FromCity = "Alam",
                             FromCountry = "egipt",
                             FromStreet = "Sharia Tahrir",
@@ -568,7 +568,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 6, 6, 1, 7, 13, 749, DateTimeKind.Utc).AddTicks(4540),
+                            Start = new DateTime(2024, 6, 17, 10, 10, 42, 766, DateTimeKind.Utc).AddTicks(2324),
                             ToCity = "Maresme",
                             ToCountry = "hiszpania",
                             ToStreet = "Paseo del Prado",
@@ -576,8 +576,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("6238d8c7-82d6-47b3-825f-f3b9db32f7b2"),
-                            End = new DateTime(2024, 8, 4, 16, 7, 13, 749, DateTimeKind.Utc).AddTicks(4543),
+                            Id = new Guid("c780dcad-67c9-45e3-9cfb-2d1f228d8731"),
+                            End = new DateTime(2024, 8, 16, 1, 10, 42, 766, DateTimeKind.Utc).AddTicks(2327),
                             FromCity = "Brava",
                             FromCountry = "hiszpania",
                             FromStreet = "Paseo del Prado",
@@ -586,7 +586,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 8, 4, 10, 7, 13, 749, DateTimeKind.Utc).AddTicks(4542),
+                            Start = new DateTime(2024, 8, 15, 19, 10, 42, 766, DateTimeKind.Utc).AddTicks(2327),
                             ToCity = "Turecka",
                             ToCountry = "turcja",
                             ToStreet = "Halaskargazi Caddesi",
@@ -594,8 +594,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("65c88078-7d18-42fd-b4a7-f9ed01051e04"),
-                            End = new DateTime(2024, 7, 16, 12, 7, 13, 749, DateTimeKind.Utc).AddTicks(4544),
+                            Id = new Guid("d528c8ae-9822-4984-91bf-798afd078031"),
+                            End = new DateTime(2024, 7, 27, 21, 10, 42, 766, DateTimeKind.Utc).AddTicks(2329),
                             FromCity = "Turecka",
                             FromCountry = "turcja",
                             FromStreet = "Atatürk Caddesi",
@@ -604,7 +604,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 7, 16, 5, 7, 13, 749, DateTimeKind.Utc).AddTicks(4544),
+                            Start = new DateTime(2024, 7, 27, 14, 10, 42, 766, DateTimeKind.Utc).AddTicks(2329),
                             ToCity = "Heraklion",
                             ToCountry = "grecja",
                             ToStreet = "Plateia Syntagmatos",
@@ -612,8 +612,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("bb1afc50-f77c-4508-afa2-492a92beef20"),
-                            End = new DateTime(2024, 6, 18, 10, 7, 13, 749, DateTimeKind.Utc).AddTicks(4546),
+                            Id = new Guid("74e32d21-99f5-4488-97c8-4b9586cd9fe3"),
+                            End = new DateTime(2024, 6, 29, 19, 10, 42, 766, DateTimeKind.Utc).AddTicks(2373),
                             FromCity = "Vlora",
                             FromCountry = "albania",
                             FromStreet = "Rruga 28 Nentori",
@@ -622,7 +622,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 6, 18, 3, 7, 13, 749, DateTimeKind.Utc).AddTicks(4545),
+                            Start = new DateTime(2024, 6, 29, 12, 10, 42, 766, DateTimeKind.Utc).AddTicks(2367),
                             ToCity = "Brava",
                             ToCountry = "hiszpania",
                             ToStreet = "Gran Vía",
@@ -630,8 +630,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("d8aae901-dd81-453d-a9b1-ef367f0c82db"),
-                            End = new DateTime(2024, 8, 1, 17, 7, 13, 749, DateTimeKind.Utc).AddTicks(4548),
+                            Id = new Guid("4e9b74f6-a758-449c-a702-0461d974a701"),
+                            End = new DateTime(2024, 8, 13, 2, 10, 42, 766, DateTimeKind.Utc).AddTicks(2375),
                             FromCity = "Almeria",
                             FromCountry = "hiszpania",
                             FromStreet = "Paseo del Prado",
@@ -640,7 +640,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 8, 1, 13, 7, 13, 749, DateTimeKind.Utc).AddTicks(4547),
+                            Start = new DateTime(2024, 8, 12, 22, 10, 42, 766, DateTimeKind.Utc).AddTicks(2375),
                             ToCity = "Alam",
                             ToCountry = "egipt",
                             ToStreet = "Sharia Ramsis",
@@ -648,8 +648,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("f5f4b802-2dd5-4119-b09d-9634f20569ad"),
-                            End = new DateTime(2024, 7, 20, 11, 7, 13, 749, DateTimeKind.Utc).AddTicks(4550),
+                            Id = new Guid("e4bbe5b9-17dc-4448-afc7-2a8d3e46be0e"),
+                            End = new DateTime(2024, 7, 31, 20, 10, 42, 766, DateTimeKind.Utc).AddTicks(2378),
                             FromCity = "Riwiera",
                             FromCountry = "chorwacja",
                             FromStreet = "Kapucinska ulica",
@@ -658,7 +658,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 7, 20, 4, 7, 13, 749, DateTimeKind.Utc).AddTicks(4549),
+                            Start = new DateTime(2024, 7, 31, 13, 10, 42, 766, DateTimeKind.Utc).AddTicks(2377),
                             ToCity = "Nero",
                             ToCountry = "grecja",
                             ToStreet = "Leoforos Vasilissis Sofias",
@@ -666,8 +666,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("f4e88283-b25e-421b-a04b-056c8bc4e7fe"),
-                            End = new DateTime(2024, 7, 30, 8, 7, 13, 749, DateTimeKind.Utc).AddTicks(4551),
+                            Id = new Guid("6a51bc73-4a05-456e-9ce7-0dd70d735a47"),
+                            End = new DateTime(2024, 8, 10, 17, 10, 42, 766, DateTimeKind.Utc).AddTicks(2381),
                             FromCity = "Turecka",
                             FromCountry = "turcja",
                             FromStreet = "Bağdat Caddesi",
@@ -676,7 +676,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 7, 29, 23, 7, 13, 749, DateTimeKind.Utc).AddTicks(4551),
+                            Start = new DateTime(2024, 8, 10, 8, 10, 42, 766, DateTimeKind.Utc).AddTicks(2380),
                             ToCity = "Riwiera",
                             ToCountry = "chorwacja",
                             ToStreet = "Maksimirska ulica",
@@ -684,8 +684,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("49258e93-ae37-4cfb-9f70-5071cf12f985"),
-                            End = new DateTime(2024, 6, 3, 20, 7, 13, 749, DateTimeKind.Utc).AddTicks(4553),
+                            Id = new Guid("857ef5e4-4cb0-41d6-83a6-75c1ee644920"),
+                            End = new DateTime(2024, 6, 15, 5, 10, 42, 766, DateTimeKind.Utc).AddTicks(2383),
                             FromCity = "Brava",
                             FromCountry = "hiszpania",
                             FromStreet = "Calle Mayor",
@@ -694,7 +694,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 6, 3, 18, 7, 13, 749, DateTimeKind.Utc).AddTicks(4553),
+                            Start = new DateTime(2024, 6, 15, 3, 10, 42, 766, DateTimeKind.Utc).AddTicks(2382),
                             ToCity = "Alam",
                             ToCountry = "egipt",
                             ToStreet = "Sharia Tahrir",
@@ -702,8 +702,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("4a6fc790-95f6-4f0d-b930-8edc8ca25264"),
-                            End = new DateTime(2024, 6, 24, 7, 7, 13, 749, DateTimeKind.Utc).AddTicks(4555),
+                            Id = new Guid("4b0ee931-00fc-41f3-9d6d-2bb96bf3028d"),
+                            End = new DateTime(2024, 7, 5, 16, 10, 42, 766, DateTimeKind.Utc).AddTicks(2385),
                             FromCity = "Durres",
                             FromCountry = "albania",
                             FromStreet = "Bulevardi Bajram Curri",
@@ -712,7 +712,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 6, 24, 1, 7, 13, 749, DateTimeKind.Utc).AddTicks(4554),
+                            Start = new DateTime(2024, 7, 5, 10, 10, 42, 766, DateTimeKind.Utc).AddTicks(2385),
                             ToCity = "Nero",
                             ToCountry = "grecja",
                             ToStreet = "Leoforos Alexandras",
@@ -720,8 +720,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("973d72b8-caca-4f4c-b58d-f9fec0e19ef2"),
-                            End = new DateTime(2024, 7, 29, 21, 7, 13, 749, DateTimeKind.Utc).AddTicks(4556),
+                            Id = new Guid("6f9ffc05-f214-462e-abd0-75cd1a2fa3e0"),
+                            End = new DateTime(2024, 8, 10, 6, 10, 42, 766, DateTimeKind.Utc).AddTicks(2389),
                             FromCity = "Kalabria",
                             FromCountry = "wlochy",
                             FromStreet = "Via Veneto",
@@ -730,7 +730,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 7, 29, 11, 7, 13, 749, DateTimeKind.Utc).AddTicks(4556),
+                            Start = new DateTime(2024, 8, 9, 20, 10, 42, 766, DateTimeKind.Utc).AddTicks(2387),
                             ToCity = "Sheikh",
                             ToCountry = "egipt",
                             ToStreet = "Sharia Ramsis",
@@ -738,8 +738,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("ac120724-3d62-4120-8a06-e4725d694b0a"),
-                            End = new DateTime(2024, 6, 10, 15, 7, 13, 749, DateTimeKind.Utc).AddTicks(4558),
+                            Id = new Guid("89de663a-5915-4d0a-bbd0-bf2d1c169d92"),
+                            End = new DateTime(2024, 6, 22, 0, 10, 42, 766, DateTimeKind.Utc).AddTicks(2395),
                             FromCity = "Riwiera",
                             FromCountry = "chorwacja",
                             FromStreet = "Maksimirska ulica",
@@ -748,7 +748,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 6, 10, 3, 7, 13, 749, DateTimeKind.Utc).AddTicks(4558),
+                            Start = new DateTime(2024, 6, 21, 12, 10, 42, 766, DateTimeKind.Utc).AddTicks(2395),
                             ToCity = "Durres",
                             ToCountry = "albania",
                             ToStreet = "Rruga e Dibres",
@@ -756,8 +756,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("1f3f7dd7-baf5-4004-bc42-298f2b0b7fd4"),
-                            End = new DateTime(2024, 6, 3, 15, 7, 13, 749, DateTimeKind.Utc).AddTicks(4560),
+                            Id = new Guid("891fdea9-af57-40c6-8ff3-84d097540d3b"),
+                            End = new DateTime(2024, 6, 15, 0, 10, 42, 766, DateTimeKind.Utc).AddTicks(2398),
                             FromCity = "Kalabria",
                             FromCountry = "wlochy",
                             FromStreet = "Via Veneto",
@@ -766,7 +766,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 6, 3, 3, 7, 13, 749, DateTimeKind.Utc).AddTicks(4560),
+                            Start = new DateTime(2024, 6, 14, 12, 10, 42, 766, DateTimeKind.Utc).AddTicks(2397),
                             ToCity = "Kalabria",
                             ToCountry = "wlochy",
                             ToStreet = "Via Nazionale",
@@ -774,8 +774,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("a6688599-4d94-40c9-a140-639bc589817d"),
-                            End = new DateTime(2024, 8, 24, 20, 7, 13, 749, DateTimeKind.Utc).AddTicks(4562),
+                            Id = new Guid("0c91cb20-d1fc-4510-9399-fe61ec70f36c"),
+                            End = new DateTime(2024, 9, 5, 5, 10, 42, 766, DateTimeKind.Utc).AddTicks(2400),
                             FromCity = "Vlora",
                             FromCountry = "albania",
                             FromStreet = "Rruga e Kavajes",
@@ -784,7 +784,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 8, 24, 16, 7, 13, 749, DateTimeKind.Utc).AddTicks(4561),
+                            Start = new DateTime(2024, 9, 5, 1, 10, 42, 766, DateTimeKind.Utc).AddTicks(2400),
                             ToCity = "Brava",
                             ToCountry = "hiszpania",
                             ToStreet = "Gran Vía",
@@ -792,8 +792,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("d8198370-f666-437e-908b-f532aee2798f"),
-                            End = new DateTime(2024, 6, 29, 1, 7, 13, 749, DateTimeKind.Utc).AddTicks(4563),
+                            Id = new Guid("423a6a82-1aaa-4cda-a7cf-460e6c645487"),
+                            End = new DateTime(2024, 7, 10, 10, 10, 42, 766, DateTimeKind.Utc).AddTicks(2404),
                             FromCity = "Brava",
                             FromCountry = "hiszpania",
                             FromStreet = "Calle de Alcalá",
@@ -802,7 +802,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 6, 28, 16, 7, 13, 749, DateTimeKind.Utc).AddTicks(4563),
+                            Start = new DateTime(2024, 7, 10, 1, 10, 42, 766, DateTimeKind.Utc).AddTicks(2402),
                             ToCity = "Turecka",
                             ToCountry = "turcja",
                             ToStreet = "Bağdat Caddesi",
@@ -810,8 +810,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("786a0438-6439-4046-82f9-f8889b3094f4"),
-                            End = new DateTime(2024, 6, 22, 19, 7, 13, 749, DateTimeKind.Utc).AddTicks(4565),
+                            Id = new Guid("ba1c76cc-61c4-40a4-9da9-97dd4090e0cd"),
+                            End = new DateTime(2024, 7, 4, 4, 10, 42, 766, DateTimeKind.Utc).AddTicks(2406),
                             FromCity = "Turecka",
                             FromCountry = "turcja",
                             FromStreet = "Atatürk Caddesi",
@@ -820,7 +820,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 6, 22, 14, 7, 13, 749, DateTimeKind.Utc).AddTicks(4565),
+                            Start = new DateTime(2024, 7, 3, 23, 10, 42, 766, DateTimeKind.Utc).AddTicks(2405),
                             ToCity = "Brava",
                             ToCountry = "hiszpania",
                             ToStreet = "Calle Mayor",
@@ -828,8 +828,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("18c3bafd-e1f0-4022-b6a1-0c8e7894f629"),
-                            End = new DateTime(2024, 7, 29, 8, 7, 13, 749, DateTimeKind.Utc).AddTicks(4567),
+                            Id = new Guid("0f3f29b7-9eea-4833-be40-404dd3cbbd67"),
+                            End = new DateTime(2024, 8, 9, 17, 10, 42, 766, DateTimeKind.Utc).AddTicks(2408),
                             FromCity = "Chania",
                             FromCountry = "grecja",
                             FromStreet = "Leoforos Vasilissis Sofias",
@@ -838,7 +838,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 7, 29, 4, 7, 13, 749, DateTimeKind.Utc).AddTicks(4566),
+                            Start = new DateTime(2024, 8, 9, 13, 10, 42, 766, DateTimeKind.Utc).AddTicks(2408),
                             ToCity = "Turecka",
                             ToCountry = "turcja",
                             ToStreet = "Atatürk Caddesi",
@@ -846,8 +846,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("1bb39d19-14d3-4046-9333-14a21d74835a"),
-                            End = new DateTime(2024, 7, 13, 20, 7, 13, 749, DateTimeKind.Utc).AddTicks(4569),
+                            Id = new Guid("4c4b9b6c-ede6-4cf6-b828-774324d5a45b"),
+                            End = new DateTime(2024, 7, 25, 5, 10, 42, 766, DateTimeKind.Utc).AddTicks(2411),
                             FromCity = "Durres",
                             FromCountry = "albania",
                             FromStreet = "Rruga Abdyl Frasheri",
@@ -856,7 +856,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 7, 13, 17, 7, 13, 749, DateTimeKind.Utc).AddTicks(4568),
+                            Start = new DateTime(2024, 7, 25, 2, 10, 42, 766, DateTimeKind.Utc).AddTicks(2410),
                             ToCity = "Olimpijska",
                             ToCountry = "grecja",
                             ToStreet = "Plateia Syntagmatos",
@@ -864,8 +864,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("567e6f9a-fc7f-41e0-b58c-b2e398e3d630"),
-                            End = new DateTime(2024, 6, 29, 14, 7, 13, 749, DateTimeKind.Utc).AddTicks(4570),
+                            Id = new Guid("fedbb6dc-c71b-4b08-ac1e-15d1421fd5d6"),
+                            End = new DateTime(2024, 7, 10, 23, 10, 42, 766, DateTimeKind.Utc).AddTicks(2413),
                             FromCity = "Heraklion",
                             FromCountry = "grecja",
                             FromStreet = "Plateia Syntagmatos",
@@ -874,7 +874,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 6, 29, 7, 7, 13, 749, DateTimeKind.Utc).AddTicks(4570),
+                            Start = new DateTime(2024, 7, 10, 16, 10, 42, 766, DateTimeKind.Utc).AddTicks(2413),
                             ToCity = "Sheikh",
                             ToCountry = "egipt",
                             ToStreet = "Sharia Salah Salem",
@@ -882,8 +882,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("5433210b-2095-4bd7-9c83-5a2aea5e501a"),
-                            End = new DateTime(2024, 6, 9, 11, 7, 13, 749, DateTimeKind.Utc).AddTicks(4572),
+                            Id = new Guid("7a847ced-2941-4865-9af6-1dee6f99ac69"),
+                            End = new DateTime(2024, 6, 20, 20, 10, 42, 766, DateTimeKind.Utc).AddTicks(2415),
                             FromCity = "Marmaris",
                             FromCountry = "turcja",
                             FromStreet = "Bağdat Caddesi",
@@ -892,7 +892,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 6, 9, 0, 7, 13, 749, DateTimeKind.Utc).AddTicks(4572),
+                            Start = new DateTime(2024, 6, 20, 9, 10, 42, 766, DateTimeKind.Utc).AddTicks(2415),
                             ToCity = "Durres",
                             ToCountry = "albania",
                             ToStreet = "Bulevardi Bajram Curri",
@@ -900,8 +900,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("45aa565a-8dfd-4f04-8ba7-2f131536177a"),
-                            End = new DateTime(2024, 8, 14, 23, 7, 13, 749, DateTimeKind.Utc).AddTicks(4574),
+                            Id = new Guid("ed24f54b-461f-4019-bb99-2ba5a7ad19fb"),
+                            End = new DateTime(2024, 8, 26, 8, 10, 42, 766, DateTimeKind.Utc).AddTicks(2418),
                             FromCity = "Maresme",
                             FromCountry = "hiszpania",
                             FromStreet = "Paseo del Prado",
@@ -910,7 +910,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 8, 14, 17, 7, 13, 749, DateTimeKind.Utc).AddTicks(4574),
+                            Start = new DateTime(2024, 8, 26, 2, 10, 42, 766, DateTimeKind.Utc).AddTicks(2418),
                             ToCity = "Alam",
                             ToCountry = "egipt",
                             ToStreet = "Sharia Ramsis",
@@ -918,8 +918,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("7247c0d3-4c05-4008-83e1-4ca2ea664dd9"),
-                            End = new DateTime(2024, 6, 26, 12, 7, 13, 749, DateTimeKind.Utc).AddTicks(4576),
+                            Id = new Guid("fc367550-81d7-40d1-b8de-1ca54650f78d"),
+                            End = new DateTime(2024, 7, 7, 21, 10, 42, 766, DateTimeKind.Utc).AddTicks(2421),
                             FromCity = "Sheikh",
                             FromCountry = "egipt",
                             FromStreet = "Sharia Ramsis",
@@ -928,7 +928,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 6, 26, 8, 7, 13, 749, DateTimeKind.Utc).AddTicks(4575),
+                            Start = new DateTime(2024, 7, 7, 17, 10, 42, 766, DateTimeKind.Utc).AddTicks(2420),
                             ToCity = "Kalabria",
                             ToCountry = "wlochy",
                             ToStreet = "Via Veneto",
@@ -936,8 +936,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("f37c8c6f-b6d5-4963-b62d-15e754b17685"),
-                            End = new DateTime(2024, 6, 5, 5, 7, 13, 749, DateTimeKind.Utc).AddTicks(4602),
+                            Id = new Guid("abd76c79-9503-4c2a-ad45-f057e9de348e"),
+                            End = new DateTime(2024, 6, 16, 14, 10, 42, 766, DateTimeKind.Utc).AddTicks(2425),
                             FromCity = "Nero",
                             FromCountry = "grecja",
                             FromStreet = "Leoforos Vasilissis Sofias",
@@ -946,7 +946,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 6, 5, 1, 7, 13, 749, DateTimeKind.Utc).AddTicks(4601),
+                            Start = new DateTime(2024, 6, 16, 10, 10, 42, 766, DateTimeKind.Utc).AddTicks(2425),
                             ToCity = "Durres",
                             ToCountry = "albania",
                             ToStreet = "Rruga e Dibres",
@@ -954,8 +954,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("8e7e8954-503e-4ec5-a18f-fe520cec837f"),
-                            End = new DateTime(2024, 7, 1, 19, 7, 13, 749, DateTimeKind.Utc).AddTicks(4604),
+                            Id = new Guid("bf1cd8ed-48b6-4c8b-89dd-fea1c6d8cee2"),
+                            End = new DateTime(2024, 7, 13, 4, 10, 42, 766, DateTimeKind.Utc).AddTicks(2428),
                             FromCity = "Marmaris",
                             FromCountry = "turcja",
                             FromStreet = "Bağdat Caddesi",
@@ -964,7 +964,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 7, 1, 17, 7, 13, 749, DateTimeKind.Utc).AddTicks(4604),
+                            Start = new DateTime(2024, 7, 13, 2, 10, 42, 766, DateTimeKind.Utc).AddTicks(2427),
                             ToCity = "Turecka",
                             ToCountry = "turcja",
                             ToStreet = "Atatürk Caddesi",
@@ -972,8 +972,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("c4b6ee43-9ca4-4680-b61f-d67988486b09"),
-                            End = new DateTime(2024, 6, 8, 1, 7, 13, 749, DateTimeKind.Utc).AddTicks(4606),
+                            Id = new Guid("112fa52d-998c-4144-a0e2-be8fd75984e4"),
+                            End = new DateTime(2024, 6, 19, 10, 10, 42, 766, DateTimeKind.Utc).AddTicks(2430),
                             FromCity = "Vlora",
                             FromCountry = "albania",
                             FromStreet = "Rruga 28 Nentori",
@@ -982,7 +982,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 6, 7, 19, 7, 13, 749, DateTimeKind.Utc).AddTicks(4606),
+                            Start = new DateTime(2024, 6, 19, 4, 10, 42, 766, DateTimeKind.Utc).AddTicks(2430),
                             ToCity = "Durres",
                             ToCountry = "albania",
                             ToStreet = "Rruga Abdyl Frasheri",
@@ -990,8 +990,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("b791886d-504b-4635-8f48-c508d2aea847"),
-                            End = new DateTime(2024, 8, 15, 21, 7, 13, 749, DateTimeKind.Utc).AddTicks(4608),
+                            Id = new Guid("71ed8445-e430-400f-b5f6-22c79d49b08d"),
+                            End = new DateTime(2024, 8, 27, 6, 10, 42, 766, DateTimeKind.Utc).AddTicks(2433),
                             FromCity = "Kalabria",
                             FromCountry = "wlochy",
                             FromStreet = "Via Veneto",
@@ -1000,7 +1000,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 8, 15, 9, 7, 13, 749, DateTimeKind.Utc).AddTicks(4607),
+                            Start = new DateTime(2024, 8, 26, 18, 10, 42, 766, DateTimeKind.Utc).AddTicks(2432),
                             ToCity = "Durres",
                             ToCountry = "albania",
                             ToStreet = "Rruga Abdyl Frasheri",
@@ -1008,8 +1008,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("4ce670f1-b0de-4886-8fc4-90028e8eac7b"),
-                            End = new DateTime(2024, 7, 16, 7, 7, 13, 749, DateTimeKind.Utc).AddTicks(4609),
+                            Id = new Guid("95a4a066-e948-481f-89e0-2713cb1711f2"),
+                            End = new DateTime(2024, 7, 27, 16, 10, 42, 766, DateTimeKind.Utc).AddTicks(2435),
                             FromCity = "Vlora",
                             FromCountry = "albania",
                             FromStreet = "Rruga e Kavajes",
@@ -1018,7 +1018,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 7, 15, 21, 7, 13, 749, DateTimeKind.Utc).AddTicks(4609),
+                            Start = new DateTime(2024, 7, 27, 6, 10, 42, 766, DateTimeKind.Utc).AddTicks(2434),
                             ToCity = "Kalabria",
                             ToCountry = "wlochy",
                             ToStreet = "Via Veneto",
@@ -1026,8 +1026,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("99a584a5-a2c5-4606-8e80-befbb396eba1"),
-                            End = new DateTime(2024, 8, 24, 14, 7, 13, 749, DateTimeKind.Utc).AddTicks(4611),
+                            Id = new Guid("73aba43a-951d-497b-abe0-675e40c238ee"),
+                            End = new DateTime(2024, 9, 4, 23, 10, 42, 766, DateTimeKind.Utc).AddTicks(2437),
                             FromCity = "Vlora",
                             FromCountry = "albania",
                             FromStreet = "Rruga e Kavajes",
@@ -1036,7 +1036,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 8, 24, 7, 7, 13, 749, DateTimeKind.Utc).AddTicks(4611),
+                            Start = new DateTime(2024, 9, 4, 16, 10, 42, 766, DateTimeKind.Utc).AddTicks(2437),
                             ToCity = "Nero",
                             ToCountry = "grecja",
                             ToStreet = "Leoforos Alexandras",
@@ -1044,8 +1044,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("5df1e03b-c979-426e-acb0-8dc1a013c197"),
-                            End = new DateTime(2024, 7, 31, 3, 7, 13, 749, DateTimeKind.Utc).AddTicks(4613),
+                            Id = new Guid("d45c2311-dd31-4106-9bfd-ef6c6e9e4fa8"),
+                            End = new DateTime(2024, 8, 11, 12, 10, 42, 766, DateTimeKind.Utc).AddTicks(2440),
                             FromCity = "Marmaris",
                             FromCountry = "turcja",
                             FromStreet = "Bağdat Caddesi",
@@ -1054,7 +1054,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 7, 30, 16, 7, 13, 749, DateTimeKind.Utc).AddTicks(4613),
+                            Start = new DateTime(2024, 8, 11, 1, 10, 42, 766, DateTimeKind.Utc).AddTicks(2439),
                             ToCity = "Kalabria",
                             ToCountry = "wlochy",
                             ToStreet = "Via Veneto",
@@ -1062,8 +1062,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("39e4a8c6-5513-45ea-b631-8746bf5e5b13"),
-                            End = new DateTime(2024, 8, 21, 20, 7, 13, 749, DateTimeKind.Utc).AddTicks(4615),
+                            Id = new Guid("4ef9163e-2d6d-47ae-b3ea-4c347cbfb1f1"),
+                            End = new DateTime(2024, 9, 2, 5, 10, 42, 766, DateTimeKind.Utc).AddTicks(2442),
                             FromCity = "Nero",
                             FromCountry = "grecja",
                             FromStreet = "Leoforos Alexandras",
@@ -1072,7 +1072,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 8, 21, 18, 7, 13, 749, DateTimeKind.Utc).AddTicks(4614),
+                            Start = new DateTime(2024, 9, 2, 3, 10, 42, 766, DateTimeKind.Utc).AddTicks(2442),
                             ToCity = "Olimpijska",
                             ToCountry = "grecja",
                             ToStreet = "Plateia Syntagmatos",
@@ -1080,8 +1080,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("1f5c6a7d-3aef-49e2-8ac6-3c65c566b53c"),
-                            End = new DateTime(2024, 6, 26, 5, 7, 13, 749, DateTimeKind.Utc).AddTicks(4616),
+                            Id = new Guid("bfb9a94d-fa31-43ef-8357-9e4ce86f0399"),
+                            End = new DateTime(2024, 7, 7, 14, 10, 42, 766, DateTimeKind.Utc).AddTicks(2445),
                             FromCity = "Alam",
                             FromCountry = "egipt",
                             FromStreet = "Sharia Tahrir",
@@ -1090,7 +1090,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 6, 26, 2, 7, 13, 749, DateTimeKind.Utc).AddTicks(4616),
+                            Start = new DateTime(2024, 7, 7, 11, 10, 42, 766, DateTimeKind.Utc).AddTicks(2444),
                             ToCity = "Alam",
                             ToCountry = "egipt",
                             ToStreet = "Sharia Tahrir",
@@ -1098,8 +1098,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("debc199d-a8a5-4499-a044-2e049f07a4d5"),
-                            End = new DateTime(2024, 7, 23, 17, 7, 13, 749, DateTimeKind.Utc).AddTicks(4618),
+                            Id = new Guid("a939278f-b115-4213-a5c7-4f5c967e805b"),
+                            End = new DateTime(2024, 8, 4, 2, 10, 42, 766, DateTimeKind.Utc).AddTicks(2447),
                             FromCity = "Brava",
                             FromCountry = "hiszpania",
                             FromStreet = "Paseo del Prado",
@@ -1108,7 +1108,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 7, 23, 9, 7, 13, 749, DateTimeKind.Utc).AddTicks(4618),
+                            Start = new DateTime(2024, 8, 3, 18, 10, 42, 766, DateTimeKind.Utc).AddTicks(2446),
                             ToCity = "Brava",
                             ToCountry = "hiszpania",
                             ToStreet = "Calle de Alcalá",
@@ -1116,8 +1116,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("409b3509-a027-4343-89ab-d202030d9a78"),
-                            End = new DateTime(2024, 6, 20, 5, 7, 13, 749, DateTimeKind.Utc).AddTicks(4620),
+                            Id = new Guid("21a12fd2-81ef-4949-9ca7-7dc5936ac33b"),
+                            End = new DateTime(2024, 7, 1, 14, 10, 42, 766, DateTimeKind.Utc).AddTicks(2449),
                             FromCity = "Olimpijska",
                             FromCountry = "grecja",
                             FromStreet = "Plateia Syntagmatos",
@@ -1126,7 +1126,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 6, 20, 2, 7, 13, 749, DateTimeKind.Utc).AddTicks(4619),
+                            Start = new DateTime(2024, 7, 1, 11, 10, 42, 766, DateTimeKind.Utc).AddTicks(2449),
                             ToCity = "Kalabria",
                             ToCountry = "wlochy",
                             ToStreet = "Via Nazionale",
@@ -1134,8 +1134,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("e50d312c-9609-4ca2-b46e-c7fe4e6e4038"),
-                            End = new DateTime(2024, 6, 3, 4, 7, 13, 749, DateTimeKind.Utc).AddTicks(4621),
+                            Id = new Guid("e844db66-362f-4619-a468-607cfd6f09f8"),
+                            End = new DateTime(2024, 6, 14, 13, 10, 42, 766, DateTimeKind.Utc).AddTicks(2452),
                             FromCity = "Kalabria",
                             FromCountry = "wlochy",
                             FromStreet = "Via del Corso",
@@ -1144,7 +1144,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 6, 2, 18, 7, 13, 749, DateTimeKind.Utc).AddTicks(4621),
+                            Start = new DateTime(2024, 6, 14, 3, 10, 42, 766, DateTimeKind.Utc).AddTicks(2451),
                             ToCity = "Brava",
                             ToCountry = "hiszpania",
                             ToStreet = "Calle de Alcalá",
@@ -1152,8 +1152,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("b0ee0077-e9d8-4d5a-a54d-799fd9eab0ec"),
-                            End = new DateTime(2024, 7, 21, 9, 7, 13, 749, DateTimeKind.Utc).AddTicks(4623),
+                            Id = new Guid("bac2f402-64e2-4867-a64e-52186bb0819f"),
+                            End = new DateTime(2024, 8, 1, 18, 10, 42, 766, DateTimeKind.Utc).AddTicks(2454),
                             FromCity = "Vlora",
                             FromCountry = "albania",
                             FromStreet = "Rruga e Kavajes",
@@ -1162,7 +1162,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 7, 21, 7, 7, 13, 749, DateTimeKind.Utc).AddTicks(4623),
+                            Start = new DateTime(2024, 8, 1, 16, 10, 42, 766, DateTimeKind.Utc).AddTicks(2453),
                             ToCity = "Kalabria",
                             ToCountry = "wlochy",
                             ToStreet = "Via Veneto",
@@ -1170,8 +1170,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("8811c3ca-6685-4007-b173-26554ce513ba"),
-                            End = new DateTime(2024, 6, 15, 1, 7, 13, 749, DateTimeKind.Utc).AddTicks(4625),
+                            Id = new Guid("67c3d8d5-8fb6-4843-8c88-c7acf981f9dd"),
+                            End = new DateTime(2024, 6, 26, 10, 10, 42, 766, DateTimeKind.Utc).AddTicks(2510),
                             FromCity = "Chania",
                             FromCountry = "grecja",
                             FromStreet = "Leoforos Vasilissis Sofias",
@@ -1180,7 +1180,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 6, 14, 20, 7, 13, 749, DateTimeKind.Utc).AddTicks(4625),
+                            Start = new DateTime(2024, 6, 26, 5, 10, 42, 766, DateTimeKind.Utc).AddTicks(2508),
                             ToCity = "Turecka",
                             ToCountry = "turcja",
                             ToStreet = "Halaskargazi Caddesi",
@@ -1188,8 +1188,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("1c3946ad-4837-404d-b324-cb38849a6a0b"),
-                            End = new DateTime(2024, 8, 8, 23, 7, 13, 749, DateTimeKind.Utc).AddTicks(4627),
+                            Id = new Guid("ca437ff5-4553-4152-874a-c2b60f66a20b"),
+                            End = new DateTime(2024, 8, 20, 8, 10, 42, 766, DateTimeKind.Utc).AddTicks(2512),
                             FromCity = "Durres",
                             FromCountry = "albania",
                             FromStreet = "Rruga e Dibres",
@@ -1198,7 +1198,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 8, 8, 17, 7, 13, 749, DateTimeKind.Utc).AddTicks(4626),
+                            Start = new DateTime(2024, 8, 20, 2, 10, 42, 766, DateTimeKind.Utc).AddTicks(2512),
                             ToCity = "Chania",
                             ToCountry = "grecja",
                             ToStreet = "Leoforos Vasilissis Sofias",
@@ -1206,8 +1206,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("bbbaa34d-40f6-4198-9160-267e33a66f88"),
-                            End = new DateTime(2024, 6, 23, 1, 7, 13, 749, DateTimeKind.Utc).AddTicks(4628),
+                            Id = new Guid("d90846d6-3527-4091-af4f-f53bdf695674"),
+                            End = new DateTime(2024, 7, 4, 10, 10, 42, 766, DateTimeKind.Utc).AddTicks(2515),
                             FromCity = "Sheikh",
                             FromCountry = "egipt",
                             FromStreet = "Sharia Ramsis",
@@ -1216,7 +1216,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 6, 22, 17, 7, 13, 749, DateTimeKind.Utc).AddTicks(4628),
+                            Start = new DateTime(2024, 7, 4, 2, 10, 42, 766, DateTimeKind.Utc).AddTicks(2514),
                             ToCity = "Brava",
                             ToCountry = "hiszpania",
                             ToStreet = "Paseo del Prado",
@@ -1224,8 +1224,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("f11ab821-66aa-47a8-8070-b4307dcb862c"),
-                            End = new DateTime(2024, 6, 22, 8, 7, 13, 749, DateTimeKind.Utc).AddTicks(4630),
+                            Id = new Guid("86f14886-06a5-4d38-acf4-0dbed49773d5"),
+                            End = new DateTime(2024, 7, 3, 17, 10, 42, 766, DateTimeKind.Utc).AddTicks(2517),
                             FromCity = "Riwiera",
                             FromCountry = "chorwacja",
                             FromStreet = "Kapucinska ulica",
@@ -1234,7 +1234,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 6, 22, 3, 7, 13, 749, DateTimeKind.Utc).AddTicks(4630),
+                            Start = new DateTime(2024, 7, 3, 12, 10, 42, 766, DateTimeKind.Utc).AddTicks(2517),
                             ToCity = "Brava",
                             ToCountry = "hiszpania",
                             ToStreet = "Calle Mayor",
@@ -1242,8 +1242,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("7c835639-fe8c-4878-8379-b13ba0f0ba7c"),
-                            End = new DateTime(2024, 6, 23, 1, 7, 13, 749, DateTimeKind.Utc).AddTicks(4632),
+                            Id = new Guid("88837525-276e-42d1-9dce-3718863f647d"),
+                            End = new DateTime(2024, 7, 4, 10, 10, 42, 766, DateTimeKind.Utc).AddTicks(2520),
                             FromCity = "Durres",
                             FromCountry = "albania",
                             FromStreet = "Rruga e Dibres",
@@ -1252,7 +1252,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 6, 22, 19, 7, 13, 749, DateTimeKind.Utc).AddTicks(4631),
+                            Start = new DateTime(2024, 7, 4, 4, 10, 42, 766, DateTimeKind.Utc).AddTicks(2519),
                             ToCity = "Brava",
                             ToCountry = "hiszpania",
                             ToStreet = "Calle Mayor",
@@ -1260,8 +1260,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("a9ca79b2-02d2-452a-9fbb-29b69138e039"),
-                            End = new DateTime(2024, 8, 23, 0, 7, 13, 749, DateTimeKind.Utc).AddTicks(4633),
+                            Id = new Guid("85be55bb-933c-4077-a481-6f5858db467f"),
+                            End = new DateTime(2024, 9, 3, 9, 10, 42, 766, DateTimeKind.Utc).AddTicks(2522),
                             FromCity = "Alam",
                             FromCountry = "egipt",
                             FromStreet = "Sharia Tahrir",
@@ -1270,7 +1270,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 8, 22, 15, 7, 13, 749, DateTimeKind.Utc).AddTicks(4633),
+                            Start = new DateTime(2024, 9, 3, 0, 10, 42, 766, DateTimeKind.Utc).AddTicks(2521),
                             ToCity = "Sheikh",
                             ToCountry = "egipt",
                             ToStreet = "Sharia Salah Salem",
@@ -1278,8 +1278,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("793ee49f-b272-41c1-9981-850289221a7a"),
-                            End = new DateTime(2024, 6, 10, 5, 7, 13, 749, DateTimeKind.Utc).AddTicks(4635),
+                            Id = new Guid("a9ecf2ea-ff6f-466c-8b71-d1dd55ef8a34"),
+                            End = new DateTime(2024, 6, 21, 14, 10, 42, 766, DateTimeKind.Utc).AddTicks(2524),
                             FromCity = "Kalabria",
                             FromCountry = "wlochy",
                             FromStreet = "Via del Corso",
@@ -1288,7 +1288,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 6, 9, 19, 7, 13, 749, DateTimeKind.Utc).AddTicks(4635),
+                            Start = new DateTime(2024, 6, 21, 4, 10, 42, 766, DateTimeKind.Utc).AddTicks(2524),
                             ToCity = "Sheikh",
                             ToCountry = "egipt",
                             ToStreet = "Sharia Ramsis",
@@ -1296,8 +1296,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("4a19618f-2ceb-45e2-afdf-df34e9064a68"),
-                            End = new DateTime(2024, 7, 19, 9, 7, 13, 749, DateTimeKind.Utc).AddTicks(4637),
+                            Id = new Guid("555ec986-6024-4b0e-8477-ed3300979669"),
+                            End = new DateTime(2024, 7, 30, 18, 10, 42, 766, DateTimeKind.Utc).AddTicks(2527),
                             FromCity = "Brava",
                             FromCountry = "hiszpania",
                             FromStreet = "Paseo del Prado",
@@ -1306,7 +1306,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 7, 19, 5, 7, 13, 749, DateTimeKind.Utc).AddTicks(4636),
+                            Start = new DateTime(2024, 7, 30, 14, 10, 42, 766, DateTimeKind.Utc).AddTicks(2526),
                             ToCity = "Chania",
                             ToCountry = "grecja",
                             ToStreet = "Leoforos Vasilissis Sofias",
@@ -1314,8 +1314,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("f3dca61e-f56c-4b5e-a089-3e5abd4e8870"),
-                            End = new DateTime(2024, 6, 12, 11, 7, 13, 749, DateTimeKind.Utc).AddTicks(4639),
+                            Id = new Guid("58e7216e-0aa4-4038-9282-99ad940a537d"),
+                            End = new DateTime(2024, 6, 23, 20, 10, 42, 766, DateTimeKind.Utc).AddTicks(2529),
                             FromCity = "Riwiera",
                             FromCountry = "chorwacja",
                             FromStreet = "Trg bana Josipa Jelačića",
@@ -1324,7 +1324,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 6, 12, 3, 7, 13, 749, DateTimeKind.Utc).AddTicks(4638),
+                            Start = new DateTime(2024, 6, 23, 12, 10, 42, 766, DateTimeKind.Utc).AddTicks(2529),
                             ToCity = "Kalabria",
                             ToCountry = "wlochy",
                             ToStreet = "Via Veneto",
@@ -1332,8 +1332,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("073ebf3f-4a5c-4b2d-a4a8-8a598b9fdc69"),
-                            End = new DateTime(2024, 8, 14, 17, 7, 13, 749, DateTimeKind.Utc).AddTicks(4640),
+                            Id = new Guid("2adcbbae-bad7-4d3a-b579-142b23ac6094"),
+                            End = new DateTime(2024, 8, 26, 2, 10, 42, 766, DateTimeKind.Utc).AddTicks(2532),
                             FromCity = "Nero",
                             FromCountry = "grecja",
                             FromStreet = "Leoforos Alexandras",
@@ -1342,7 +1342,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 8, 14, 9, 7, 13, 749, DateTimeKind.Utc).AddTicks(4640),
+                            Start = new DateTime(2024, 8, 25, 18, 10, 42, 766, DateTimeKind.Utc).AddTicks(2531),
                             ToCity = "Peloponez",
                             ToCountry = "grecja",
                             ToStreet = "Leoforos Alexandras",
@@ -1350,8 +1350,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("9455e8a5-28e5-4962-95d0-f2b57d020515"),
-                            End = new DateTime(2024, 7, 5, 15, 7, 13, 749, DateTimeKind.Utc).AddTicks(4642),
+                            Id = new Guid("735a95ee-81c5-4b55-93ca-8e07f4d482e6"),
+                            End = new DateTime(2024, 7, 17, 0, 10, 42, 766, DateTimeKind.Utc).AddTicks(2534),
                             FromCity = "Durres",
                             FromCountry = "albania",
                             FromStreet = "Rruga Abdyl Frasheri",
@@ -1360,7 +1360,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 7, 5, 9, 7, 13, 749, DateTimeKind.Utc).AddTicks(4642),
+                            Start = new DateTime(2024, 7, 16, 18, 10, 42, 766, DateTimeKind.Utc).AddTicks(2534),
                             ToCity = "Durres",
                             ToCountry = "albania",
                             ToStreet = "Rruga e Dibres",
@@ -1368,8 +1368,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("2f212a6a-da97-4b09-aba5-d12d5186cbdf"),
-                            End = new DateTime(2024, 8, 2, 21, 7, 13, 749, DateTimeKind.Utc).AddTicks(4644),
+                            Id = new Guid("42893a10-bd57-4820-af36-14981831bc12"),
+                            End = new DateTime(2024, 8, 14, 6, 10, 42, 766, DateTimeKind.Utc).AddTicks(2536),
                             FromCity = "Almeria",
                             FromCountry = "hiszpania",
                             FromStreet = "Paseo del Prado",
@@ -1378,7 +1378,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 8, 2, 14, 7, 13, 749, DateTimeKind.Utc).AddTicks(4643),
+                            Start = new DateTime(2024, 8, 13, 23, 10, 42, 766, DateTimeKind.Utc).AddTicks(2536),
                             ToCity = "Marmaris",
                             ToCountry = "turcja",
                             ToStreet = "Bağdat Caddesi",
@@ -1386,8 +1386,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("5e9bd6da-a279-4a10-aeb5-1dc190f6a7d7"),
-                            End = new DateTime(2024, 6, 8, 23, 7, 13, 749, DateTimeKind.Utc).AddTicks(4646),
+                            Id = new Guid("2c3012e3-e1a2-40d3-92f8-5b8534a72559"),
+                            End = new DateTime(2024, 6, 20, 8, 10, 42, 766, DateTimeKind.Utc).AddTicks(2539),
                             FromCity = "Durres",
                             FromCountry = "albania",
                             FromStreet = "Rruga Abdyl Frasheri",
@@ -1396,7 +1396,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 6, 8, 21, 7, 13, 749, DateTimeKind.Utc).AddTicks(4645),
+                            Start = new DateTime(2024, 6, 20, 6, 10, 42, 766, DateTimeKind.Utc).AddTicks(2538),
                             ToCity = "Kalabria",
                             ToCountry = "wlochy",
                             ToStreet = "Via del Corso",
@@ -1404,8 +1404,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("3b106e44-3d4d-419f-87a9-fb81fffab7a4"),
-                            End = new DateTime(2024, 7, 2, 17, 7, 13, 749, DateTimeKind.Utc).AddTicks(4647),
+                            Id = new Guid("f7ca36cf-decd-4390-a25d-51fa22d39f8b"),
+                            End = new DateTime(2024, 7, 14, 2, 10, 42, 766, DateTimeKind.Utc).AddTicks(2541),
                             FromCity = "Turecka",
                             FromCountry = "turcja",
                             FromStreet = "Bağdat Caddesi",
@@ -1414,7 +1414,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 7, 2, 7, 7, 13, 749, DateTimeKind.Utc).AddTicks(4647),
+                            Start = new DateTime(2024, 7, 13, 16, 10, 42, 766, DateTimeKind.Utc).AddTicks(2541),
                             ToCity = "Sheikh",
                             ToCountry = "egipt",
                             ToStreet = "Sharia Tahrir",
@@ -1422,8 +1422,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("d36c4c69-df9f-4a5e-b46d-5ba613ca6ddb"),
-                            End = new DateTime(2024, 8, 4, 2, 7, 13, 749, DateTimeKind.Utc).AddTicks(4649),
+                            Id = new Guid("04c2d060-9f77-46f0-a3b3-694477469402"),
+                            End = new DateTime(2024, 8, 15, 11, 10, 42, 766, DateTimeKind.Utc).AddTicks(2543),
                             FromCity = "Alam",
                             FromCountry = "egipt",
                             FromStreet = "Sharia Tahrir",
@@ -1432,7 +1432,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 8, 3, 21, 7, 13, 749, DateTimeKind.Utc).AddTicks(4649),
+                            Start = new DateTime(2024, 8, 15, 6, 10, 42, 766, DateTimeKind.Utc).AddTicks(2543),
                             ToCity = "Sheikh",
                             ToCountry = "egipt",
                             ToStreet = "Sharia Salah Salem",
@@ -1440,8 +1440,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("e304f327-4125-450d-8b20-d389ded7cdcf"),
-                            End = new DateTime(2024, 6, 27, 3, 7, 13, 749, DateTimeKind.Utc).AddTicks(4651),
+                            Id = new Guid("d274dd3d-362f-4953-b992-d311d70af774"),
+                            End = new DateTime(2024, 7, 8, 12, 10, 42, 766, DateTimeKind.Utc).AddTicks(2546),
                             FromCity = "Sheikh",
                             FromCountry = "egipt",
                             FromStreet = "Sharia Ramsis",
@@ -1450,7 +1450,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 6, 26, 16, 7, 13, 749, DateTimeKind.Utc).AddTicks(4650),
+                            Start = new DateTime(2024, 7, 8, 1, 10, 42, 766, DateTimeKind.Utc).AddTicks(2545),
                             ToCity = "Durres",
                             ToCountry = "albania",
                             ToStreet = "Rruga Abdyl Frasheri",
@@ -1458,8 +1458,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("eeefc2f5-0ac6-4ca9-8eec-b88773809299"),
-                            End = new DateTime(2024, 6, 9, 4, 7, 13, 749, DateTimeKind.Utc).AddTicks(4652),
+                            Id = new Guid("7af237c8-debb-4573-ad91-9308a60e9933"),
+                            End = new DateTime(2024, 6, 20, 13, 10, 42, 766, DateTimeKind.Utc).AddTicks(2548),
                             FromCity = "Nero",
                             FromCountry = "grecja",
                             FromStreet = "Leoforos Alexandras",
@@ -1468,7 +1468,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 6, 8, 16, 7, 13, 749, DateTimeKind.Utc).AddTicks(4652),
+                            Start = new DateTime(2024, 6, 20, 1, 10, 42, 766, DateTimeKind.Utc).AddTicks(2548),
                             ToCity = "Peloponez",
                             ToCountry = "grecja",
                             ToStreet = "Leoforos Alexandras",
@@ -1476,8 +1476,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("e1239e1f-3549-43cb-8f99-0978becd9957"),
-                            End = new DateTime(2024, 7, 19, 3, 7, 13, 749, DateTimeKind.Utc).AddTicks(4679),
+                            Id = new Guid("ea06070a-ad6a-488e-a69a-f0de5db6d125"),
+                            End = new DateTime(2024, 7, 30, 12, 10, 42, 766, DateTimeKind.Utc).AddTicks(2551),
                             FromCity = "Turecka",
                             FromCountry = "turcja",
                             FromStreet = "Atatürk Caddesi",
@@ -1486,7 +1486,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 7, 18, 22, 7, 13, 749, DateTimeKind.Utc).AddTicks(4678),
+                            Start = new DateTime(2024, 7, 30, 7, 10, 42, 766, DateTimeKind.Utc).AddTicks(2550),
                             ToCity = "Durres",
                             ToCountry = "albania",
                             ToStreet = "Rruga Abdyl Frasheri",
@@ -1494,8 +1494,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("a59f7122-1cc6-4f66-94ca-d3f00306b790"),
-                            End = new DateTime(2024, 6, 17, 6, 7, 13, 749, DateTimeKind.Utc).AddTicks(4681),
+                            Id = new Guid("9bd56701-52f9-4162-83d7-ff3715838967"),
+                            End = new DateTime(2024, 6, 28, 15, 10, 42, 766, DateTimeKind.Utc).AddTicks(2553),
                             FromCity = "Durres",
                             FromCountry = "albania",
                             FromStreet = "Rruga e Dibres",
@@ -1504,7 +1504,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 6, 17, 3, 7, 13, 749, DateTimeKind.Utc).AddTicks(4680),
+                            Start = new DateTime(2024, 6, 28, 12, 10, 42, 766, DateTimeKind.Utc).AddTicks(2553),
                             ToCity = "Turecka",
                             ToCountry = "turcja",
                             ToStreet = "Atatürk Caddesi",
@@ -1512,8 +1512,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("52457fde-62e5-4b00-ae89-84a902418685"),
-                            End = new DateTime(2024, 7, 24, 12, 7, 13, 749, DateTimeKind.Utc).AddTicks(4683),
+                            Id = new Guid("89f58f9a-030a-45d3-9845-edac72170ce3"),
+                            End = new DateTime(2024, 8, 4, 21, 10, 42, 766, DateTimeKind.Utc).AddTicks(2556),
                             FromCity = "Riwiera",
                             FromCountry = "chorwacja",
                             FromStreet = "Maksimirska ulica",
@@ -1522,7 +1522,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 7, 24, 1, 7, 13, 749, DateTimeKind.Utc).AddTicks(4682),
+                            Start = new DateTime(2024, 8, 4, 10, 10, 42, 766, DateTimeKind.Utc).AddTicks(2556),
                             ToCity = "Durres",
                             ToCountry = "albania",
                             ToStreet = "Rruga e Dibres",
@@ -1530,8 +1530,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("2b54fe04-6544-4305-bc8e-6c7bd9e3b8ed"),
-                            End = new DateTime(2024, 7, 2, 20, 7, 13, 749, DateTimeKind.Utc).AddTicks(4684),
+                            Id = new Guid("6479c238-4d6f-4944-9ae9-5e9d5c3574a7"),
+                            End = new DateTime(2024, 7, 14, 5, 10, 42, 766, DateTimeKind.Utc).AddTicks(2559),
                             FromCity = "Nero",
                             FromCountry = "grecja",
                             FromStreet = "Leoforos Alexandras",
@@ -1540,7 +1540,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 7, 2, 14, 7, 13, 749, DateTimeKind.Utc).AddTicks(4684),
+                            Start = new DateTime(2024, 7, 13, 23, 10, 42, 766, DateTimeKind.Utc).AddTicks(2558),
                             ToCity = "Durres",
                             ToCountry = "albania",
                             ToStreet = "Bulevardi Bajram Curri",
@@ -1548,8 +1548,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("da31cacc-0d4c-4f07-9af7-84c64c41c8e8"),
-                            End = new DateTime(2024, 7, 21, 5, 7, 13, 749, DateTimeKind.Utc).AddTicks(4688),
+                            Id = new Guid("69044a0c-0038-4d68-beee-0ffff6f4df7a"),
+                            End = new DateTime(2024, 8, 1, 14, 10, 42, 766, DateTimeKind.Utc).AddTicks(2561),
                             FromCity = "Sheikh",
                             FromCountry = "egipt",
                             FromStreet = "Sharia Salah Salem",
@@ -1558,7 +1558,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 7, 20, 21, 7, 13, 749, DateTimeKind.Utc).AddTicks(4686),
+                            Start = new DateTime(2024, 8, 1, 6, 10, 42, 766, DateTimeKind.Utc).AddTicks(2561),
                             ToCity = "Brava",
                             ToCountry = "hiszpania",
                             ToStreet = "Calle Mayor",
@@ -1566,8 +1566,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("c5851778-039f-4c66-875d-fa0da367e572"),
-                            End = new DateTime(2024, 8, 27, 14, 7, 13, 749, DateTimeKind.Utc).AddTicks(4689),
+                            Id = new Guid("cb9f1dac-aab6-4c04-813a-dc86ec1f3984"),
+                            End = new DateTime(2024, 9, 7, 23, 10, 42, 766, DateTimeKind.Utc).AddTicks(2564),
                             FromCity = "Sheikh",
                             FromCountry = "egipt",
                             FromStreet = "Sharia Ramsis",
@@ -1576,7 +1576,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 8, 27, 2, 7, 13, 749, DateTimeKind.Utc).AddTicks(4689),
+                            Start = new DateTime(2024, 9, 7, 11, 10, 42, 766, DateTimeKind.Utc).AddTicks(2563),
                             ToCity = "Nero",
                             ToCountry = "grecja",
                             ToStreet = "Leoforos Alexandras",
@@ -1584,8 +1584,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("fb74bd3d-8854-45b7-857d-b01f9b918748"),
-                            End = new DateTime(2024, 8, 21, 15, 7, 13, 749, DateTimeKind.Utc).AddTicks(4691),
+                            Id = new Guid("82cad992-d606-4779-9a01-3afea07d5a50"),
+                            End = new DateTime(2024, 9, 2, 0, 10, 42, 766, DateTimeKind.Utc).AddTicks(2566),
                             FromCity = "Alam",
                             FromCountry = "egipt",
                             FromStreet = "Sharia Gamal Abdel Nasser",
@@ -1594,7 +1594,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 8, 21, 10, 7, 13, 749, DateTimeKind.Utc).AddTicks(4691),
+                            Start = new DateTime(2024, 9, 1, 19, 10, 42, 766, DateTimeKind.Utc).AddTicks(2566),
                             ToCity = "Durres",
                             ToCountry = "albania",
                             ToStreet = "Rruga Abdyl Frasheri",
@@ -1602,8 +1602,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("25b98ca8-e95a-413d-825e-a5be3e091c23"),
-                            End = new DateTime(2024, 7, 25, 5, 7, 13, 749, DateTimeKind.Utc).AddTicks(4693),
+                            Id = new Guid("7abf1efd-4a85-427a-9efb-271d97ff04e5"),
+                            End = new DateTime(2024, 8, 5, 14, 10, 42, 766, DateTimeKind.Utc).AddTicks(2574),
                             FromCity = "Turecka",
                             FromCountry = "turcja",
                             FromStreet = "Atatürk Caddesi",
@@ -1612,7 +1612,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 7, 25, 0, 7, 13, 749, DateTimeKind.Utc).AddTicks(4692),
+                            Start = new DateTime(2024, 8, 5, 9, 10, 42, 766, DateTimeKind.Utc).AddTicks(2568),
                             ToCity = "Turecka",
                             ToCountry = "turcja",
                             ToStreet = "Atatürk Caddesi",
@@ -1620,8 +1620,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("4683ea91-9f9f-450f-ae52-121bb7d70e6d"),
-                            End = new DateTime(2024, 6, 12, 15, 7, 13, 749, DateTimeKind.Utc).AddTicks(4695),
+                            Id = new Guid("eb88a74a-a5c6-4f20-a318-3c34ec064f15"),
+                            End = new DateTime(2024, 6, 24, 0, 10, 42, 766, DateTimeKind.Utc).AddTicks(2577),
                             FromCity = "Turecka",
                             FromCountry = "turcja",
                             FromStreet = "Halaskargazi Caddesi",
@@ -1630,7 +1630,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 6, 12, 9, 7, 13, 749, DateTimeKind.Utc).AddTicks(4694),
+                            Start = new DateTime(2024, 6, 23, 18, 10, 42, 766, DateTimeKind.Utc).AddTicks(2576),
                             ToCity = "Maresme",
                             ToCountry = "hiszpania",
                             ToStreet = "Paseo del Prado",
@@ -1638,8 +1638,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("04eece83-206a-49b0-b04e-9b06ed047f39"),
-                            End = new DateTime(2024, 7, 1, 15, 7, 13, 749, DateTimeKind.Utc).AddTicks(4696),
+                            Id = new Guid("a5898b9c-60a3-4430-adb7-5c4d1f0ec7b5"),
+                            End = new DateTime(2024, 7, 13, 0, 10, 42, 766, DateTimeKind.Utc).AddTicks(2579),
                             FromCity = "Alam",
                             FromCountry = "egipt",
                             FromStreet = "Sharia Tahrir",
@@ -1648,7 +1648,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 7, 1, 13, 7, 13, 749, DateTimeKind.Utc).AddTicks(4696),
+                            Start = new DateTime(2024, 7, 12, 22, 10, 42, 766, DateTimeKind.Utc).AddTicks(2578),
                             ToCity = "Durres",
                             ToCountry = "albania",
                             ToStreet = "Rruga e Dibres",
@@ -1656,8 +1656,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("33eb14d7-ed5c-4231-999f-22b6763f1cb0"),
-                            End = new DateTime(2024, 6, 15, 10, 7, 13, 749, DateTimeKind.Utc).AddTicks(4698),
+                            Id = new Guid("550ca7a5-50fd-4a4a-af86-5f25a7aaccb0"),
+                            End = new DateTime(2024, 6, 26, 19, 10, 42, 766, DateTimeKind.Utc).AddTicks(2582),
                             FromCity = "Peloponez",
                             FromCountry = "grecja",
                             FromStreet = "Leoforos Alexandras",
@@ -1666,7 +1666,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 6, 15, 2, 7, 13, 749, DateTimeKind.Utc).AddTicks(4698),
+                            Start = new DateTime(2024, 6, 26, 11, 10, 42, 766, DateTimeKind.Utc).AddTicks(2581),
                             ToCity = "Riwiera",
                             ToCountry = "chorwacja",
                             ToStreet = "Trg bana Josipa Jelačića",
@@ -1674,8 +1674,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("7662a661-ed4f-4c1a-a1e5-519d4ada440b"),
-                            End = new DateTime(2024, 8, 19, 10, 7, 13, 749, DateTimeKind.Utc).AddTicks(4700),
+                            Id = new Guid("44607b8b-be5e-479a-832f-ae267bf17458"),
+                            End = new DateTime(2024, 8, 30, 19, 10, 42, 766, DateTimeKind.Utc).AddTicks(2584),
                             FromCity = "Durres",
                             FromCountry = "albania",
                             FromStreet = "Rruga Abdyl Frasheri",
@@ -1684,7 +1684,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 8, 19, 1, 7, 13, 749, DateTimeKind.Utc).AddTicks(4700),
+                            Start = new DateTime(2024, 8, 30, 10, 10, 42, 766, DateTimeKind.Utc).AddTicks(2584),
                             ToCity = "Maresme",
                             ToCountry = "hiszpania",
                             ToStreet = "Paseo del Prado",
@@ -1692,8 +1692,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("113f04e2-9cdf-4764-8baf-cc17b76eade4"),
-                            End = new DateTime(2024, 6, 30, 0, 7, 13, 749, DateTimeKind.Utc).AddTicks(4702),
+                            Id = new Guid("cea90f0b-d919-4836-9661-4aa620e7ca88"),
+                            End = new DateTime(2024, 7, 11, 9, 10, 42, 766, DateTimeKind.Utc).AddTicks(2587),
                             FromCity = "Alam",
                             FromCountry = "egipt",
                             FromStreet = "Sharia Tahrir",
@@ -1702,7 +1702,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 6, 29, 22, 7, 13, 749, DateTimeKind.Utc).AddTicks(4701),
+                            Start = new DateTime(2024, 7, 11, 7, 10, 42, 766, DateTimeKind.Utc).AddTicks(2586),
                             ToCity = "Almeria",
                             ToCountry = "hiszpania",
                             ToStreet = "Paseo del Prado",
@@ -1710,8 +1710,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("f7e4a6d0-ca0d-4429-a1fe-09b6c88b1a27"),
-                            End = new DateTime(2024, 8, 3, 6, 7, 13, 749, DateTimeKind.Utc).AddTicks(4703),
+                            Id = new Guid("f954ed4c-dffd-414e-9119-0aa62cfe7be5"),
+                            End = new DateTime(2024, 8, 14, 15, 10, 42, 766, DateTimeKind.Utc).AddTicks(2629),
                             FromCity = "Sheikh",
                             FromCountry = "egipt",
                             FromStreet = "Sharia Salah Salem",
@@ -1720,7 +1720,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 8, 2, 21, 7, 13, 749, DateTimeKind.Utc).AddTicks(4703),
+                            Start = new DateTime(2024, 8, 14, 6, 10, 42, 766, DateTimeKind.Utc).AddTicks(2623),
                             ToCity = "Nero",
                             ToCountry = "grecja",
                             ToStreet = "Leoforos Alexandras",
@@ -1728,8 +1728,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("54acba1b-b6e8-4fda-b694-e12c416a4b27"),
-                            End = new DateTime(2024, 8, 26, 16, 7, 13, 749, DateTimeKind.Utc).AddTicks(4705),
+                            Id = new Guid("d5d2c416-cadd-4d17-9aea-b9c7264da841"),
+                            End = new DateTime(2024, 9, 7, 1, 10, 42, 766, DateTimeKind.Utc).AddTicks(2631),
                             FromCity = "Turecka",
                             FromCountry = "turcja",
                             FromStreet = "Atatürk Caddesi",
@@ -1738,7 +1738,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 8, 26, 14, 7, 13, 749, DateTimeKind.Utc).AddTicks(4705),
+                            Start = new DateTime(2024, 9, 6, 23, 10, 42, 766, DateTimeKind.Utc).AddTicks(2631),
                             ToCity = "Turecka",
                             ToCountry = "turcja",
                             ToStreet = "Halaskargazi Caddesi",
@@ -1746,8 +1746,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("b02aa6f1-bcc6-411f-9b78-facd0f222014"),
-                            End = new DateTime(2024, 6, 8, 20, 7, 13, 749, DateTimeKind.Utc).AddTicks(4707),
+                            Id = new Guid("7099a15b-c48c-4424-b392-c196c04f3113"),
+                            End = new DateTime(2024, 6, 20, 5, 10, 42, 766, DateTimeKind.Utc).AddTicks(2634),
                             FromCity = "Luz",
                             FromCountry = "hiszpania",
                             FromStreet = "Calle Mayor",
@@ -1756,7 +1756,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 6, 8, 10, 7, 13, 749, DateTimeKind.Utc).AddTicks(4706),
+                            Start = new DateTime(2024, 6, 19, 19, 10, 42, 766, DateTimeKind.Utc).AddTicks(2633),
                             ToCity = "Riwiera",
                             ToCountry = "chorwacja",
                             ToStreet = "Maksimirska ulica",
@@ -1764,8 +1764,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("0a4564d8-8590-42e0-bc70-ef694c1663fd"),
-                            End = new DateTime(2024, 7, 19, 3, 7, 13, 749, DateTimeKind.Utc).AddTicks(4709),
+                            Id = new Guid("53d64473-9b75-4ae2-9658-cc72e66248de"),
+                            End = new DateTime(2024, 7, 30, 12, 10, 42, 766, DateTimeKind.Utc).AddTicks(2636),
                             FromCity = "Riwiera",
                             FromCountry = "chorwacja",
                             FromStreet = "Vukovarska ulica",
@@ -1774,7 +1774,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 7, 18, 18, 7, 13, 749, DateTimeKind.Utc).AddTicks(4708),
+                            Start = new DateTime(2024, 7, 30, 3, 10, 42, 766, DateTimeKind.Utc).AddTicks(2636),
                             ToCity = "Olimpijska",
                             ToCountry = "grecja",
                             ToStreet = "Plateia Syntagmatos",
@@ -1782,8 +1782,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("eb2d1d92-5eeb-431b-a54d-ab0defe68c2a"),
-                            End = new DateTime(2024, 6, 11, 19, 7, 13, 749, DateTimeKind.Utc).AddTicks(4710),
+                            Id = new Guid("da2280c4-a39e-4f7f-9333-a0d5233f6553"),
+                            End = new DateTime(2024, 6, 23, 4, 10, 42, 766, DateTimeKind.Utc).AddTicks(2639),
                             FromCity = "Alam",
                             FromCountry = "egipt",
                             FromStreet = "Sharia Gamal Abdel Nasser",
@@ -1792,7 +1792,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 6, 11, 11, 7, 13, 749, DateTimeKind.Utc).AddTicks(4710),
+                            Start = new DateTime(2024, 6, 22, 20, 10, 42, 766, DateTimeKind.Utc).AddTicks(2638),
                             ToCity = "Olimpijska",
                             ToCountry = "grecja",
                             ToStreet = "Plateia Syntagmatos",
@@ -1800,8 +1800,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("96df141c-dded-4ea3-88c8-3e1036f4a271"),
-                            End = new DateTime(2024, 7, 13, 11, 7, 13, 749, DateTimeKind.Utc).AddTicks(4712),
+                            Id = new Guid("40af5a0a-47f1-4289-a5a7-047fed6d1fad"),
+                            End = new DateTime(2024, 7, 24, 20, 10, 42, 766, DateTimeKind.Utc).AddTicks(2641),
                             FromCity = "Sheikh",
                             FromCountry = "egipt",
                             FromStreet = "Sharia Ramsis",
@@ -1810,7 +1810,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 7, 13, 9, 7, 13, 749, DateTimeKind.Utc).AddTicks(4711),
+                            Start = new DateTime(2024, 7, 24, 18, 10, 42, 766, DateTimeKind.Utc).AddTicks(2640),
                             ToCity = "Turecka",
                             ToCountry = "turcja",
                             ToStreet = "Atatürk Caddesi",
@@ -1818,8 +1818,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("27144dff-1b0e-4b98-bfad-d1a2c4991d60"),
-                            End = new DateTime(2024, 8, 25, 1, 7, 13, 749, DateTimeKind.Utc).AddTicks(4714),
+                            Id = new Guid("ff7d6a73-452e-459b-948f-93c991e6dcf7"),
+                            End = new DateTime(2024, 9, 5, 10, 10, 42, 766, DateTimeKind.Utc).AddTicks(2643),
                             FromCity = "Kalabria",
                             FromCountry = "wlochy",
                             FromStreet = "Via Nazionale",
@@ -1828,7 +1828,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 8, 24, 20, 7, 13, 749, DateTimeKind.Utc).AddTicks(4713),
+                            Start = new DateTime(2024, 9, 5, 5, 10, 42, 766, DateTimeKind.Utc).AddTicks(2643),
                             ToCity = "Riwiera",
                             ToCountry = "chorwacja",
                             ToStreet = "Kapucinska ulica",
@@ -1836,8 +1836,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("d7ce4b90-4aba-46b2-9411-8c1c4c10a8b7"),
-                            End = new DateTime(2024, 7, 27, 16, 7, 13, 749, DateTimeKind.Utc).AddTicks(4715),
+                            Id = new Guid("475068f3-9fd2-430c-a738-ad6880a6e358"),
+                            End = new DateTime(2024, 8, 8, 1, 10, 42, 766, DateTimeKind.Utc).AddTicks(2646),
                             FromCity = "Brava",
                             FromCountry = "hiszpania",
                             FromStreet = "Gran Vía",
@@ -1846,7 +1846,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 7, 27, 6, 7, 13, 749, DateTimeKind.Utc).AddTicks(4715),
+                            Start = new DateTime(2024, 8, 7, 15, 10, 42, 766, DateTimeKind.Utc).AddTicks(2645),
                             ToCity = "Kalabria",
                             ToCountry = "wlochy",
                             ToStreet = "Via del Corso",
@@ -1854,8 +1854,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("a59bbe80-11ba-4498-b780-cefddca7c227"),
-                            End = new DateTime(2024, 6, 12, 7, 7, 13, 749, DateTimeKind.Utc).AddTicks(4717),
+                            Id = new Guid("2866d6af-6190-4404-a98a-0dd49f102aca"),
+                            End = new DateTime(2024, 6, 23, 16, 10, 42, 766, DateTimeKind.Utc).AddTicks(2648),
                             FromCity = "Kalabria",
                             FromCountry = "wlochy",
                             FromStreet = "Via del Corso",
@@ -1864,7 +1864,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 6, 12, 3, 7, 13, 749, DateTimeKind.Utc).AddTicks(4717),
+                            Start = new DateTime(2024, 6, 23, 12, 10, 42, 766, DateTimeKind.Utc).AddTicks(2648),
                             ToCity = "Turecka",
                             ToCountry = "turcja",
                             ToStreet = "Atatürk Caddesi",
@@ -1872,8 +1872,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("97a5d660-d2e2-43f5-b6d9-3d49c2733008"),
-                            End = new DateTime(2024, 7, 31, 3, 7, 13, 749, DateTimeKind.Utc).AddTicks(4719),
+                            Id = new Guid("db70e3a2-6676-4d70-af87-51fcfc831a2a"),
+                            End = new DateTime(2024, 8, 11, 12, 10, 42, 766, DateTimeKind.Utc).AddTicks(2650),
                             FromCity = "Turecka",
                             FromCountry = "turcja",
                             FromStreet = "Bağdat Caddesi",
@@ -1882,7 +1882,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 7, 30, 15, 7, 13, 749, DateTimeKind.Utc).AddTicks(4718),
+                            Start = new DateTime(2024, 8, 11, 0, 10, 42, 766, DateTimeKind.Utc).AddTicks(2650),
                             ToCity = "Durres",
                             ToCountry = "albania",
                             ToStreet = "Rruga Abdyl Frasheri",
@@ -1890,8 +1890,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("3e72ebb8-e6d2-4d5a-ad6a-fc3d5ef93bb2"),
-                            End = new DateTime(2024, 8, 11, 14, 7, 13, 749, DateTimeKind.Utc).AddTicks(4721),
+                            Id = new Guid("66e3ee04-8a82-4806-8393-c0f7f6a85930"),
+                            End = new DateTime(2024, 8, 22, 23, 10, 42, 766, DateTimeKind.Utc).AddTicks(2653),
                             FromCity = "Riwiera",
                             FromCountry = "chorwacja",
                             FromStreet = "Maksimirska ulica",
@@ -1900,7 +1900,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 8, 11, 4, 7, 13, 749, DateTimeKind.Utc).AddTicks(4720),
+                            Start = new DateTime(2024, 8, 22, 13, 10, 42, 766, DateTimeKind.Utc).AddTicks(2652),
                             ToCity = "Marmaris",
                             ToCountry = "turcja",
                             ToStreet = "Bağdat Caddesi",
@@ -1908,8 +1908,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("2a45979d-f582-4a56-8268-7a7b6d29f7af"),
-                            End = new DateTime(2024, 7, 10, 11, 7, 13, 749, DateTimeKind.Utc).AddTicks(4722),
+                            Id = new Guid("e7c5fe9d-0617-462d-be2f-9d60378a9aaf"),
+                            End = new DateTime(2024, 7, 21, 20, 10, 42, 766, DateTimeKind.Utc).AddTicks(2655),
                             FromCity = "Riwiera",
                             FromCountry = "chorwacja",
                             FromStreet = "Kapucinska ulica",
@@ -1918,7 +1918,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 7, 10, 2, 7, 13, 749, DateTimeKind.Utc).AddTicks(4722),
+                            Start = new DateTime(2024, 7, 21, 11, 10, 42, 766, DateTimeKind.Utc).AddTicks(2655),
                             ToCity = "Vlora",
                             ToCountry = "albania",
                             ToStreet = "Rruga 28 Nentori",
@@ -1926,8 +1926,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("db0a135d-1b54-4a6d-82b9-faf1d178bfc3"),
-                            End = new DateTime(2024, 7, 12, 13, 7, 13, 749, DateTimeKind.Utc).AddTicks(4724),
+                            Id = new Guid("fac67dbd-5ef7-425a-aaaf-1e757c8f9a08"),
+                            End = new DateTime(2024, 7, 23, 22, 10, 42, 766, DateTimeKind.Utc).AddTicks(2657),
                             FromCity = "Brava",
                             FromCountry = "hiszpania",
                             FromStreet = "Paseo del Prado",
@@ -1936,7 +1936,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 7, 12, 11, 7, 13, 749, DateTimeKind.Utc).AddTicks(4724),
+                            Start = new DateTime(2024, 7, 23, 20, 10, 42, 766, DateTimeKind.Utc).AddTicks(2657),
                             ToCity = "Turecka",
                             ToCountry = "turcja",
                             ToStreet = "Bağdat Caddesi",
@@ -1944,8 +1944,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("4fee6368-cdf9-4d3b-8fe3-498a661def6d"),
-                            End = new DateTime(2024, 6, 14, 5, 7, 13, 749, DateTimeKind.Utc).AddTicks(4726),
+                            Id = new Guid("39f24e9f-a522-4be3-86b4-de55a0714c6d"),
+                            End = new DateTime(2024, 6, 25, 14, 10, 42, 766, DateTimeKind.Utc).AddTicks(2660),
                             FromCity = "Sheikh",
                             FromCountry = "egipt",
                             FromStreet = "Sharia Salah Salem",
@@ -1954,7 +1954,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 6, 14, 1, 7, 13, 749, DateTimeKind.Utc).AddTicks(4725),
+                            Start = new DateTime(2024, 6, 25, 10, 10, 42, 766, DateTimeKind.Utc).AddTicks(2659),
                             ToCity = "Durres",
                             ToCountry = "albania",
                             ToStreet = "Rruga Abdyl Frasheri",
@@ -1962,8 +1962,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("adeae5cd-e357-46f0-8f08-6c1032101f2a"),
-                            End = new DateTime(2024, 7, 13, 4, 7, 13, 749, DateTimeKind.Utc).AddTicks(4727),
+                            Id = new Guid("5a6769e1-ed7f-4549-9a1d-b0d0cf8f01ff"),
+                            End = new DateTime(2024, 7, 24, 13, 10, 42, 766, DateTimeKind.Utc).AddTicks(2662),
                             FromCity = "Alam",
                             FromCountry = "egipt",
                             FromStreet = "Sharia Gamal Abdel Nasser",
@@ -1972,7 +1972,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 7, 12, 22, 7, 13, 749, DateTimeKind.Utc).AddTicks(4727),
+                            Start = new DateTime(2024, 7, 24, 7, 10, 42, 766, DateTimeKind.Utc).AddTicks(2662),
                             ToCity = "Riwiera",
                             ToCountry = "chorwacja",
                             ToStreet = "Kapucinska ulica",
@@ -1980,8 +1980,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("158cfd17-44d9-4a4b-bb03-b3d4e208519c"),
-                            End = new DateTime(2024, 8, 2, 21, 7, 13, 749, DateTimeKind.Utc).AddTicks(4729),
+                            Id = new Guid("ed1d5c37-7438-4eeb-8a44-c7ca256dbde1"),
+                            End = new DateTime(2024, 8, 14, 6, 10, 42, 766, DateTimeKind.Utc).AddTicks(2665),
                             FromCity = "Durres",
                             FromCountry = "albania",
                             FromStreet = "Bulevardi Bajram Curri",
@@ -1990,7 +1990,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 8, 2, 13, 7, 13, 749, DateTimeKind.Utc).AddTicks(4729),
+                            Start = new DateTime(2024, 8, 13, 22, 10, 42, 766, DateTimeKind.Utc).AddTicks(2664),
                             ToCity = "Durres",
                             ToCountry = "albania",
                             ToStreet = "Rruga e Dibres",
@@ -1998,8 +1998,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("2599ffa9-b948-4f25-8ee1-1c0df0ccbd12"),
-                            End = new DateTime(2024, 8, 3, 20, 7, 13, 749, DateTimeKind.Utc).AddTicks(4731),
+                            Id = new Guid("30921403-6732-418c-9116-a69de511eb14"),
+                            End = new DateTime(2024, 8, 15, 5, 10, 42, 766, DateTimeKind.Utc).AddTicks(2669),
                             FromCity = "Turecka",
                             FromCountry = "turcja",
                             FromStreet = "Bağdat Caddesi",
@@ -2008,7 +2008,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 8, 3, 11, 7, 13, 749, DateTimeKind.Utc).AddTicks(4730),
+                            Start = new DateTime(2024, 8, 14, 20, 10, 42, 766, DateTimeKind.Utc).AddTicks(2669),
                             ToCity = "Nero",
                             ToCountry = "grecja",
                             ToStreet = "Leoforos Vasilissis Sofias",
@@ -2016,8 +2016,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("42bbbd30-fe9f-4d74-8470-475d88ddcfae"),
-                            End = new DateTime(2024, 7, 27, 11, 7, 13, 749, DateTimeKind.Utc).AddTicks(4756),
+                            Id = new Guid("dcf369c3-42fc-4005-ade2-385d705f3c1e"),
+                            End = new DateTime(2024, 8, 7, 20, 10, 42, 766, DateTimeKind.Utc).AddTicks(2671),
                             FromCity = "Maresme",
                             FromCountry = "hiszpania",
                             FromStreet = "Paseo del Prado",
@@ -2026,7 +2026,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 7, 27, 8, 7, 13, 749, DateTimeKind.Utc).AddTicks(4755),
+                            Start = new DateTime(2024, 8, 7, 17, 10, 42, 766, DateTimeKind.Utc).AddTicks(2671),
                             ToCity = "Brava",
                             ToCountry = "hiszpania",
                             ToStreet = "Gran Vía",
@@ -2034,8 +2034,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("c472da36-91a0-490e-af3a-f1176b7cdbee"),
-                            End = new DateTime(2024, 7, 2, 17, 7, 13, 749, DateTimeKind.Utc).AddTicks(4758),
+                            Id = new Guid("8c76d364-bcb9-4dbc-a606-33a2f61a8ae3"),
+                            End = new DateTime(2024, 7, 14, 2, 10, 42, 766, DateTimeKind.Utc).AddTicks(2674),
                             FromCity = "Durres",
                             FromCountry = "albania",
                             FromStreet = "Rruga Abdyl Frasheri",
@@ -2044,7 +2044,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 7, 2, 11, 7, 13, 749, DateTimeKind.Utc).AddTicks(4758),
+                            Start = new DateTime(2024, 7, 13, 20, 10, 42, 766, DateTimeKind.Utc).AddTicks(2673),
                             ToCity = "Kalabria",
                             ToCountry = "wlochy",
                             ToStreet = "Via del Corso",
@@ -2052,8 +2052,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("051559ae-ab42-4686-8ef3-765ab89f9f7b"),
-                            End = new DateTime(2024, 7, 16, 16, 7, 13, 749, DateTimeKind.Utc).AddTicks(4760),
+                            Id = new Guid("7858fcb7-559d-4b4b-bafa-164236e12e67"),
+                            End = new DateTime(2024, 7, 28, 1, 10, 42, 766, DateTimeKind.Utc).AddTicks(2676),
                             FromCity = "Alam",
                             FromCountry = "egipt",
                             FromStreet = "Sharia Tahrir",
@@ -2062,7 +2062,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 7, 16, 7, 7, 13, 749, DateTimeKind.Utc).AddTicks(4760),
+                            Start = new DateTime(2024, 7, 27, 16, 10, 42, 766, DateTimeKind.Utc).AddTicks(2676),
                             ToCity = "Durres",
                             ToCountry = "albania",
                             ToStreet = "Rruga Abdyl Frasheri",
@@ -2070,8 +2070,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("553104c0-fbd6-4a2d-8903-b1483c64e883"),
-                            End = new DateTime(2024, 6, 27, 3, 7, 13, 749, DateTimeKind.Utc).AddTicks(4762),
+                            Id = new Guid("f5867f19-1d36-4630-a423-4ae2f6ffccf1"),
+                            End = new DateTime(2024, 7, 8, 12, 10, 42, 766, DateTimeKind.Utc).AddTicks(2678),
                             FromCity = "Maresme",
                             FromCountry = "hiszpania",
                             FromStreet = "Paseo del Prado",
@@ -2080,7 +2080,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 6, 26, 18, 7, 13, 749, DateTimeKind.Utc).AddTicks(4761),
+                            Start = new DateTime(2024, 7, 8, 3, 10, 42, 766, DateTimeKind.Utc).AddTicks(2678),
                             ToCity = "Luz",
                             ToCountry = "hiszpania",
                             ToStreet = "Calle Mayor",
@@ -2088,8 +2088,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("402c53b1-3957-4568-9c5e-f725ad29c744"),
-                            End = new DateTime(2024, 7, 5, 16, 7, 13, 749, DateTimeKind.Utc).AddTicks(4763),
+                            Id = new Guid("4f0364e7-f111-4597-8068-d17035319bcb"),
+                            End = new DateTime(2024, 7, 17, 1, 10, 42, 766, DateTimeKind.Utc).AddTicks(2681),
                             FromCity = "Sheikh",
                             FromCountry = "egipt",
                             FromStreet = "Sharia Tahrir",
@@ -2098,7 +2098,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 7, 5, 9, 7, 13, 749, DateTimeKind.Utc).AddTicks(4763),
+                            Start = new DateTime(2024, 7, 16, 18, 10, 42, 766, DateTimeKind.Utc).AddTicks(2680),
                             ToCity = "Riwiera",
                             ToCountry = "chorwacja",
                             ToStreet = "Trg bana Josipa Jelačića",
@@ -2106,8 +2106,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("5fcf18e9-103d-4a6b-8b00-25d37b59b7cc"),
-                            End = new DateTime(2024, 8, 18, 20, 7, 13, 749, DateTimeKind.Utc).AddTicks(4765),
+                            Id = new Guid("2a5c5ef5-607f-46ee-ba9d-32d7b8866222"),
+                            End = new DateTime(2024, 8, 30, 5, 10, 42, 766, DateTimeKind.Utc).AddTicks(2683),
                             FromCity = "Riwiera",
                             FromCountry = "chorwacja",
                             FromStreet = "Vukovarska ulica",
@@ -2116,7 +2116,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 8, 18, 10, 7, 13, 749, DateTimeKind.Utc).AddTicks(4765),
+                            Start = new DateTime(2024, 8, 29, 19, 10, 42, 766, DateTimeKind.Utc).AddTicks(2683),
                             ToCity = "Vlora",
                             ToCountry = "albania",
                             ToStreet = "Rruga 28 Nentori",
@@ -2124,8 +2124,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("208d4cc2-9e38-46c6-849f-a626266cbfaa"),
-                            End = new DateTime(2024, 6, 24, 18, 7, 13, 749, DateTimeKind.Utc).AddTicks(4768),
+                            Id = new Guid("14f60acd-0c13-45d7-a644-0d8e68d06805"),
+                            End = new DateTime(2024, 7, 6, 3, 10, 42, 766, DateTimeKind.Utc).AddTicks(2686),
                             FromCity = "Riwiera",
                             FromCountry = "chorwacja",
                             FromStreet = "Maksimirska ulica",
@@ -2134,7 +2134,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 6, 24, 8, 7, 13, 749, DateTimeKind.Utc).AddTicks(4767),
+                            Start = new DateTime(2024, 7, 5, 17, 10, 42, 766, DateTimeKind.Utc).AddTicks(2685),
                             ToCity = "Alam",
                             ToCountry = "egipt",
                             ToStreet = "Sharia Ramsis",
@@ -2142,8 +2142,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("9b923c21-c278-49c8-ada8-d521b6d73c81"),
-                            End = new DateTime(2024, 6, 23, 10, 7, 13, 749, DateTimeKind.Utc).AddTicks(4769),
+                            Id = new Guid("18b36953-ca71-45db-9df1-369233cbe30d"),
+                            End = new DateTime(2024, 7, 4, 19, 10, 42, 766, DateTimeKind.Utc).AddTicks(2688),
                             FromCity = "Kalabria",
                             FromCountry = "wlochy",
                             FromStreet = "Via Veneto",
@@ -2152,7 +2152,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 6, 23, 8, 7, 13, 749, DateTimeKind.Utc).AddTicks(4769),
+                            Start = new DateTime(2024, 7, 4, 17, 10, 42, 766, DateTimeKind.Utc).AddTicks(2687),
                             ToCity = "Riwiera",
                             ToCountry = "chorwacja",
                             ToStreet = "Vukovarska ulica",
@@ -2160,8 +2160,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("cc0304a1-d60d-40b1-833e-06effc358467"),
-                            End = new DateTime(2024, 8, 1, 21, 7, 13, 749, DateTimeKind.Utc).AddTicks(4771),
+                            Id = new Guid("c415ba74-bcfd-4cbc-9beb-dbb5ab9d8d66"),
+                            End = new DateTime(2024, 8, 13, 6, 10, 42, 766, DateTimeKind.Utc).AddTicks(2690),
                             FromCity = "Turecka",
                             FromCountry = "turcja",
                             FromStreet = "Atatürk Caddesi",
@@ -2170,7 +2170,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 8, 1, 9, 7, 13, 749, DateTimeKind.Utc).AddTicks(4771),
+                            Start = new DateTime(2024, 8, 12, 18, 10, 42, 766, DateTimeKind.Utc).AddTicks(2690),
                             ToCity = "Riwiera",
                             ToCountry = "chorwacja",
                             ToStreet = "Maksimirska ulica",
@@ -2178,8 +2178,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("b4599ce3-3aa9-482a-af27-1de1302ab2bf"),
-                            End = new DateTime(2024, 8, 1, 14, 7, 13, 749, DateTimeKind.Utc).AddTicks(4773),
+                            Id = new Guid("f0cd8741-008e-4948-b9e0-61d6b41a5982"),
+                            End = new DateTime(2024, 8, 12, 23, 10, 42, 766, DateTimeKind.Utc).AddTicks(2693),
                             FromCity = "Riwiera",
                             FromCountry = "chorwacja",
                             FromStreet = "Vukovarska ulica",
@@ -2188,7 +2188,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 8, 1, 8, 7, 13, 749, DateTimeKind.Utc).AddTicks(4773),
+                            Start = new DateTime(2024, 8, 12, 17, 10, 42, 766, DateTimeKind.Utc).AddTicks(2692),
                             ToCity = "Sheikh",
                             ToCountry = "egipt",
                             ToStreet = "Sharia Tahrir",
@@ -2196,8 +2196,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("d0671cce-4f64-4287-9443-44f098ea3edb"),
-                            End = new DateTime(2024, 7, 4, 0, 7, 13, 749, DateTimeKind.Utc).AddTicks(4775),
+                            Id = new Guid("839485ee-78fb-4c11-a765-c95dfac64290"),
+                            End = new DateTime(2024, 7, 15, 9, 10, 42, 766, DateTimeKind.Utc).AddTicks(2695),
                             FromCity = "Maresme",
                             FromCountry = "hiszpania",
                             FromStreet = "Paseo del Prado",
@@ -2206,7 +2206,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 7, 3, 22, 7, 13, 749, DateTimeKind.Utc).AddTicks(4774),
+                            Start = new DateTime(2024, 7, 15, 7, 10, 42, 766, DateTimeKind.Utc).AddTicks(2695),
                             ToCity = "Turecka",
                             ToCountry = "turcja",
                             ToStreet = "Atatürk Caddesi",
@@ -2214,8 +2214,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("29c6eb0e-c5f5-4dd5-aec9-91513008d2bb"),
-                            End = new DateTime(2024, 6, 25, 23, 7, 13, 749, DateTimeKind.Utc).AddTicks(4776),
+                            Id = new Guid("44a8973a-f27b-49fb-a776-603d902163f5"),
+                            End = new DateTime(2024, 7, 7, 8, 10, 42, 766, DateTimeKind.Utc).AddTicks(2697),
                             FromCity = "Alam",
                             FromCountry = "egipt",
                             FromStreet = "Sharia Tahrir",
@@ -2224,7 +2224,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 6, 25, 19, 7, 13, 749, DateTimeKind.Utc).AddTicks(4776),
+                            Start = new DateTime(2024, 7, 7, 4, 10, 42, 766, DateTimeKind.Utc).AddTicks(2697),
                             ToCity = "Kalabria",
                             ToCountry = "wlochy",
                             ToStreet = "Via Veneto",
@@ -2232,8 +2232,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("88f600c6-53ec-4150-975b-8f62196862cf"),
-                            End = new DateTime(2024, 7, 8, 2, 7, 13, 749, DateTimeKind.Utc).AddTicks(4778),
+                            Id = new Guid("eeb5ce8d-e185-483e-bc89-f446d5582cb0"),
+                            End = new DateTime(2024, 7, 19, 11, 10, 42, 766, DateTimeKind.Utc).AddTicks(2700),
                             FromCity = "Maresme",
                             FromCountry = "hiszpania",
                             FromStreet = "Paseo del Prado",
@@ -2242,7 +2242,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 7, 7, 14, 7, 13, 749, DateTimeKind.Utc).AddTicks(4778),
+                            Start = new DateTime(2024, 7, 18, 23, 10, 42, 766, DateTimeKind.Utc).AddTicks(2699),
                             ToCity = "Turecka",
                             ToCountry = "turcja",
                             ToStreet = "Atatürk Caddesi",
@@ -2250,8 +2250,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("14bc06d4-0af2-4d3d-891a-aad81ff26a5b"),
-                            End = new DateTime(2024, 5, 30, 19, 7, 13, 749, DateTimeKind.Utc).AddTicks(4780),
+                            Id = new Guid("4e677492-a491-422d-a55f-fe5d1b8365ad"),
+                            End = new DateTime(2024, 6, 11, 4, 10, 42, 766, DateTimeKind.Utc).AddTicks(2737),
                             FromCity = "Alam",
                             FromCountry = "egipt",
                             FromStreet = "Sharia Gamal Abdel Nasser",
@@ -2260,7 +2260,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 5, 30, 13, 7, 13, 749, DateTimeKind.Utc).AddTicks(4779),
+                            Start = new DateTime(2024, 6, 10, 22, 10, 42, 766, DateTimeKind.Utc).AddTicks(2735),
                             ToCity = "Riwiera",
                             ToCountry = "chorwacja",
                             ToStreet = "Maksimirska ulica",
@@ -2268,8 +2268,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("66a173d2-9b54-4fa6-8ac9-597af7f0aa12"),
-                            End = new DateTime(2024, 7, 3, 9, 7, 13, 749, DateTimeKind.Utc).AddTicks(4781),
+                            Id = new Guid("ebd4b061-a484-4106-913e-9baf85d9cba1"),
+                            End = new DateTime(2024, 7, 14, 18, 10, 42, 766, DateTimeKind.Utc).AddTicks(2739),
                             FromCity = "Nero",
                             FromCountry = "grecja",
                             FromStreet = "Leoforos Alexandras",
@@ -2278,7 +2278,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 7, 2, 22, 7, 13, 749, DateTimeKind.Utc).AddTicks(4781),
+                            Start = new DateTime(2024, 7, 14, 7, 10, 42, 766, DateTimeKind.Utc).AddTicks(2739),
                             ToCity = "Sheikh",
                             ToCountry = "egipt",
                             ToStreet = "Sharia Ramsis",
@@ -2286,8 +2286,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("b707a9d0-22fd-4c59-bfee-3f2949fc050b"),
-                            End = new DateTime(2024, 7, 20, 0, 7, 13, 749, DateTimeKind.Utc).AddTicks(4783),
+                            Id = new Guid("9e7e7a4d-0b42-4e42-bc25-4b2c05f17ddc"),
+                            End = new DateTime(2024, 7, 31, 9, 10, 42, 766, DateTimeKind.Utc).AddTicks(2742),
                             FromCity = "Almeria",
                             FromCountry = "hiszpania",
                             FromStreet = "Paseo del Prado",
@@ -2296,7 +2296,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 7, 19, 19, 7, 13, 749, DateTimeKind.Utc).AddTicks(4783),
+                            Start = new DateTime(2024, 7, 31, 4, 10, 42, 766, DateTimeKind.Utc).AddTicks(2741),
                             ToCity = "Luz",
                             ToCountry = "hiszpania",
                             ToStreet = "Calle Mayor",
@@ -2304,8 +2304,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("20f189c6-2116-4bcd-bef6-4bc5a8c875ab"),
-                            End = new DateTime(2024, 7, 5, 13, 7, 13, 749, DateTimeKind.Utc).AddTicks(4785),
+                            Id = new Guid("23527d13-4f80-421e-91df-bfd9229aff27"),
+                            End = new DateTime(2024, 7, 16, 22, 10, 42, 766, DateTimeKind.Utc).AddTicks(2744),
                             FromCity = "Alam",
                             FromCountry = "egipt",
                             FromStreet = "Sharia Ramsis",
@@ -2314,7 +2314,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 7, 5, 2, 7, 13, 749, DateTimeKind.Utc).AddTicks(4784),
+                            Start = new DateTime(2024, 7, 16, 11, 10, 42, 766, DateTimeKind.Utc).AddTicks(2744),
                             ToCity = "Brava",
                             ToCountry = "hiszpania",
                             ToStreet = "Calle Mayor",
@@ -2322,8 +2322,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("2dad94d4-0f5e-4433-bc7a-50b8abe9a15b"),
-                            End = new DateTime(2024, 6, 29, 12, 7, 13, 749, DateTimeKind.Utc).AddTicks(4787),
+                            Id = new Guid("54f9287e-feef-4822-b43b-9905685371f3"),
+                            End = new DateTime(2024, 7, 10, 21, 10, 42, 766, DateTimeKind.Utc).AddTicks(2746),
                             FromCity = "Riwiera",
                             FromCountry = "chorwacja",
                             FromStreet = "Kapucinska ulica",
@@ -2332,7 +2332,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 6, 29, 5, 7, 13, 749, DateTimeKind.Utc).AddTicks(4786),
+                            Start = new DateTime(2024, 7, 10, 14, 10, 42, 766, DateTimeKind.Utc).AddTicks(2746),
                             ToCity = "Vlora",
                             ToCountry = "albania",
                             ToStreet = "Rruga e Kavajes",
@@ -2340,8 +2340,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("45842a5a-b953-451e-8604-5d2985d54863"),
-                            End = new DateTime(2024, 7, 2, 14, 7, 13, 749, DateTimeKind.Utc).AddTicks(4788),
+                            Id = new Guid("adf4c447-32ef-47e8-a8aa-5a0584138f59"),
+                            End = new DateTime(2024, 7, 13, 23, 10, 42, 766, DateTimeKind.Utc).AddTicks(2749),
                             FromCity = "Sheikh",
                             FromCountry = "egipt",
                             FromStreet = "Sharia Salah Salem",
@@ -2350,7 +2350,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 7, 2, 11, 7, 13, 749, DateTimeKind.Utc).AddTicks(4788),
+                            Start = new DateTime(2024, 7, 13, 20, 10, 42, 766, DateTimeKind.Utc).AddTicks(2748),
                             ToCity = "Alam",
                             ToCountry = "egipt",
                             ToStreet = "Sharia Tahrir",
@@ -2358,8 +2358,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("60aba868-4542-411c-9909-595072f5d55d"),
-                            End = new DateTime(2024, 6, 29, 23, 7, 13, 749, DateTimeKind.Utc).AddTicks(4790),
+                            Id = new Guid("947f8962-4c59-4957-9e01-520ab6febd4b"),
+                            End = new DateTime(2024, 7, 11, 8, 10, 42, 766, DateTimeKind.Utc).AddTicks(2751),
                             FromCity = "Alam",
                             FromCountry = "egipt",
                             FromStreet = "Sharia Tahrir",
@@ -2368,7 +2368,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 6, 29, 15, 7, 13, 749, DateTimeKind.Utc).AddTicks(4790),
+                            Start = new DateTime(2024, 7, 11, 0, 10, 42, 766, DateTimeKind.Utc).AddTicks(2751),
                             ToCity = "Brava",
                             ToCountry = "hiszpania",
                             ToStreet = "Calle de Alcalá",
@@ -2376,8 +2376,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("a8458f4a-9874-4dd7-9d49-03eb857c8d2a"),
-                            End = new DateTime(2024, 7, 13, 2, 7, 13, 749, DateTimeKind.Utc).AddTicks(4792),
+                            Id = new Guid("7e22cf71-e2e1-467a-9b86-9f91046d3317"),
+                            End = new DateTime(2024, 7, 24, 11, 10, 42, 766, DateTimeKind.Utc).AddTicks(2754),
                             FromCity = "Durres",
                             FromCountry = "albania",
                             FromStreet = "Bulevardi Bajram Curri",
@@ -2386,7 +2386,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 7, 12, 14, 7, 13, 749, DateTimeKind.Utc).AddTicks(4791),
+                            Start = new DateTime(2024, 7, 23, 23, 10, 42, 766, DateTimeKind.Utc).AddTicks(2753),
                             ToCity = "Vlora",
                             ToCountry = "albania",
                             ToStreet = "Rruga e Kavajes",
@@ -2394,8 +2394,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("416bbca3-c28c-4151-a7fe-4c27f7c65fdb"),
-                            End = new DateTime(2024, 7, 7, 17, 7, 13, 749, DateTimeKind.Utc).AddTicks(4793),
+                            Id = new Guid("9aee448a-050f-428f-ab29-f83c74aedbdc"),
+                            End = new DateTime(2024, 7, 19, 2, 10, 42, 766, DateTimeKind.Utc).AddTicks(2756),
                             FromCity = "Durres",
                             FromCountry = "albania",
                             FromStreet = "Rruga Abdyl Frasheri",
@@ -2404,7 +2404,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 7, 7, 12, 7, 13, 749, DateTimeKind.Utc).AddTicks(4793),
+                            Start = new DateTime(2024, 7, 18, 21, 10, 42, 766, DateTimeKind.Utc).AddTicks(2756),
                             ToCity = "Alam",
                             ToCountry = "egipt",
                             ToStreet = "Sharia Gamal Abdel Nasser",
@@ -2412,8 +2412,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("58a7e463-20ac-4284-a349-3e55784104f4"),
-                            End = new DateTime(2024, 6, 10, 1, 7, 13, 749, DateTimeKind.Utc).AddTicks(4795),
+                            Id = new Guid("54674cee-2d93-4d3b-816e-15b463fb2ec1"),
+                            End = new DateTime(2024, 6, 21, 10, 10, 42, 766, DateTimeKind.Utc).AddTicks(2759),
                             FromCity = "Luz",
                             FromCountry = "hiszpania",
                             FromStreet = "Calle Mayor",
@@ -2422,7 +2422,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 6, 9, 13, 7, 13, 749, DateTimeKind.Utc).AddTicks(4795),
+                            Start = new DateTime(2024, 6, 20, 22, 10, 42, 766, DateTimeKind.Utc).AddTicks(2758),
                             ToCity = "Riwiera",
                             ToCountry = "chorwacja",
                             ToStreet = "Vukovarska ulica",
@@ -2430,8 +2430,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("e6e4273f-a9ef-4178-b26a-92a508c9aa1a"),
-                            End = new DateTime(2024, 8, 21, 1, 7, 13, 749, DateTimeKind.Utc).AddTicks(4797),
+                            Id = new Guid("9f67c71c-4c6a-493c-a86f-fe2980b630b1"),
+                            End = new DateTime(2024, 9, 1, 10, 10, 42, 766, DateTimeKind.Utc).AddTicks(2761),
                             FromCity = "Durres",
                             FromCountry = "albania",
                             FromStreet = "Bulevardi Bajram Curri",
@@ -2440,7 +2440,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 8, 20, 13, 7, 13, 749, DateTimeKind.Utc).AddTicks(4797),
+                            Start = new DateTime(2024, 8, 31, 22, 10, 42, 766, DateTimeKind.Utc).AddTicks(2760),
                             ToCity = "Turecka",
                             ToCountry = "turcja",
                             ToStreet = "Atatürk Caddesi",
@@ -2448,8 +2448,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("80528e8e-23ca-4977-8a3e-463686a6a378"),
-                            End = new DateTime(2024, 8, 1, 16, 7, 13, 749, DateTimeKind.Utc).AddTicks(4799),
+                            Id = new Guid("d70adb02-3177-4469-a98c-5bca5394bccb"),
+                            End = new DateTime(2024, 8, 13, 1, 10, 42, 766, DateTimeKind.Utc).AddTicks(2763),
                             FromCity = "Durres",
                             FromCountry = "albania",
                             FromStreet = "Rruga e Dibres",
@@ -2458,7 +2458,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 8, 1, 6, 7, 13, 749, DateTimeKind.Utc).AddTicks(4798),
+                            Start = new DateTime(2024, 8, 12, 15, 10, 42, 766, DateTimeKind.Utc).AddTicks(2763),
                             ToCity = "Durres",
                             ToCountry = "albania",
                             ToStreet = "Rruga Abdyl Frasheri",
@@ -2466,8 +2466,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("6d18b84a-2d05-46d8-a9d7-ddbb329e5cba"),
-                            End = new DateTime(2024, 8, 13, 0, 7, 13, 749, DateTimeKind.Utc).AddTicks(4800),
+                            Id = new Guid("f6474309-a344-456a-8108-83613ff5287d"),
+                            End = new DateTime(2024, 8, 24, 9, 10, 42, 766, DateTimeKind.Utc).AddTicks(2766),
                             FromCity = "Kalabria",
                             FromCountry = "wlochy",
                             FromStreet = "Via Nazionale",
@@ -2476,7 +2476,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 8, 12, 14, 7, 13, 749, DateTimeKind.Utc).AddTicks(4800),
+                            Start = new DateTime(2024, 8, 23, 23, 10, 42, 766, DateTimeKind.Utc).AddTicks(2765),
                             ToCity = "Brava",
                             ToCountry = "hiszpania",
                             ToStreet = "Calle de Alcalá",
@@ -2484,8 +2484,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("032bf625-a6af-45b4-89cd-0f7e840b1918"),
-                            End = new DateTime(2024, 7, 12, 2, 7, 13, 749, DateTimeKind.Utc).AddTicks(4802),
+                            Id = new Guid("7dcf549d-4b38-43dd-982d-fcdcd42a35ad"),
+                            End = new DateTime(2024, 7, 23, 11, 10, 42, 766, DateTimeKind.Utc).AddTicks(2768),
                             FromCity = "Riwiera",
                             FromCountry = "chorwacja",
                             FromStreet = "Vukovarska ulica",
@@ -2494,7 +2494,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 7, 11, 16, 7, 13, 749, DateTimeKind.Utc).AddTicks(4802),
+                            Start = new DateTime(2024, 7, 23, 1, 10, 42, 766, DateTimeKind.Utc).AddTicks(2767),
                             ToCity = "Alam",
                             ToCountry = "egipt",
                             ToStreet = "Sharia Gamal Abdel Nasser",
@@ -2502,8 +2502,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("20f10150-f446-4aee-8e6b-22760f7da48e"),
-                            End = new DateTime(2024, 6, 13, 10, 7, 13, 749, DateTimeKind.Utc).AddTicks(4804),
+                            Id = new Guid("81d1c0f1-e183-4138-a4e1-59c1cc091a0d"),
+                            End = new DateTime(2024, 6, 24, 19, 10, 42, 766, DateTimeKind.Utc).AddTicks(2771),
                             FromCity = "Peloponez",
                             FromCountry = "grecja",
                             FromStreet = "Leoforos Alexandras",
@@ -2512,7 +2512,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 6, 13, 6, 7, 13, 749, DateTimeKind.Utc).AddTicks(4803),
+                            Start = new DateTime(2024, 6, 24, 15, 10, 42, 766, DateTimeKind.Utc).AddTicks(2770),
                             ToCity = "Kalabria",
                             ToCountry = "wlochy",
                             ToStreet = "Via del Corso",
@@ -2520,8 +2520,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("e1e05ce5-36f5-446d-bf50-52fd206ea68a"),
-                            End = new DateTime(2024, 8, 1, 23, 7, 13, 749, DateTimeKind.Utc).AddTicks(4806),
+                            Id = new Guid("ebad7111-0fb4-4119-829a-e42d8ade0ad5"),
+                            End = new DateTime(2024, 8, 13, 8, 10, 42, 766, DateTimeKind.Utc).AddTicks(2773),
                             FromCity = "Alam",
                             FromCountry = "egipt",
                             FromStreet = "Sharia Gamal Abdel Nasser",
@@ -2530,7 +2530,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 8, 1, 16, 7, 13, 749, DateTimeKind.Utc).AddTicks(4805),
+                            Start = new DateTime(2024, 8, 13, 1, 10, 42, 766, DateTimeKind.Utc).AddTicks(2773),
                             ToCity = "Kalabria",
                             ToCountry = "wlochy",
                             ToStreet = "Via del Corso",
@@ -2538,8 +2538,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("88035675-c558-41f5-870e-daa0c01be154"),
-                            End = new DateTime(2024, 8, 18, 22, 7, 13, 749, DateTimeKind.Utc).AddTicks(4807),
+                            Id = new Guid("a1cd838c-5bf9-453a-9eea-4aa0e488c163"),
+                            End = new DateTime(2024, 8, 30, 7, 10, 42, 766, DateTimeKind.Utc).AddTicks(2776),
                             FromCity = "Turecka",
                             FromCountry = "turcja",
                             FromStreet = "Bağdat Caddesi",
@@ -2548,7 +2548,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 8, 18, 11, 7, 13, 749, DateTimeKind.Utc).AddTicks(4807),
+                            Start = new DateTime(2024, 8, 29, 20, 10, 42, 766, DateTimeKind.Utc).AddTicks(2775),
                             ToCity = "Nero",
                             ToCountry = "grecja",
                             ToStreet = "Leoforos Alexandras",
@@ -2556,8 +2556,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("f504316a-d1bc-4f73-8697-c15064a6c127"),
-                            End = new DateTime(2024, 7, 16, 0, 7, 13, 749, DateTimeKind.Utc).AddTicks(4835),
+                            Id = new Guid("19745002-b661-4004-9c0c-c1bcb017c602"),
+                            End = new DateTime(2024, 7, 27, 9, 10, 42, 766, DateTimeKind.Utc).AddTicks(2778),
                             FromCity = "Sheikh",
                             FromCountry = "egipt",
                             FromStreet = "Sharia Tahrir",
@@ -2566,7 +2566,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 7, 15, 17, 7, 13, 749, DateTimeKind.Utc).AddTicks(4833),
+                            Start = new DateTime(2024, 7, 27, 2, 10, 42, 766, DateTimeKind.Utc).AddTicks(2777),
                             ToCity = "Sheikh",
                             ToCountry = "egipt",
                             ToStreet = "Sharia Salah Salem",
@@ -2574,8 +2574,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("2001d82f-0416-4df2-8589-5f7ffe01ceb3"),
-                            End = new DateTime(2024, 8, 12, 11, 7, 13, 749, DateTimeKind.Utc).AddTicks(4837),
+                            Id = new Guid("c7e86deb-2ad7-4d45-9ced-1fd10333c902"),
+                            End = new DateTime(2024, 8, 23, 20, 10, 42, 766, DateTimeKind.Utc).AddTicks(2780),
                             FromCity = "Marmaris",
                             FromCountry = "turcja",
                             FromStreet = "Bağdat Caddesi",
@@ -2584,7 +2584,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 8, 12, 9, 7, 13, 749, DateTimeKind.Utc).AddTicks(4836),
+                            Start = new DateTime(2024, 8, 23, 18, 10, 42, 766, DateTimeKind.Utc).AddTicks(2780),
                             ToCity = "Sheikh",
                             ToCountry = "egipt",
                             ToStreet = "Sharia Tahrir",
@@ -2592,8 +2592,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("8d5cffcc-4c00-4e27-affb-bfd1f6b8e2c3"),
-                            End = new DateTime(2024, 8, 15, 4, 7, 13, 749, DateTimeKind.Utc).AddTicks(4838),
+                            Id = new Guid("014d0a5f-8730-43b4-8bc7-c1b491abe27c"),
+                            End = new DateTime(2024, 8, 26, 13, 10, 42, 766, DateTimeKind.Utc).AddTicks(2783),
                             FromCity = "Brava",
                             FromCountry = "hiszpania",
                             FromStreet = "Gran Vía",
@@ -2602,7 +2602,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 8, 14, 20, 7, 13, 749, DateTimeKind.Utc).AddTicks(4838),
+                            Start = new DateTime(2024, 8, 26, 5, 10, 42, 766, DateTimeKind.Utc).AddTicks(2782),
                             ToCity = "Turecka",
                             ToCountry = "turcja",
                             ToStreet = "Halaskargazi Caddesi",
@@ -2610,8 +2610,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("99c1fa40-2551-456a-a022-14fdd665cad6"),
-                            End = new DateTime(2024, 6, 5, 16, 7, 13, 749, DateTimeKind.Utc).AddTicks(4840),
+                            Id = new Guid("ff020a58-35fb-44f0-8217-37c7f5d72b13"),
+                            End = new DateTime(2024, 6, 17, 1, 10, 42, 766, DateTimeKind.Utc).AddTicks(2785),
                             FromCity = "Alam",
                             FromCountry = "egipt",
                             FromStreet = "Sharia Gamal Abdel Nasser",
@@ -2620,7 +2620,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 6, 5, 12, 7, 13, 749, DateTimeKind.Utc).AddTicks(4840),
+                            Start = new DateTime(2024, 6, 16, 21, 10, 42, 766, DateTimeKind.Utc).AddTicks(2784),
                             ToCity = "Alam",
                             ToCountry = "egipt",
                             ToStreet = "Sharia Tahrir",
@@ -2628,8 +2628,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("0a9c4d79-350f-4a86-b2d3-d8f240ad963f"),
-                            End = new DateTime(2024, 6, 27, 23, 7, 13, 749, DateTimeKind.Utc).AddTicks(4842),
+                            Id = new Guid("01234571-5ff1-4e78-b615-1c15f80b924a"),
+                            End = new DateTime(2024, 7, 9, 8, 10, 42, 766, DateTimeKind.Utc).AddTicks(2787),
                             FromCity = "Kalabria",
                             FromCountry = "wlochy",
                             FromStreet = "Via Veneto",
@@ -2638,7 +2638,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 6, 27, 15, 7, 13, 749, DateTimeKind.Utc).AddTicks(4841),
+                            Start = new DateTime(2024, 7, 9, 0, 10, 42, 766, DateTimeKind.Utc).AddTicks(2787),
                             ToCity = "Durres",
                             ToCountry = "albania",
                             ToStreet = "Bulevardi Bajram Curri",
@@ -2646,8 +2646,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("c8612758-55dc-4f35-85e5-af59bd4c604c"),
-                            End = new DateTime(2024, 6, 22, 6, 7, 13, 749, DateTimeKind.Utc).AddTicks(4844),
+                            Id = new Guid("8c9e89c5-6162-4bf5-a6b8-95cf0a660b79"),
+                            End = new DateTime(2024, 7, 3, 15, 10, 42, 766, DateTimeKind.Utc).AddTicks(2790),
                             FromCity = "Olimpijska",
                             FromCountry = "grecja",
                             FromStreet = "Plateia Syntagmatos",
@@ -2656,7 +2656,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 6, 22, 3, 7, 13, 749, DateTimeKind.Utc).AddTicks(4843),
+                            Start = new DateTime(2024, 7, 3, 12, 10, 42, 766, DateTimeKind.Utc).AddTicks(2789),
                             ToCity = "Turecka",
                             ToCountry = "turcja",
                             ToStreet = "Bağdat Caddesi",
@@ -2664,8 +2664,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("506b4941-fdd9-422d-9f2f-1fa28837f3c1"),
-                            End = new DateTime(2024, 6, 15, 8, 7, 13, 749, DateTimeKind.Utc).AddTicks(4845),
+                            Id = new Guid("55531bb8-602f-4b79-92c4-18a1f45a9a82"),
+                            End = new DateTime(2024, 6, 26, 17, 10, 42, 766, DateTimeKind.Utc).AddTicks(2792),
                             FromCity = "Riwiera",
                             FromCountry = "chorwacja",
                             FromStreet = "Maksimirska ulica",
@@ -2674,7 +2674,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 6, 15, 2, 7, 13, 749, DateTimeKind.Utc).AddTicks(4845),
+                            Start = new DateTime(2024, 6, 26, 11, 10, 42, 766, DateTimeKind.Utc).AddTicks(2792),
                             ToCity = "Sheikh",
                             ToCountry = "egipt",
                             ToStreet = "Sharia Ramsis",
@@ -2682,8 +2682,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("cce56ca2-68bd-4bdf-869a-8a082cb9d101"),
-                            End = new DateTime(2024, 7, 14, 15, 7, 13, 749, DateTimeKind.Utc).AddTicks(4847),
+                            Id = new Guid("70d4b44b-b038-4fd7-b2f7-a019b5b6faba"),
+                            End = new DateTime(2024, 7, 26, 0, 10, 42, 766, DateTimeKind.Utc).AddTicks(2795),
                             FromCity = "Kalabria",
                             FromCountry = "wlochy",
                             FromStreet = "Via Veneto",
@@ -2692,7 +2692,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 7, 14, 10, 7, 13, 749, DateTimeKind.Utc).AddTicks(4847),
+                            Start = new DateTime(2024, 7, 25, 19, 10, 42, 766, DateTimeKind.Utc).AddTicks(2794),
                             ToCity = "Brava",
                             ToCountry = "hiszpania",
                             ToStreet = "Paseo del Prado",
@@ -2700,8 +2700,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("b1601514-94a8-4349-b726-f90703690a4d"),
-                            End = new DateTime(2024, 7, 29, 15, 7, 13, 749, DateTimeKind.Utc).AddTicks(4849),
+                            Id = new Guid("7b77bbfe-45eb-404f-b40f-8a7cc297d561"),
+                            End = new DateTime(2024, 8, 10, 0, 10, 42, 766, DateTimeKind.Utc).AddTicks(2797),
                             FromCity = "Turecka",
                             FromCountry = "turcja",
                             FromStreet = "Bağdat Caddesi",
@@ -2710,7 +2710,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 7, 29, 3, 7, 13, 749, DateTimeKind.Utc).AddTicks(4848),
+                            Start = new DateTime(2024, 8, 9, 12, 10, 42, 766, DateTimeKind.Utc).AddTicks(2796),
                             ToCity = "Sheikh",
                             ToCountry = "egipt",
                             ToStreet = "Sharia Salah Salem",
@@ -2718,8 +2718,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("0a72e6ad-f3b3-48a1-ab8f-1f1e358bd249"),
-                            End = new DateTime(2024, 6, 14, 10, 7, 13, 749, DateTimeKind.Utc).AddTicks(4850),
+                            Id = new Guid("2918fe71-b03f-43b6-91dc-011b34a30c36"),
+                            End = new DateTime(2024, 6, 25, 19, 10, 42, 766, DateTimeKind.Utc).AddTicks(2799),
                             FromCity = "Nero",
                             FromCountry = "grecja",
                             FromStreet = "Leoforos Vasilissis Sofias",
@@ -2728,7 +2728,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 6, 14, 7, 7, 13, 749, DateTimeKind.Utc).AddTicks(4850),
+                            Start = new DateTime(2024, 6, 25, 16, 10, 42, 766, DateTimeKind.Utc).AddTicks(2799),
                             ToCity = "Durres",
                             ToCountry = "albania",
                             ToStreet = "Rruga Abdyl Frasheri",
@@ -2736,8 +2736,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("528cd78c-c107-47dc-864e-c9a9e2b19e80"),
-                            End = new DateTime(2024, 7, 23, 0, 7, 13, 749, DateTimeKind.Utc).AddTicks(4852),
+                            Id = new Guid("b318f133-3028-4532-bdad-a67640b3c1ce"),
+                            End = new DateTime(2024, 8, 3, 9, 10, 42, 766, DateTimeKind.Utc).AddTicks(2802),
                             FromCity = "Marmaris",
                             FromCountry = "turcja",
                             FromStreet = "Bağdat Caddesi",
@@ -2746,7 +2746,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 7, 22, 22, 7, 13, 749, DateTimeKind.Utc).AddTicks(4852),
+                            Start = new DateTime(2024, 8, 3, 7, 10, 42, 766, DateTimeKind.Utc).AddTicks(2801),
                             ToCity = "Riwiera",
                             ToCountry = "chorwacja",
                             ToStreet = "Maksimirska ulica",
@@ -2754,8 +2754,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("46270436-e658-4f64-b683-3cf4d1b28363"),
-                            End = new DateTime(2024, 6, 20, 13, 7, 13, 749, DateTimeKind.Utc).AddTicks(4854),
+                            Id = new Guid("09ea754b-8582-482f-a57a-0fe74330245d"),
+                            End = new DateTime(2024, 7, 1, 22, 10, 42, 766, DateTimeKind.Utc).AddTicks(2804),
                             FromCity = "Sheikh",
                             FromCountry = "egipt",
                             FromStreet = "Sharia Salah Salem",
@@ -2764,7 +2764,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 6, 20, 1, 7, 13, 749, DateTimeKind.Utc).AddTicks(4853),
+                            Start = new DateTime(2024, 7, 1, 10, 10, 42, 766, DateTimeKind.Utc).AddTicks(2804),
                             ToCity = "Kalabria",
                             ToCountry = "wlochy",
                             ToStreet = "Via del Corso",
@@ -2772,8 +2772,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("a97a9180-910e-4fd2-88c8-5bcf112d6e3f"),
-                            End = new DateTime(2024, 6, 10, 0, 7, 13, 749, DateTimeKind.Utc).AddTicks(4855),
+                            Id = new Guid("49d827de-d9a4-46d7-a775-e105729b544b"),
+                            End = new DateTime(2024, 6, 21, 9, 10, 42, 766, DateTimeKind.Utc).AddTicks(2806),
                             FromCity = "Alam",
                             FromCountry = "egipt",
                             FromStreet = "Sharia Tahrir",
@@ -2782,7 +2782,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 6, 9, 21, 7, 13, 749, DateTimeKind.Utc).AddTicks(4855),
+                            Start = new DateTime(2024, 6, 21, 6, 10, 42, 766, DateTimeKind.Utc).AddTicks(2806),
                             ToCity = "Alam",
                             ToCountry = "egipt",
                             ToStreet = "Sharia Ramsis",
@@ -2790,8 +2790,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("122e35a7-8912-4ea6-b5ce-d82847c44d8e"),
-                            End = new DateTime(2024, 7, 21, 18, 7, 13, 749, DateTimeKind.Utc).AddTicks(4857),
+                            Id = new Guid("81020105-ed12-4c27-b8a2-214235b7df70"),
+                            End = new DateTime(2024, 8, 2, 3, 10, 42, 766, DateTimeKind.Utc).AddTicks(2846),
                             FromCity = "Vlora",
                             FromCountry = "albania",
                             FromStreet = "Rruga 28 Nentori",
@@ -2800,7 +2800,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 7, 21, 11, 7, 13, 749, DateTimeKind.Utc).AddTicks(4857),
+                            Start = new DateTime(2024, 8, 1, 20, 10, 42, 766, DateTimeKind.Utc).AddTicks(2844),
                             ToCity = "Alam",
                             ToCountry = "egipt",
                             ToStreet = "Sharia Gamal Abdel Nasser",
@@ -2808,8 +2808,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("4f7fae2a-d95f-4913-a600-5b622b3d9224"),
-                            End = new DateTime(2024, 8, 16, 21, 7, 13, 749, DateTimeKind.Utc).AddTicks(4859),
+                            Id = new Guid("7c3e45ff-5767-4e54-9906-90598d24b918"),
+                            End = new DateTime(2024, 8, 28, 6, 10, 42, 766, DateTimeKind.Utc).AddTicks(2849),
                             FromCity = "Vlora",
                             FromCountry = "albania",
                             FromStreet = "Rruga 28 Nentori",
@@ -2818,7 +2818,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 8, 16, 9, 7, 13, 749, DateTimeKind.Utc).AddTicks(4858),
+                            Start = new DateTime(2024, 8, 27, 18, 10, 42, 766, DateTimeKind.Utc).AddTicks(2848),
                             ToCity = "Turecka",
                             ToCountry = "turcja",
                             ToStreet = "Halaskargazi Caddesi",
@@ -2826,8 +2826,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("392ee92f-b4b9-4540-b2b7-cf5d632c4492"),
-                            End = new DateTime(2024, 5, 30, 18, 7, 13, 749, DateTimeKind.Utc).AddTicks(4861),
+                            Id = new Guid("2a65dad1-4ac7-4b40-af81-dcbb4e3a6e34"),
+                            End = new DateTime(2024, 6, 11, 3, 10, 42, 766, DateTimeKind.Utc).AddTicks(2851),
                             FromCity = "Durres",
                             FromCountry = "albania",
                             FromStreet = "Rruga e Dibres",
@@ -2836,7 +2836,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 5, 30, 8, 7, 13, 749, DateTimeKind.Utc).AddTicks(4860),
+                            Start = new DateTime(2024, 6, 10, 17, 10, 42, 766, DateTimeKind.Utc).AddTicks(2851),
                             ToCity = "Brava",
                             ToCountry = "hiszpania",
                             ToStreet = "Calle Mayor",
@@ -2844,8 +2844,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("2db52170-a6ce-4741-b61e-985940a74c7c"),
-                            End = new DateTime(2024, 6, 17, 18, 7, 13, 749, DateTimeKind.Utc).AddTicks(4862),
+                            Id = new Guid("27974147-92c7-4c7a-acd2-9019b577a0b4"),
+                            End = new DateTime(2024, 6, 29, 3, 10, 42, 766, DateTimeKind.Utc).AddTicks(2854),
                             FromCity = "Durres",
                             FromCountry = "albania",
                             FromStreet = "Rruga e Dibres",
@@ -2854,7 +2854,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 6, 17, 13, 7, 13, 749, DateTimeKind.Utc).AddTicks(4862),
+                            Start = new DateTime(2024, 6, 28, 22, 10, 42, 766, DateTimeKind.Utc).AddTicks(2853),
                             ToCity = "Durres",
                             ToCountry = "albania",
                             ToStreet = "Bulevardi Bajram Curri",
@@ -2862,8 +2862,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("e9bda7c7-ab05-4dae-93b1-da39d42f331c"),
-                            End = new DateTime(2024, 6, 29, 20, 7, 13, 749, DateTimeKind.Utc).AddTicks(4864),
+                            Id = new Guid("b578a128-d072-4401-92fe-5db1a0045453"),
+                            End = new DateTime(2024, 7, 11, 5, 10, 42, 766, DateTimeKind.Utc).AddTicks(2856),
                             FromCity = "Vlora",
                             FromCountry = "albania",
                             FromStreet = "Rruga e Kavajes",
@@ -2872,7 +2872,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 6, 29, 16, 7, 13, 749, DateTimeKind.Utc).AddTicks(4864),
+                            Start = new DateTime(2024, 7, 11, 1, 10, 42, 766, DateTimeKind.Utc).AddTicks(2855),
                             ToCity = "Heraklion",
                             ToCountry = "grecja",
                             ToStreet = "Plateia Syntagmatos",
@@ -2880,8 +2880,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("3fb016f1-e40b-4f7a-87bf-fccfa97af0a9"),
-                            End = new DateTime(2024, 7, 7, 22, 7, 13, 749, DateTimeKind.Utc).AddTicks(4866),
+                            Id = new Guid("d7e2e6c3-6c23-45d4-b420-a290bf0d448c"),
+                            End = new DateTime(2024, 7, 19, 7, 10, 42, 766, DateTimeKind.Utc).AddTicks(2858),
                             FromCity = "Sheikh",
                             FromCountry = "egipt",
                             FromStreet = "Sharia Tahrir",
@@ -2890,7 +2890,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 7, 7, 14, 7, 13, 749, DateTimeKind.Utc).AddTicks(4865),
+                            Start = new DateTime(2024, 7, 18, 23, 10, 42, 766, DateTimeKind.Utc).AddTicks(2858),
                             ToCity = "Vlora",
                             ToCountry = "albania",
                             ToStreet = "Rruga e Kavajes",
@@ -2898,8 +2898,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("4fe4afaa-cf0a-4e0a-9483-c415584da6be"),
-                            End = new DateTime(2024, 7, 10, 21, 7, 13, 749, DateTimeKind.Utc).AddTicks(4867),
+                            Id = new Guid("e46dfcfb-be01-4a5e-a337-f7e25cb71f25"),
+                            End = new DateTime(2024, 7, 22, 6, 10, 42, 766, DateTimeKind.Utc).AddTicks(2861),
                             FromCity = "Luz",
                             FromCountry = "hiszpania",
                             FromStreet = "Calle Mayor",
@@ -2908,7 +2908,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 7, 10, 16, 7, 13, 749, DateTimeKind.Utc).AddTicks(4867),
+                            Start = new DateTime(2024, 7, 22, 1, 10, 42, 766, DateTimeKind.Utc).AddTicks(2860),
                             ToCity = "Marmaris",
                             ToCountry = "turcja",
                             ToStreet = "Bağdat Caddesi",
@@ -2916,8 +2916,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("1f5acfdb-5824-4f27-ad14-64b52384e02f"),
-                            End = new DateTime(2024, 6, 2, 13, 7, 13, 749, DateTimeKind.Utc).AddTicks(4869),
+                            Id = new Guid("696350e4-3f05-4bc3-9a97-9b97e4715589"),
+                            End = new DateTime(2024, 6, 13, 22, 10, 42, 766, DateTimeKind.Utc).AddTicks(2863),
                             FromCity = "Alam",
                             FromCountry = "egipt",
                             FromStreet = "Sharia Tahrir",
@@ -2926,7 +2926,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 6, 2, 6, 7, 13, 749, DateTimeKind.Utc).AddTicks(4869),
+                            Start = new DateTime(2024, 6, 13, 15, 10, 42, 766, DateTimeKind.Utc).AddTicks(2863),
                             ToCity = "Turecka",
                             ToCountry = "turcja",
                             ToStreet = "Bağdat Caddesi",
@@ -2934,8 +2934,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("2a9a77d3-4440-49a9-9935-1f020388f337"),
-                            End = new DateTime(2024, 8, 15, 5, 7, 13, 749, DateTimeKind.Utc).AddTicks(4871),
+                            Id = new Guid("39fa4315-c0ff-42d1-868d-857dcbe92b81"),
+                            End = new DateTime(2024, 8, 26, 14, 10, 42, 766, DateTimeKind.Utc).AddTicks(2866),
                             FromCity = "Turecka",
                             FromCountry = "turcja",
                             FromStreet = "Atatürk Caddesi",
@@ -2944,7 +2944,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 8, 15, 2, 7, 13, 749, DateTimeKind.Utc).AddTicks(4870),
+                            Start = new DateTime(2024, 8, 26, 11, 10, 42, 766, DateTimeKind.Utc).AddTicks(2865),
                             ToCity = "Chania",
                             ToCountry = "grecja",
                             ToStreet = "Leoforos Vasilissis Sofias",
@@ -2952,8 +2952,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("468addde-b862-4df0-9d5c-2eda6ea6c1e2"),
-                            End = new DateTime(2024, 6, 27, 4, 7, 13, 749, DateTimeKind.Utc).AddTicks(4872),
+                            Id = new Guid("3e2cf5b5-1907-4f13-8d9b-40486263743a"),
+                            End = new DateTime(2024, 7, 8, 13, 10, 42, 766, DateTimeKind.Utc).AddTicks(2868),
                             FromCity = "Sheikh",
                             FromCountry = "egipt",
                             FromStreet = "Sharia Ramsis",
@@ -2962,7 +2962,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 6, 26, 21, 7, 13, 749, DateTimeKind.Utc).AddTicks(4872),
+                            Start = new DateTime(2024, 7, 8, 6, 10, 42, 766, DateTimeKind.Utc).AddTicks(2868),
                             ToCity = "Kalabria",
                             ToCountry = "wlochy",
                             ToStreet = "Via Veneto",
@@ -2970,8 +2970,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("8fad72e1-69cc-42d3-9d58-9e46871b0f0d"),
-                            End = new DateTime(2024, 7, 16, 19, 7, 13, 749, DateTimeKind.Utc).AddTicks(4874),
+                            Id = new Guid("88cb77b0-1749-4b75-be36-ea5dfdf3a6ac"),
+                            End = new DateTime(2024, 7, 28, 4, 10, 42, 766, DateTimeKind.Utc).AddTicks(2870),
                             FromCity = "Sheikh",
                             FromCountry = "egipt",
                             FromStreet = "Sharia Salah Salem",
@@ -2980,7 +2980,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 7, 16, 10, 7, 13, 749, DateTimeKind.Utc).AddTicks(4874),
+                            Start = new DateTime(2024, 7, 27, 19, 10, 42, 766, DateTimeKind.Utc).AddTicks(2870),
                             ToCity = "Olimpijska",
                             ToCountry = "grecja",
                             ToStreet = "Plateia Syntagmatos",
@@ -2988,8 +2988,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("e339736c-9114-441f-84bb-ed45fa064ef6"),
-                            End = new DateTime(2024, 7, 18, 18, 7, 13, 749, DateTimeKind.Utc).AddTicks(4876),
+                            Id = new Guid("147f2998-dd96-4487-9612-65fa38fa31bb"),
+                            End = new DateTime(2024, 7, 30, 3, 10, 42, 766, DateTimeKind.Utc).AddTicks(2873),
                             FromCity = "Kalabria",
                             FromCountry = "wlochy",
                             FromStreet = "Via del Corso",
@@ -2998,7 +2998,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 7, 18, 12, 7, 13, 749, DateTimeKind.Utc).AddTicks(4876),
+                            Start = new DateTime(2024, 7, 29, 21, 10, 42, 766, DateTimeKind.Utc).AddTicks(2872),
                             ToCity = "Sheikh",
                             ToCountry = "egipt",
                             ToStreet = "Sharia Salah Salem",
@@ -3006,8 +3006,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("a2149dc3-c510-4004-a6e7-946c1a2ba417"),
-                            End = new DateTime(2024, 6, 28, 17, 7, 13, 749, DateTimeKind.Utc).AddTicks(4878),
+                            Id = new Guid("f8daac65-5f16-45de-8723-08c36b36699b"),
+                            End = new DateTime(2024, 7, 10, 2, 10, 42, 766, DateTimeKind.Utc).AddTicks(2875),
                             FromCity = "Brava",
                             FromCountry = "hiszpania",
                             FromStreet = "Paseo del Prado",
@@ -3016,7 +3016,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 6, 28, 5, 7, 13, 749, DateTimeKind.Utc).AddTicks(4877),
+                            Start = new DateTime(2024, 7, 9, 14, 10, 42, 766, DateTimeKind.Utc).AddTicks(2875),
                             ToCity = "Kalabria",
                             ToCountry = "wlochy",
                             ToStreet = "Via del Corso",
@@ -3024,8 +3024,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("010a93f8-7e22-45d6-a0d4-0b93190679cc"),
-                            End = new DateTime(2024, 8, 27, 7, 7, 13, 749, DateTimeKind.Utc).AddTicks(4880),
+                            Id = new Guid("26a7090d-93ac-454e-92b2-e9ce37f5bce8"),
+                            End = new DateTime(2024, 9, 7, 16, 10, 42, 766, DateTimeKind.Utc).AddTicks(2877),
                             FromCity = "Chania",
                             FromCountry = "grecja",
                             FromStreet = "Leoforos Vasilissis Sofias",
@@ -3034,7 +3034,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 8, 27, 1, 7, 13, 749, DateTimeKind.Utc).AddTicks(4880),
+                            Start = new DateTime(2024, 9, 7, 10, 10, 42, 766, DateTimeKind.Utc).AddTicks(2877),
                             ToCity = "Riwiera",
                             ToCountry = "chorwacja",
                             ToStreet = "Kapucinska ulica",
@@ -3042,8 +3042,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("8ef5d7a9-0e88-4c22-9486-c4d2155b22dc"),
-                            End = new DateTime(2024, 7, 30, 18, 7, 13, 749, DateTimeKind.Utc).AddTicks(4882),
+                            Id = new Guid("cccb3578-220d-4670-9856-65f477ea0a91"),
+                            End = new DateTime(2024, 8, 11, 3, 10, 42, 766, DateTimeKind.Utc).AddTicks(2880),
                             FromCity = "Riwiera",
                             FromCountry = "chorwacja",
                             FromStreet = "Maksimirska ulica",
@@ -3052,7 +3052,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 7, 30, 11, 7, 13, 749, DateTimeKind.Utc).AddTicks(4881),
+                            Start = new DateTime(2024, 8, 10, 20, 10, 42, 766, DateTimeKind.Utc).AddTicks(2879),
                             ToCity = "Brava",
                             ToCountry = "hiszpania",
                             ToStreet = "Calle Mayor",
@@ -3060,8 +3060,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("b2d92f88-797d-419b-bad9-8f9459620a61"),
-                            End = new DateTime(2024, 8, 25, 19, 7, 13, 749, DateTimeKind.Utc).AddTicks(4883),
+                            Id = new Guid("34a8c8fc-b0b2-4f5b-b233-1f883a3fd8cc"),
+                            End = new DateTime(2024, 9, 6, 4, 10, 42, 766, DateTimeKind.Utc).AddTicks(2882),
                             FromCity = "Brava",
                             FromCountry = "hiszpania",
                             FromStreet = "Gran Vía",
@@ -3070,7 +3070,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 8, 25, 17, 7, 13, 749, DateTimeKind.Utc).AddTicks(4883),
+                            Start = new DateTime(2024, 9, 6, 2, 10, 42, 766, DateTimeKind.Utc).AddTicks(2882),
                             ToCity = "Alam",
                             ToCountry = "egipt",
                             ToStreet = "Sharia Ramsis",
@@ -3078,8 +3078,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("282cdf9a-5e18-4776-b743-12ee38fc89f5"),
-                            End = new DateTime(2024, 7, 10, 20, 7, 13, 749, DateTimeKind.Utc).AddTicks(4885),
+                            Id = new Guid("d58112e4-c5b0-45af-9d20-f27a063ef11c"),
+                            End = new DateTime(2024, 7, 22, 5, 10, 42, 766, DateTimeKind.Utc).AddTicks(2885),
                             FromCity = "Sheikh",
                             FromCountry = "egipt",
                             FromStreet = "Sharia Tahrir",
@@ -3088,7 +3088,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 7, 10, 10, 7, 13, 749, DateTimeKind.Utc).AddTicks(4885),
+                            Start = new DateTime(2024, 7, 21, 19, 10, 42, 766, DateTimeKind.Utc).AddTicks(2884),
                             ToCity = "Vlora",
                             ToCountry = "albania",
                             ToStreet = "Rruga e Kavajes",
@@ -3096,8 +3096,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("5777789e-c9e1-49a8-8d27-3ba044614e5f"),
-                            End = new DateTime(2024, 6, 30, 9, 7, 13, 749, DateTimeKind.Utc).AddTicks(4920),
+                            Id = new Guid("34fa370e-e198-4140-8ba9-c7392b7f9d52"),
+                            End = new DateTime(2024, 7, 11, 18, 10, 42, 766, DateTimeKind.Utc).AddTicks(2887),
                             FromCity = "Alam",
                             FromCountry = "egipt",
                             FromStreet = "Sharia Tahrir",
@@ -3106,7 +3106,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 6, 30, 7, 7, 13, 749, DateTimeKind.Utc).AddTicks(4919),
+                            Start = new DateTime(2024, 7, 11, 16, 10, 42, 766, DateTimeKind.Utc).AddTicks(2887),
                             ToCity = "Sheikh",
                             ToCountry = "egipt",
                             ToStreet = "Sharia Salah Salem",
@@ -3114,8 +3114,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("b1d8f724-b62b-4ab0-961f-6897a6ad3dab"),
-                            End = new DateTime(2024, 8, 5, 5, 7, 13, 749, DateTimeKind.Utc).AddTicks(4922),
+                            Id = new Guid("28655b5b-4dbc-4959-9003-3542b7a1ab3d"),
+                            End = new DateTime(2024, 8, 16, 14, 10, 42, 766, DateTimeKind.Utc).AddTicks(2889),
                             FromCity = "Kalabria",
                             FromCountry = "wlochy",
                             FromStreet = "Via del Corso",
@@ -3124,7 +3124,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 8, 5, 1, 7, 13, 749, DateTimeKind.Utc).AddTicks(4921),
+                            Start = new DateTime(2024, 8, 16, 10, 10, 42, 766, DateTimeKind.Utc).AddTicks(2889),
                             ToCity = "Turecka",
                             ToCountry = "turcja",
                             ToStreet = "Atatürk Caddesi",
@@ -3132,8 +3132,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("98ea0327-2c3e-4adb-bbcf-6ac8fe129b3c"),
-                            End = new DateTime(2024, 6, 21, 1, 7, 13, 749, DateTimeKind.Utc).AddTicks(4923),
+                            Id = new Guid("ba93d1a7-c680-41a9-aa39-5505cd0896d5"),
+                            End = new DateTime(2024, 7, 2, 10, 10, 42, 766, DateTimeKind.Utc).AddTicks(2892),
                             FromCity = "Luz",
                             FromCountry = "hiszpania",
                             FromStreet = "Calle Mayor",
@@ -3142,7 +3142,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 6, 20, 19, 7, 13, 749, DateTimeKind.Utc).AddTicks(4923),
+                            Start = new DateTime(2024, 7, 2, 4, 10, 42, 766, DateTimeKind.Utc).AddTicks(2891),
                             ToCity = "Durres",
                             ToCountry = "albania",
                             ToStreet = "Rruga Abdyl Frasheri",
@@ -3150,8 +3150,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("ad1a7758-5e5a-4696-a364-4bf14e7d8c8c"),
-                            End = new DateTime(2024, 8, 14, 13, 7, 13, 749, DateTimeKind.Utc).AddTicks(4925),
+                            Id = new Guid("80dfd165-79ec-42a6-b435-984d76cf9b1d"),
+                            End = new DateTime(2024, 8, 25, 22, 10, 42, 766, DateTimeKind.Utc).AddTicks(2894),
                             FromCity = "Riwiera",
                             FromCountry = "chorwacja",
                             FromStreet = "Maksimirska ulica",
@@ -3160,7 +3160,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 8, 14, 3, 7, 13, 749, DateTimeKind.Utc).AddTicks(4925),
+                            Start = new DateTime(2024, 8, 25, 12, 10, 42, 766, DateTimeKind.Utc).AddTicks(2894),
                             ToCity = "Peloponez",
                             ToCountry = "grecja",
                             ToStreet = "Leoforos Alexandras",
@@ -3168,8 +3168,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("d1052a48-c0ae-4bd9-8f50-db723ae9d690"),
-                            End = new DateTime(2024, 8, 21, 2, 7, 13, 749, DateTimeKind.Utc).AddTicks(4927),
+                            Id = new Guid("0ad9a7dc-c3db-4f52-b18d-bc2dd201944a"),
+                            End = new DateTime(2024, 9, 1, 11, 10, 42, 766, DateTimeKind.Utc).AddTicks(2897),
                             FromCity = "Alam",
                             FromCountry = "egipt",
                             FromStreet = "Sharia Tahrir",
@@ -3178,7 +3178,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 8, 20, 14, 7, 13, 749, DateTimeKind.Utc).AddTicks(4926),
+                            Start = new DateTime(2024, 8, 31, 23, 10, 42, 766, DateTimeKind.Utc).AddTicks(2896),
                             ToCity = "Maresme",
                             ToCountry = "hiszpania",
                             ToStreet = "Paseo del Prado",
@@ -3186,8 +3186,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("d96bd71f-b49a-448c-8682-af5d54e2b7c3"),
-                            End = new DateTime(2024, 7, 2, 3, 7, 13, 749, DateTimeKind.Utc).AddTicks(4929),
+                            Id = new Guid("5c63b837-40c5-4d2d-a44d-c3a23012d789"),
+                            End = new DateTime(2024, 7, 13, 12, 10, 42, 766, DateTimeKind.Utc).AddTicks(2899),
                             FromCity = "Almeria",
                             FromCountry = "hiszpania",
                             FromStreet = "Paseo del Prado",
@@ -3196,7 +3196,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 7, 1, 17, 7, 13, 749, DateTimeKind.Utc).AddTicks(4928),
+                            Start = new DateTime(2024, 7, 13, 2, 10, 42, 766, DateTimeKind.Utc).AddTicks(2899),
                             ToCity = "Marmaris",
                             ToCountry = "turcja",
                             ToStreet = "Bağdat Caddesi",
@@ -3204,8 +3204,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("2f63cfca-c34f-475d-867f-c0bfed938852"),
-                            End = new DateTime(2024, 8, 25, 18, 7, 13, 749, DateTimeKind.Utc).AddTicks(4930),
+                            Id = new Guid("38a2ced7-bd2a-4bd4-add0-14139fd53de6"),
+                            End = new DateTime(2024, 9, 6, 3, 10, 42, 766, DateTimeKind.Utc).AddTicks(2901),
                             FromCity = "Alam",
                             FromCountry = "egipt",
                             FromStreet = "Sharia Tahrir",
@@ -3214,7 +3214,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 8, 25, 15, 7, 13, 749, DateTimeKind.Utc).AddTicks(4930),
+                            Start = new DateTime(2024, 9, 6, 0, 10, 42, 766, DateTimeKind.Utc).AddTicks(2901),
                             ToCity = "Turecka",
                             ToCountry = "turcja",
                             ToStreet = "Atatürk Caddesi",
@@ -3222,8 +3222,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("2c4896c9-25b5-432a-b153-d76c1f5e994f"),
-                            End = new DateTime(2024, 6, 29, 19, 7, 13, 749, DateTimeKind.Utc).AddTicks(4932),
+                            Id = new Guid("5a3d0def-3db2-40b3-aa59-3232955a9ef7"),
+                            End = new DateTime(2024, 7, 11, 4, 10, 42, 766, DateTimeKind.Utc).AddTicks(2904),
                             FromCity = "Riwiera",
                             FromCountry = "chorwacja",
                             FromStreet = "Maksimirska ulica",
@@ -3232,7 +3232,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 6, 29, 13, 7, 13, 749, DateTimeKind.Utc).AddTicks(4932),
+                            Start = new DateTime(2024, 7, 10, 22, 10, 42, 766, DateTimeKind.Utc).AddTicks(2903),
                             ToCity = "Brava",
                             ToCountry = "hiszpania",
                             ToStreet = "Calle Mayor",
@@ -3240,8 +3240,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("97ab19f4-bc15-4748-9539-e20c64691fd0"),
-                            End = new DateTime(2024, 5, 31, 3, 7, 13, 749, DateTimeKind.Utc).AddTicks(4934),
+                            Id = new Guid("098ccf77-73e5-40be-a441-306fc4313371"),
+                            End = new DateTime(2024, 6, 11, 12, 10, 42, 766, DateTimeKind.Utc).AddTicks(2906),
                             FromCity = "Chania",
                             FromCountry = "grecja",
                             FromStreet = "Leoforos Vasilissis Sofias",
@@ -3250,7 +3250,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 5, 30, 21, 7, 13, 749, DateTimeKind.Utc).AddTicks(4933),
+                            Start = new DateTime(2024, 6, 11, 6, 10, 42, 766, DateTimeKind.Utc).AddTicks(2906),
                             ToCity = "Riwiera",
                             ToCountry = "chorwacja",
                             ToStreet = "Maksimirska ulica",
@@ -3258,8 +3258,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("1a57fb48-1730-412f-94a2-243deec45f29"),
-                            End = new DateTime(2024, 7, 2, 1, 7, 13, 749, DateTimeKind.Utc).AddTicks(4936),
+                            Id = new Guid("04329567-a23f-44b9-b062-1b23a86f550b"),
+                            End = new DateTime(2024, 7, 13, 10, 10, 42, 766, DateTimeKind.Utc).AddTicks(2909),
                             FromCity = "Vlora",
                             FromCountry = "albania",
                             FromStreet = "Rruga e Kavajes",
@@ -3268,7 +3268,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 7, 1, 20, 7, 13, 749, DateTimeKind.Utc).AddTicks(4935),
+                            Start = new DateTime(2024, 7, 13, 5, 10, 42, 766, DateTimeKind.Utc).AddTicks(2908),
                             ToCity = "Brava",
                             ToCountry = "hiszpania",
                             ToStreet = "Gran Vía",
@@ -3276,8 +3276,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("47d0f9c6-e982-4afa-aee5-e5656f230e1a"),
-                            End = new DateTime(2024, 6, 27, 22, 7, 13, 749, DateTimeKind.Utc).AddTicks(4937),
+                            Id = new Guid("64fd2a92-21c1-4ada-a73b-7cfc6392b356"),
+                            End = new DateTime(2024, 7, 9, 7, 10, 42, 766, DateTimeKind.Utc).AddTicks(2911),
                             FromCity = "Durres",
                             FromCountry = "albania",
                             FromStreet = "Rruga e Dibres",
@@ -3286,7 +3286,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 6, 27, 10, 7, 13, 749, DateTimeKind.Utc).AddTicks(4937),
+                            Start = new DateTime(2024, 7, 8, 19, 10, 42, 766, DateTimeKind.Utc).AddTicks(2911),
                             ToCity = "Alam",
                             ToCountry = "egipt",
                             ToStreet = "Sharia Tahrir",
@@ -3294,8 +3294,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("691eaeae-05c0-4fc7-b0a1-8499232c0f51"),
-                            End = new DateTime(2024, 8, 22, 16, 7, 13, 749, DateTimeKind.Utc).AddTicks(4939),
+                            Id = new Guid("8c59afe9-41a2-4291-94b9-6ae5d64d6a7e"),
+                            End = new DateTime(2024, 9, 3, 1, 10, 42, 766, DateTimeKind.Utc).AddTicks(2914),
                             FromCity = "Alam",
                             FromCountry = "egipt",
                             FromStreet = "Sharia Tahrir",
@@ -3304,7 +3304,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 8, 22, 13, 7, 13, 749, DateTimeKind.Utc).AddTicks(4939),
+                            Start = new DateTime(2024, 9, 2, 22, 10, 42, 766, DateTimeKind.Utc).AddTicks(2913),
                             ToCity = "Durres",
                             ToCountry = "albania",
                             ToStreet = "Bulevardi Bajram Curri",
@@ -3312,8 +3312,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("271cd4a1-0710-429f-85fd-10cb263ce2f3"),
-                            End = new DateTime(2024, 7, 18, 12, 7, 13, 749, DateTimeKind.Utc).AddTicks(4941),
+                            Id = new Guid("9e8d4a06-76de-46e4-9a29-39335dd1ca3a"),
+                            End = new DateTime(2024, 7, 29, 21, 10, 42, 766, DateTimeKind.Utc).AddTicks(2916),
                             FromCity = "Brava",
                             FromCountry = "hiszpania",
                             FromStreet = "Calle de Alcalá",
@@ -3322,7 +3322,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 7, 18, 10, 7, 13, 749, DateTimeKind.Utc).AddTicks(4940),
+                            Start = new DateTime(2024, 7, 29, 19, 10, 42, 766, DateTimeKind.Utc).AddTicks(2915),
                             ToCity = "Durres",
                             ToCountry = "albania",
                             ToStreet = "Bulevardi Bajram Curri",
@@ -3330,8 +3330,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("e6686c3e-e925-467b-9d16-7ebab944f887"),
-                            End = new DateTime(2024, 7, 10, 6, 7, 13, 749, DateTimeKind.Utc).AddTicks(4942),
+                            Id = new Guid("917e5e33-fa35-4180-8946-3d9c08fb56cf"),
+                            End = new DateTime(2024, 7, 21, 15, 10, 42, 766, DateTimeKind.Utc).AddTicks(2951),
                             FromCity = "Sheikh",
                             FromCountry = "egipt",
                             FromStreet = "Sharia Ramsis",
@@ -3340,7 +3340,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 7, 10, 0, 7, 13, 749, DateTimeKind.Utc).AddTicks(4942),
+                            Start = new DateTime(2024, 7, 21, 9, 10, 42, 766, DateTimeKind.Utc).AddTicks(2949),
                             ToCity = "Alam",
                             ToCountry = "egipt",
                             ToStreet = "Sharia Gamal Abdel Nasser",
@@ -3348,8 +3348,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("85403cea-2155-49a0-a9bd-ee09272f4244"),
-                            End = new DateTime(2024, 8, 20, 18, 7, 13, 749, DateTimeKind.Utc).AddTicks(4944),
+                            Id = new Guid("5b708768-cfc1-4eb4-9ab4-aba5e44a17f2"),
+                            End = new DateTime(2024, 9, 1, 3, 10, 42, 766, DateTimeKind.Utc).AddTicks(2953),
                             FromCity = "Brava",
                             FromCountry = "hiszpania",
                             FromStreet = "Gran Vía",
@@ -3358,7 +3358,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 8, 20, 8, 7, 13, 749, DateTimeKind.Utc).AddTicks(4944),
+                            Start = new DateTime(2024, 8, 31, 17, 10, 42, 766, DateTimeKind.Utc).AddTicks(2953),
                             ToCity = "Heraklion",
                             ToCountry = "grecja",
                             ToStreet = "Plateia Syntagmatos",
@@ -3366,8 +3366,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("63b69aba-869a-4f77-9a77-4ebd6db43209"),
-                            End = new DateTime(2024, 8, 3, 16, 7, 13, 749, DateTimeKind.Utc).AddTicks(4946),
+                            Id = new Guid("2ca77881-ab46-44c3-ae0f-30d1fc00c77a"),
+                            End = new DateTime(2024, 8, 15, 1, 10, 42, 766, DateTimeKind.Utc).AddTicks(2955),
                             FromCity = "Riwiera",
                             FromCountry = "chorwacja",
                             FromStreet = "Vukovarska ulica",
@@ -3376,7 +3376,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 8, 3, 13, 7, 13, 749, DateTimeKind.Utc).AddTicks(4945),
+                            Start = new DateTime(2024, 8, 14, 22, 10, 42, 766, DateTimeKind.Utc).AddTicks(2955),
                             ToCity = "Riwiera",
                             ToCountry = "chorwacja",
                             ToStreet = "Maksimirska ulica",
@@ -3384,8 +3384,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("0212d170-8ec3-45aa-bd3a-880186642a87"),
-                            End = new DateTime(2024, 6, 11, 1, 7, 13, 749, DateTimeKind.Utc).AddTicks(4948),
+                            Id = new Guid("433a08df-5b53-4b39-963f-e5ffe0e595f5"),
+                            End = new DateTime(2024, 6, 22, 10, 10, 42, 766, DateTimeKind.Utc).AddTicks(2958),
                             FromCity = "Nero",
                             FromCountry = "grecja",
                             FromStreet = "Leoforos Alexandras",
@@ -3394,7 +3394,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 6, 10, 17, 7, 13, 749, DateTimeKind.Utc).AddTicks(4947),
+                            Start = new DateTime(2024, 6, 22, 2, 10, 42, 766, DateTimeKind.Utc).AddTicks(2957),
                             ToCity = "Turecka",
                             ToCountry = "turcja",
                             ToStreet = "Atatürk Caddesi",
@@ -3402,8 +3402,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("1bdd9573-5c5a-4724-a5bc-badb7820af56"),
-                            End = new DateTime(2024, 6, 2, 12, 7, 13, 749, DateTimeKind.Utc).AddTicks(4949),
+                            Id = new Guid("fbc24228-8c49-408d-9186-68b279389795"),
+                            End = new DateTime(2024, 6, 13, 21, 10, 42, 766, DateTimeKind.Utc).AddTicks(2960),
                             FromCity = "Alam",
                             FromCountry = "egipt",
                             FromStreet = "Sharia Tahrir",
@@ -3412,7 +3412,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 6, 2, 6, 7, 13, 749, DateTimeKind.Utc).AddTicks(4949),
+                            Start = new DateTime(2024, 6, 13, 15, 10, 42, 766, DateTimeKind.Utc).AddTicks(2960),
                             ToCity = "Durres",
                             ToCountry = "albania",
                             ToStreet = "Bulevardi Bajram Curri",
@@ -3420,8 +3420,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("6c5ca391-af57-4387-9842-de0a2b8702ef"),
-                            End = new DateTime(2024, 6, 21, 1, 7, 13, 749, DateTimeKind.Utc).AddTicks(4951),
+                            Id = new Guid("d76203e7-1983-4c92-9dbd-bad2fdb78eff"),
+                            End = new DateTime(2024, 7, 2, 10, 10, 42, 766, DateTimeKind.Utc).AddTicks(2963),
                             FromCity = "Durres",
                             FromCountry = "albania",
                             FromStreet = "Rruga Abdyl Frasheri",
@@ -3430,7 +3430,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 6, 20, 21, 7, 13, 749, DateTimeKind.Utc).AddTicks(4950),
+                            Start = new DateTime(2024, 7, 2, 6, 10, 42, 766, DateTimeKind.Utc).AddTicks(2962),
                             ToCity = "Turecka",
                             ToCountry = "turcja",
                             ToStreet = "Atatürk Caddesi",
@@ -3438,8 +3438,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("2506b586-1e90-4e6a-ae9b-a98eec7093f6"),
-                            End = new DateTime(2024, 8, 15, 20, 7, 13, 749, DateTimeKind.Utc).AddTicks(4953),
+                            Id = new Guid("5adfa016-d261-4a5b-87bb-25c5427e74eb"),
+                            End = new DateTime(2024, 8, 27, 5, 10, 42, 766, DateTimeKind.Utc).AddTicks(2965),
                             FromCity = "Sheikh",
                             FromCountry = "egipt",
                             FromStreet = "Sharia Tahrir",
@@ -3448,7 +3448,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 8, 15, 9, 7, 13, 749, DateTimeKind.Utc).AddTicks(4952),
+                            Start = new DateTime(2024, 8, 26, 18, 10, 42, 766, DateTimeKind.Utc).AddTicks(2965),
                             ToCity = "Luz",
                             ToCountry = "hiszpania",
                             ToStreet = "Calle Mayor",
@@ -3456,8 +3456,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("db2d90fe-7ac7-411f-bec4-51a14a22eb04"),
-                            End = new DateTime(2024, 6, 24, 0, 7, 13, 749, DateTimeKind.Utc).AddTicks(4954),
+                            Id = new Guid("0fed87b2-b5b4-49d2-842c-fde61719b5a4"),
+                            End = new DateTime(2024, 7, 5, 9, 10, 42, 766, DateTimeKind.Utc).AddTicks(2968),
                             FromCity = "Nero",
                             FromCountry = "grecja",
                             FromStreet = "Leoforos Vasilissis Sofias",
@@ -3466,7 +3466,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 6, 23, 19, 7, 13, 749, DateTimeKind.Utc).AddTicks(4954),
+                            Start = new DateTime(2024, 7, 5, 4, 10, 42, 766, DateTimeKind.Utc).AddTicks(2967),
                             ToCity = "Kalabria",
                             ToCountry = "wlochy",
                             ToStreet = "Via Nazionale",
@@ -3474,8 +3474,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("f2dcd313-2323-4b7f-8918-4b4e95f56169"),
-                            End = new DateTime(2024, 8, 25, 5, 7, 13, 749, DateTimeKind.Utc).AddTicks(4956),
+                            Id = new Guid("9f8e8444-d76b-4487-908d-5980ca9800d9"),
+                            End = new DateTime(2024, 9, 5, 14, 10, 42, 766, DateTimeKind.Utc).AddTicks(2970),
                             FromCity = "Alam",
                             FromCountry = "egipt",
                             FromStreet = "Sharia Tahrir",
@@ -3484,7 +3484,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 8, 24, 23, 7, 13, 749, DateTimeKind.Utc).AddTicks(4956),
+                            Start = new DateTime(2024, 9, 5, 8, 10, 42, 766, DateTimeKind.Utc).AddTicks(2970),
                             ToCity = "Luz",
                             ToCountry = "hiszpania",
                             ToStreet = "Calle Mayor",
@@ -3492,8 +3492,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("f46c07c4-3f77-49c8-9c24-8876146cdad7"),
-                            End = new DateTime(2024, 6, 17, 6, 7, 13, 749, DateTimeKind.Utc).AddTicks(4958),
+                            Id = new Guid("44b44c61-43fc-47b9-b440-77adb4f7c77e"),
+                            End = new DateTime(2024, 6, 28, 15, 10, 42, 766, DateTimeKind.Utc).AddTicks(2973),
                             FromCity = "Olimpijska",
                             FromCountry = "grecja",
                             FromStreet = "Plateia Syntagmatos",
@@ -3502,7 +3502,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 6, 17, 1, 7, 13, 749, DateTimeKind.Utc).AddTicks(4958),
+                            Start = new DateTime(2024, 6, 28, 10, 10, 42, 766, DateTimeKind.Utc).AddTicks(2972),
                             ToCity = "Kalabria",
                             ToCountry = "wlochy",
                             ToStreet = "Via Veneto",
@@ -3510,8 +3510,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("90100a42-6019-437b-9228-b25b776ab589"),
-                            End = new DateTime(2024, 6, 29, 6, 7, 13, 749, DateTimeKind.Utc).AddTicks(4960),
+                            Id = new Guid("7f9043aa-c37b-4b6f-9c67-291fbd7e863b"),
+                            End = new DateTime(2024, 7, 10, 15, 10, 42, 766, DateTimeKind.Utc).AddTicks(2975),
                             FromCity = "Brava",
                             FromCountry = "hiszpania",
                             FromStreet = "Paseo del Prado",
@@ -3520,7 +3520,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 6, 28, 19, 7, 13, 749, DateTimeKind.Utc).AddTicks(4959),
+                            Start = new DateTime(2024, 7, 10, 4, 10, 42, 766, DateTimeKind.Utc).AddTicks(2974),
                             ToCity = "Riwiera",
                             ToCountry = "chorwacja",
                             ToStreet = "Maksimirska ulica",
@@ -3528,8 +3528,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("62554c5c-30c0-49d5-9f22-488478913aa1"),
-                            End = new DateTime(2024, 6, 16, 0, 7, 13, 749, DateTimeKind.Utc).AddTicks(4962),
+                            Id = new Guid("6d661ccf-dded-43f7-8fb3-525690b357e7"),
+                            End = new DateTime(2024, 6, 27, 9, 10, 42, 766, DateTimeKind.Utc).AddTicks(2977),
                             FromCity = "Brava",
                             FromCountry = "hiszpania",
                             FromStreet = "Gran Vía",
@@ -3538,7 +3538,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 6, 15, 16, 7, 13, 749, DateTimeKind.Utc).AddTicks(4961),
+                            Start = new DateTime(2024, 6, 27, 1, 10, 42, 766, DateTimeKind.Utc).AddTicks(2977),
                             ToCity = "Turecka",
                             ToCountry = "turcja",
                             ToStreet = "Bağdat Caddesi",
@@ -3546,8 +3546,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("b81a0882-ec07-4791-80f6-859fcee3797a"),
-                            End = new DateTime(2024, 6, 27, 9, 7, 13, 749, DateTimeKind.Utc).AddTicks(4963),
+                            Id = new Guid("bf16202a-c030-40a3-8298-b74fbb58ed9a"),
+                            End = new DateTime(2024, 7, 8, 18, 10, 42, 766, DateTimeKind.Utc).AddTicks(2980),
                             FromCity = "Durres",
                             FromCountry = "albania",
                             FromStreet = "Bulevardi Bajram Curri",
@@ -3556,7 +3556,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 6, 27, 2, 7, 13, 749, DateTimeKind.Utc).AddTicks(4963),
+                            Start = new DateTime(2024, 7, 8, 11, 10, 42, 766, DateTimeKind.Utc).AddTicks(2979),
                             ToCity = "Chania",
                             ToCountry = "grecja",
                             ToStreet = "Leoforos Vasilissis Sofias",
@@ -3564,8 +3564,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("9bdbcc64-b3a9-4f86-8529-358e91b46eb5"),
-                            End = new DateTime(2024, 7, 15, 15, 7, 13, 749, DateTimeKind.Utc).AddTicks(4965),
+                            Id = new Guid("a08e5d9f-5016-41de-a34d-5f75a3817c1e"),
+                            End = new DateTime(2024, 7, 27, 0, 10, 42, 766, DateTimeKind.Utc).AddTicks(2982),
                             FromCity = "Riwiera",
                             FromCountry = "chorwacja",
                             FromStreet = "Kapucinska ulica",
@@ -3574,7 +3574,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 7, 15, 6, 7, 13, 749, DateTimeKind.Utc).AddTicks(4964),
+                            Start = new DateTime(2024, 7, 26, 15, 10, 42, 766, DateTimeKind.Utc).AddTicks(2981),
                             ToCity = "Nero",
                             ToCountry = "grecja",
                             ToStreet = "Leoforos Alexandras",
@@ -3582,8 +3582,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("3e409392-1657-4dc2-8d34-83cee9152c1b"),
-                            End = new DateTime(2024, 6, 4, 23, 7, 13, 749, DateTimeKind.Utc).AddTicks(4968),
+                            Id = new Guid("c6912f8a-f389-4adc-b0d4-cdaeed319623"),
+                            End = new DateTime(2024, 6, 16, 8, 10, 42, 766, DateTimeKind.Utc).AddTicks(2984),
                             FromCity = "Peloponez",
                             FromCountry = "grecja",
                             FromStreet = "Leoforos Alexandras",
@@ -3592,7 +3592,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 6, 4, 18, 7, 13, 749, DateTimeKind.Utc).AddTicks(4967),
+                            Start = new DateTime(2024, 6, 16, 3, 10, 42, 766, DateTimeKind.Utc).AddTicks(2984),
                             ToCity = "Alam",
                             ToCountry = "egipt",
                             ToStreet = "Sharia Tahrir",
@@ -3600,8 +3600,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("04bbbefd-eb8f-4b4e-9d36-0ef983564791"),
-                            End = new DateTime(2024, 6, 29, 20, 7, 13, 749, DateTimeKind.Utc).AddTicks(4969),
+                            Id = new Guid("43f052a2-c6e4-4f1c-9de0-58b8bb087cc7"),
+                            End = new DateTime(2024, 7, 11, 5, 10, 42, 766, DateTimeKind.Utc).AddTicks(2987),
                             FromCity = "Riwiera",
                             FromCountry = "chorwacja",
                             FromStreet = "Trg bana Josipa Jelačića",
@@ -3610,7 +3610,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 6, 29, 11, 7, 13, 749, DateTimeKind.Utc).AddTicks(4969),
+                            Start = new DateTime(2024, 7, 10, 20, 10, 42, 766, DateTimeKind.Utc).AddTicks(2986),
                             ToCity = "Kalabria",
                             ToCountry = "wlochy",
                             ToStreet = "Via Nazionale",
@@ -3618,8 +3618,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("30b97752-ae37-4c74-abd1-c1b858e4184a"),
-                            End = new DateTime(2024, 6, 15, 6, 7, 13, 749, DateTimeKind.Utc).AddTicks(4971),
+                            Id = new Guid("3e41523c-a51b-4794-9bac-efcde7614ae0"),
+                            End = new DateTime(2024, 6, 26, 15, 10, 42, 766, DateTimeKind.Utc).AddTicks(2989),
                             FromCity = "Riwiera",
                             FromCountry = "chorwacja",
                             FromStreet = "Trg bana Josipa Jelačića",
@@ -3628,7 +3628,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 6, 14, 19, 7, 13, 749, DateTimeKind.Utc).AddTicks(4971),
+                            Start = new DateTime(2024, 6, 26, 4, 10, 42, 766, DateTimeKind.Utc).AddTicks(2989),
                             ToCity = "Durres",
                             ToCountry = "albania",
                             ToStreet = "Rruga Abdyl Frasheri",
@@ -3636,8 +3636,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("11cc22de-f02a-4a04-bb40-6065ff84cc77"),
-                            End = new DateTime(2024, 6, 18, 3, 7, 13, 749, DateTimeKind.Utc).AddTicks(4996),
+                            Id = new Guid("9d918ae7-471d-4f6a-a681-b9ec0498b467"),
+                            End = new DateTime(2024, 6, 29, 12, 10, 42, 766, DateTimeKind.Utc).AddTicks(2992),
                             FromCity = "Riwiera",
                             FromCountry = "chorwacja",
                             FromStreet = "Vukovarska ulica",
@@ -3646,7 +3646,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 6, 17, 15, 7, 13, 749, DateTimeKind.Utc).AddTicks(4995),
+                            Start = new DateTime(2024, 6, 29, 0, 10, 42, 766, DateTimeKind.Utc).AddTicks(2991),
                             ToCity = "Luz",
                             ToCountry = "hiszpania",
                             ToStreet = "Calle Mayor",
@@ -3654,8 +3654,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("aa34116a-0a79-4906-b47d-1fff74862895"),
-                            End = new DateTime(2024, 8, 15, 0, 7, 13, 749, DateTimeKind.Utc).AddTicks(4998),
+                            Id = new Guid("a423ff6c-a534-4cd0-9d6f-5502f0308995"),
+                            End = new DateTime(2024, 8, 26, 9, 10, 42, 766, DateTimeKind.Utc).AddTicks(2994),
                             FromCity = "Alam",
                             FromCountry = "egipt",
                             FromStreet = "Sharia Tahrir",
@@ -3664,7 +3664,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 8, 14, 16, 7, 13, 749, DateTimeKind.Utc).AddTicks(4998),
+                            Start = new DateTime(2024, 8, 26, 1, 10, 42, 766, DateTimeKind.Utc).AddTicks(2993),
                             ToCity = "Turecka",
                             ToCountry = "turcja",
                             ToStreet = "Bağdat Caddesi",
@@ -3672,8 +3672,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("6ad76cc1-774e-4fac-a484-da71cb9133f5"),
-                            End = new DateTime(2024, 6, 3, 20, 7, 13, 749, DateTimeKind.Utc).AddTicks(5000),
+                            Id = new Guid("c07adb48-73e3-4d60-bdfc-facd7e16195c"),
+                            End = new DateTime(2024, 6, 15, 5, 10, 42, 766, DateTimeKind.Utc).AddTicks(2996),
                             FromCity = "Kalabria",
                             FromCountry = "wlochy",
                             FromStreet = "Via Veneto",
@@ -3682,7 +3682,7 @@ namespace transportservice.Migrations
                             PriceUnder10 = 0m,
                             PriceUnder18 = 0m,
                             PriceUnder3 = 0m,
-                            Start = new DateTime(2024, 6, 3, 18, 7, 13, 749, DateTimeKind.Utc).AddTicks(4999),
+                            Start = new DateTime(2024, 6, 15, 3, 10, 42, 766, DateTimeKind.Utc).AddTicks(2996),
                             ToCity = "Turecka",
                             ToCountry = "turcja",
                             ToStreet = "Atatürk Caddesi",
@@ -3710,6 +3710,46 @@ namespace transportservice.Migrations
                     b.HasIndex("TransportOptionId");
 
                     b.ToTable("Discounts");
+                });
+
+            modelBuilder.Entity("transportservice.Models.PopularDestination", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("City")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<int>("Counter")
+                        .HasColumnType("integer");
+
+                    b.Property<string>("Country")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("PopularDestinations");
+                });
+
+            modelBuilder.Entity("transportservice.Models.PopularTransportType", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<int>("Counter")
+                        .HasColumnType("integer");
+
+                    b.Property<string>("Type")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("PopularTransportTypes");
                 });
 
             modelBuilder.Entity("transportservice.Models.QueryTransportOption", b =>
@@ -3783,8 +3823,8 @@ namespace transportservice.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("49427aa5-7573-4fe9-a99a-5ca97df04459"),
-                            End = new DateTime(2024, 8, 18, 4, 7, 13, 749, DateTimeKind.Utc).AddTicks(5101),
+                            Id = new Guid("a546e637-ebcd-4d3a-9924-8cfd289e58cc"),
+                            End = new DateTime(2024, 8, 29, 13, 10, 42, 766, DateTimeKind.Utc).AddTicks(3194),
                             FromCity = "Olimpijska",
                             FromCountry = "grecja",
                             FromStreet = "Plateia Syntagmatos",
@@ -3793,7 +3833,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 96m,
                             PriceUnder3 = 21m,
                             Seats = 88,
-                            Start = new DateTime(2024, 8, 17, 20, 7, 13, 749, DateTimeKind.Utc).AddTicks(5101),
+                            Start = new DateTime(2024, 8, 29, 5, 10, 42, 766, DateTimeKind.Utc).AddTicks(3193),
                             ToCity = "Turecka",
                             ToCountry = "turcja",
                             ToStreet = "Halaskargazi Caddesi",
@@ -3801,8 +3841,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("73331d99-edf6-4582-97a2-0354cd404dbf"),
-                            End = new DateTime(2024, 7, 18, 19, 7, 13, 749, DateTimeKind.Utc).AddTicks(5106),
+                            Id = new Guid("bff52d10-f52f-480b-8e4f-10d98b5e4e87"),
+                            End = new DateTime(2024, 7, 30, 4, 10, 42, 766, DateTimeKind.Utc).AddTicks(3199),
                             FromCity = "Brava",
                             FromCountry = "hiszpania",
                             FromStreet = "Calle de Alcalá",
@@ -3811,7 +3851,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 243m,
                             PriceUnder3 = 54m,
                             Seats = 111,
-                            Start = new DateTime(2024, 7, 18, 16, 7, 13, 749, DateTimeKind.Utc).AddTicks(5105),
+                            Start = new DateTime(2024, 7, 30, 1, 10, 42, 766, DateTimeKind.Utc).AddTicks(3199),
                             ToCity = "Kalabria",
                             ToCountry = "wlochy",
                             ToStreet = "Via del Corso",
@@ -3819,8 +3859,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("b6ac79a1-45bb-485c-8606-e9af88851c13"),
-                            End = new DateTime(2024, 6, 25, 11, 7, 13, 749, DateTimeKind.Utc).AddTicks(5108),
+                            Id = new Guid("8dfd09ec-6d47-46e8-9d61-aa29fea1934e"),
+                            End = new DateTime(2024, 7, 6, 20, 10, 42, 766, DateTimeKind.Utc).AddTicks(3203),
                             FromCity = "Durres",
                             FromCountry = "albania",
                             FromStreet = "Rruga Abdyl Frasheri",
@@ -3829,7 +3869,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 189m,
                             PriceUnder3 = 42m,
                             Seats = 161,
-                            Start = new DateTime(2024, 6, 25, 8, 7, 13, 749, DateTimeKind.Utc).AddTicks(5108),
+                            Start = new DateTime(2024, 7, 6, 17, 10, 42, 766, DateTimeKind.Utc).AddTicks(3202),
                             ToCity = "Maresme",
                             ToCountry = "hiszpania",
                             ToStreet = "Paseo del Prado",
@@ -3837,8 +3877,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("eafe123e-df09-4f1f-82a2-45a186d181be"),
-                            End = new DateTime(2024, 5, 29, 17, 7, 13, 749, DateTimeKind.Utc).AddTicks(5110),
+                            Id = new Guid("8e7af89b-36c5-4969-9326-bd295fe99586"),
+                            End = new DateTime(2024, 6, 10, 2, 10, 42, 766, DateTimeKind.Utc).AddTicks(3206),
                             FromCity = "Kalabria",
                             FromCountry = "wlochy",
                             FromStreet = "Via Veneto",
@@ -3847,7 +3887,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 46m,
                             PriceUnder3 = 10m,
                             Seats = 72,
-                            Start = new DateTime(2024, 5, 29, 13, 7, 13, 749, DateTimeKind.Utc).AddTicks(5110),
+                            Start = new DateTime(2024, 6, 9, 22, 10, 42, 766, DateTimeKind.Utc).AddTicks(3205),
                             ToCity = "Riwiera",
                             ToCountry = "chorwacja",
                             ToStreet = "Kapucinska ulica",
@@ -3855,8 +3895,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("53d4a04c-97a5-462d-a57f-b887a481d874"),
-                            End = new DateTime(2024, 8, 8, 16, 7, 13, 749, DateTimeKind.Utc).AddTicks(5112),
+                            Id = new Guid("c2af9c60-9000-4d03-b8e4-a5d0cd500836"),
+                            End = new DateTime(2024, 8, 20, 1, 10, 42, 766, DateTimeKind.Utc).AddTicks(3209),
                             FromCity = "Kalabria",
                             FromCountry = "wlochy",
                             FromStreet = "Via Veneto",
@@ -3865,7 +3905,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 167m,
                             PriceUnder3 = 37m,
                             Seats = 172,
-                            Start = new DateTime(2024, 8, 8, 9, 7, 13, 749, DateTimeKind.Utc).AddTicks(5112),
+                            Start = new DateTime(2024, 8, 19, 18, 10, 42, 766, DateTimeKind.Utc).AddTicks(3208),
                             ToCity = "Durres",
                             ToCountry = "albania",
                             ToStreet = "Rruga Abdyl Frasheri",
@@ -3873,8 +3913,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("e57dc91a-088f-4681-9a8d-b1c7cd2d84e9"),
-                            End = new DateTime(2024, 6, 9, 11, 7, 13, 749, DateTimeKind.Utc).AddTicks(5115),
+                            Id = new Guid("db80c9f8-7732-420f-9ec8-d6d144aa7ab7"),
+                            End = new DateTime(2024, 6, 20, 20, 10, 42, 766, DateTimeKind.Utc).AddTicks(3211),
                             FromCity = "Kalabria",
                             FromCountry = "wlochy",
                             FromStreet = "Via Nazionale",
@@ -3883,7 +3923,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 108m,
                             PriceUnder3 = 24m,
                             Seats = 173,
-                            Start = new DateTime(2024, 6, 9, 8, 7, 13, 749, DateTimeKind.Utc).AddTicks(5115),
+                            Start = new DateTime(2024, 6, 20, 17, 10, 42, 766, DateTimeKind.Utc).AddTicks(3211),
                             ToCity = "Riwiera",
                             ToCountry = "chorwacja",
                             ToStreet = "Maksimirska ulica",
@@ -3891,8 +3931,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("f0a42564-8eec-4136-8f5e-0c92c12e5408"),
-                            End = new DateTime(2024, 8, 1, 4, 7, 13, 749, DateTimeKind.Utc).AddTicks(5144),
+                            Id = new Guid("9a7db70b-d099-4c92-89df-85773bba2b21"),
+                            End = new DateTime(2024, 8, 12, 13, 10, 42, 766, DateTimeKind.Utc).AddTicks(3214),
                             FromCity = "Vlora",
                             FromCountry = "albania",
                             FromStreet = "Rruga 28 Nentori",
@@ -3901,7 +3941,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 266m,
                             PriceUnder3 = 59m,
                             Seats = 51,
-                            Start = new DateTime(2024, 8, 1, 0, 7, 13, 749, DateTimeKind.Utc).AddTicks(5141),
+                            Start = new DateTime(2024, 8, 12, 9, 10, 42, 766, DateTimeKind.Utc).AddTicks(3213),
                             ToCity = "Marmaris",
                             ToCountry = "turcja",
                             ToStreet = "Bağdat Caddesi",
@@ -3909,8 +3949,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("e8a0ba8d-68c8-4ec3-9464-f4f0773b9d8e"),
-                            End = new DateTime(2024, 6, 10, 18, 7, 13, 749, DateTimeKind.Utc).AddTicks(5146),
+                            Id = new Guid("834eecd5-551e-4409-923e-d0a6d7937404"),
+                            End = new DateTime(2024, 6, 22, 3, 10, 42, 766, DateTimeKind.Utc).AddTicks(3216),
                             FromCity = "Heraklion",
                             FromCountry = "grecja",
                             FromStreet = "Plateia Syntagmatos",
@@ -3919,7 +3959,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 265m,
                             PriceUnder3 = 59m,
                             Seats = 166,
-                            Start = new DateTime(2024, 6, 10, 10, 7, 13, 749, DateTimeKind.Utc).AddTicks(5145),
+                            Start = new DateTime(2024, 6, 21, 19, 10, 42, 766, DateTimeKind.Utc).AddTicks(3216),
                             ToCity = "Kalabria",
                             ToCountry = "wlochy",
                             ToStreet = "Via del Corso",
@@ -3927,8 +3967,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("9f9ba4aa-21d8-4595-8961-c05865363f2c"),
-                            End = new DateTime(2024, 8, 21, 23, 7, 13, 749, DateTimeKind.Utc).AddTicks(5148),
+                            Id = new Guid("152868d6-ddb5-4181-9133-2efec9e6d34d"),
+                            End = new DateTime(2024, 9, 2, 8, 10, 42, 766, DateTimeKind.Utc).AddTicks(3219),
                             FromCity = "Alam",
                             FromCountry = "egipt",
                             FromStreet = "Sharia Gamal Abdel Nasser",
@@ -3937,7 +3977,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 168m,
                             PriceUnder3 = 37m,
                             Seats = 122,
-                            Start = new DateTime(2024, 8, 21, 19, 7, 13, 749, DateTimeKind.Utc).AddTicks(5147),
+                            Start = new DateTime(2024, 9, 2, 4, 10, 42, 766, DateTimeKind.Utc).AddTicks(3219),
                             ToCity = "Turecka",
                             ToCountry = "turcja",
                             ToStreet = "Atatürk Caddesi",
@@ -3945,8 +3985,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("1dd3db80-2095-4e82-a87f-ea97c3e5ce3c"),
-                            End = new DateTime(2024, 8, 25, 17, 7, 13, 749, DateTimeKind.Utc).AddTicks(5149),
+                            Id = new Guid("85bc2905-de78-41bf-9014-029a1bc28359"),
+                            End = new DateTime(2024, 9, 6, 2, 10, 42, 766, DateTimeKind.Utc).AddTicks(3222),
                             FromCity = "Luz",
                             FromCountry = "hiszpania",
                             FromStreet = "Calle Mayor",
@@ -3955,7 +3995,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 216m,
                             PriceUnder3 = 48m,
                             Seats = 116,
-                            Start = new DateTime(2024, 8, 25, 7, 7, 13, 749, DateTimeKind.Utc).AddTicks(5149),
+                            Start = new DateTime(2024, 9, 5, 16, 10, 42, 766, DateTimeKind.Utc).AddTicks(3221),
                             ToCity = "Riwiera",
                             ToCountry = "chorwacja",
                             ToStreet = "Kapucinska ulica",
@@ -3963,8 +4003,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("d0dcc199-cd05-4a54-b75c-c751ca6e97b0"),
-                            End = new DateTime(2024, 6, 18, 23, 7, 13, 749, DateTimeKind.Utc).AddTicks(5152),
+                            Id = new Guid("1b700de1-5512-462c-82dc-1d366e713439"),
+                            End = new DateTime(2024, 6, 30, 8, 10, 42, 766, DateTimeKind.Utc).AddTicks(3224),
                             FromCity = "Riwiera",
                             FromCountry = "chorwacja",
                             FromStreet = "Kapucinska ulica",
@@ -3973,7 +4013,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 231m,
                             PriceUnder3 = 51m,
                             Seats = 76,
-                            Start = new DateTime(2024, 6, 18, 15, 7, 13, 749, DateTimeKind.Utc).AddTicks(5152),
+                            Start = new DateTime(2024, 6, 30, 0, 10, 42, 766, DateTimeKind.Utc).AddTicks(3224),
                             ToCity = "Nero",
                             ToCountry = "grecja",
                             ToStreet = "Leoforos Vasilissis Sofias",
@@ -3981,8 +4021,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("ed3e2233-4bc2-4bfd-acfb-3e098dbd51a9"),
-                            End = new DateTime(2024, 8, 25, 18, 7, 13, 749, DateTimeKind.Utc).AddTicks(5154),
+                            Id = new Guid("bbd0e2b6-2334-49a3-8d95-6150f66d674a"),
+                            End = new DateTime(2024, 9, 6, 3, 10, 42, 766, DateTimeKind.Utc).AddTicks(3227),
                             FromCity = "Olimpijska",
                             FromCountry = "grecja",
                             FromStreet = "Plateia Syntagmatos",
@@ -3991,7 +4031,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 172m,
                             PriceUnder3 = 38m,
                             Seats = 65,
-                            Start = new DateTime(2024, 8, 25, 12, 7, 13, 749, DateTimeKind.Utc).AddTicks(5154),
+                            Start = new DateTime(2024, 9, 5, 21, 10, 42, 766, DateTimeKind.Utc).AddTicks(3226),
                             ToCity = "Sheikh",
                             ToCountry = "egipt",
                             ToStreet = "Sharia Salah Salem",
@@ -3999,8 +4039,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("a842a718-90b0-405c-96ed-4ebd8112ef1d"),
-                            End = new DateTime(2024, 7, 24, 22, 7, 13, 749, DateTimeKind.Utc).AddTicks(5156),
+                            Id = new Guid("f22ae7dd-0c27-46cc-981b-ea822326e162"),
+                            End = new DateTime(2024, 8, 5, 7, 10, 42, 766, DateTimeKind.Utc).AddTicks(3229),
                             FromCity = "Alam",
                             FromCountry = "egipt",
                             FromStreet = "Sharia Tahrir",
@@ -4009,7 +4049,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 243m,
                             PriceUnder3 = 54m,
                             Seats = 63,
-                            Start = new DateTime(2024, 7, 24, 20, 7, 13, 749, DateTimeKind.Utc).AddTicks(5155),
+                            Start = new DateTime(2024, 8, 5, 5, 10, 42, 766, DateTimeKind.Utc).AddTicks(3229),
                             ToCity = "Riwiera",
                             ToCountry = "chorwacja",
                             ToStreet = "Vukovarska ulica",
@@ -4017,8 +4057,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("57ed07e1-9402-4045-84e5-011ba617040e"),
-                            End = new DateTime(2024, 6, 3, 10, 7, 13, 749, DateTimeKind.Utc).AddTicks(5157),
+                            Id = new Guid("300659cc-be4a-4310-8796-b3981c4481c7"),
+                            End = new DateTime(2024, 6, 14, 19, 10, 42, 766, DateTimeKind.Utc).AddTicks(3232),
                             FromCity = "Maresme",
                             FromCountry = "hiszpania",
                             FromStreet = "Paseo del Prado",
@@ -4027,7 +4067,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 180m,
                             PriceUnder3 = 40m,
                             Seats = 65,
-                            Start = new DateTime(2024, 6, 3, 7, 7, 13, 749, DateTimeKind.Utc).AddTicks(5157),
+                            Start = new DateTime(2024, 6, 14, 16, 10, 42, 766, DateTimeKind.Utc).AddTicks(3231),
                             ToCity = "Brava",
                             ToCountry = "hiszpania",
                             ToStreet = "Paseo del Prado",
@@ -4035,8 +4075,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("d973eeca-9dfa-41bb-9003-628176b9af1a"),
-                            End = new DateTime(2024, 6, 29, 10, 7, 13, 749, DateTimeKind.Utc).AddTicks(5160),
+                            Id = new Guid("190b1244-ef8d-4838-a9dc-74a9a73574cb"),
+                            End = new DateTime(2024, 7, 10, 19, 10, 42, 766, DateTimeKind.Utc).AddTicks(3235),
                             FromCity = "Kalabria",
                             FromCountry = "wlochy",
                             FromStreet = "Via Veneto",
@@ -4045,7 +4085,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 144m,
                             PriceUnder3 = 32m,
                             Seats = 137,
-                            Start = new DateTime(2024, 6, 29, 2, 7, 13, 749, DateTimeKind.Utc).AddTicks(5160),
+                            Start = new DateTime(2024, 7, 10, 11, 10, 42, 766, DateTimeKind.Utc).AddTicks(3234),
                             ToCity = "Nero",
                             ToCountry = "grecja",
                             ToStreet = "Leoforos Alexandras",
@@ -4053,8 +4093,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("739f7efd-1114-4987-8f12-fcdd52965f1e"),
-                            End = new DateTime(2024, 7, 13, 13, 7, 13, 749, DateTimeKind.Utc).AddTicks(5162),
+                            Id = new Guid("d1e3ca05-0278-4ab8-bd14-e593b28895e3"),
+                            End = new DateTime(2024, 7, 24, 22, 10, 42, 766, DateTimeKind.Utc).AddTicks(3237),
                             FromCity = "Almeria",
                             FromCountry = "hiszpania",
                             FromStreet = "Paseo del Prado",
@@ -4063,7 +4103,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 175m,
                             PriceUnder3 = 39m,
                             Seats = 60,
-                            Start = new DateTime(2024, 7, 13, 2, 7, 13, 749, DateTimeKind.Utc).AddTicks(5161),
+                            Start = new DateTime(2024, 7, 24, 11, 10, 42, 766, DateTimeKind.Utc).AddTicks(3237),
                             ToCity = "Sheikh",
                             ToCountry = "egipt",
                             ToStreet = "Sharia Ramsis",
@@ -4071,8 +4111,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("cf9948d1-fb35-4b8b-9e0d-726e98e1652d"),
-                            End = new DateTime(2024, 8, 17, 14, 7, 13, 749, DateTimeKind.Utc).AddTicks(5164),
+                            Id = new Guid("652670c2-f376-4564-b324-9ddd3893d7f4"),
+                            End = new DateTime(2024, 8, 28, 23, 10, 42, 766, DateTimeKind.Utc).AddTicks(3240),
                             FromCity = "Riwiera",
                             FromCountry = "chorwacja",
                             FromStreet = "Trg bana Josipa Jelačića",
@@ -4081,7 +4121,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 115m,
                             PriceUnder3 = 25m,
                             Seats = 109,
-                            Start = new DateTime(2024, 8, 17, 3, 7, 13, 749, DateTimeKind.Utc).AddTicks(5163),
+                            Start = new DateTime(2024, 8, 28, 12, 10, 42, 766, DateTimeKind.Utc).AddTicks(3239),
                             ToCity = "Vlora",
                             ToCountry = "albania",
                             ToStreet = "Rruga e Kavajes",
@@ -4089,8 +4129,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("d238185c-6282-4dd0-a1ad-e1393174daef"),
-                            End = new DateTime(2024, 7, 8, 21, 7, 13, 749, DateTimeKind.Utc).AddTicks(5165),
+                            Id = new Guid("1b18607a-17de-4675-b24b-c9c8a27ffc1d"),
+                            End = new DateTime(2024, 7, 20, 6, 10, 42, 766, DateTimeKind.Utc).AddTicks(3242),
                             FromCity = "Durres",
                             FromCountry = "albania",
                             FromStreet = "Rruga e Dibres",
@@ -4099,7 +4139,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 71m,
                             PriceUnder3 = 15m,
                             Seats = 176,
-                            Start = new DateTime(2024, 7, 8, 17, 7, 13, 749, DateTimeKind.Utc).AddTicks(5165),
+                            Start = new DateTime(2024, 7, 20, 2, 10, 42, 766, DateTimeKind.Utc).AddTicks(3242),
                             ToCity = "Chania",
                             ToCountry = "grecja",
                             ToStreet = "Leoforos Vasilissis Sofias",
@@ -4107,8 +4147,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("7fd36505-d5d7-4685-b8c7-79deb352e617"),
-                            End = new DateTime(2024, 8, 3, 20, 7, 13, 749, DateTimeKind.Utc).AddTicks(5167),
+                            Id = new Guid("947975b9-1dd1-40b2-9305-4ceb4dd6c574"),
+                            End = new DateTime(2024, 8, 15, 5, 10, 42, 766, DateTimeKind.Utc).AddTicks(3245),
                             FromCity = "Durres",
                             FromCountry = "albania",
                             FromStreet = "Bulevardi Bajram Curri",
@@ -4117,7 +4157,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 161m,
                             PriceUnder3 = 35m,
                             Seats = 159,
-                            Start = new DateTime(2024, 8, 3, 14, 7, 13, 749, DateTimeKind.Utc).AddTicks(5167),
+                            Start = new DateTime(2024, 8, 14, 23, 10, 42, 766, DateTimeKind.Utc).AddTicks(3244),
                             ToCity = "Sheikh",
                             ToCountry = "egipt",
                             ToStreet = "Sharia Tahrir",
@@ -4125,8 +4165,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("d88c0f60-3989-43b3-bfea-68973f0c4f8a"),
-                            End = new DateTime(2024, 8, 16, 9, 7, 13, 749, DateTimeKind.Utc).AddTicks(5169),
+                            Id = new Guid("a54b8f76-b15c-47e2-8446-5a16091a820a"),
+                            End = new DateTime(2024, 8, 27, 18, 10, 42, 766, DateTimeKind.Utc).AddTicks(3248),
                             FromCity = "Maresme",
                             FromCountry = "hiszpania",
                             FromStreet = "Paseo del Prado",
@@ -4135,7 +4175,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 63m,
                             PriceUnder3 = 14m,
                             Seats = 177,
-                            Start = new DateTime(2024, 8, 16, 7, 7, 13, 749, DateTimeKind.Utc).AddTicks(5169),
+                            Start = new DateTime(2024, 8, 27, 16, 10, 42, 766, DateTimeKind.Utc).AddTicks(3247),
                             ToCity = "Turecka",
                             ToCountry = "turcja",
                             ToStreet = "Atatürk Caddesi",
@@ -4143,8 +4183,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("9934d983-51f8-4a6b-9795-ed87f7e857e8"),
-                            End = new DateTime(2024, 7, 20, 6, 7, 13, 749, DateTimeKind.Utc).AddTicks(5171),
+                            Id = new Guid("72a1c7cc-226a-4a07-8f72-76c5d9188729"),
+                            End = new DateTime(2024, 7, 31, 15, 10, 42, 766, DateTimeKind.Utc).AddTicks(3250),
                             FromCity = "Turecka",
                             FromCountry = "turcja",
                             FromStreet = "Atatürk Caddesi",
@@ -4153,7 +4193,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 242m,
                             PriceUnder3 = 53m,
                             Seats = 125,
-                            Start = new DateTime(2024, 7, 19, 20, 7, 13, 749, DateTimeKind.Utc).AddTicks(5171),
+                            Start = new DateTime(2024, 7, 31, 5, 10, 42, 766, DateTimeKind.Utc).AddTicks(3250),
                             ToCity = "Turecka",
                             ToCountry = "turcja",
                             ToStreet = "Halaskargazi Caddesi",
@@ -4161,8 +4201,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("a7284800-726c-46a6-be20-0250fed834cf"),
-                            End = new DateTime(2024, 8, 18, 6, 7, 13, 749, DateTimeKind.Utc).AddTicks(5173),
+                            Id = new Guid("47e7ff51-9825-4070-b95b-7e39f56f2dfc"),
+                            End = new DateTime(2024, 8, 29, 15, 10, 42, 766, DateTimeKind.Utc).AddTicks(3253),
                             FromCity = "Brava",
                             FromCountry = "hiszpania",
                             FromStreet = "Paseo del Prado",
@@ -4171,7 +4211,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 171m,
                             PriceUnder3 = 38m,
                             Seats = 105,
-                            Start = new DateTime(2024, 8, 18, 1, 7, 13, 749, DateTimeKind.Utc).AddTicks(5173),
+                            Start = new DateTime(2024, 8, 29, 10, 10, 42, 766, DateTimeKind.Utc).AddTicks(3252),
                             ToCity = "Kalabria",
                             ToCountry = "wlochy",
                             ToStreet = "Via Nazionale",
@@ -4179,8 +4219,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("7efa7a99-a8ae-4ad0-a197-df7a1ba06483"),
-                            End = new DateTime(2024, 6, 12, 7, 7, 13, 749, DateTimeKind.Utc).AddTicks(5175),
+                            Id = new Guid("c2c2b435-f756-4b64-951b-923b5c0267ac"),
+                            End = new DateTime(2024, 6, 23, 16, 10, 42, 766, DateTimeKind.Utc).AddTicks(3295),
                             FromCity = "Alam",
                             FromCountry = "egipt",
                             FromStreet = "Sharia Ramsis",
@@ -4189,7 +4229,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 60m,
                             PriceUnder3 = 13m,
                             Seats = 194,
-                            Start = new DateTime(2024, 6, 12, 2, 7, 13, 749, DateTimeKind.Utc).AddTicks(5174),
+                            Start = new DateTime(2024, 6, 23, 11, 10, 42, 766, DateTimeKind.Utc).AddTicks(3292),
                             ToCity = "Brava",
                             ToCountry = "hiszpania",
                             ToStreet = "Calle de Alcalá",
@@ -4197,8 +4237,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("5b3fbe00-a503-4f9b-86f0-b61b2e63daec"),
-                            End = new DateTime(2024, 8, 23, 4, 7, 13, 749, DateTimeKind.Utc).AddTicks(5177),
+                            Id = new Guid("2004c61e-9d34-4fb8-976e-248f18b1dc25"),
+                            End = new DateTime(2024, 9, 3, 13, 10, 42, 766, DateTimeKind.Utc).AddTicks(3298),
                             FromCity = "Brava",
                             FromCountry = "hiszpania",
                             FromStreet = "Gran Vía",
@@ -4207,7 +4247,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 269m,
                             PriceUnder3 = 59m,
                             Seats = 64,
-                            Start = new DateTime(2024, 8, 22, 22, 7, 13, 749, DateTimeKind.Utc).AddTicks(5176),
+                            Start = new DateTime(2024, 9, 3, 7, 10, 42, 766, DateTimeKind.Utc).AddTicks(3298),
                             ToCity = "Alam",
                             ToCountry = "egipt",
                             ToStreet = "Sharia Tahrir",
@@ -4215,8 +4255,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("e3847334-bd5a-4bfc-960e-af7eb3382d12"),
-                            End = new DateTime(2024, 6, 16, 2, 7, 13, 749, DateTimeKind.Utc).AddTicks(5179),
+                            Id = new Guid("f9abdc3a-a575-4f21-96d7-ee68e5f362f2"),
+                            End = new DateTime(2024, 6, 27, 11, 10, 42, 766, DateTimeKind.Utc).AddTicks(3301),
                             FromCity = "Riwiera",
                             FromCountry = "chorwacja",
                             FromStreet = "Maksimirska ulica",
@@ -4225,7 +4265,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 114m,
                             PriceUnder3 = 25m,
                             Seats = 154,
-                            Start = new DateTime(2024, 6, 15, 16, 7, 13, 749, DateTimeKind.Utc).AddTicks(5178),
+                            Start = new DateTime(2024, 6, 27, 1, 10, 42, 766, DateTimeKind.Utc).AddTicks(3300),
                             ToCity = "Sheikh",
                             ToCountry = "egipt",
                             ToStreet = "Sharia Tahrir",
@@ -4233,8 +4273,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("56307abe-acc9-436b-aea3-db33442183d9"),
-                            End = new DateTime(2024, 8, 16, 15, 7, 13, 749, DateTimeKind.Utc).AddTicks(5181),
+                            Id = new Guid("80e2c1a7-c0e6-4b8f-8ff1-614df7fb2288"),
+                            End = new DateTime(2024, 8, 28, 0, 10, 42, 766, DateTimeKind.Utc).AddTicks(3303),
                             FromCity = "Turecka",
                             FromCountry = "turcja",
                             FromStreet = "Atatürk Caddesi",
@@ -4243,7 +4283,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 73m,
                             PriceUnder3 = 16m,
                             Seats = 98,
-                            Start = new DateTime(2024, 8, 16, 9, 7, 13, 749, DateTimeKind.Utc).AddTicks(5180),
+                            Start = new DateTime(2024, 8, 27, 18, 10, 42, 766, DateTimeKind.Utc).AddTicks(3303),
                             ToCity = "Olimpijska",
                             ToCountry = "grecja",
                             ToStreet = "Plateia Syntagmatos",
@@ -4251,8 +4291,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("a5d00daa-75a1-4176-aeec-303a87d03239"),
-                            End = new DateTime(2024, 6, 6, 3, 7, 13, 749, DateTimeKind.Utc).AddTicks(5182),
+                            Id = new Guid("e6dcb16f-573e-4d08-9a0e-e922db6667e6"),
+                            End = new DateTime(2024, 6, 17, 12, 10, 42, 766, DateTimeKind.Utc).AddTicks(3306),
                             FromCity = "Alam",
                             FromCountry = "egipt",
                             FromStreet = "Sharia Tahrir",
@@ -4261,7 +4301,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 239m,
                             PriceUnder3 = 53m,
                             Seats = 168,
-                            Start = new DateTime(2024, 6, 6, 1, 7, 13, 749, DateTimeKind.Utc).AddTicks(5182),
+                            Start = new DateTime(2024, 6, 17, 10, 10, 42, 766, DateTimeKind.Utc).AddTicks(3305),
                             ToCity = "Maresme",
                             ToCountry = "hiszpania",
                             ToStreet = "Paseo del Prado",
@@ -4269,8 +4309,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("6238d8c7-82d6-47b3-825f-f3b9db32f7b2"),
-                            End = new DateTime(2024, 8, 4, 16, 7, 13, 749, DateTimeKind.Utc).AddTicks(5184),
+                            Id = new Guid("c780dcad-67c9-45e3-9cfb-2d1f228d8731"),
+                            End = new DateTime(2024, 8, 16, 1, 10, 42, 766, DateTimeKind.Utc).AddTicks(3309),
                             FromCity = "Brava",
                             FromCountry = "hiszpania",
                             FromStreet = "Paseo del Prado",
@@ -4279,7 +4319,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 84m,
                             PriceUnder3 = 18m,
                             Seats = 74,
-                            Start = new DateTime(2024, 8, 4, 10, 7, 13, 749, DateTimeKind.Utc).AddTicks(5184),
+                            Start = new DateTime(2024, 8, 15, 19, 10, 42, 766, DateTimeKind.Utc).AddTicks(3308),
                             ToCity = "Turecka",
                             ToCountry = "turcja",
                             ToStreet = "Halaskargazi Caddesi",
@@ -4287,8 +4327,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("65c88078-7d18-42fd-b4a7-f9ed01051e04"),
-                            End = new DateTime(2024, 7, 16, 12, 7, 13, 749, DateTimeKind.Utc).AddTicks(5187),
+                            Id = new Guid("d528c8ae-9822-4984-91bf-798afd078031"),
+                            End = new DateTime(2024, 7, 27, 21, 10, 42, 766, DateTimeKind.Utc).AddTicks(3311),
                             FromCity = "Turecka",
                             FromCountry = "turcja",
                             FromStreet = "Atatürk Caddesi",
@@ -4297,7 +4337,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 113m,
                             PriceUnder3 = 25m,
                             Seats = 131,
-                            Start = new DateTime(2024, 7, 16, 5, 7, 13, 749, DateTimeKind.Utc).AddTicks(5187),
+                            Start = new DateTime(2024, 7, 27, 14, 10, 42, 766, DateTimeKind.Utc).AddTicks(3311),
                             ToCity = "Heraklion",
                             ToCountry = "grecja",
                             ToStreet = "Plateia Syntagmatos",
@@ -4305,8 +4345,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("bb1afc50-f77c-4508-afa2-492a92beef20"),
-                            End = new DateTime(2024, 6, 18, 10, 7, 13, 749, DateTimeKind.Utc).AddTicks(5189),
+                            Id = new Guid("74e32d21-99f5-4488-97c8-4b9586cd9fe3"),
+                            End = new DateTime(2024, 6, 29, 19, 10, 42, 766, DateTimeKind.Utc).AddTicks(3314),
                             FromCity = "Vlora",
                             FromCountry = "albania",
                             FromStreet = "Rruga 28 Nentori",
@@ -4315,7 +4355,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 217m,
                             PriceUnder3 = 48m,
                             Seats = 191,
-                            Start = new DateTime(2024, 6, 18, 3, 7, 13, 749, DateTimeKind.Utc).AddTicks(5188),
+                            Start = new DateTime(2024, 6, 29, 12, 10, 42, 766, DateTimeKind.Utc).AddTicks(3313),
                             ToCity = "Brava",
                             ToCountry = "hiszpania",
                             ToStreet = "Gran Vía",
@@ -4323,8 +4363,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("d8aae901-dd81-453d-a9b1-ef367f0c82db"),
-                            End = new DateTime(2024, 8, 1, 17, 7, 13, 749, DateTimeKind.Utc).AddTicks(5191),
+                            Id = new Guid("4e9b74f6-a758-449c-a702-0461d974a701"),
+                            End = new DateTime(2024, 8, 13, 2, 10, 42, 766, DateTimeKind.Utc).AddTicks(3316),
                             FromCity = "Almeria",
                             FromCountry = "hiszpania",
                             FromStreet = "Paseo del Prado",
@@ -4333,7 +4373,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 163m,
                             PriceUnder3 = 36m,
                             Seats = 142,
-                            Start = new DateTime(2024, 8, 1, 13, 7, 13, 749, DateTimeKind.Utc).AddTicks(5190),
+                            Start = new DateTime(2024, 8, 12, 22, 10, 42, 766, DateTimeKind.Utc).AddTicks(3316),
                             ToCity = "Alam",
                             ToCountry = "egipt",
                             ToStreet = "Sharia Ramsis",
@@ -4341,8 +4381,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("f5f4b802-2dd5-4119-b09d-9634f20569ad"),
-                            End = new DateTime(2024, 7, 20, 11, 7, 13, 749, DateTimeKind.Utc).AddTicks(5192),
+                            Id = new Guid("e4bbe5b9-17dc-4448-afc7-2a8d3e46be0e"),
+                            End = new DateTime(2024, 7, 31, 20, 10, 42, 766, DateTimeKind.Utc).AddTicks(3319),
                             FromCity = "Riwiera",
                             FromCountry = "chorwacja",
                             FromStreet = "Kapucinska ulica",
@@ -4351,7 +4391,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 97m,
                             PriceUnder3 = 21m,
                             Seats = 112,
-                            Start = new DateTime(2024, 7, 20, 4, 7, 13, 749, DateTimeKind.Utc).AddTicks(5192),
+                            Start = new DateTime(2024, 7, 31, 13, 10, 42, 766, DateTimeKind.Utc).AddTicks(3318),
                             ToCity = "Nero",
                             ToCountry = "grecja",
                             ToStreet = "Leoforos Vasilissis Sofias",
@@ -4359,8 +4399,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("f4e88283-b25e-421b-a04b-056c8bc4e7fe"),
-                            End = new DateTime(2024, 7, 30, 8, 7, 13, 749, DateTimeKind.Utc).AddTicks(5194),
+                            Id = new Guid("6a51bc73-4a05-456e-9ce7-0dd70d735a47"),
+                            End = new DateTime(2024, 8, 10, 17, 10, 42, 766, DateTimeKind.Utc).AddTicks(3321),
                             FromCity = "Turecka",
                             FromCountry = "turcja",
                             FromStreet = "Bağdat Caddesi",
@@ -4369,7 +4409,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 95m,
                             PriceUnder3 = 21m,
                             Seats = 163,
-                            Start = new DateTime(2024, 7, 29, 23, 7, 13, 749, DateTimeKind.Utc).AddTicks(5194),
+                            Start = new DateTime(2024, 8, 10, 8, 10, 42, 766, DateTimeKind.Utc).AddTicks(3321),
                             ToCity = "Riwiera",
                             ToCountry = "chorwacja",
                             ToStreet = "Maksimirska ulica",
@@ -4377,8 +4417,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("49258e93-ae37-4cfb-9f70-5071cf12f985"),
-                            End = new DateTime(2024, 6, 3, 20, 7, 13, 749, DateTimeKind.Utc).AddTicks(5196),
+                            Id = new Guid("857ef5e4-4cb0-41d6-83a6-75c1ee644920"),
+                            End = new DateTime(2024, 6, 15, 5, 10, 42, 766, DateTimeKind.Utc).AddTicks(3324),
                             FromCity = "Brava",
                             FromCountry = "hiszpania",
                             FromStreet = "Calle Mayor",
@@ -4387,7 +4427,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 59m,
                             PriceUnder3 = 13m,
                             Seats = 180,
-                            Start = new DateTime(2024, 6, 3, 18, 7, 13, 749, DateTimeKind.Utc).AddTicks(5196),
+                            Start = new DateTime(2024, 6, 15, 3, 10, 42, 766, DateTimeKind.Utc).AddTicks(3323),
                             ToCity = "Alam",
                             ToCountry = "egipt",
                             ToStreet = "Sharia Tahrir",
@@ -4395,8 +4435,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("4a6fc790-95f6-4f0d-b930-8edc8ca25264"),
-                            End = new DateTime(2024, 6, 24, 7, 7, 13, 749, DateTimeKind.Utc).AddTicks(5199),
+                            Id = new Guid("4b0ee931-00fc-41f3-9d6d-2bb96bf3028d"),
+                            End = new DateTime(2024, 7, 5, 16, 10, 42, 766, DateTimeKind.Utc).AddTicks(3327),
                             FromCity = "Durres",
                             FromCountry = "albania",
                             FromStreet = "Bulevardi Bajram Curri",
@@ -4405,7 +4445,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 166m,
                             PriceUnder3 = 37m,
                             Seats = 184,
-                            Start = new DateTime(2024, 6, 24, 1, 7, 13, 749, DateTimeKind.Utc).AddTicks(5198),
+                            Start = new DateTime(2024, 7, 5, 10, 10, 42, 766, DateTimeKind.Utc).AddTicks(3326),
                             ToCity = "Nero",
                             ToCountry = "grecja",
                             ToStreet = "Leoforos Alexandras",
@@ -4413,8 +4453,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("973d72b8-caca-4f4c-b58d-f9fec0e19ef2"),
-                            End = new DateTime(2024, 7, 29, 21, 7, 13, 749, DateTimeKind.Utc).AddTicks(5200),
+                            Id = new Guid("6f9ffc05-f214-462e-abd0-75cd1a2fa3e0"),
+                            End = new DateTime(2024, 8, 10, 6, 10, 42, 766, DateTimeKind.Utc).AddTicks(3329),
                             FromCity = "Kalabria",
                             FromCountry = "wlochy",
                             FromStreet = "Via Veneto",
@@ -4423,7 +4463,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 56m,
                             PriceUnder3 = 12m,
                             Seats = 97,
-                            Start = new DateTime(2024, 7, 29, 11, 7, 13, 749, DateTimeKind.Utc).AddTicks(5200),
+                            Start = new DateTime(2024, 8, 9, 20, 10, 42, 766, DateTimeKind.Utc).AddTicks(3329),
                             ToCity = "Sheikh",
                             ToCountry = "egipt",
                             ToStreet = "Sharia Ramsis",
@@ -4431,8 +4471,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("ac120724-3d62-4120-8a06-e4725d694b0a"),
-                            End = new DateTime(2024, 6, 10, 15, 7, 13, 749, DateTimeKind.Utc).AddTicks(5202),
+                            Id = new Guid("89de663a-5915-4d0a-bbd0-bf2d1c169d92"),
+                            End = new DateTime(2024, 6, 22, 0, 10, 42, 766, DateTimeKind.Utc).AddTicks(3332),
                             FromCity = "Riwiera",
                             FromCountry = "chorwacja",
                             FromStreet = "Maksimirska ulica",
@@ -4441,7 +4481,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 250m,
                             PriceUnder3 = 55m,
                             Seats = 60,
-                            Start = new DateTime(2024, 6, 10, 3, 7, 13, 749, DateTimeKind.Utc).AddTicks(5202),
+                            Start = new DateTime(2024, 6, 21, 12, 10, 42, 766, DateTimeKind.Utc).AddTicks(3331),
                             ToCity = "Durres",
                             ToCountry = "albania",
                             ToStreet = "Rruga e Dibres",
@@ -4449,8 +4489,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("1f3f7dd7-baf5-4004-bc42-298f2b0b7fd4"),
-                            End = new DateTime(2024, 6, 3, 15, 7, 13, 749, DateTimeKind.Utc).AddTicks(5204),
+                            Id = new Guid("891fdea9-af57-40c6-8ff3-84d097540d3b"),
+                            End = new DateTime(2024, 6, 15, 0, 10, 42, 766, DateTimeKind.Utc).AddTicks(3334),
                             FromCity = "Kalabria",
                             FromCountry = "wlochy",
                             FromStreet = "Via Veneto",
@@ -4459,7 +4499,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 153m,
                             PriceUnder3 = 34m,
                             Seats = 57,
-                            Start = new DateTime(2024, 6, 3, 3, 7, 13, 749, DateTimeKind.Utc).AddTicks(5204),
+                            Start = new DateTime(2024, 6, 14, 12, 10, 42, 766, DateTimeKind.Utc).AddTicks(3334),
                             ToCity = "Kalabria",
                             ToCountry = "wlochy",
                             ToStreet = "Via Nazionale",
@@ -4467,8 +4507,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("a6688599-4d94-40c9-a140-639bc589817d"),
-                            End = new DateTime(2024, 8, 24, 20, 7, 13, 749, DateTimeKind.Utc).AddTicks(5206),
+                            Id = new Guid("0c91cb20-d1fc-4510-9399-fe61ec70f36c"),
+                            End = new DateTime(2024, 9, 5, 5, 10, 42, 766, DateTimeKind.Utc).AddTicks(3337),
                             FromCity = "Vlora",
                             FromCountry = "albania",
                             FromStreet = "Rruga e Kavajes",
@@ -4477,7 +4517,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 98m,
                             PriceUnder3 = 21m,
                             Seats = 166,
-                            Start = new DateTime(2024, 8, 24, 16, 7, 13, 749, DateTimeKind.Utc).AddTicks(5206),
+                            Start = new DateTime(2024, 9, 5, 1, 10, 42, 766, DateTimeKind.Utc).AddTicks(3336),
                             ToCity = "Brava",
                             ToCountry = "hiszpania",
                             ToStreet = "Gran Vía",
@@ -4485,8 +4525,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("d8198370-f666-437e-908b-f532aee2798f"),
-                            End = new DateTime(2024, 6, 29, 1, 7, 13, 749, DateTimeKind.Utc).AddTicks(5208),
+                            Id = new Guid("423a6a82-1aaa-4cda-a7cf-460e6c645487"),
+                            End = new DateTime(2024, 7, 10, 10, 10, 42, 766, DateTimeKind.Utc).AddTicks(3339),
                             FromCity = "Brava",
                             FromCountry = "hiszpania",
                             FromStreet = "Calle de Alcalá",
@@ -4495,7 +4535,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 70m,
                             PriceUnder3 = 15m,
                             Seats = 92,
-                            Start = new DateTime(2024, 6, 28, 16, 7, 13, 749, DateTimeKind.Utc).AddTicks(5207),
+                            Start = new DateTime(2024, 7, 10, 1, 10, 42, 766, DateTimeKind.Utc).AddTicks(3339),
                             ToCity = "Turecka",
                             ToCountry = "turcja",
                             ToStreet = "Bağdat Caddesi",
@@ -4503,8 +4543,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("786a0438-6439-4046-82f9-f8889b3094f4"),
-                            End = new DateTime(2024, 6, 22, 19, 7, 13, 749, DateTimeKind.Utc).AddTicks(5209),
+                            Id = new Guid("ba1c76cc-61c4-40a4-9da9-97dd4090e0cd"),
+                            End = new DateTime(2024, 7, 4, 4, 10, 42, 766, DateTimeKind.Utc).AddTicks(3342),
                             FromCity = "Turecka",
                             FromCountry = "turcja",
                             FromStreet = "Atatürk Caddesi",
@@ -4513,7 +4553,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 185m,
                             PriceUnder3 = 41m,
                             Seats = 137,
-                            Start = new DateTime(2024, 6, 22, 14, 7, 13, 749, DateTimeKind.Utc).AddTicks(5209),
+                            Start = new DateTime(2024, 7, 3, 23, 10, 42, 766, DateTimeKind.Utc).AddTicks(3341),
                             ToCity = "Brava",
                             ToCountry = "hiszpania",
                             ToStreet = "Calle Mayor",
@@ -4521,8 +4561,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("18c3bafd-e1f0-4022-b6a1-0c8e7894f629"),
-                            End = new DateTime(2024, 7, 29, 8, 7, 13, 749, DateTimeKind.Utc).AddTicks(5211),
+                            Id = new Guid("0f3f29b7-9eea-4833-be40-404dd3cbbd67"),
+                            End = new DateTime(2024, 8, 9, 17, 10, 42, 766, DateTimeKind.Utc).AddTicks(3344),
                             FromCity = "Chania",
                             FromCountry = "grecja",
                             FromStreet = "Leoforos Vasilissis Sofias",
@@ -4531,7 +4571,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 135m,
                             PriceUnder3 = 30m,
                             Seats = 190,
-                            Start = new DateTime(2024, 7, 29, 4, 7, 13, 749, DateTimeKind.Utc).AddTicks(5211),
+                            Start = new DateTime(2024, 8, 9, 13, 10, 42, 766, DateTimeKind.Utc).AddTicks(3344),
                             ToCity = "Turecka",
                             ToCountry = "turcja",
                             ToStreet = "Atatürk Caddesi",
@@ -4539,8 +4579,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("1bb39d19-14d3-4046-9333-14a21d74835a"),
-                            End = new DateTime(2024, 7, 13, 20, 7, 13, 749, DateTimeKind.Utc).AddTicks(5213),
+                            Id = new Guid("4c4b9b6c-ede6-4cf6-b828-774324d5a45b"),
+                            End = new DateTime(2024, 7, 25, 5, 10, 42, 766, DateTimeKind.Utc).AddTicks(3347),
                             FromCity = "Durres",
                             FromCountry = "albania",
                             FromStreet = "Rruga Abdyl Frasheri",
@@ -4549,7 +4589,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 187m,
                             PriceUnder3 = 41m,
                             Seats = 159,
-                            Start = new DateTime(2024, 7, 13, 17, 7, 13, 749, DateTimeKind.Utc).AddTicks(5213),
+                            Start = new DateTime(2024, 7, 25, 2, 10, 42, 766, DateTimeKind.Utc).AddTicks(3346),
                             ToCity = "Olimpijska",
                             ToCountry = "grecja",
                             ToStreet = "Plateia Syntagmatos",
@@ -4557,8 +4597,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("567e6f9a-fc7f-41e0-b58c-b2e398e3d630"),
-                            End = new DateTime(2024, 6, 29, 14, 7, 13, 749, DateTimeKind.Utc).AddTicks(5215),
+                            Id = new Guid("fedbb6dc-c71b-4b08-ac1e-15d1421fd5d6"),
+                            End = new DateTime(2024, 7, 10, 23, 10, 42, 766, DateTimeKind.Utc).AddTicks(3349),
                             FromCity = "Heraklion",
                             FromCountry = "grecja",
                             FromStreet = "Plateia Syntagmatos",
@@ -4567,7 +4607,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 60m,
                             PriceUnder3 = 13m,
                             Seats = 195,
-                            Start = new DateTime(2024, 6, 29, 7, 7, 13, 749, DateTimeKind.Utc).AddTicks(5215),
+                            Start = new DateTime(2024, 7, 10, 16, 10, 42, 766, DateTimeKind.Utc).AddTicks(3349),
                             ToCity = "Sheikh",
                             ToCountry = "egipt",
                             ToStreet = "Sharia Salah Salem",
@@ -4575,8 +4615,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("5433210b-2095-4bd7-9c83-5a2aea5e501a"),
-                            End = new DateTime(2024, 6, 9, 11, 7, 13, 749, DateTimeKind.Utc).AddTicks(5240),
+                            Id = new Guid("7a847ced-2941-4865-9af6-1dee6f99ac69"),
+                            End = new DateTime(2024, 6, 20, 20, 10, 42, 766, DateTimeKind.Utc).AddTicks(3352),
                             FromCity = "Marmaris",
                             FromCountry = "turcja",
                             FromStreet = "Bağdat Caddesi",
@@ -4585,7 +4625,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 48m,
                             PriceUnder3 = 10m,
                             Seats = 197,
-                            Start = new DateTime(2024, 6, 9, 0, 7, 13, 749, DateTimeKind.Utc).AddTicks(5239),
+                            Start = new DateTime(2024, 6, 20, 9, 10, 42, 766, DateTimeKind.Utc).AddTicks(3351),
                             ToCity = "Durres",
                             ToCountry = "albania",
                             ToStreet = "Bulevardi Bajram Curri",
@@ -4593,8 +4633,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("45aa565a-8dfd-4f04-8ba7-2f131536177a"),
-                            End = new DateTime(2024, 8, 14, 23, 7, 13, 749, DateTimeKind.Utc).AddTicks(5242),
+                            Id = new Guid("ed24f54b-461f-4019-bb99-2ba5a7ad19fb"),
+                            End = new DateTime(2024, 8, 26, 8, 10, 42, 766, DateTimeKind.Utc).AddTicks(3354),
                             FromCity = "Maresme",
                             FromCountry = "hiszpania",
                             FromStreet = "Paseo del Prado",
@@ -4603,7 +4643,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 99m,
                             PriceUnder3 = 22m,
                             Seats = 120,
-                            Start = new DateTime(2024, 8, 14, 17, 7, 13, 749, DateTimeKind.Utc).AddTicks(5242),
+                            Start = new DateTime(2024, 8, 26, 2, 10, 42, 766, DateTimeKind.Utc).AddTicks(3354),
                             ToCity = "Alam",
                             ToCountry = "egipt",
                             ToStreet = "Sharia Ramsis",
@@ -4611,8 +4651,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("7247c0d3-4c05-4008-83e1-4ca2ea664dd9"),
-                            End = new DateTime(2024, 6, 26, 12, 7, 13, 749, DateTimeKind.Utc).AddTicks(5244),
+                            Id = new Guid("fc367550-81d7-40d1-b8de-1ca54650f78d"),
+                            End = new DateTime(2024, 7, 7, 21, 10, 42, 766, DateTimeKind.Utc).AddTicks(3357),
                             FromCity = "Sheikh",
                             FromCountry = "egipt",
                             FromStreet = "Sharia Ramsis",
@@ -4621,7 +4661,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 174m,
                             PriceUnder3 = 38m,
                             Seats = 79,
-                            Start = new DateTime(2024, 6, 26, 8, 7, 13, 749, DateTimeKind.Utc).AddTicks(5244),
+                            Start = new DateTime(2024, 7, 7, 17, 10, 42, 766, DateTimeKind.Utc).AddTicks(3356),
                             ToCity = "Kalabria",
                             ToCountry = "wlochy",
                             ToStreet = "Via Veneto",
@@ -4629,8 +4669,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("f37c8c6f-b6d5-4963-b62d-15e754b17685"),
-                            End = new DateTime(2024, 6, 5, 5, 7, 13, 749, DateTimeKind.Utc).AddTicks(5246),
+                            Id = new Guid("abd76c79-9503-4c2a-ad45-f057e9de348e"),
+                            End = new DateTime(2024, 6, 16, 14, 10, 42, 766, DateTimeKind.Utc).AddTicks(3360),
                             FromCity = "Nero",
                             FromCountry = "grecja",
                             FromStreet = "Leoforos Vasilissis Sofias",
@@ -4639,7 +4679,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 152m,
                             PriceUnder3 = 33m,
                             Seats = 136,
-                            Start = new DateTime(2024, 6, 5, 1, 7, 13, 749, DateTimeKind.Utc).AddTicks(5246),
+                            Start = new DateTime(2024, 6, 16, 10, 10, 42, 766, DateTimeKind.Utc).AddTicks(3359),
                             ToCity = "Durres",
                             ToCountry = "albania",
                             ToStreet = "Rruga e Dibres",
@@ -4647,8 +4687,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("8e7e8954-503e-4ec5-a18f-fe520cec837f"),
-                            End = new DateTime(2024, 7, 1, 19, 7, 13, 749, DateTimeKind.Utc).AddTicks(5248),
+                            Id = new Guid("bf1cd8ed-48b6-4c8b-89dd-fea1c6d8cee2"),
+                            End = new DateTime(2024, 7, 13, 4, 10, 42, 766, DateTimeKind.Utc).AddTicks(3362),
                             FromCity = "Marmaris",
                             FromCountry = "turcja",
                             FromStreet = "Bağdat Caddesi",
@@ -4657,7 +4697,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 168m,
                             PriceUnder3 = 37m,
                             Seats = 143,
-                            Start = new DateTime(2024, 7, 1, 17, 7, 13, 749, DateTimeKind.Utc).AddTicks(5247),
+                            Start = new DateTime(2024, 7, 13, 2, 10, 42, 766, DateTimeKind.Utc).AddTicks(3362),
                             ToCity = "Turecka",
                             ToCountry = "turcja",
                             ToStreet = "Atatürk Caddesi",
@@ -4665,8 +4705,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("c4b6ee43-9ca4-4680-b61f-d67988486b09"),
-                            End = new DateTime(2024, 6, 8, 1, 7, 13, 749, DateTimeKind.Utc).AddTicks(5250),
+                            Id = new Guid("112fa52d-998c-4144-a0e2-be8fd75984e4"),
+                            End = new DateTime(2024, 6, 19, 10, 10, 42, 766, DateTimeKind.Utc).AddTicks(3365),
                             FromCity = "Vlora",
                             FromCountry = "albania",
                             FromStreet = "Rruga 28 Nentori",
@@ -4675,7 +4715,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 265m,
                             PriceUnder3 = 59m,
                             Seats = 142,
-                            Start = new DateTime(2024, 6, 7, 19, 7, 13, 749, DateTimeKind.Utc).AddTicks(5249),
+                            Start = new DateTime(2024, 6, 19, 4, 10, 42, 766, DateTimeKind.Utc).AddTicks(3364),
                             ToCity = "Durres",
                             ToCountry = "albania",
                             ToStreet = "Rruga Abdyl Frasheri",
@@ -4683,8 +4723,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("b791886d-504b-4635-8f48-c508d2aea847"),
-                            End = new DateTime(2024, 8, 15, 21, 7, 13, 749, DateTimeKind.Utc).AddTicks(5251),
+                            Id = new Guid("71ed8445-e430-400f-b5f6-22c79d49b08d"),
+                            End = new DateTime(2024, 8, 27, 6, 10, 42, 766, DateTimeKind.Utc).AddTicks(3367),
                             FromCity = "Kalabria",
                             FromCountry = "wlochy",
                             FromStreet = "Via Veneto",
@@ -4693,7 +4733,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 207m,
                             PriceUnder3 = 46m,
                             Seats = 79,
-                            Start = new DateTime(2024, 8, 15, 9, 7, 13, 749, DateTimeKind.Utc).AddTicks(5251),
+                            Start = new DateTime(2024, 8, 26, 18, 10, 42, 766, DateTimeKind.Utc).AddTicks(3367),
                             ToCity = "Durres",
                             ToCountry = "albania",
                             ToStreet = "Rruga Abdyl Frasheri",
@@ -4701,8 +4741,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("4ce670f1-b0de-4886-8fc4-90028e8eac7b"),
-                            End = new DateTime(2024, 7, 16, 7, 7, 13, 749, DateTimeKind.Utc).AddTicks(5253),
+                            Id = new Guid("95a4a066-e948-481f-89e0-2713cb1711f2"),
+                            End = new DateTime(2024, 7, 27, 16, 10, 42, 766, DateTimeKind.Utc).AddTicks(3370),
                             FromCity = "Vlora",
                             FromCountry = "albania",
                             FromStreet = "Rruga e Kavajes",
@@ -4711,7 +4751,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 72m,
                             PriceUnder3 = 16m,
                             Seats = 162,
-                            Start = new DateTime(2024, 7, 15, 21, 7, 13, 749, DateTimeKind.Utc).AddTicks(5253),
+                            Start = new DateTime(2024, 7, 27, 6, 10, 42, 766, DateTimeKind.Utc).AddTicks(3369),
                             ToCity = "Kalabria",
                             ToCountry = "wlochy",
                             ToStreet = "Via Veneto",
@@ -4719,8 +4759,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("99a584a5-a2c5-4606-8e80-befbb396eba1"),
-                            End = new DateTime(2024, 8, 24, 14, 7, 13, 749, DateTimeKind.Utc).AddTicks(5255),
+                            Id = new Guid("73aba43a-951d-497b-abe0-675e40c238ee"),
+                            End = new DateTime(2024, 9, 4, 23, 10, 42, 766, DateTimeKind.Utc).AddTicks(3372),
                             FromCity = "Vlora",
                             FromCountry = "albania",
                             FromStreet = "Rruga e Kavajes",
@@ -4729,7 +4769,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 128m,
                             PriceUnder3 = 28m,
                             Seats = 79,
-                            Start = new DateTime(2024, 8, 24, 7, 7, 13, 749, DateTimeKind.Utc).AddTicks(5255),
+                            Start = new DateTime(2024, 9, 4, 16, 10, 42, 766, DateTimeKind.Utc).AddTicks(3372),
                             ToCity = "Nero",
                             ToCountry = "grecja",
                             ToStreet = "Leoforos Alexandras",
@@ -4737,8 +4777,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("5df1e03b-c979-426e-acb0-8dc1a013c197"),
-                            End = new DateTime(2024, 7, 31, 3, 7, 13, 749, DateTimeKind.Utc).AddTicks(5257),
+                            Id = new Guid("d45c2311-dd31-4106-9bfd-ef6c6e9e4fa8"),
+                            End = new DateTime(2024, 8, 11, 12, 10, 42, 766, DateTimeKind.Utc).AddTicks(3375),
                             FromCity = "Marmaris",
                             FromCountry = "turcja",
                             FromStreet = "Bağdat Caddesi",
@@ -4747,7 +4787,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 175m,
                             PriceUnder3 = 39m,
                             Seats = 62,
-                            Start = new DateTime(2024, 7, 30, 16, 7, 13, 749, DateTimeKind.Utc).AddTicks(5256),
+                            Start = new DateTime(2024, 8, 11, 1, 10, 42, 766, DateTimeKind.Utc).AddTicks(3374),
                             ToCity = "Kalabria",
                             ToCountry = "wlochy",
                             ToStreet = "Via Veneto",
@@ -4755,8 +4795,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("39e4a8c6-5513-45ea-b631-8746bf5e5b13"),
-                            End = new DateTime(2024, 8, 21, 20, 7, 13, 749, DateTimeKind.Utc).AddTicks(5259),
+                            Id = new Guid("4ef9163e-2d6d-47ae-b3ea-4c347cbfb1f1"),
+                            End = new DateTime(2024, 9, 2, 5, 10, 42, 766, DateTimeKind.Utc).AddTicks(3377),
                             FromCity = "Nero",
                             FromCountry = "grecja",
                             FromStreet = "Leoforos Alexandras",
@@ -4765,7 +4805,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 203m,
                             PriceUnder3 = 45m,
                             Seats = 97,
-                            Start = new DateTime(2024, 8, 21, 18, 7, 13, 749, DateTimeKind.Utc).AddTicks(5258),
+                            Start = new DateTime(2024, 9, 2, 3, 10, 42, 766, DateTimeKind.Utc).AddTicks(3377),
                             ToCity = "Olimpijska",
                             ToCountry = "grecja",
                             ToStreet = "Plateia Syntagmatos",
@@ -4773,8 +4813,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("1f5c6a7d-3aef-49e2-8ac6-3c65c566b53c"),
-                            End = new DateTime(2024, 6, 26, 5, 7, 13, 749, DateTimeKind.Utc).AddTicks(5260),
+                            Id = new Guid("bfb9a94d-fa31-43ef-8357-9e4ce86f0399"),
+                            End = new DateTime(2024, 7, 7, 14, 10, 42, 766, DateTimeKind.Utc).AddTicks(3380),
                             FromCity = "Alam",
                             FromCountry = "egipt",
                             FromStreet = "Sharia Tahrir",
@@ -4783,7 +4823,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 111m,
                             PriceUnder3 = 24m,
                             Seats = 115,
-                            Start = new DateTime(2024, 6, 26, 2, 7, 13, 749, DateTimeKind.Utc).AddTicks(5260),
+                            Start = new DateTime(2024, 7, 7, 11, 10, 42, 766, DateTimeKind.Utc).AddTicks(3380),
                             ToCity = "Alam",
                             ToCountry = "egipt",
                             ToStreet = "Sharia Tahrir",
@@ -4791,8 +4831,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("debc199d-a8a5-4499-a044-2e049f07a4d5"),
-                            End = new DateTime(2024, 7, 23, 17, 7, 13, 749, DateTimeKind.Utc).AddTicks(5262),
+                            Id = new Guid("a939278f-b115-4213-a5c7-4f5c967e805b"),
+                            End = new DateTime(2024, 8, 4, 2, 10, 42, 766, DateTimeKind.Utc).AddTicks(3383),
                             FromCity = "Brava",
                             FromCountry = "hiszpania",
                             FromStreet = "Paseo del Prado",
@@ -4801,7 +4841,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 164m,
                             PriceUnder3 = 36m,
                             Seats = 187,
-                            Start = new DateTime(2024, 7, 23, 9, 7, 13, 749, DateTimeKind.Utc).AddTicks(5262),
+                            Start = new DateTime(2024, 8, 3, 18, 10, 42, 766, DateTimeKind.Utc).AddTicks(3382),
                             ToCity = "Brava",
                             ToCountry = "hiszpania",
                             ToStreet = "Calle de Alcalá",
@@ -4809,8 +4849,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("409b3509-a027-4343-89ab-d202030d9a78"),
-                            End = new DateTime(2024, 6, 20, 5, 7, 13, 749, DateTimeKind.Utc).AddTicks(5264),
+                            Id = new Guid("21a12fd2-81ef-4949-9ca7-7dc5936ac33b"),
+                            End = new DateTime(2024, 7, 1, 14, 10, 42, 766, DateTimeKind.Utc).AddTicks(3385),
                             FromCity = "Olimpijska",
                             FromCountry = "grecja",
                             FromStreet = "Plateia Syntagmatos",
@@ -4819,7 +4859,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 110m,
                             PriceUnder3 = 24m,
                             Seats = 175,
-                            Start = new DateTime(2024, 6, 20, 2, 7, 13, 749, DateTimeKind.Utc).AddTicks(5264),
+                            Start = new DateTime(2024, 7, 1, 11, 10, 42, 766, DateTimeKind.Utc).AddTicks(3385),
                             ToCity = "Kalabria",
                             ToCountry = "wlochy",
                             ToStreet = "Via Nazionale",
@@ -4827,8 +4867,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("e50d312c-9609-4ca2-b46e-c7fe4e6e4038"),
-                            End = new DateTime(2024, 6, 3, 4, 7, 13, 749, DateTimeKind.Utc).AddTicks(5266),
+                            Id = new Guid("e844db66-362f-4619-a468-607cfd6f09f8"),
+                            End = new DateTime(2024, 6, 14, 13, 10, 42, 766, DateTimeKind.Utc).AddTicks(3388),
                             FromCity = "Kalabria",
                             FromCountry = "wlochy",
                             FromStreet = "Via del Corso",
@@ -4837,7 +4877,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 214m,
                             PriceUnder3 = 47m,
                             Seats = 151,
-                            Start = new DateTime(2024, 6, 2, 18, 7, 13, 749, DateTimeKind.Utc).AddTicks(5265),
+                            Start = new DateTime(2024, 6, 14, 3, 10, 42, 766, DateTimeKind.Utc).AddTicks(3387),
                             ToCity = "Brava",
                             ToCountry = "hiszpania",
                             ToStreet = "Calle de Alcalá",
@@ -4845,8 +4885,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("b0ee0077-e9d8-4d5a-a54d-799fd9eab0ec"),
-                            End = new DateTime(2024, 7, 21, 9, 7, 13, 749, DateTimeKind.Utc).AddTicks(5268),
+                            Id = new Guid("bac2f402-64e2-4867-a64e-52186bb0819f"),
+                            End = new DateTime(2024, 8, 1, 18, 10, 42, 766, DateTimeKind.Utc).AddTicks(3390),
                             FromCity = "Vlora",
                             FromCountry = "albania",
                             FromStreet = "Rruga e Kavajes",
@@ -4855,7 +4895,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 203m,
                             PriceUnder3 = 45m,
                             Seats = 160,
-                            Start = new DateTime(2024, 7, 21, 7, 7, 13, 749, DateTimeKind.Utc).AddTicks(5267),
+                            Start = new DateTime(2024, 8, 1, 16, 10, 42, 766, DateTimeKind.Utc).AddTicks(3390),
                             ToCity = "Kalabria",
                             ToCountry = "wlochy",
                             ToStreet = "Via Veneto",
@@ -4863,8 +4903,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("8811c3ca-6685-4007-b173-26554ce513ba"),
-                            End = new DateTime(2024, 6, 15, 1, 7, 13, 749, DateTimeKind.Utc).AddTicks(5270),
+                            Id = new Guid("67c3d8d5-8fb6-4843-8c88-c7acf981f9dd"),
+                            End = new DateTime(2024, 6, 26, 10, 10, 42, 766, DateTimeKind.Utc).AddTicks(3428),
                             FromCity = "Chania",
                             FromCountry = "grecja",
                             FromStreet = "Leoforos Vasilissis Sofias",
@@ -4873,7 +4913,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 125m,
                             PriceUnder3 = 27m,
                             Seats = 116,
-                            Start = new DateTime(2024, 6, 14, 20, 7, 13, 749, DateTimeKind.Utc).AddTicks(5270),
+                            Start = new DateTime(2024, 6, 26, 5, 10, 42, 766, DateTimeKind.Utc).AddTicks(3427),
                             ToCity = "Turecka",
                             ToCountry = "turcja",
                             ToStreet = "Halaskargazi Caddesi",
@@ -4881,8 +4921,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("1c3946ad-4837-404d-b324-cb38849a6a0b"),
-                            End = new DateTime(2024, 8, 8, 23, 7, 13, 749, DateTimeKind.Utc).AddTicks(5272),
+                            Id = new Guid("ca437ff5-4553-4152-874a-c2b60f66a20b"),
+                            End = new DateTime(2024, 8, 20, 8, 10, 42, 766, DateTimeKind.Utc).AddTicks(3431),
                             FromCity = "Durres",
                             FromCountry = "albania",
                             FromStreet = "Rruga e Dibres",
@@ -4891,7 +4931,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 242m,
                             PriceUnder3 = 53m,
                             Seats = 92,
-                            Start = new DateTime(2024, 8, 8, 17, 7, 13, 749, DateTimeKind.Utc).AddTicks(5272),
+                            Start = new DateTime(2024, 8, 20, 2, 10, 42, 766, DateTimeKind.Utc).AddTicks(3431),
                             ToCity = "Chania",
                             ToCountry = "grecja",
                             ToStreet = "Leoforos Vasilissis Sofias",
@@ -4899,8 +4939,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("bbbaa34d-40f6-4198-9160-267e33a66f88"),
-                            End = new DateTime(2024, 6, 23, 1, 7, 13, 749, DateTimeKind.Utc).AddTicks(5274),
+                            Id = new Guid("d90846d6-3527-4091-af4f-f53bdf695674"),
+                            End = new DateTime(2024, 7, 4, 10, 10, 42, 766, DateTimeKind.Utc).AddTicks(3434),
                             FromCity = "Sheikh",
                             FromCountry = "egipt",
                             FromStreet = "Sharia Ramsis",
@@ -4909,7 +4949,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 72m,
                             PriceUnder3 = 16m,
                             Seats = 194,
-                            Start = new DateTime(2024, 6, 22, 17, 7, 13, 749, DateTimeKind.Utc).AddTicks(5274),
+                            Start = new DateTime(2024, 7, 4, 2, 10, 42, 766, DateTimeKind.Utc).AddTicks(3433),
                             ToCity = "Brava",
                             ToCountry = "hiszpania",
                             ToStreet = "Paseo del Prado",
@@ -4917,8 +4957,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("f11ab821-66aa-47a8-8070-b4307dcb862c"),
-                            End = new DateTime(2024, 6, 22, 8, 7, 13, 749, DateTimeKind.Utc).AddTicks(5276),
+                            Id = new Guid("86f14886-06a5-4d38-acf4-0dbed49773d5"),
+                            End = new DateTime(2024, 7, 3, 17, 10, 42, 766, DateTimeKind.Utc).AddTicks(3436),
                             FromCity = "Riwiera",
                             FromCountry = "chorwacja",
                             FromStreet = "Kapucinska ulica",
@@ -4927,7 +4967,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 216m,
                             PriceUnder3 = 48m,
                             Seats = 88,
-                            Start = new DateTime(2024, 6, 22, 3, 7, 13, 749, DateTimeKind.Utc).AddTicks(5276),
+                            Start = new DateTime(2024, 7, 3, 12, 10, 42, 766, DateTimeKind.Utc).AddTicks(3436),
                             ToCity = "Brava",
                             ToCountry = "hiszpania",
                             ToStreet = "Calle Mayor",
@@ -4935,8 +4975,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("7c835639-fe8c-4878-8379-b13ba0f0ba7c"),
-                            End = new DateTime(2024, 6, 23, 1, 7, 13, 749, DateTimeKind.Utc).AddTicks(5278),
+                            Id = new Guid("88837525-276e-42d1-9dce-3718863f647d"),
+                            End = new DateTime(2024, 7, 4, 10, 10, 42, 766, DateTimeKind.Utc).AddTicks(3439),
                             FromCity = "Durres",
                             FromCountry = "albania",
                             FromStreet = "Rruga e Dibres",
@@ -4945,7 +4985,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 109m,
                             PriceUnder3 = 24m,
                             Seats = 175,
-                            Start = new DateTime(2024, 6, 22, 19, 7, 13, 749, DateTimeKind.Utc).AddTicks(5277),
+                            Start = new DateTime(2024, 7, 4, 4, 10, 42, 766, DateTimeKind.Utc).AddTicks(3439),
                             ToCity = "Brava",
                             ToCountry = "hiszpania",
                             ToStreet = "Calle Mayor",
@@ -4953,8 +4993,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("a9ca79b2-02d2-452a-9fbb-29b69138e039"),
-                            End = new DateTime(2024, 8, 23, 0, 7, 13, 749, DateTimeKind.Utc).AddTicks(5280),
+                            Id = new Guid("85be55bb-933c-4077-a481-6f5858db467f"),
+                            End = new DateTime(2024, 9, 3, 9, 10, 42, 766, DateTimeKind.Utc).AddTicks(3442),
                             FromCity = "Alam",
                             FromCountry = "egipt",
                             FromStreet = "Sharia Tahrir",
@@ -4963,7 +5003,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 230m,
                             PriceUnder3 = 51m,
                             Seats = 132,
-                            Start = new DateTime(2024, 8, 22, 15, 7, 13, 749, DateTimeKind.Utc).AddTicks(5279),
+                            Start = new DateTime(2024, 9, 3, 0, 10, 42, 766, DateTimeKind.Utc).AddTicks(3442),
                             ToCity = "Sheikh",
                             ToCountry = "egipt",
                             ToStreet = "Sharia Salah Salem",
@@ -4971,8 +5011,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("793ee49f-b272-41c1-9981-850289221a7a"),
-                            End = new DateTime(2024, 6, 10, 5, 7, 13, 749, DateTimeKind.Utc).AddTicks(5281),
+                            Id = new Guid("a9ecf2ea-ff6f-466c-8b71-d1dd55ef8a34"),
+                            End = new DateTime(2024, 6, 21, 14, 10, 42, 766, DateTimeKind.Utc).AddTicks(3445),
                             FromCity = "Kalabria",
                             FromCountry = "wlochy",
                             FromStreet = "Via del Corso",
@@ -4981,7 +5021,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 117m,
                             PriceUnder3 = 26m,
                             Seats = 121,
-                            Start = new DateTime(2024, 6, 9, 19, 7, 13, 749, DateTimeKind.Utc).AddTicks(5281),
+                            Start = new DateTime(2024, 6, 21, 4, 10, 42, 766, DateTimeKind.Utc).AddTicks(3444),
                             ToCity = "Sheikh",
                             ToCountry = "egipt",
                             ToStreet = "Sharia Ramsis",
@@ -4989,8 +5029,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("4a19618f-2ceb-45e2-afdf-df34e9064a68"),
-                            End = new DateTime(2024, 7, 19, 9, 7, 13, 749, DateTimeKind.Utc).AddTicks(5283),
+                            Id = new Guid("555ec986-6024-4b0e-8477-ed3300979669"),
+                            End = new DateTime(2024, 7, 30, 18, 10, 42, 766, DateTimeKind.Utc).AddTicks(3447),
                             FromCity = "Brava",
                             FromCountry = "hiszpania",
                             FromStreet = "Paseo del Prado",
@@ -4999,7 +5039,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 214m,
                             PriceUnder3 = 47m,
                             Seats = 103,
-                            Start = new DateTime(2024, 7, 19, 5, 7, 13, 749, DateTimeKind.Utc).AddTicks(5283),
+                            Start = new DateTime(2024, 7, 30, 14, 10, 42, 766, DateTimeKind.Utc).AddTicks(3447),
                             ToCity = "Chania",
                             ToCountry = "grecja",
                             ToStreet = "Leoforos Vasilissis Sofias",
@@ -5007,8 +5047,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("f3dca61e-f56c-4b5e-a089-3e5abd4e8870"),
-                            End = new DateTime(2024, 6, 12, 11, 7, 13, 749, DateTimeKind.Utc).AddTicks(5285),
+                            Id = new Guid("58e7216e-0aa4-4038-9282-99ad940a537d"),
+                            End = new DateTime(2024, 6, 23, 20, 10, 42, 766, DateTimeKind.Utc).AddTicks(3450),
                             FromCity = "Riwiera",
                             FromCountry = "chorwacja",
                             FromStreet = "Trg bana Josipa Jelačića",
@@ -5017,7 +5057,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 100m,
                             PriceUnder3 = 22m,
                             Seats = 83,
-                            Start = new DateTime(2024, 6, 12, 3, 7, 13, 749, DateTimeKind.Utc).AddTicks(5285),
+                            Start = new DateTime(2024, 6, 23, 12, 10, 42, 766, DateTimeKind.Utc).AddTicks(3449),
                             ToCity = "Kalabria",
                             ToCountry = "wlochy",
                             ToStreet = "Via Veneto",
@@ -5025,8 +5065,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("073ebf3f-4a5c-4b2d-a4a8-8a598b9fdc69"),
-                            End = new DateTime(2024, 8, 14, 17, 7, 13, 749, DateTimeKind.Utc).AddTicks(5287),
+                            Id = new Guid("2adcbbae-bad7-4d3a-b579-142b23ac6094"),
+                            End = new DateTime(2024, 8, 26, 2, 10, 42, 766, DateTimeKind.Utc).AddTicks(3452),
                             FromCity = "Nero",
                             FromCountry = "grecja",
                             FromStreet = "Leoforos Alexandras",
@@ -5035,7 +5075,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 238m,
                             PriceUnder3 = 53m,
                             Seats = 105,
-                            Start = new DateTime(2024, 8, 14, 9, 7, 13, 749, DateTimeKind.Utc).AddTicks(5286),
+                            Start = new DateTime(2024, 8, 25, 18, 10, 42, 766, DateTimeKind.Utc).AddTicks(3452),
                             ToCity = "Peloponez",
                             ToCountry = "grecja",
                             ToStreet = "Leoforos Alexandras",
@@ -5043,8 +5083,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("9455e8a5-28e5-4962-95d0-f2b57d020515"),
-                            End = new DateTime(2024, 7, 5, 15, 7, 13, 749, DateTimeKind.Utc).AddTicks(5289),
+                            Id = new Guid("735a95ee-81c5-4b55-93ca-8e07f4d482e6"),
+                            End = new DateTime(2024, 7, 17, 0, 10, 42, 766, DateTimeKind.Utc).AddTicks(3455),
                             FromCity = "Durres",
                             FromCountry = "albania",
                             FromStreet = "Rruga Abdyl Frasheri",
@@ -5053,7 +5093,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 144m,
                             PriceUnder3 = 32m,
                             Seats = 53,
-                            Start = new DateTime(2024, 7, 5, 9, 7, 13, 749, DateTimeKind.Utc).AddTicks(5288),
+                            Start = new DateTime(2024, 7, 16, 18, 10, 42, 766, DateTimeKind.Utc).AddTicks(3454),
                             ToCity = "Durres",
                             ToCountry = "albania",
                             ToStreet = "Rruga e Dibres",
@@ -5061,8 +5101,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("2f212a6a-da97-4b09-aba5-d12d5186cbdf"),
-                            End = new DateTime(2024, 8, 2, 21, 7, 13, 749, DateTimeKind.Utc).AddTicks(5291),
+                            Id = new Guid("42893a10-bd57-4820-af36-14981831bc12"),
+                            End = new DateTime(2024, 8, 14, 6, 10, 42, 766, DateTimeKind.Utc).AddTicks(3457),
                             FromCity = "Almeria",
                             FromCountry = "hiszpania",
                             FromStreet = "Paseo del Prado",
@@ -5071,7 +5111,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 257m,
                             PriceUnder3 = 57m,
                             Seats = 136,
-                            Start = new DateTime(2024, 8, 2, 14, 7, 13, 749, DateTimeKind.Utc).AddTicks(5291),
+                            Start = new DateTime(2024, 8, 13, 23, 10, 42, 766, DateTimeKind.Utc).AddTicks(3457),
                             ToCity = "Marmaris",
                             ToCountry = "turcja",
                             ToStreet = "Bağdat Caddesi",
@@ -5079,8 +5119,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("5e9bd6da-a279-4a10-aeb5-1dc190f6a7d7"),
-                            End = new DateTime(2024, 6, 8, 23, 7, 13, 749, DateTimeKind.Utc).AddTicks(5293),
+                            Id = new Guid("2c3012e3-e1a2-40d3-92f8-5b8534a72559"),
+                            End = new DateTime(2024, 6, 20, 8, 10, 42, 766, DateTimeKind.Utc).AddTicks(3460),
                             FromCity = "Durres",
                             FromCountry = "albania",
                             FromStreet = "Rruga Abdyl Frasheri",
@@ -5089,7 +5129,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 87m,
                             PriceUnder3 = 19m,
                             Seats = 200,
-                            Start = new DateTime(2024, 6, 8, 21, 7, 13, 749, DateTimeKind.Utc).AddTicks(5292),
+                            Start = new DateTime(2024, 6, 20, 6, 10, 42, 766, DateTimeKind.Utc).AddTicks(3459),
                             ToCity = "Kalabria",
                             ToCountry = "wlochy",
                             ToStreet = "Via del Corso",
@@ -5097,8 +5137,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("3b106e44-3d4d-419f-87a9-fb81fffab7a4"),
-                            End = new DateTime(2024, 7, 2, 17, 7, 13, 749, DateTimeKind.Utc).AddTicks(5295),
+                            Id = new Guid("f7ca36cf-decd-4390-a25d-51fa22d39f8b"),
+                            End = new DateTime(2024, 7, 14, 2, 10, 42, 766, DateTimeKind.Utc).AddTicks(3463),
                             FromCity = "Turecka",
                             FromCountry = "turcja",
                             FromStreet = "Bağdat Caddesi",
@@ -5107,7 +5147,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 242m,
                             PriceUnder3 = 53m,
                             Seats = 79,
-                            Start = new DateTime(2024, 7, 2, 7, 7, 13, 749, DateTimeKind.Utc).AddTicks(5294),
+                            Start = new DateTime(2024, 7, 13, 16, 10, 42, 766, DateTimeKind.Utc).AddTicks(3462),
                             ToCity = "Sheikh",
                             ToCountry = "egipt",
                             ToStreet = "Sharia Tahrir",
@@ -5115,8 +5155,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("d36c4c69-df9f-4a5e-b46d-5ba613ca6ddb"),
-                            End = new DateTime(2024, 8, 4, 2, 7, 13, 749, DateTimeKind.Utc).AddTicks(5297),
+                            Id = new Guid("04c2d060-9f77-46f0-a3b3-694477469402"),
+                            End = new DateTime(2024, 8, 15, 11, 10, 42, 766, DateTimeKind.Utc).AddTicks(3465),
                             FromCity = "Alam",
                             FromCountry = "egipt",
                             FromStreet = "Sharia Tahrir",
@@ -5125,7 +5165,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 145m,
                             PriceUnder3 = 32m,
                             Seats = 101,
-                            Start = new DateTime(2024, 8, 3, 21, 7, 13, 749, DateTimeKind.Utc).AddTicks(5296),
+                            Start = new DateTime(2024, 8, 15, 6, 10, 42, 766, DateTimeKind.Utc).AddTicks(3465),
                             ToCity = "Sheikh",
                             ToCountry = "egipt",
                             ToStreet = "Sharia Salah Salem",
@@ -5133,8 +5173,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("e304f327-4125-450d-8b20-d389ded7cdcf"),
-                            End = new DateTime(2024, 6, 27, 3, 7, 13, 749, DateTimeKind.Utc).AddTicks(5299),
+                            Id = new Guid("d274dd3d-362f-4953-b992-d311d70af774"),
+                            End = new DateTime(2024, 7, 8, 12, 10, 42, 766, DateTimeKind.Utc).AddTicks(3468),
                             FromCity = "Sheikh",
                             FromCountry = "egipt",
                             FromStreet = "Sharia Ramsis",
@@ -5143,7 +5183,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 101m,
                             PriceUnder3 = 22m,
                             Seats = 65,
-                            Start = new DateTime(2024, 6, 26, 16, 7, 13, 749, DateTimeKind.Utc).AddTicks(5298),
+                            Start = new DateTime(2024, 7, 8, 1, 10, 42, 766, DateTimeKind.Utc).AddTicks(3467),
                             ToCity = "Durres",
                             ToCountry = "albania",
                             ToStreet = "Rruga Abdyl Frasheri",
@@ -5151,8 +5191,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("eeefc2f5-0ac6-4ca9-8eec-b88773809299"),
-                            End = new DateTime(2024, 6, 9, 4, 7, 13, 749, DateTimeKind.Utc).AddTicks(5300),
+                            Id = new Guid("7af237c8-debb-4573-ad91-9308a60e9933"),
+                            End = new DateTime(2024, 6, 20, 13, 10, 42, 766, DateTimeKind.Utc).AddTicks(3470),
                             FromCity = "Nero",
                             FromCountry = "grecja",
                             FromStreet = "Leoforos Alexandras",
@@ -5161,7 +5201,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 89m,
                             PriceUnder3 = 19m,
                             Seats = 154,
-                            Start = new DateTime(2024, 6, 8, 16, 7, 13, 749, DateTimeKind.Utc).AddTicks(5300),
+                            Start = new DateTime(2024, 6, 20, 1, 10, 42, 766, DateTimeKind.Utc).AddTicks(3470),
                             ToCity = "Peloponez",
                             ToCountry = "grecja",
                             ToStreet = "Leoforos Alexandras",
@@ -5169,8 +5209,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("e1239e1f-3549-43cb-8f99-0978becd9957"),
-                            End = new DateTime(2024, 7, 19, 3, 7, 13, 749, DateTimeKind.Utc).AddTicks(5302),
+                            Id = new Guid("ea06070a-ad6a-488e-a69a-f0de5db6d125"),
+                            End = new DateTime(2024, 7, 30, 12, 10, 42, 766, DateTimeKind.Utc).AddTicks(3473),
                             FromCity = "Turecka",
                             FromCountry = "turcja",
                             FromStreet = "Atatürk Caddesi",
@@ -5179,7 +5219,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 238m,
                             PriceUnder3 = 53m,
                             Seats = 105,
-                            Start = new DateTime(2024, 7, 18, 22, 7, 13, 749, DateTimeKind.Utc).AddTicks(5302),
+                            Start = new DateTime(2024, 7, 30, 7, 10, 42, 766, DateTimeKind.Utc).AddTicks(3472),
                             ToCity = "Durres",
                             ToCountry = "albania",
                             ToStreet = "Rruga Abdyl Frasheri",
@@ -5187,8 +5227,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("a59f7122-1cc6-4f66-94ca-d3f00306b790"),
-                            End = new DateTime(2024, 6, 17, 6, 7, 13, 749, DateTimeKind.Utc).AddTicks(5304),
+                            Id = new Guid("9bd56701-52f9-4162-83d7-ff3715838967"),
+                            End = new DateTime(2024, 6, 28, 15, 10, 42, 766, DateTimeKind.Utc).AddTicks(3475),
                             FromCity = "Durres",
                             FromCountry = "albania",
                             FromStreet = "Rruga e Dibres",
@@ -5197,7 +5237,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 81m,
                             PriceUnder3 = 18m,
                             Seats = 82,
-                            Start = new DateTime(2024, 6, 17, 3, 7, 13, 749, DateTimeKind.Utc).AddTicks(5304),
+                            Start = new DateTime(2024, 6, 28, 12, 10, 42, 766, DateTimeKind.Utc).AddTicks(3475),
                             ToCity = "Turecka",
                             ToCountry = "turcja",
                             ToStreet = "Atatürk Caddesi",
@@ -5205,8 +5245,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("52457fde-62e5-4b00-ae89-84a902418685"),
-                            End = new DateTime(2024, 7, 24, 12, 7, 13, 749, DateTimeKind.Utc).AddTicks(5306),
+                            Id = new Guid("89f58f9a-030a-45d3-9845-edac72170ce3"),
+                            End = new DateTime(2024, 8, 4, 21, 10, 42, 766, DateTimeKind.Utc).AddTicks(3478),
                             FromCity = "Riwiera",
                             FromCountry = "chorwacja",
                             FromStreet = "Maksimirska ulica",
@@ -5215,7 +5255,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 55m,
                             PriceUnder3 = 12m,
                             Seats = 175,
-                            Start = new DateTime(2024, 7, 24, 1, 7, 13, 749, DateTimeKind.Utc).AddTicks(5306),
+                            Start = new DateTime(2024, 8, 4, 10, 10, 42, 766, DateTimeKind.Utc).AddTicks(3477),
                             ToCity = "Durres",
                             ToCountry = "albania",
                             ToStreet = "Rruga e Dibres",
@@ -5223,8 +5263,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("2b54fe04-6544-4305-bc8e-6c7bd9e3b8ed"),
-                            End = new DateTime(2024, 7, 2, 20, 7, 13, 749, DateTimeKind.Utc).AddTicks(5308),
+                            Id = new Guid("6479c238-4d6f-4944-9ae9-5e9d5c3574a7"),
+                            End = new DateTime(2024, 7, 14, 5, 10, 42, 766, DateTimeKind.Utc).AddTicks(3480),
                             FromCity = "Nero",
                             FromCountry = "grecja",
                             FromStreet = "Leoforos Alexandras",
@@ -5233,7 +5273,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 202m,
                             PriceUnder3 = 45m,
                             Seats = 174,
-                            Start = new DateTime(2024, 7, 2, 14, 7, 13, 749, DateTimeKind.Utc).AddTicks(5307),
+                            Start = new DateTime(2024, 7, 13, 23, 10, 42, 766, DateTimeKind.Utc).AddTicks(3480),
                             ToCity = "Durres",
                             ToCountry = "albania",
                             ToStreet = "Bulevardi Bajram Curri",
@@ -5241,8 +5281,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("da31cacc-0d4c-4f07-9af7-84c64c41c8e8"),
-                            End = new DateTime(2024, 7, 21, 5, 7, 13, 749, DateTimeKind.Utc).AddTicks(5310),
+                            Id = new Guid("69044a0c-0038-4d68-beee-0ffff6f4df7a"),
+                            End = new DateTime(2024, 8, 1, 14, 10, 42, 766, DateTimeKind.Utc).AddTicks(3483),
                             FromCity = "Sheikh",
                             FromCountry = "egipt",
                             FromStreet = "Sharia Salah Salem",
@@ -5251,7 +5291,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 180m,
                             PriceUnder3 = 40m,
                             Seats = 72,
-                            Start = new DateTime(2024, 7, 20, 21, 7, 13, 749, DateTimeKind.Utc).AddTicks(5309),
+                            Start = new DateTime(2024, 8, 1, 6, 10, 42, 766, DateTimeKind.Utc).AddTicks(3482),
                             ToCity = "Brava",
                             ToCountry = "hiszpania",
                             ToStreet = "Calle Mayor",
@@ -5259,8 +5299,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("c5851778-039f-4c66-875d-fa0da367e572"),
-                            End = new DateTime(2024, 8, 27, 14, 7, 13, 749, DateTimeKind.Utc).AddTicks(5336),
+                            Id = new Guid("cb9f1dac-aab6-4c04-813a-dc86ec1f3984"),
+                            End = new DateTime(2024, 9, 7, 23, 10, 42, 766, DateTimeKind.Utc).AddTicks(3486),
                             FromCity = "Sheikh",
                             FromCountry = "egipt",
                             FromStreet = "Sharia Ramsis",
@@ -5269,7 +5309,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 127m,
                             PriceUnder3 = 28m,
                             Seats = 63,
-                            Start = new DateTime(2024, 8, 27, 2, 7, 13, 749, DateTimeKind.Utc).AddTicks(5334),
+                            Start = new DateTime(2024, 9, 7, 11, 10, 42, 766, DateTimeKind.Utc).AddTicks(3485),
                             ToCity = "Nero",
                             ToCountry = "grecja",
                             ToStreet = "Leoforos Alexandras",
@@ -5277,8 +5317,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("fb74bd3d-8854-45b7-857d-b01f9b918748"),
-                            End = new DateTime(2024, 8, 21, 15, 7, 13, 749, DateTimeKind.Utc).AddTicks(5338),
+                            Id = new Guid("82cad992-d606-4779-9a01-3afea07d5a50"),
+                            End = new DateTime(2024, 9, 2, 0, 10, 42, 766, DateTimeKind.Utc).AddTicks(3488),
                             FromCity = "Alam",
                             FromCountry = "egipt",
                             FromStreet = "Sharia Gamal Abdel Nasser",
@@ -5287,7 +5327,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 210m,
                             PriceUnder3 = 46m,
                             Seats = 198,
-                            Start = new DateTime(2024, 8, 21, 10, 7, 13, 749, DateTimeKind.Utc).AddTicks(5338),
+                            Start = new DateTime(2024, 9, 1, 19, 10, 42, 766, DateTimeKind.Utc).AddTicks(3488),
                             ToCity = "Durres",
                             ToCountry = "albania",
                             ToStreet = "Rruga Abdyl Frasheri",
@@ -5295,8 +5335,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("25b98ca8-e95a-413d-825e-a5be3e091c23"),
-                            End = new DateTime(2024, 7, 25, 5, 7, 13, 749, DateTimeKind.Utc).AddTicks(5340),
+                            Id = new Guid("7abf1efd-4a85-427a-9efb-271d97ff04e5"),
+                            End = new DateTime(2024, 8, 5, 14, 10, 42, 766, DateTimeKind.Utc).AddTicks(3491),
                             FromCity = "Turecka",
                             FromCountry = "turcja",
                             FromStreet = "Atatürk Caddesi",
@@ -5305,7 +5345,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 198m,
                             PriceUnder3 = 44m,
                             Seats = 185,
-                            Start = new DateTime(2024, 7, 25, 0, 7, 13, 749, DateTimeKind.Utc).AddTicks(5339),
+                            Start = new DateTime(2024, 8, 5, 9, 10, 42, 766, DateTimeKind.Utc).AddTicks(3490),
                             ToCity = "Turecka",
                             ToCountry = "turcja",
                             ToStreet = "Atatürk Caddesi",
@@ -5313,8 +5353,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("4683ea91-9f9f-450f-ae52-121bb7d70e6d"),
-                            End = new DateTime(2024, 6, 12, 15, 7, 13, 749, DateTimeKind.Utc).AddTicks(5342),
+                            Id = new Guid("eb88a74a-a5c6-4f20-a318-3c34ec064f15"),
+                            End = new DateTime(2024, 6, 24, 0, 10, 42, 766, DateTimeKind.Utc).AddTicks(3493),
                             FromCity = "Turecka",
                             FromCountry = "turcja",
                             FromStreet = "Halaskargazi Caddesi",
@@ -5323,7 +5363,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 109m,
                             PriceUnder3 = 24m,
                             Seats = 67,
-                            Start = new DateTime(2024, 6, 12, 9, 7, 13, 749, DateTimeKind.Utc).AddTicks(5341),
+                            Start = new DateTime(2024, 6, 23, 18, 10, 42, 766, DateTimeKind.Utc).AddTicks(3493),
                             ToCity = "Maresme",
                             ToCountry = "hiszpania",
                             ToStreet = "Paseo del Prado",
@@ -5331,8 +5371,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("04eece83-206a-49b0-b04e-9b06ed047f39"),
-                            End = new DateTime(2024, 7, 1, 15, 7, 13, 749, DateTimeKind.Utc).AddTicks(5343),
+                            Id = new Guid("a5898b9c-60a3-4430-adb7-5c4d1f0ec7b5"),
+                            End = new DateTime(2024, 7, 13, 0, 10, 42, 766, DateTimeKind.Utc).AddTicks(3496),
                             FromCity = "Alam",
                             FromCountry = "egipt",
                             FromStreet = "Sharia Tahrir",
@@ -5341,7 +5381,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 186m,
                             PriceUnder3 = 41m,
                             Seats = 89,
-                            Start = new DateTime(2024, 7, 1, 13, 7, 13, 749, DateTimeKind.Utc).AddTicks(5343),
+                            Start = new DateTime(2024, 7, 12, 22, 10, 42, 766, DateTimeKind.Utc).AddTicks(3495),
                             ToCity = "Durres",
                             ToCountry = "albania",
                             ToStreet = "Rruga e Dibres",
@@ -5349,8 +5389,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("33eb14d7-ed5c-4231-999f-22b6763f1cb0"),
-                            End = new DateTime(2024, 6, 15, 10, 7, 13, 749, DateTimeKind.Utc).AddTicks(5345),
+                            Id = new Guid("550ca7a5-50fd-4a4a-af86-5f25a7aaccb0"),
+                            End = new DateTime(2024, 6, 26, 19, 10, 42, 766, DateTimeKind.Utc).AddTicks(3498),
                             FromCity = "Peloponez",
                             FromCountry = "grecja",
                             FromStreet = "Leoforos Alexandras",
@@ -5359,7 +5399,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 189m,
                             PriceUnder3 = 42m,
                             Seats = 79,
-                            Start = new DateTime(2024, 6, 15, 2, 7, 13, 749, DateTimeKind.Utc).AddTicks(5345),
+                            Start = new DateTime(2024, 6, 26, 11, 10, 42, 766, DateTimeKind.Utc).AddTicks(3498),
                             ToCity = "Riwiera",
                             ToCountry = "chorwacja",
                             ToStreet = "Trg bana Josipa Jelačića",
@@ -5367,8 +5407,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("7662a661-ed4f-4c1a-a1e5-519d4ada440b"),
-                            End = new DateTime(2024, 8, 19, 10, 7, 13, 749, DateTimeKind.Utc).AddTicks(5347),
+                            Id = new Guid("44607b8b-be5e-479a-832f-ae267bf17458"),
+                            End = new DateTime(2024, 8, 30, 19, 10, 42, 766, DateTimeKind.Utc).AddTicks(3501),
                             FromCity = "Durres",
                             FromCountry = "albania",
                             FromStreet = "Rruga Abdyl Frasheri",
@@ -5377,7 +5417,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 153m,
                             PriceUnder3 = 34m,
                             Seats = 68,
-                            Start = new DateTime(2024, 8, 19, 1, 7, 13, 749, DateTimeKind.Utc).AddTicks(5347),
+                            Start = new DateTime(2024, 8, 30, 10, 10, 42, 766, DateTimeKind.Utc).AddTicks(3501),
                             ToCity = "Maresme",
                             ToCountry = "hiszpania",
                             ToStreet = "Paseo del Prado",
@@ -5385,8 +5425,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("113f04e2-9cdf-4764-8baf-cc17b76eade4"),
-                            End = new DateTime(2024, 6, 30, 0, 7, 13, 749, DateTimeKind.Utc).AddTicks(5349),
+                            Id = new Guid("cea90f0b-d919-4836-9661-4aa620e7ca88"),
+                            End = new DateTime(2024, 7, 11, 9, 10, 42, 766, DateTimeKind.Utc).AddTicks(3504),
                             FromCity = "Alam",
                             FromCountry = "egipt",
                             FromStreet = "Sharia Tahrir",
@@ -5395,7 +5435,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 262m,
                             PriceUnder3 = 58m,
                             Seats = 85,
-                            Start = new DateTime(2024, 6, 29, 22, 7, 13, 749, DateTimeKind.Utc).AddTicks(5348),
+                            Start = new DateTime(2024, 7, 11, 7, 10, 42, 766, DateTimeKind.Utc).AddTicks(3503),
                             ToCity = "Almeria",
                             ToCountry = "hiszpania",
                             ToStreet = "Paseo del Prado",
@@ -5403,8 +5443,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("f7e4a6d0-ca0d-4429-a1fe-09b6c88b1a27"),
-                            End = new DateTime(2024, 8, 3, 6, 7, 13, 749, DateTimeKind.Utc).AddTicks(5351),
+                            Id = new Guid("f954ed4c-dffd-414e-9119-0aa62cfe7be5"),
+                            End = new DateTime(2024, 8, 14, 15, 10, 42, 766, DateTimeKind.Utc).AddTicks(3506),
                             FromCity = "Sheikh",
                             FromCountry = "egipt",
                             FromStreet = "Sharia Salah Salem",
@@ -5413,7 +5453,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 207m,
                             PriceUnder3 = 46m,
                             Seats = 157,
-                            Start = new DateTime(2024, 8, 2, 21, 7, 13, 749, DateTimeKind.Utc).AddTicks(5350),
+                            Start = new DateTime(2024, 8, 14, 6, 10, 42, 766, DateTimeKind.Utc).AddTicks(3506),
                             ToCity = "Nero",
                             ToCountry = "grecja",
                             ToStreet = "Leoforos Alexandras",
@@ -5421,8 +5461,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("54acba1b-b6e8-4fda-b694-e12c416a4b27"),
-                            End = new DateTime(2024, 8, 26, 16, 7, 13, 749, DateTimeKind.Utc).AddTicks(5352),
+                            Id = new Guid("d5d2c416-cadd-4d17-9aea-b9c7264da841"),
+                            End = new DateTime(2024, 9, 7, 1, 10, 42, 766, DateTimeKind.Utc).AddTicks(3509),
                             FromCity = "Turecka",
                             FromCountry = "turcja",
                             FromStreet = "Atatürk Caddesi",
@@ -5431,7 +5471,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 170m,
                             PriceUnder3 = 37m,
                             Seats = 93,
-                            Start = new DateTime(2024, 8, 26, 14, 7, 13, 749, DateTimeKind.Utc).AddTicks(5352),
+                            Start = new DateTime(2024, 9, 6, 23, 10, 42, 766, DateTimeKind.Utc).AddTicks(3508),
                             ToCity = "Turecka",
                             ToCountry = "turcja",
                             ToStreet = "Halaskargazi Caddesi",
@@ -5439,8 +5479,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("b02aa6f1-bcc6-411f-9b78-facd0f222014"),
-                            End = new DateTime(2024, 6, 8, 20, 7, 13, 749, DateTimeKind.Utc).AddTicks(5354),
+                            Id = new Guid("7099a15b-c48c-4424-b392-c196c04f3113"),
+                            End = new DateTime(2024, 6, 20, 5, 10, 42, 766, DateTimeKind.Utc).AddTicks(3511),
                             FromCity = "Luz",
                             FromCountry = "hiszpania",
                             FromStreet = "Calle Mayor",
@@ -5449,7 +5489,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 192m,
                             PriceUnder3 = 42m,
                             Seats = 116,
-                            Start = new DateTime(2024, 6, 8, 10, 7, 13, 749, DateTimeKind.Utc).AddTicks(5354),
+                            Start = new DateTime(2024, 6, 19, 19, 10, 42, 766, DateTimeKind.Utc).AddTicks(3511),
                             ToCity = "Riwiera",
                             ToCountry = "chorwacja",
                             ToStreet = "Maksimirska ulica",
@@ -5457,8 +5497,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("0a4564d8-8590-42e0-bc70-ef694c1663fd"),
-                            End = new DateTime(2024, 7, 19, 3, 7, 13, 749, DateTimeKind.Utc).AddTicks(5356),
+                            Id = new Guid("53d64473-9b75-4ae2-9658-cc72e66248de"),
+                            End = new DateTime(2024, 7, 30, 12, 10, 42, 766, DateTimeKind.Utc).AddTicks(3514),
                             FromCity = "Riwiera",
                             FromCountry = "chorwacja",
                             FromStreet = "Vukovarska ulica",
@@ -5467,7 +5507,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 93m,
                             PriceUnder3 = 20m,
                             Seats = 184,
-                            Start = new DateTime(2024, 7, 18, 18, 7, 13, 749, DateTimeKind.Utc).AddTicks(5356),
+                            Start = new DateTime(2024, 7, 30, 3, 10, 42, 766, DateTimeKind.Utc).AddTicks(3513),
                             ToCity = "Olimpijska",
                             ToCountry = "grecja",
                             ToStreet = "Plateia Syntagmatos",
@@ -5475,8 +5515,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("eb2d1d92-5eeb-431b-a54d-ab0defe68c2a"),
-                            End = new DateTime(2024, 6, 11, 19, 7, 13, 749, DateTimeKind.Utc).AddTicks(5358),
+                            Id = new Guid("da2280c4-a39e-4f7f-9333-a0d5233f6553"),
+                            End = new DateTime(2024, 6, 23, 4, 10, 42, 766, DateTimeKind.Utc).AddTicks(3516),
                             FromCity = "Alam",
                             FromCountry = "egipt",
                             FromStreet = "Sharia Gamal Abdel Nasser",
@@ -5485,7 +5525,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 167m,
                             PriceUnder3 = 37m,
                             Seats = 100,
-                            Start = new DateTime(2024, 6, 11, 11, 7, 13, 749, DateTimeKind.Utc).AddTicks(5358),
+                            Start = new DateTime(2024, 6, 22, 20, 10, 42, 766, DateTimeKind.Utc).AddTicks(3516),
                             ToCity = "Olimpijska",
                             ToCountry = "grecja",
                             ToStreet = "Plateia Syntagmatos",
@@ -5493,8 +5533,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("96df141c-dded-4ea3-88c8-3e1036f4a271"),
-                            End = new DateTime(2024, 7, 13, 11, 7, 13, 749, DateTimeKind.Utc).AddTicks(5360),
+                            Id = new Guid("40af5a0a-47f1-4289-a5a7-047fed6d1fad"),
+                            End = new DateTime(2024, 7, 24, 20, 10, 42, 766, DateTimeKind.Utc).AddTicks(3519),
                             FromCity = "Sheikh",
                             FromCountry = "egipt",
                             FromStreet = "Sharia Ramsis",
@@ -5503,7 +5543,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 219m,
                             PriceUnder3 = 48m,
                             Seats = 71,
-                            Start = new DateTime(2024, 7, 13, 9, 7, 13, 749, DateTimeKind.Utc).AddTicks(5359),
+                            Start = new DateTime(2024, 7, 24, 18, 10, 42, 766, DateTimeKind.Utc).AddTicks(3518),
                             ToCity = "Turecka",
                             ToCountry = "turcja",
                             ToStreet = "Atatürk Caddesi",
@@ -5511,8 +5551,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("27144dff-1b0e-4b98-bfad-d1a2c4991d60"),
-                            End = new DateTime(2024, 8, 25, 1, 7, 13, 749, DateTimeKind.Utc).AddTicks(5362),
+                            Id = new Guid("ff7d6a73-452e-459b-948f-93c991e6dcf7"),
+                            End = new DateTime(2024, 9, 5, 10, 10, 42, 766, DateTimeKind.Utc).AddTicks(3522),
                             FromCity = "Kalabria",
                             FromCountry = "wlochy",
                             FromStreet = "Via Nazionale",
@@ -5521,7 +5561,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 70m,
                             PriceUnder3 = 15m,
                             Seats = 52,
-                            Start = new DateTime(2024, 8, 24, 20, 7, 13, 749, DateTimeKind.Utc).AddTicks(5361),
+                            Start = new DateTime(2024, 9, 5, 5, 10, 42, 766, DateTimeKind.Utc).AddTicks(3521),
                             ToCity = "Riwiera",
                             ToCountry = "chorwacja",
                             ToStreet = "Kapucinska ulica",
@@ -5529,8 +5569,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("d7ce4b90-4aba-46b2-9411-8c1c4c10a8b7"),
-                            End = new DateTime(2024, 7, 27, 16, 7, 13, 749, DateTimeKind.Utc).AddTicks(5363),
+                            Id = new Guid("475068f3-9fd2-430c-a738-ad6880a6e358"),
+                            End = new DateTime(2024, 8, 8, 1, 10, 42, 766, DateTimeKind.Utc).AddTicks(3524),
                             FromCity = "Brava",
                             FromCountry = "hiszpania",
                             FromStreet = "Gran Vía",
@@ -5539,7 +5579,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 120m,
                             PriceUnder3 = 26m,
                             Seats = 171,
-                            Start = new DateTime(2024, 7, 27, 6, 7, 13, 749, DateTimeKind.Utc).AddTicks(5363),
+                            Start = new DateTime(2024, 8, 7, 15, 10, 42, 766, DateTimeKind.Utc).AddTicks(3524),
                             ToCity = "Kalabria",
                             ToCountry = "wlochy",
                             ToStreet = "Via del Corso",
@@ -5547,8 +5587,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("a59bbe80-11ba-4498-b780-cefddca7c227"),
-                            End = new DateTime(2024, 6, 12, 7, 7, 13, 749, DateTimeKind.Utc).AddTicks(5365),
+                            Id = new Guid("2866d6af-6190-4404-a98a-0dd49f102aca"),
+                            End = new DateTime(2024, 6, 23, 16, 10, 42, 766, DateTimeKind.Utc).AddTicks(3574),
                             FromCity = "Kalabria",
                             FromCountry = "wlochy",
                             FromStreet = "Via del Corso",
@@ -5557,7 +5597,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 198m,
                             PriceUnder3 = 44m,
                             Seats = 70,
-                            Start = new DateTime(2024, 6, 12, 3, 7, 13, 749, DateTimeKind.Utc).AddTicks(5365),
+                            Start = new DateTime(2024, 6, 23, 12, 10, 42, 766, DateTimeKind.Utc).AddTicks(3571),
                             ToCity = "Turecka",
                             ToCountry = "turcja",
                             ToStreet = "Atatürk Caddesi",
@@ -5565,8 +5605,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("97a5d660-d2e2-43f5-b6d9-3d49c2733008"),
-                            End = new DateTime(2024, 7, 31, 3, 7, 13, 749, DateTimeKind.Utc).AddTicks(5367),
+                            Id = new Guid("db70e3a2-6676-4d70-af87-51fcfc831a2a"),
+                            End = new DateTime(2024, 8, 11, 12, 10, 42, 766, DateTimeKind.Utc).AddTicks(3577),
                             FromCity = "Turecka",
                             FromCountry = "turcja",
                             FromStreet = "Bağdat Caddesi",
@@ -5575,7 +5615,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 129m,
                             PriceUnder3 = 28m,
                             Seats = 134,
-                            Start = new DateTime(2024, 7, 30, 15, 7, 13, 749, DateTimeKind.Utc).AddTicks(5367),
+                            Start = new DateTime(2024, 8, 11, 0, 10, 42, 766, DateTimeKind.Utc).AddTicks(3577),
                             ToCity = "Durres",
                             ToCountry = "albania",
                             ToStreet = "Rruga Abdyl Frasheri",
@@ -5583,8 +5623,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("3e72ebb8-e6d2-4d5a-ad6a-fc3d5ef93bb2"),
-                            End = new DateTime(2024, 8, 11, 14, 7, 13, 749, DateTimeKind.Utc).AddTicks(5369),
+                            Id = new Guid("66e3ee04-8a82-4806-8393-c0f7f6a85930"),
+                            End = new DateTime(2024, 8, 22, 23, 10, 42, 766, DateTimeKind.Utc).AddTicks(3580),
                             FromCity = "Riwiera",
                             FromCountry = "chorwacja",
                             FromStreet = "Maksimirska ulica",
@@ -5593,7 +5633,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 195m,
                             PriceUnder3 = 43m,
                             Seats = 54,
-                            Start = new DateTime(2024, 8, 11, 4, 7, 13, 749, DateTimeKind.Utc).AddTicks(5368),
+                            Start = new DateTime(2024, 8, 22, 13, 10, 42, 766, DateTimeKind.Utc).AddTicks(3579),
                             ToCity = "Marmaris",
                             ToCountry = "turcja",
                             ToStreet = "Bağdat Caddesi",
@@ -5601,8 +5641,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("2a45979d-f582-4a56-8268-7a7b6d29f7af"),
-                            End = new DateTime(2024, 7, 10, 11, 7, 13, 749, DateTimeKind.Utc).AddTicks(5371),
+                            Id = new Guid("e7c5fe9d-0617-462d-be2f-9d60378a9aaf"),
+                            End = new DateTime(2024, 7, 21, 20, 10, 42, 766, DateTimeKind.Utc).AddTicks(3583),
                             FromCity = "Riwiera",
                             FromCountry = "chorwacja",
                             FromStreet = "Kapucinska ulica",
@@ -5611,7 +5651,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 139m,
                             PriceUnder3 = 31m,
                             Seats = 73,
-                            Start = new DateTime(2024, 7, 10, 2, 7, 13, 749, DateTimeKind.Utc).AddTicks(5370),
+                            Start = new DateTime(2024, 7, 21, 11, 10, 42, 766, DateTimeKind.Utc).AddTicks(3582),
                             ToCity = "Vlora",
                             ToCountry = "albania",
                             ToStreet = "Rruga 28 Nentori",
@@ -5619,8 +5659,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("db0a135d-1b54-4a6d-82b9-faf1d178bfc3"),
-                            End = new DateTime(2024, 7, 12, 13, 7, 13, 749, DateTimeKind.Utc).AddTicks(5373),
+                            Id = new Guid("fac67dbd-5ef7-425a-aaaf-1e757c8f9a08"),
+                            End = new DateTime(2024, 7, 23, 22, 10, 42, 766, DateTimeKind.Utc).AddTicks(3585),
                             FromCity = "Brava",
                             FromCountry = "hiszpania",
                             FromStreet = "Paseo del Prado",
@@ -5629,7 +5669,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 48m,
                             PriceUnder3 = 10m,
                             Seats = 194,
-                            Start = new DateTime(2024, 7, 12, 11, 7, 13, 749, DateTimeKind.Utc).AddTicks(5372),
+                            Start = new DateTime(2024, 7, 23, 20, 10, 42, 766, DateTimeKind.Utc).AddTicks(3585),
                             ToCity = "Turecka",
                             ToCountry = "turcja",
                             ToStreet = "Bağdat Caddesi",
@@ -5637,8 +5677,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("4fee6368-cdf9-4d3b-8fe3-498a661def6d"),
-                            End = new DateTime(2024, 6, 14, 5, 7, 13, 749, DateTimeKind.Utc).AddTicks(5374),
+                            Id = new Guid("39f24e9f-a522-4be3-86b4-de55a0714c6d"),
+                            End = new DateTime(2024, 6, 25, 14, 10, 42, 766, DateTimeKind.Utc).AddTicks(3588),
                             FromCity = "Sheikh",
                             FromCountry = "egipt",
                             FromStreet = "Sharia Salah Salem",
@@ -5647,7 +5687,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 269m,
                             PriceUnder3 = 59m,
                             Seats = 197,
-                            Start = new DateTime(2024, 6, 14, 1, 7, 13, 749, DateTimeKind.Utc).AddTicks(5374),
+                            Start = new DateTime(2024, 6, 25, 10, 10, 42, 766, DateTimeKind.Utc).AddTicks(3587),
                             ToCity = "Durres",
                             ToCountry = "albania",
                             ToStreet = "Rruga Abdyl Frasheri",
@@ -5655,8 +5695,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("adeae5cd-e357-46f0-8f08-6c1032101f2a"),
-                            End = new DateTime(2024, 7, 13, 4, 7, 13, 749, DateTimeKind.Utc).AddTicks(5376),
+                            Id = new Guid("5a6769e1-ed7f-4549-9a1d-b0d0cf8f01ff"),
+                            End = new DateTime(2024, 7, 24, 13, 10, 42, 766, DateTimeKind.Utc).AddTicks(3590),
                             FromCity = "Alam",
                             FromCountry = "egipt",
                             FromStreet = "Sharia Gamal Abdel Nasser",
@@ -5665,7 +5705,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 112m,
                             PriceUnder3 = 25m,
                             Seats = 167,
-                            Start = new DateTime(2024, 7, 12, 22, 7, 13, 749, DateTimeKind.Utc).AddTicks(5376),
+                            Start = new DateTime(2024, 7, 24, 7, 10, 42, 766, DateTimeKind.Utc).AddTicks(3590),
                             ToCity = "Riwiera",
                             ToCountry = "chorwacja",
                             ToStreet = "Kapucinska ulica",
@@ -5673,8 +5713,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("158cfd17-44d9-4a4b-bb03-b3d4e208519c"),
-                            End = new DateTime(2024, 8, 2, 21, 7, 13, 749, DateTimeKind.Utc).AddTicks(5378),
+                            Id = new Guid("ed1d5c37-7438-4eeb-8a44-c7ca256dbde1"),
+                            End = new DateTime(2024, 8, 14, 6, 10, 42, 766, DateTimeKind.Utc).AddTicks(3593),
                             FromCity = "Durres",
                             FromCountry = "albania",
                             FromStreet = "Bulevardi Bajram Curri",
@@ -5683,7 +5723,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 152m,
                             PriceUnder3 = 33m,
                             Seats = 51,
-                            Start = new DateTime(2024, 8, 2, 13, 7, 13, 749, DateTimeKind.Utc).AddTicks(5378),
+                            Start = new DateTime(2024, 8, 13, 22, 10, 42, 766, DateTimeKind.Utc).AddTicks(3592),
                             ToCity = "Durres",
                             ToCountry = "albania",
                             ToStreet = "Rruga e Dibres",
@@ -5691,8 +5731,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("2599ffa9-b948-4f25-8ee1-1c0df0ccbd12"),
-                            End = new DateTime(2024, 8, 3, 20, 7, 13, 749, DateTimeKind.Utc).AddTicks(5380),
+                            Id = new Guid("30921403-6732-418c-9116-a69de511eb14"),
+                            End = new DateTime(2024, 8, 15, 5, 10, 42, 766, DateTimeKind.Utc).AddTicks(3595),
                             FromCity = "Turecka",
                             FromCountry = "turcja",
                             FromStreet = "Bağdat Caddesi",
@@ -5701,7 +5741,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 121m,
                             PriceUnder3 = 27m,
                             Seats = 161,
-                            Start = new DateTime(2024, 8, 3, 11, 7, 13, 749, DateTimeKind.Utc).AddTicks(5379),
+                            Start = new DateTime(2024, 8, 14, 20, 10, 42, 766, DateTimeKind.Utc).AddTicks(3595),
                             ToCity = "Nero",
                             ToCountry = "grecja",
                             ToStreet = "Leoforos Vasilissis Sofias",
@@ -5709,8 +5749,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("42bbbd30-fe9f-4d74-8470-475d88ddcfae"),
-                            End = new DateTime(2024, 7, 27, 11, 7, 13, 749, DateTimeKind.Utc).AddTicks(5382),
+                            Id = new Guid("dcf369c3-42fc-4005-ade2-385d705f3c1e"),
+                            End = new DateTime(2024, 8, 7, 20, 10, 42, 766, DateTimeKind.Utc).AddTicks(3598),
                             FromCity = "Maresme",
                             FromCountry = "hiszpania",
                             FromStreet = "Paseo del Prado",
@@ -5719,7 +5759,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 98m,
                             PriceUnder3 = 21m,
                             Seats = 200,
-                            Start = new DateTime(2024, 7, 27, 8, 7, 13, 749, DateTimeKind.Utc).AddTicks(5381),
+                            Start = new DateTime(2024, 8, 7, 17, 10, 42, 766, DateTimeKind.Utc).AddTicks(3597),
                             ToCity = "Brava",
                             ToCountry = "hiszpania",
                             ToStreet = "Gran Vía",
@@ -5727,8 +5767,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("c472da36-91a0-490e-af3a-f1176b7cdbee"),
-                            End = new DateTime(2024, 7, 2, 17, 7, 13, 749, DateTimeKind.Utc).AddTicks(5383),
+                            Id = new Guid("8c76d364-bcb9-4dbc-a606-33a2f61a8ae3"),
+                            End = new DateTime(2024, 7, 14, 2, 10, 42, 766, DateTimeKind.Utc).AddTicks(3601),
                             FromCity = "Durres",
                             FromCountry = "albania",
                             FromStreet = "Rruga Abdyl Frasheri",
@@ -5737,7 +5777,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 124m,
                             PriceUnder3 = 27m,
                             Seats = 99,
-                            Start = new DateTime(2024, 7, 2, 11, 7, 13, 749, DateTimeKind.Utc).AddTicks(5383),
+                            Start = new DateTime(2024, 7, 13, 20, 10, 42, 766, DateTimeKind.Utc).AddTicks(3600),
                             ToCity = "Kalabria",
                             ToCountry = "wlochy",
                             ToStreet = "Via del Corso",
@@ -5745,8 +5785,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("051559ae-ab42-4686-8ef3-765ab89f9f7b"),
-                            End = new DateTime(2024, 7, 16, 16, 7, 13, 749, DateTimeKind.Utc).AddTicks(5385),
+                            Id = new Guid("7858fcb7-559d-4b4b-bafa-164236e12e67"),
+                            End = new DateTime(2024, 7, 28, 1, 10, 42, 766, DateTimeKind.Utc).AddTicks(3603),
                             FromCity = "Alam",
                             FromCountry = "egipt",
                             FromStreet = "Sharia Tahrir",
@@ -5755,7 +5795,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 163m,
                             PriceUnder3 = 36m,
                             Seats = 164,
-                            Start = new DateTime(2024, 7, 16, 7, 7, 13, 749, DateTimeKind.Utc).AddTicks(5385),
+                            Start = new DateTime(2024, 7, 27, 16, 10, 42, 766, DateTimeKind.Utc).AddTicks(3603),
                             ToCity = "Durres",
                             ToCountry = "albania",
                             ToStreet = "Rruga Abdyl Frasheri",
@@ -5763,8 +5803,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("553104c0-fbd6-4a2d-8903-b1483c64e883"),
-                            End = new DateTime(2024, 6, 27, 3, 7, 13, 749, DateTimeKind.Utc).AddTicks(5387),
+                            Id = new Guid("f5867f19-1d36-4630-a423-4ae2f6ffccf1"),
+                            End = new DateTime(2024, 7, 8, 12, 10, 42, 766, DateTimeKind.Utc).AddTicks(3606),
                             FromCity = "Maresme",
                             FromCountry = "hiszpania",
                             FromStreet = "Paseo del Prado",
@@ -5773,7 +5813,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 144m,
                             PriceUnder3 = 32m,
                             Seats = 123,
-                            Start = new DateTime(2024, 6, 26, 18, 7, 13, 749, DateTimeKind.Utc).AddTicks(5387),
+                            Start = new DateTime(2024, 7, 8, 3, 10, 42, 766, DateTimeKind.Utc).AddTicks(3605),
                             ToCity = "Luz",
                             ToCountry = "hiszpania",
                             ToStreet = "Calle Mayor",
@@ -5781,8 +5821,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("402c53b1-3957-4568-9c5e-f725ad29c744"),
-                            End = new DateTime(2024, 7, 5, 16, 7, 13, 749, DateTimeKind.Utc).AddTicks(5389),
+                            Id = new Guid("4f0364e7-f111-4597-8068-d17035319bcb"),
+                            End = new DateTime(2024, 7, 17, 1, 10, 42, 766, DateTimeKind.Utc).AddTicks(3608),
                             FromCity = "Sheikh",
                             FromCountry = "egipt",
                             FromStreet = "Sharia Tahrir",
@@ -5791,7 +5831,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 48m,
                             PriceUnder3 = 10m,
                             Seats = 184,
-                            Start = new DateTime(2024, 7, 5, 9, 7, 13, 749, DateTimeKind.Utc).AddTicks(5388),
+                            Start = new DateTime(2024, 7, 16, 18, 10, 42, 766, DateTimeKind.Utc).AddTicks(3608),
                             ToCity = "Riwiera",
                             ToCountry = "chorwacja",
                             ToStreet = "Trg bana Josipa Jelačića",
@@ -5799,8 +5839,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("5fcf18e9-103d-4a6b-8b00-25d37b59b7cc"),
-                            End = new DateTime(2024, 8, 18, 20, 7, 13, 749, DateTimeKind.Utc).AddTicks(5391),
+                            Id = new Guid("2a5c5ef5-607f-46ee-ba9d-32d7b8866222"),
+                            End = new DateTime(2024, 8, 30, 5, 10, 42, 766, DateTimeKind.Utc).AddTicks(3611),
                             FromCity = "Riwiera",
                             FromCountry = "chorwacja",
                             FromStreet = "Vukovarska ulica",
@@ -5809,7 +5849,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 233m,
                             PriceUnder3 = 51m,
                             Seats = 191,
-                            Start = new DateTime(2024, 8, 18, 10, 7, 13, 749, DateTimeKind.Utc).AddTicks(5390),
+                            Start = new DateTime(2024, 8, 29, 19, 10, 42, 766, DateTimeKind.Utc).AddTicks(3610),
                             ToCity = "Vlora",
                             ToCountry = "albania",
                             ToStreet = "Rruga 28 Nentori",
@@ -5817,8 +5857,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("208d4cc2-9e38-46c6-849f-a626266cbfaa"),
-                            End = new DateTime(2024, 6, 24, 18, 7, 13, 749, DateTimeKind.Utc).AddTicks(5393),
+                            Id = new Guid("14f60acd-0c13-45d7-a644-0d8e68d06805"),
+                            End = new DateTime(2024, 7, 6, 3, 10, 42, 766, DateTimeKind.Utc).AddTicks(3613),
                             FromCity = "Riwiera",
                             FromCountry = "chorwacja",
                             FromStreet = "Maksimirska ulica",
@@ -5827,7 +5867,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 140m,
                             PriceUnder3 = 31m,
                             Seats = 66,
-                            Start = new DateTime(2024, 6, 24, 8, 7, 13, 749, DateTimeKind.Utc).AddTicks(5392),
+                            Start = new DateTime(2024, 7, 5, 17, 10, 42, 766, DateTimeKind.Utc).AddTicks(3613),
                             ToCity = "Alam",
                             ToCountry = "egipt",
                             ToStreet = "Sharia Ramsis",
@@ -5835,8 +5875,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("9b923c21-c278-49c8-ada8-d521b6d73c81"),
-                            End = new DateTime(2024, 6, 23, 10, 7, 13, 749, DateTimeKind.Utc).AddTicks(5394),
+                            Id = new Guid("18b36953-ca71-45db-9df1-369233cbe30d"),
+                            End = new DateTime(2024, 7, 4, 19, 10, 42, 766, DateTimeKind.Utc).AddTicks(3616),
                             FromCity = "Kalabria",
                             FromCountry = "wlochy",
                             FromStreet = "Via Veneto",
@@ -5845,7 +5885,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 157m,
                             PriceUnder3 = 35m,
                             Seats = 194,
-                            Start = new DateTime(2024, 6, 23, 8, 7, 13, 749, DateTimeKind.Utc).AddTicks(5394),
+                            Start = new DateTime(2024, 7, 4, 17, 10, 42, 766, DateTimeKind.Utc).AddTicks(3615),
                             ToCity = "Riwiera",
                             ToCountry = "chorwacja",
                             ToStreet = "Vukovarska ulica",
@@ -5853,8 +5893,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("cc0304a1-d60d-40b1-833e-06effc358467"),
-                            End = new DateTime(2024, 8, 1, 21, 7, 13, 749, DateTimeKind.Utc).AddTicks(5396),
+                            Id = new Guid("c415ba74-bcfd-4cbc-9beb-dbb5ab9d8d66"),
+                            End = new DateTime(2024, 8, 13, 6, 10, 42, 766, DateTimeKind.Utc).AddTicks(3618),
                             FromCity = "Turecka",
                             FromCountry = "turcja",
                             FromStreet = "Atatürk Caddesi",
@@ -5863,7 +5903,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 193m,
                             PriceUnder3 = 43m,
                             Seats = 107,
-                            Start = new DateTime(2024, 8, 1, 9, 7, 13, 749, DateTimeKind.Utc).AddTicks(5396),
+                            Start = new DateTime(2024, 8, 12, 18, 10, 42, 766, DateTimeKind.Utc).AddTicks(3618),
                             ToCity = "Riwiera",
                             ToCountry = "chorwacja",
                             ToStreet = "Maksimirska ulica",
@@ -5871,8 +5911,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("b4599ce3-3aa9-482a-af27-1de1302ab2bf"),
-                            End = new DateTime(2024, 8, 1, 14, 7, 13, 749, DateTimeKind.Utc).AddTicks(5398),
+                            Id = new Guid("f0cd8741-008e-4948-b9e0-61d6b41a5982"),
+                            End = new DateTime(2024, 8, 12, 23, 10, 42, 766, DateTimeKind.Utc).AddTicks(3621),
                             FromCity = "Riwiera",
                             FromCountry = "chorwacja",
                             FromStreet = "Vukovarska ulica",
@@ -5881,7 +5921,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 215m,
                             PriceUnder3 = 47m,
                             Seats = 182,
-                            Start = new DateTime(2024, 8, 1, 8, 7, 13, 749, DateTimeKind.Utc).AddTicks(5398),
+                            Start = new DateTime(2024, 8, 12, 17, 10, 42, 766, DateTimeKind.Utc).AddTicks(3621),
                             ToCity = "Sheikh",
                             ToCountry = "egipt",
                             ToStreet = "Sharia Tahrir",
@@ -5889,8 +5929,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("d0671cce-4f64-4287-9443-44f098ea3edb"),
-                            End = new DateTime(2024, 7, 4, 0, 7, 13, 749, DateTimeKind.Utc).AddTicks(5400),
+                            Id = new Guid("839485ee-78fb-4c11-a765-c95dfac64290"),
+                            End = new DateTime(2024, 7, 15, 9, 10, 42, 766, DateTimeKind.Utc).AddTicks(3624),
                             FromCity = "Maresme",
                             FromCountry = "hiszpania",
                             FromStreet = "Paseo del Prado",
@@ -5899,7 +5939,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 254m,
                             PriceUnder3 = 56m,
                             Seats = 164,
-                            Start = new DateTime(2024, 7, 3, 22, 7, 13, 749, DateTimeKind.Utc).AddTicks(5399),
+                            Start = new DateTime(2024, 7, 15, 7, 10, 42, 766, DateTimeKind.Utc).AddTicks(3623),
                             ToCity = "Turecka",
                             ToCountry = "turcja",
                             ToStreet = "Atatürk Caddesi",
@@ -5907,8 +5947,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("29c6eb0e-c5f5-4dd5-aec9-91513008d2bb"),
-                            End = new DateTime(2024, 6, 25, 23, 7, 13, 749, DateTimeKind.Utc).AddTicks(5402),
+                            Id = new Guid("44a8973a-f27b-49fb-a776-603d902163f5"),
+                            End = new DateTime(2024, 7, 7, 8, 10, 42, 766, DateTimeKind.Utc).AddTicks(3626),
                             FromCity = "Alam",
                             FromCountry = "egipt",
                             FromStreet = "Sharia Tahrir",
@@ -5917,7 +5957,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 170m,
                             PriceUnder3 = 37m,
                             Seats = 165,
-                            Start = new DateTime(2024, 6, 25, 19, 7, 13, 749, DateTimeKind.Utc).AddTicks(5401),
+                            Start = new DateTime(2024, 7, 7, 4, 10, 42, 766, DateTimeKind.Utc).AddTicks(3626),
                             ToCity = "Kalabria",
                             ToCountry = "wlochy",
                             ToStreet = "Via Veneto",
@@ -5925,8 +5965,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("88f600c6-53ec-4150-975b-8f62196862cf"),
-                            End = new DateTime(2024, 7, 8, 2, 7, 13, 749, DateTimeKind.Utc).AddTicks(5403),
+                            Id = new Guid("eeb5ce8d-e185-483e-bc89-f446d5582cb0"),
+                            End = new DateTime(2024, 7, 19, 11, 10, 42, 766, DateTimeKind.Utc).AddTicks(3629),
                             FromCity = "Maresme",
                             FromCountry = "hiszpania",
                             FromStreet = "Paseo del Prado",
@@ -5935,7 +5975,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 96m,
                             PriceUnder3 = 21m,
                             Seats = 90,
-                            Start = new DateTime(2024, 7, 7, 14, 7, 13, 749, DateTimeKind.Utc).AddTicks(5403),
+                            Start = new DateTime(2024, 7, 18, 23, 10, 42, 766, DateTimeKind.Utc).AddTicks(3628),
                             ToCity = "Turecka",
                             ToCountry = "turcja",
                             ToStreet = "Atatürk Caddesi",
@@ -5943,8 +5983,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("14bc06d4-0af2-4d3d-891a-aad81ff26a5b"),
-                            End = new DateTime(2024, 5, 30, 19, 7, 13, 749, DateTimeKind.Utc).AddTicks(5430),
+                            Id = new Guid("4e677492-a491-422d-a55f-fe5d1b8365ad"),
+                            End = new DateTime(2024, 6, 11, 4, 10, 42, 766, DateTimeKind.Utc).AddTicks(3631),
                             FromCity = "Alam",
                             FromCountry = "egipt",
                             FromStreet = "Sharia Gamal Abdel Nasser",
@@ -5953,7 +5993,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 120m,
                             PriceUnder3 = 26m,
                             Seats = 84,
-                            Start = new DateTime(2024, 5, 30, 13, 7, 13, 749, DateTimeKind.Utc).AddTicks(5428),
+                            Start = new DateTime(2024, 6, 10, 22, 10, 42, 766, DateTimeKind.Utc).AddTicks(3631),
                             ToCity = "Riwiera",
                             ToCountry = "chorwacja",
                             ToStreet = "Maksimirska ulica",
@@ -5961,8 +6001,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("66a173d2-9b54-4fa6-8ac9-597af7f0aa12"),
-                            End = new DateTime(2024, 7, 3, 9, 7, 13, 749, DateTimeKind.Utc).AddTicks(5432),
+                            Id = new Guid("ebd4b061-a484-4106-913e-9baf85d9cba1"),
+                            End = new DateTime(2024, 7, 14, 18, 10, 42, 766, DateTimeKind.Utc).AddTicks(3634),
                             FromCity = "Nero",
                             FromCountry = "grecja",
                             FromStreet = "Leoforos Alexandras",
@@ -5971,7 +6011,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 223m,
                             PriceUnder3 = 49m,
                             Seats = 93,
-                            Start = new DateTime(2024, 7, 2, 22, 7, 13, 749, DateTimeKind.Utc).AddTicks(5431),
+                            Start = new DateTime(2024, 7, 14, 7, 10, 42, 766, DateTimeKind.Utc).AddTicks(3633),
                             ToCity = "Sheikh",
                             ToCountry = "egipt",
                             ToStreet = "Sharia Ramsis",
@@ -5979,8 +6019,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("b707a9d0-22fd-4c59-bfee-3f2949fc050b"),
-                            End = new DateTime(2024, 7, 20, 0, 7, 13, 749, DateTimeKind.Utc).AddTicks(5434),
+                            Id = new Guid("9e7e7a4d-0b42-4e42-bc25-4b2c05f17ddc"),
+                            End = new DateTime(2024, 7, 31, 9, 10, 42, 766, DateTimeKind.Utc).AddTicks(3636),
                             FromCity = "Almeria",
                             FromCountry = "hiszpania",
                             FromStreet = "Paseo del Prado",
@@ -5989,7 +6029,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 153m,
                             PriceUnder3 = 34m,
                             Seats = 112,
-                            Start = new DateTime(2024, 7, 19, 19, 7, 13, 749, DateTimeKind.Utc).AddTicks(5433),
+                            Start = new DateTime(2024, 7, 31, 4, 10, 42, 766, DateTimeKind.Utc).AddTicks(3636),
                             ToCity = "Luz",
                             ToCountry = "hiszpania",
                             ToStreet = "Calle Mayor",
@@ -5997,8 +6037,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("20f189c6-2116-4bcd-bef6-4bc5a8c875ab"),
-                            End = new DateTime(2024, 7, 5, 13, 7, 13, 749, DateTimeKind.Utc).AddTicks(5436),
+                            Id = new Guid("23527d13-4f80-421e-91df-bfd9229aff27"),
+                            End = new DateTime(2024, 7, 16, 22, 10, 42, 766, DateTimeKind.Utc).AddTicks(3639),
                             FromCity = "Alam",
                             FromCountry = "egipt",
                             FromStreet = "Sharia Ramsis",
@@ -6007,7 +6047,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 223m,
                             PriceUnder3 = 49m,
                             Seats = 126,
-                            Start = new DateTime(2024, 7, 5, 2, 7, 13, 749, DateTimeKind.Utc).AddTicks(5435),
+                            Start = new DateTime(2024, 7, 16, 11, 10, 42, 766, DateTimeKind.Utc).AddTicks(3638),
                             ToCity = "Brava",
                             ToCountry = "hiszpania",
                             ToStreet = "Calle Mayor",
@@ -6015,8 +6055,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("2dad94d4-0f5e-4433-bc7a-50b8abe9a15b"),
-                            End = new DateTime(2024, 6, 29, 12, 7, 13, 749, DateTimeKind.Utc).AddTicks(5437),
+                            Id = new Guid("54f9287e-feef-4822-b43b-9905685371f3"),
+                            End = new DateTime(2024, 7, 10, 21, 10, 42, 766, DateTimeKind.Utc).AddTicks(3641),
                             FromCity = "Riwiera",
                             FromCountry = "chorwacja",
                             FromStreet = "Kapucinska ulica",
@@ -6025,7 +6065,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 207m,
                             PriceUnder3 = 46m,
                             Seats = 115,
-                            Start = new DateTime(2024, 6, 29, 5, 7, 13, 749, DateTimeKind.Utc).AddTicks(5437),
+                            Start = new DateTime(2024, 7, 10, 14, 10, 42, 766, DateTimeKind.Utc).AddTicks(3641),
                             ToCity = "Vlora",
                             ToCountry = "albania",
                             ToStreet = "Rruga e Kavajes",
@@ -6033,8 +6073,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("45842a5a-b953-451e-8604-5d2985d54863"),
-                            End = new DateTime(2024, 7, 2, 14, 7, 13, 749, DateTimeKind.Utc).AddTicks(5440),
+                            Id = new Guid("adf4c447-32ef-47e8-a8aa-5a0584138f59"),
+                            End = new DateTime(2024, 7, 13, 23, 10, 42, 766, DateTimeKind.Utc).AddTicks(3644),
                             FromCity = "Sheikh",
                             FromCountry = "egipt",
                             FromStreet = "Sharia Salah Salem",
@@ -6043,7 +6083,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 103m,
                             PriceUnder3 = 23m,
                             Seats = 162,
-                            Start = new DateTime(2024, 7, 2, 11, 7, 13, 749, DateTimeKind.Utc).AddTicks(5440),
+                            Start = new DateTime(2024, 7, 13, 20, 10, 42, 766, DateTimeKind.Utc).AddTicks(3643),
                             ToCity = "Alam",
                             ToCountry = "egipt",
                             ToStreet = "Sharia Tahrir",
@@ -6051,8 +6091,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("60aba868-4542-411c-9909-595072f5d55d"),
-                            End = new DateTime(2024, 6, 29, 23, 7, 13, 749, DateTimeKind.Utc).AddTicks(5442),
+                            Id = new Guid("947f8962-4c59-4957-9e01-520ab6febd4b"),
+                            End = new DateTime(2024, 7, 11, 8, 10, 42, 766, DateTimeKind.Utc).AddTicks(3646),
                             FromCity = "Alam",
                             FromCountry = "egipt",
                             FromStreet = "Sharia Tahrir",
@@ -6061,7 +6101,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 126m,
                             PriceUnder3 = 28m,
                             Seats = 123,
-                            Start = new DateTime(2024, 6, 29, 15, 7, 13, 749, DateTimeKind.Utc).AddTicks(5441),
+                            Start = new DateTime(2024, 7, 11, 0, 10, 42, 766, DateTimeKind.Utc).AddTicks(3646),
                             ToCity = "Brava",
                             ToCountry = "hiszpania",
                             ToStreet = "Calle de Alcalá",
@@ -6069,8 +6109,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("a8458f4a-9874-4dd7-9d49-03eb857c8d2a"),
-                            End = new DateTime(2024, 7, 13, 2, 7, 13, 749, DateTimeKind.Utc).AddTicks(5444),
+                            Id = new Guid("7e22cf71-e2e1-467a-9b86-9f91046d3317"),
+                            End = new DateTime(2024, 7, 24, 11, 10, 42, 766, DateTimeKind.Utc).AddTicks(3649),
                             FromCity = "Durres",
                             FromCountry = "albania",
                             FromStreet = "Bulevardi Bajram Curri",
@@ -6079,7 +6119,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 162m,
                             PriceUnder3 = 36m,
                             Seats = 138,
-                            Start = new DateTime(2024, 7, 12, 14, 7, 13, 749, DateTimeKind.Utc).AddTicks(5443),
+                            Start = new DateTime(2024, 7, 23, 23, 10, 42, 766, DateTimeKind.Utc).AddTicks(3648),
                             ToCity = "Vlora",
                             ToCountry = "albania",
                             ToStreet = "Rruga e Kavajes",
@@ -6087,8 +6127,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("416bbca3-c28c-4151-a7fe-4c27f7c65fdb"),
-                            End = new DateTime(2024, 7, 7, 17, 7, 13, 749, DateTimeKind.Utc).AddTicks(5445),
+                            Id = new Guid("9aee448a-050f-428f-ab29-f83c74aedbdc"),
+                            End = new DateTime(2024, 7, 19, 2, 10, 42, 766, DateTimeKind.Utc).AddTicks(3652),
                             FromCity = "Durres",
                             FromCountry = "albania",
                             FromStreet = "Rruga Abdyl Frasheri",
@@ -6097,7 +6137,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 263m,
                             PriceUnder3 = 58m,
                             Seats = 147,
-                            Start = new DateTime(2024, 7, 7, 12, 7, 13, 749, DateTimeKind.Utc).AddTicks(5445),
+                            Start = new DateTime(2024, 7, 18, 21, 10, 42, 766, DateTimeKind.Utc).AddTicks(3651),
                             ToCity = "Alam",
                             ToCountry = "egipt",
                             ToStreet = "Sharia Gamal Abdel Nasser",
@@ -6105,8 +6145,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("58a7e463-20ac-4284-a349-3e55784104f4"),
-                            End = new DateTime(2024, 6, 10, 1, 7, 13, 749, DateTimeKind.Utc).AddTicks(5447),
+                            Id = new Guid("54674cee-2d93-4d3b-816e-15b463fb2ec1"),
+                            End = new DateTime(2024, 6, 21, 10, 10, 42, 766, DateTimeKind.Utc).AddTicks(3654),
                             FromCity = "Luz",
                             FromCountry = "hiszpania",
                             FromStreet = "Calle Mayor",
@@ -6115,7 +6155,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 156m,
                             PriceUnder3 = 34m,
                             Seats = 173,
-                            Start = new DateTime(2024, 6, 9, 13, 7, 13, 749, DateTimeKind.Utc).AddTicks(5447),
+                            Start = new DateTime(2024, 6, 20, 22, 10, 42, 766, DateTimeKind.Utc).AddTicks(3654),
                             ToCity = "Riwiera",
                             ToCountry = "chorwacja",
                             ToStreet = "Vukovarska ulica",
@@ -6123,8 +6163,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("e6e4273f-a9ef-4178-b26a-92a508c9aa1a"),
-                            End = new DateTime(2024, 8, 21, 1, 7, 13, 749, DateTimeKind.Utc).AddTicks(5449),
+                            Id = new Guid("9f67c71c-4c6a-493c-a86f-fe2980b630b1"),
+                            End = new DateTime(2024, 9, 1, 10, 10, 42, 766, DateTimeKind.Utc).AddTicks(3657),
                             FromCity = "Durres",
                             FromCountry = "albania",
                             FromStreet = "Bulevardi Bajram Curri",
@@ -6133,7 +6173,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 97m,
                             PriceUnder3 = 21m,
                             Seats = 84,
-                            Start = new DateTime(2024, 8, 20, 13, 7, 13, 749, DateTimeKind.Utc).AddTicks(5449),
+                            Start = new DateTime(2024, 8, 31, 22, 10, 42, 766, DateTimeKind.Utc).AddTicks(3656),
                             ToCity = "Turecka",
                             ToCountry = "turcja",
                             ToStreet = "Atatürk Caddesi",
@@ -6141,8 +6181,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("80528e8e-23ca-4977-8a3e-463686a6a378"),
-                            End = new DateTime(2024, 8, 1, 16, 7, 13, 749, DateTimeKind.Utc).AddTicks(5451),
+                            Id = new Guid("d70adb02-3177-4469-a98c-5bca5394bccb"),
+                            End = new DateTime(2024, 8, 13, 1, 10, 42, 766, DateTimeKind.Utc).AddTicks(3659),
                             FromCity = "Durres",
                             FromCountry = "albania",
                             FromStreet = "Rruga e Dibres",
@@ -6151,7 +6191,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 130m,
                             PriceUnder3 = 29m,
                             Seats = 109,
-                            Start = new DateTime(2024, 8, 1, 6, 7, 13, 749, DateTimeKind.Utc).AddTicks(5451),
+                            Start = new DateTime(2024, 8, 12, 15, 10, 42, 766, DateTimeKind.Utc).AddTicks(3659),
                             ToCity = "Durres",
                             ToCountry = "albania",
                             ToStreet = "Rruga Abdyl Frasheri",
@@ -6159,8 +6199,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("6d18b84a-2d05-46d8-a9d7-ddbb329e5cba"),
-                            End = new DateTime(2024, 8, 13, 0, 7, 13, 749, DateTimeKind.Utc).AddTicks(5453),
+                            Id = new Guid("f6474309-a344-456a-8108-83613ff5287d"),
+                            End = new DateTime(2024, 8, 24, 9, 10, 42, 766, DateTimeKind.Utc).AddTicks(3662),
                             FromCity = "Kalabria",
                             FromCountry = "wlochy",
                             FromStreet = "Via Nazionale",
@@ -6169,7 +6209,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 190m,
                             PriceUnder3 = 42m,
                             Seats = 192,
-                            Start = new DateTime(2024, 8, 12, 14, 7, 13, 749, DateTimeKind.Utc).AddTicks(5453),
+                            Start = new DateTime(2024, 8, 23, 23, 10, 42, 766, DateTimeKind.Utc).AddTicks(3661),
                             ToCity = "Brava",
                             ToCountry = "hiszpania",
                             ToStreet = "Calle de Alcalá",
@@ -6177,8 +6217,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("032bf625-a6af-45b4-89cd-0f7e840b1918"),
-                            End = new DateTime(2024, 7, 12, 2, 7, 13, 749, DateTimeKind.Utc).AddTicks(5455),
+                            Id = new Guid("7dcf549d-4b38-43dd-982d-fcdcd42a35ad"),
+                            End = new DateTime(2024, 7, 23, 11, 10, 42, 766, DateTimeKind.Utc).AddTicks(3664),
                             FromCity = "Riwiera",
                             FromCountry = "chorwacja",
                             FromStreet = "Vukovarska ulica",
@@ -6187,7 +6227,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 143m,
                             PriceUnder3 = 31m,
                             Seats = 65,
-                            Start = new DateTime(2024, 7, 11, 16, 7, 13, 749, DateTimeKind.Utc).AddTicks(5454),
+                            Start = new DateTime(2024, 7, 23, 1, 10, 42, 766, DateTimeKind.Utc).AddTicks(3664),
                             ToCity = "Alam",
                             ToCountry = "egipt",
                             ToStreet = "Sharia Gamal Abdel Nasser",
@@ -6195,8 +6235,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("20f10150-f446-4aee-8e6b-22760f7da48e"),
-                            End = new DateTime(2024, 6, 13, 10, 7, 13, 749, DateTimeKind.Utc).AddTicks(5457),
+                            Id = new Guid("81d1c0f1-e183-4138-a4e1-59c1cc091a0d"),
+                            End = new DateTime(2024, 6, 24, 19, 10, 42, 766, DateTimeKind.Utc).AddTicks(3667),
                             FromCity = "Peloponez",
                             FromCountry = "grecja",
                             FromStreet = "Leoforos Alexandras",
@@ -6205,7 +6245,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 259m,
                             PriceUnder3 = 57m,
                             Seats = 195,
-                            Start = new DateTime(2024, 6, 13, 6, 7, 13, 749, DateTimeKind.Utc).AddTicks(5456),
+                            Start = new DateTime(2024, 6, 24, 15, 10, 42, 766, DateTimeKind.Utc).AddTicks(3666),
                             ToCity = "Kalabria",
                             ToCountry = "wlochy",
                             ToStreet = "Via del Corso",
@@ -6213,8 +6253,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("e1e05ce5-36f5-446d-bf50-52fd206ea68a"),
-                            End = new DateTime(2024, 8, 1, 23, 7, 13, 749, DateTimeKind.Utc).AddTicks(5458),
+                            Id = new Guid("ebad7111-0fb4-4119-829a-e42d8ade0ad5"),
+                            End = new DateTime(2024, 8, 13, 8, 10, 42, 766, DateTimeKind.Utc).AddTicks(3669),
                             FromCity = "Alam",
                             FromCountry = "egipt",
                             FromStreet = "Sharia Gamal Abdel Nasser",
@@ -6223,7 +6263,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 73m,
                             PriceUnder3 = 16m,
                             Seats = 136,
-                            Start = new DateTime(2024, 8, 1, 16, 7, 13, 749, DateTimeKind.Utc).AddTicks(5458),
+                            Start = new DateTime(2024, 8, 13, 1, 10, 42, 766, DateTimeKind.Utc).AddTicks(3669),
                             ToCity = "Kalabria",
                             ToCountry = "wlochy",
                             ToStreet = "Via del Corso",
@@ -6231,8 +6271,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("88035675-c558-41f5-870e-daa0c01be154"),
-                            End = new DateTime(2024, 8, 18, 22, 7, 13, 749, DateTimeKind.Utc).AddTicks(5460),
+                            Id = new Guid("a1cd838c-5bf9-453a-9eea-4aa0e488c163"),
+                            End = new DateTime(2024, 8, 30, 7, 10, 42, 766, DateTimeKind.Utc).AddTicks(3704),
                             FromCity = "Turecka",
                             FromCountry = "turcja",
                             FromStreet = "Bağdat Caddesi",
@@ -6241,7 +6281,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 195m,
                             PriceUnder3 = 43m,
                             Seats = 160,
-                            Start = new DateTime(2024, 8, 18, 11, 7, 13, 749, DateTimeKind.Utc).AddTicks(5460),
+                            Start = new DateTime(2024, 8, 29, 20, 10, 42, 766, DateTimeKind.Utc).AddTicks(3701),
                             ToCity = "Nero",
                             ToCountry = "grecja",
                             ToStreet = "Leoforos Alexandras",
@@ -6249,8 +6289,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("f504316a-d1bc-4f73-8697-c15064a6c127"),
-                            End = new DateTime(2024, 7, 16, 0, 7, 13, 749, DateTimeKind.Utc).AddTicks(5462),
+                            Id = new Guid("19745002-b661-4004-9c0c-c1bcb017c602"),
+                            End = new DateTime(2024, 7, 27, 9, 10, 42, 766, DateTimeKind.Utc).AddTicks(3706),
                             FromCity = "Sheikh",
                             FromCountry = "egipt",
                             FromStreet = "Sharia Tahrir",
@@ -6259,7 +6299,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 63m,
                             PriceUnder3 = 14m,
                             Seats = 149,
-                            Start = new DateTime(2024, 7, 15, 17, 7, 13, 749, DateTimeKind.Utc).AddTicks(5462),
+                            Start = new DateTime(2024, 7, 27, 2, 10, 42, 766, DateTimeKind.Utc).AddTicks(3706),
                             ToCity = "Sheikh",
                             ToCountry = "egipt",
                             ToStreet = "Sharia Salah Salem",
@@ -6267,8 +6307,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("2001d82f-0416-4df2-8589-5f7ffe01ceb3"),
-                            End = new DateTime(2024, 8, 12, 11, 7, 13, 749, DateTimeKind.Utc).AddTicks(5464),
+                            Id = new Guid("c7e86deb-2ad7-4d45-9ced-1fd10333c902"),
+                            End = new DateTime(2024, 8, 23, 20, 10, 42, 766, DateTimeKind.Utc).AddTicks(3709),
                             FromCity = "Marmaris",
                             FromCountry = "turcja",
                             FromStreet = "Bağdat Caddesi",
@@ -6277,7 +6317,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 238m,
                             PriceUnder3 = 53m,
                             Seats = 126,
-                            Start = new DateTime(2024, 8, 12, 9, 7, 13, 749, DateTimeKind.Utc).AddTicks(5463),
+                            Start = new DateTime(2024, 8, 23, 18, 10, 42, 766, DateTimeKind.Utc).AddTicks(3708),
                             ToCity = "Sheikh",
                             ToCountry = "egipt",
                             ToStreet = "Sharia Tahrir",
@@ -6285,8 +6325,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("8d5cffcc-4c00-4e27-affb-bfd1f6b8e2c3"),
-                            End = new DateTime(2024, 8, 15, 4, 7, 13, 749, DateTimeKind.Utc).AddTicks(5467),
+                            Id = new Guid("014d0a5f-8730-43b4-8bc7-c1b491abe27c"),
+                            End = new DateTime(2024, 8, 26, 13, 10, 42, 766, DateTimeKind.Utc).AddTicks(3711),
                             FromCity = "Brava",
                             FromCountry = "hiszpania",
                             FromStreet = "Gran Vía",
@@ -6295,7 +6335,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 230m,
                             PriceUnder3 = 51m,
                             Seats = 103,
-                            Start = new DateTime(2024, 8, 14, 20, 7, 13, 749, DateTimeKind.Utc).AddTicks(5466),
+                            Start = new DateTime(2024, 8, 26, 5, 10, 42, 766, DateTimeKind.Utc).AddTicks(3711),
                             ToCity = "Turecka",
                             ToCountry = "turcja",
                             ToStreet = "Halaskargazi Caddesi",
@@ -6303,8 +6343,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("99c1fa40-2551-456a-a022-14fdd665cad6"),
-                            End = new DateTime(2024, 6, 5, 16, 7, 13, 749, DateTimeKind.Utc).AddTicks(5468),
+                            Id = new Guid("ff020a58-35fb-44f0-8217-37c7f5d72b13"),
+                            End = new DateTime(2024, 6, 17, 1, 10, 42, 766, DateTimeKind.Utc).AddTicks(3714),
                             FromCity = "Alam",
                             FromCountry = "egipt",
                             FromStreet = "Sharia Gamal Abdel Nasser",
@@ -6313,7 +6353,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 237m,
                             PriceUnder3 = 52m,
                             Seats = 104,
-                            Start = new DateTime(2024, 6, 5, 12, 7, 13, 749, DateTimeKind.Utc).AddTicks(5468),
+                            Start = new DateTime(2024, 6, 16, 21, 10, 42, 766, DateTimeKind.Utc).AddTicks(3714),
                             ToCity = "Alam",
                             ToCountry = "egipt",
                             ToStreet = "Sharia Tahrir",
@@ -6321,8 +6361,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("0a9c4d79-350f-4a86-b2d3-d8f240ad963f"),
-                            End = new DateTime(2024, 6, 27, 23, 7, 13, 749, DateTimeKind.Utc).AddTicks(5470),
+                            Id = new Guid("01234571-5ff1-4e78-b615-1c15f80b924a"),
+                            End = new DateTime(2024, 7, 9, 8, 10, 42, 766, DateTimeKind.Utc).AddTicks(3717),
                             FromCity = "Kalabria",
                             FromCountry = "wlochy",
                             FromStreet = "Via Veneto",
@@ -6331,7 +6371,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 242m,
                             PriceUnder3 = 53m,
                             Seats = 50,
-                            Start = new DateTime(2024, 6, 27, 15, 7, 13, 749, DateTimeKind.Utc).AddTicks(5470),
+                            Start = new DateTime(2024, 7, 9, 0, 10, 42, 766, DateTimeKind.Utc).AddTicks(3716),
                             ToCity = "Durres",
                             ToCountry = "albania",
                             ToStreet = "Bulevardi Bajram Curri",
@@ -6339,8 +6379,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("c8612758-55dc-4f35-85e5-af59bd4c604c"),
-                            End = new DateTime(2024, 6, 22, 6, 7, 13, 749, DateTimeKind.Utc).AddTicks(5472),
+                            Id = new Guid("8c9e89c5-6162-4bf5-a6b8-95cf0a660b79"),
+                            End = new DateTime(2024, 7, 3, 15, 10, 42, 766, DateTimeKind.Utc).AddTicks(3719),
                             FromCity = "Olimpijska",
                             FromCountry = "grecja",
                             FromStreet = "Plateia Syntagmatos",
@@ -6349,7 +6389,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 151m,
                             PriceUnder3 = 33m,
                             Seats = 153,
-                            Start = new DateTime(2024, 6, 22, 3, 7, 13, 749, DateTimeKind.Utc).AddTicks(5472),
+                            Start = new DateTime(2024, 7, 3, 12, 10, 42, 766, DateTimeKind.Utc).AddTicks(3719),
                             ToCity = "Turecka",
                             ToCountry = "turcja",
                             ToStreet = "Bağdat Caddesi",
@@ -6357,8 +6397,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("506b4941-fdd9-422d-9f2f-1fa28837f3c1"),
-                            End = new DateTime(2024, 6, 15, 8, 7, 13, 749, DateTimeKind.Utc).AddTicks(5474),
+                            Id = new Guid("55531bb8-602f-4b79-92c4-18a1f45a9a82"),
+                            End = new DateTime(2024, 6, 26, 17, 10, 42, 766, DateTimeKind.Utc).AddTicks(3722),
                             FromCity = "Riwiera",
                             FromCountry = "chorwacja",
                             FromStreet = "Maksimirska ulica",
@@ -6367,7 +6407,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 157m,
                             PriceUnder3 = 35m,
                             Seats = 200,
-                            Start = new DateTime(2024, 6, 15, 2, 7, 13, 749, DateTimeKind.Utc).AddTicks(5473),
+                            Start = new DateTime(2024, 6, 26, 11, 10, 42, 766, DateTimeKind.Utc).AddTicks(3721),
                             ToCity = "Sheikh",
                             ToCountry = "egipt",
                             ToStreet = "Sharia Ramsis",
@@ -6375,8 +6415,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("cce56ca2-68bd-4bdf-869a-8a082cb9d101"),
-                            End = new DateTime(2024, 7, 14, 15, 7, 13, 749, DateTimeKind.Utc).AddTicks(5476),
+                            Id = new Guid("70d4b44b-b038-4fd7-b2f7-a019b5b6faba"),
+                            End = new DateTime(2024, 7, 26, 0, 10, 42, 766, DateTimeKind.Utc).AddTicks(3724),
                             FromCity = "Kalabria",
                             FromCountry = "wlochy",
                             FromStreet = "Via Veneto",
@@ -6385,7 +6425,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 74m,
                             PriceUnder3 = 16m,
                             Seats = 153,
-                            Start = new DateTime(2024, 7, 14, 10, 7, 13, 749, DateTimeKind.Utc).AddTicks(5475),
+                            Start = new DateTime(2024, 7, 25, 19, 10, 42, 766, DateTimeKind.Utc).AddTicks(3724),
                             ToCity = "Brava",
                             ToCountry = "hiszpania",
                             ToStreet = "Paseo del Prado",
@@ -6393,8 +6433,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("b1601514-94a8-4349-b726-f90703690a4d"),
-                            End = new DateTime(2024, 7, 29, 15, 7, 13, 749, DateTimeKind.Utc).AddTicks(5477),
+                            Id = new Guid("7b77bbfe-45eb-404f-b40f-8a7cc297d561"),
+                            End = new DateTime(2024, 8, 10, 0, 10, 42, 766, DateTimeKind.Utc).AddTicks(3727),
                             FromCity = "Turecka",
                             FromCountry = "turcja",
                             FromStreet = "Bağdat Caddesi",
@@ -6403,7 +6443,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 153m,
                             PriceUnder3 = 34m,
                             Seats = 167,
-                            Start = new DateTime(2024, 7, 29, 3, 7, 13, 749, DateTimeKind.Utc).AddTicks(5477),
+                            Start = new DateTime(2024, 8, 9, 12, 10, 42, 766, DateTimeKind.Utc).AddTicks(3726),
                             ToCity = "Sheikh",
                             ToCountry = "egipt",
                             ToStreet = "Sharia Salah Salem",
@@ -6411,8 +6451,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("0a72e6ad-f3b3-48a1-ab8f-1f1e358bd249"),
-                            End = new DateTime(2024, 6, 14, 10, 7, 13, 749, DateTimeKind.Utc).AddTicks(5479),
+                            Id = new Guid("2918fe71-b03f-43b6-91dc-011b34a30c36"),
+                            End = new DateTime(2024, 6, 25, 19, 10, 42, 766, DateTimeKind.Utc).AddTicks(3729),
                             FromCity = "Nero",
                             FromCountry = "grecja",
                             FromStreet = "Leoforos Vasilissis Sofias",
@@ -6421,7 +6461,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 93m,
                             PriceUnder3 = 20m,
                             Seats = 170,
-                            Start = new DateTime(2024, 6, 14, 7, 7, 13, 749, DateTimeKind.Utc).AddTicks(5479),
+                            Start = new DateTime(2024, 6, 25, 16, 10, 42, 766, DateTimeKind.Utc).AddTicks(3729),
                             ToCity = "Durres",
                             ToCountry = "albania",
                             ToStreet = "Rruga Abdyl Frasheri",
@@ -6429,8 +6469,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("528cd78c-c107-47dc-864e-c9a9e2b19e80"),
-                            End = new DateTime(2024, 7, 23, 0, 7, 13, 749, DateTimeKind.Utc).AddTicks(5481),
+                            Id = new Guid("b318f133-3028-4532-bdad-a67640b3c1ce"),
+                            End = new DateTime(2024, 8, 3, 9, 10, 42, 766, DateTimeKind.Utc).AddTicks(3732),
                             FromCity = "Marmaris",
                             FromCountry = "turcja",
                             FromStreet = "Bağdat Caddesi",
@@ -6439,7 +6479,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 241m,
                             PriceUnder3 = 53m,
                             Seats = 132,
-                            Start = new DateTime(2024, 7, 22, 22, 7, 13, 749, DateTimeKind.Utc).AddTicks(5481),
+                            Start = new DateTime(2024, 8, 3, 7, 10, 42, 766, DateTimeKind.Utc).AddTicks(3731),
                             ToCity = "Riwiera",
                             ToCountry = "chorwacja",
                             ToStreet = "Maksimirska ulica",
@@ -6447,8 +6487,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("46270436-e658-4f64-b683-3cf4d1b28363"),
-                            End = new DateTime(2024, 6, 20, 13, 7, 13, 749, DateTimeKind.Utc).AddTicks(5483),
+                            Id = new Guid("09ea754b-8582-482f-a57a-0fe74330245d"),
+                            End = new DateTime(2024, 7, 1, 22, 10, 42, 766, DateTimeKind.Utc).AddTicks(3735),
                             FromCity = "Sheikh",
                             FromCountry = "egipt",
                             FromStreet = "Sharia Salah Salem",
@@ -6457,7 +6497,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 99m,
                             PriceUnder3 = 22m,
                             Seats = 165,
-                            Start = new DateTime(2024, 6, 20, 1, 7, 13, 749, DateTimeKind.Utc).AddTicks(5482),
+                            Start = new DateTime(2024, 7, 1, 10, 10, 42, 766, DateTimeKind.Utc).AddTicks(3734),
                             ToCity = "Kalabria",
                             ToCountry = "wlochy",
                             ToStreet = "Via del Corso",
@@ -6465,8 +6505,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("a97a9180-910e-4fd2-88c8-5bcf112d6e3f"),
-                            End = new DateTime(2024, 6, 10, 0, 7, 13, 749, DateTimeKind.Utc).AddTicks(5485),
+                            Id = new Guid("49d827de-d9a4-46d7-a775-e105729b544b"),
+                            End = new DateTime(2024, 6, 21, 9, 10, 42, 766, DateTimeKind.Utc).AddTicks(3737),
                             FromCity = "Alam",
                             FromCountry = "egipt",
                             FromStreet = "Sharia Tahrir",
@@ -6475,7 +6515,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 81m,
                             PriceUnder3 = 18m,
                             Seats = 187,
-                            Start = new DateTime(2024, 6, 9, 21, 7, 13, 749, DateTimeKind.Utc).AddTicks(5484),
+                            Start = new DateTime(2024, 6, 21, 6, 10, 42, 766, DateTimeKind.Utc).AddTicks(3737),
                             ToCity = "Alam",
                             ToCountry = "egipt",
                             ToStreet = "Sharia Ramsis",
@@ -6483,8 +6523,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("122e35a7-8912-4ea6-b5ce-d82847c44d8e"),
-                            End = new DateTime(2024, 7, 21, 18, 7, 13, 749, DateTimeKind.Utc).AddTicks(5487),
+                            Id = new Guid("81020105-ed12-4c27-b8a2-214235b7df70"),
+                            End = new DateTime(2024, 8, 2, 3, 10, 42, 766, DateTimeKind.Utc).AddTicks(3740),
                             FromCity = "Vlora",
                             FromCountry = "albania",
                             FromStreet = "Rruga 28 Nentori",
@@ -6493,7 +6533,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 80m,
                             PriceUnder3 = 17m,
                             Seats = 162,
-                            Start = new DateTime(2024, 7, 21, 11, 7, 13, 749, DateTimeKind.Utc).AddTicks(5486),
+                            Start = new DateTime(2024, 8, 1, 20, 10, 42, 766, DateTimeKind.Utc).AddTicks(3739),
                             ToCity = "Alam",
                             ToCountry = "egipt",
                             ToStreet = "Sharia Gamal Abdel Nasser",
@@ -6501,8 +6541,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("4f7fae2a-d95f-4913-a600-5b622b3d9224"),
-                            End = new DateTime(2024, 8, 16, 21, 7, 13, 749, DateTimeKind.Utc).AddTicks(5488),
+                            Id = new Guid("7c3e45ff-5767-4e54-9906-90598d24b918"),
+                            End = new DateTime(2024, 8, 28, 6, 10, 42, 766, DateTimeKind.Utc).AddTicks(3742),
                             FromCity = "Vlora",
                             FromCountry = "albania",
                             FromStreet = "Rruga 28 Nentori",
@@ -6511,7 +6551,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 61m,
                             PriceUnder3 = 13m,
                             Seats = 91,
-                            Start = new DateTime(2024, 8, 16, 9, 7, 13, 749, DateTimeKind.Utc).AddTicks(5488),
+                            Start = new DateTime(2024, 8, 27, 18, 10, 42, 766, DateTimeKind.Utc).AddTicks(3742),
                             ToCity = "Turecka",
                             ToCountry = "turcja",
                             ToStreet = "Halaskargazi Caddesi",
@@ -6519,8 +6559,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("392ee92f-b4b9-4540-b2b7-cf5d632c4492"),
-                            End = new DateTime(2024, 5, 30, 18, 7, 13, 749, DateTimeKind.Utc).AddTicks(5490),
+                            Id = new Guid("2a65dad1-4ac7-4b40-af81-dcbb4e3a6e34"),
+                            End = new DateTime(2024, 6, 11, 3, 10, 42, 766, DateTimeKind.Utc).AddTicks(3745),
                             FromCity = "Durres",
                             FromCountry = "albania",
                             FromStreet = "Rruga e Dibres",
@@ -6529,7 +6569,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 70m,
                             PriceUnder3 = 15m,
                             Seats = 187,
-                            Start = new DateTime(2024, 5, 30, 8, 7, 13, 749, DateTimeKind.Utc).AddTicks(5490),
+                            Start = new DateTime(2024, 6, 10, 17, 10, 42, 766, DateTimeKind.Utc).AddTicks(3744),
                             ToCity = "Brava",
                             ToCountry = "hiszpania",
                             ToStreet = "Calle Mayor",
@@ -6537,8 +6577,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("2db52170-a6ce-4741-b61e-985940a74c7c"),
-                            End = new DateTime(2024, 6, 17, 18, 7, 13, 749, DateTimeKind.Utc).AddTicks(5493),
+                            Id = new Guid("27974147-92c7-4c7a-acd2-9019b577a0b4"),
+                            End = new DateTime(2024, 6, 29, 3, 10, 42, 766, DateTimeKind.Utc).AddTicks(3747),
                             FromCity = "Durres",
                             FromCountry = "albania",
                             FromStreet = "Rruga e Dibres",
@@ -6547,7 +6587,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 117m,
                             PriceUnder3 = 26m,
                             Seats = 70,
-                            Start = new DateTime(2024, 6, 17, 13, 7, 13, 749, DateTimeKind.Utc).AddTicks(5493),
+                            Start = new DateTime(2024, 6, 28, 22, 10, 42, 766, DateTimeKind.Utc).AddTicks(3747),
                             ToCity = "Durres",
                             ToCountry = "albania",
                             ToStreet = "Bulevardi Bajram Curri",
@@ -6555,8 +6595,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("e9bda7c7-ab05-4dae-93b1-da39d42f331c"),
-                            End = new DateTime(2024, 6, 29, 20, 7, 13, 749, DateTimeKind.Utc).AddTicks(5495),
+                            Id = new Guid("b578a128-d072-4401-92fe-5db1a0045453"),
+                            End = new DateTime(2024, 7, 11, 5, 10, 42, 766, DateTimeKind.Utc).AddTicks(3750),
                             FromCity = "Vlora",
                             FromCountry = "albania",
                             FromStreet = "Rruga e Kavajes",
@@ -6565,7 +6605,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 244m,
                             PriceUnder3 = 54m,
                             Seats = 73,
-                            Start = new DateTime(2024, 6, 29, 16, 7, 13, 749, DateTimeKind.Utc).AddTicks(5495),
+                            Start = new DateTime(2024, 7, 11, 1, 10, 42, 766, DateTimeKind.Utc).AddTicks(3749),
                             ToCity = "Heraklion",
                             ToCountry = "grecja",
                             ToStreet = "Plateia Syntagmatos",
@@ -6573,8 +6613,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("3fb016f1-e40b-4f7a-87bf-fccfa97af0a9"),
-                            End = new DateTime(2024, 7, 7, 22, 7, 13, 749, DateTimeKind.Utc).AddTicks(5497),
+                            Id = new Guid("d7e2e6c3-6c23-45d4-b420-a290bf0d448c"),
+                            End = new DateTime(2024, 7, 19, 7, 10, 42, 766, DateTimeKind.Utc).AddTicks(3752),
                             FromCity = "Sheikh",
                             FromCountry = "egipt",
                             FromStreet = "Sharia Tahrir",
@@ -6583,7 +6623,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 113m,
                             PriceUnder3 = 25m,
                             Seats = 184,
-                            Start = new DateTime(2024, 7, 7, 14, 7, 13, 749, DateTimeKind.Utc).AddTicks(5496),
+                            Start = new DateTime(2024, 7, 18, 23, 10, 42, 766, DateTimeKind.Utc).AddTicks(3752),
                             ToCity = "Vlora",
                             ToCountry = "albania",
                             ToStreet = "Rruga e Kavajes",
@@ -6591,8 +6631,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("4fe4afaa-cf0a-4e0a-9483-c415584da6be"),
-                            End = new DateTime(2024, 7, 10, 21, 7, 13, 749, DateTimeKind.Utc).AddTicks(5498),
+                            Id = new Guid("e46dfcfb-be01-4a5e-a337-f7e25cb71f25"),
+                            End = new DateTime(2024, 7, 22, 6, 10, 42, 766, DateTimeKind.Utc).AddTicks(3755),
                             FromCity = "Luz",
                             FromCountry = "hiszpania",
                             FromStreet = "Calle Mayor",
@@ -6601,7 +6641,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 260m,
                             PriceUnder3 = 57m,
                             Seats = 131,
-                            Start = new DateTime(2024, 7, 10, 16, 7, 13, 749, DateTimeKind.Utc).AddTicks(5498),
+                            Start = new DateTime(2024, 7, 22, 1, 10, 42, 766, DateTimeKind.Utc).AddTicks(3754),
                             ToCity = "Marmaris",
                             ToCountry = "turcja",
                             ToStreet = "Bağdat Caddesi",
@@ -6609,8 +6649,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("1f5acfdb-5824-4f27-ad14-64b52384e02f"),
-                            End = new DateTime(2024, 6, 2, 13, 7, 13, 749, DateTimeKind.Utc).AddTicks(5501),
+                            Id = new Guid("696350e4-3f05-4bc3-9a97-9b97e4715589"),
+                            End = new DateTime(2024, 6, 13, 22, 10, 42, 766, DateTimeKind.Utc).AddTicks(3758),
                             FromCity = "Alam",
                             FromCountry = "egipt",
                             FromStreet = "Sharia Tahrir",
@@ -6619,7 +6659,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 126m,
                             PriceUnder3 = 28m,
                             Seats = 57,
-                            Start = new DateTime(2024, 6, 2, 6, 7, 13, 749, DateTimeKind.Utc).AddTicks(5501),
+                            Start = new DateTime(2024, 6, 13, 15, 10, 42, 766, DateTimeKind.Utc).AddTicks(3757),
                             ToCity = "Turecka",
                             ToCountry = "turcja",
                             ToStreet = "Bağdat Caddesi",
@@ -6627,8 +6667,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("2a9a77d3-4440-49a9-9935-1f020388f337"),
-                            End = new DateTime(2024, 8, 15, 5, 7, 13, 749, DateTimeKind.Utc).AddTicks(5528),
+                            Id = new Guid("39fa4315-c0ff-42d1-868d-857dcbe92b81"),
+                            End = new DateTime(2024, 8, 26, 14, 10, 42, 766, DateTimeKind.Utc).AddTicks(3760),
                             FromCity = "Turecka",
                             FromCountry = "turcja",
                             FromStreet = "Atatürk Caddesi",
@@ -6637,7 +6677,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 217m,
                             PriceUnder3 = 48m,
                             Seats = 168,
-                            Start = new DateTime(2024, 8, 15, 2, 7, 13, 749, DateTimeKind.Utc).AddTicks(5526),
+                            Start = new DateTime(2024, 8, 26, 11, 10, 42, 766, DateTimeKind.Utc).AddTicks(3760),
                             ToCity = "Chania",
                             ToCountry = "grecja",
                             ToStreet = "Leoforos Vasilissis Sofias",
@@ -6645,8 +6685,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("468addde-b862-4df0-9d5c-2eda6ea6c1e2"),
-                            End = new DateTime(2024, 6, 27, 4, 7, 13, 749, DateTimeKind.Utc).AddTicks(5531),
+                            Id = new Guid("3e2cf5b5-1907-4f13-8d9b-40486263743a"),
+                            End = new DateTime(2024, 7, 8, 13, 10, 42, 766, DateTimeKind.Utc).AddTicks(3763),
                             FromCity = "Sheikh",
                             FromCountry = "egipt",
                             FromStreet = "Sharia Ramsis",
@@ -6655,7 +6695,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 222m,
                             PriceUnder3 = 49m,
                             Seats = 85,
-                            Start = new DateTime(2024, 6, 26, 21, 7, 13, 749, DateTimeKind.Utc).AddTicks(5530),
+                            Start = new DateTime(2024, 7, 8, 6, 10, 42, 766, DateTimeKind.Utc).AddTicks(3762),
                             ToCity = "Kalabria",
                             ToCountry = "wlochy",
                             ToStreet = "Via Veneto",
@@ -6663,8 +6703,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("8fad72e1-69cc-42d3-9d58-9e46871b0f0d"),
-                            End = new DateTime(2024, 7, 16, 19, 7, 13, 749, DateTimeKind.Utc).AddTicks(5532),
+                            Id = new Guid("88cb77b0-1749-4b75-be36-ea5dfdf3a6ac"),
+                            End = new DateTime(2024, 7, 28, 4, 10, 42, 766, DateTimeKind.Utc).AddTicks(3765),
                             FromCity = "Sheikh",
                             FromCountry = "egipt",
                             FromStreet = "Sharia Salah Salem",
@@ -6673,7 +6713,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 177m,
                             PriceUnder3 = 39m,
                             Seats = 112,
-                            Start = new DateTime(2024, 7, 16, 10, 7, 13, 749, DateTimeKind.Utc).AddTicks(5532),
+                            Start = new DateTime(2024, 7, 27, 19, 10, 42, 766, DateTimeKind.Utc).AddTicks(3765),
                             ToCity = "Olimpijska",
                             ToCountry = "grecja",
                             ToStreet = "Plateia Syntagmatos",
@@ -6681,8 +6721,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("e339736c-9114-441f-84bb-ed45fa064ef6"),
-                            End = new DateTime(2024, 7, 18, 18, 7, 13, 749, DateTimeKind.Utc).AddTicks(5534),
+                            Id = new Guid("147f2998-dd96-4487-9612-65fa38fa31bb"),
+                            End = new DateTime(2024, 7, 30, 3, 10, 42, 766, DateTimeKind.Utc).AddTicks(3768),
                             FromCity = "Kalabria",
                             FromCountry = "wlochy",
                             FromStreet = "Via del Corso",
@@ -6691,7 +6731,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 131m,
                             PriceUnder3 = 29m,
                             Seats = 154,
-                            Start = new DateTime(2024, 7, 18, 12, 7, 13, 749, DateTimeKind.Utc).AddTicks(5534),
+                            Start = new DateTime(2024, 7, 29, 21, 10, 42, 766, DateTimeKind.Utc).AddTicks(3768),
                             ToCity = "Sheikh",
                             ToCountry = "egipt",
                             ToStreet = "Sharia Salah Salem",
@@ -6699,8 +6739,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("a2149dc3-c510-4004-a6e7-946c1a2ba417"),
-                            End = new DateTime(2024, 6, 28, 17, 7, 13, 749, DateTimeKind.Utc).AddTicks(5537),
+                            Id = new Guid("f8daac65-5f16-45de-8723-08c36b36699b"),
+                            End = new DateTime(2024, 7, 10, 2, 10, 42, 766, DateTimeKind.Utc).AddTicks(3771),
                             FromCity = "Brava",
                             FromCountry = "hiszpania",
                             FromStreet = "Paseo del Prado",
@@ -6709,7 +6749,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 161m,
                             PriceUnder3 = 35m,
                             Seats = 171,
-                            Start = new DateTime(2024, 6, 28, 5, 7, 13, 749, DateTimeKind.Utc).AddTicks(5537),
+                            Start = new DateTime(2024, 7, 9, 14, 10, 42, 766, DateTimeKind.Utc).AddTicks(3770),
                             ToCity = "Kalabria",
                             ToCountry = "wlochy",
                             ToStreet = "Via del Corso",
@@ -6717,8 +6757,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("010a93f8-7e22-45d6-a0d4-0b93190679cc"),
-                            End = new DateTime(2024, 8, 27, 7, 7, 13, 749, DateTimeKind.Utc).AddTicks(5539),
+                            Id = new Guid("26a7090d-93ac-454e-92b2-e9ce37f5bce8"),
+                            End = new DateTime(2024, 9, 7, 16, 10, 42, 766, DateTimeKind.Utc).AddTicks(3773),
                             FromCity = "Chania",
                             FromCountry = "grecja",
                             FromStreet = "Leoforos Vasilissis Sofias",
@@ -6727,7 +6767,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 169m,
                             PriceUnder3 = 37m,
                             Seats = 110,
-                            Start = new DateTime(2024, 8, 27, 1, 7, 13, 749, DateTimeKind.Utc).AddTicks(5538),
+                            Start = new DateTime(2024, 9, 7, 10, 10, 42, 766, DateTimeKind.Utc).AddTicks(3773),
                             ToCity = "Riwiera",
                             ToCountry = "chorwacja",
                             ToStreet = "Kapucinska ulica",
@@ -6735,8 +6775,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("8ef5d7a9-0e88-4c22-9486-c4d2155b22dc"),
-                            End = new DateTime(2024, 7, 30, 18, 7, 13, 749, DateTimeKind.Utc).AddTicks(5541),
+                            Id = new Guid("cccb3578-220d-4670-9856-65f477ea0a91"),
+                            End = new DateTime(2024, 8, 11, 3, 10, 42, 766, DateTimeKind.Utc).AddTicks(3776),
                             FromCity = "Riwiera",
                             FromCountry = "chorwacja",
                             FromStreet = "Maksimirska ulica",
@@ -6745,7 +6785,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 190m,
                             PriceUnder3 = 42m,
                             Seats = 181,
-                            Start = new DateTime(2024, 7, 30, 11, 7, 13, 749, DateTimeKind.Utc).AddTicks(5540),
+                            Start = new DateTime(2024, 8, 10, 20, 10, 42, 766, DateTimeKind.Utc).AddTicks(3775),
                             ToCity = "Brava",
                             ToCountry = "hiszpania",
                             ToStreet = "Calle Mayor",
@@ -6753,8 +6793,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("b2d92f88-797d-419b-bad9-8f9459620a61"),
-                            End = new DateTime(2024, 8, 25, 19, 7, 13, 749, DateTimeKind.Utc).AddTicks(5542),
+                            Id = new Guid("34a8c8fc-b0b2-4f5b-b233-1f883a3fd8cc"),
+                            End = new DateTime(2024, 9, 6, 4, 10, 42, 766, DateTimeKind.Utc).AddTicks(3778),
                             FromCity = "Brava",
                             FromCountry = "hiszpania",
                             FromStreet = "Gran Vía",
@@ -6763,7 +6803,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 85m,
                             PriceUnder3 = 19m,
                             Seats = 165,
-                            Start = new DateTime(2024, 8, 25, 17, 7, 13, 749, DateTimeKind.Utc).AddTicks(5542),
+                            Start = new DateTime(2024, 9, 6, 2, 10, 42, 766, DateTimeKind.Utc).AddTicks(3778),
                             ToCity = "Alam",
                             ToCountry = "egipt",
                             ToStreet = "Sharia Ramsis",
@@ -6771,8 +6811,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("282cdf9a-5e18-4776-b743-12ee38fc89f5"),
-                            End = new DateTime(2024, 7, 10, 20, 7, 13, 749, DateTimeKind.Utc).AddTicks(5544),
+                            Id = new Guid("d58112e4-c5b0-45af-9d20-f27a063ef11c"),
+                            End = new DateTime(2024, 7, 22, 5, 10, 42, 766, DateTimeKind.Utc).AddTicks(3781),
                             FromCity = "Sheikh",
                             FromCountry = "egipt",
                             FromStreet = "Sharia Tahrir",
@@ -6781,7 +6821,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 237m,
                             PriceUnder3 = 52m,
                             Seats = 180,
-                            Start = new DateTime(2024, 7, 10, 10, 7, 13, 749, DateTimeKind.Utc).AddTicks(5544),
+                            Start = new DateTime(2024, 7, 21, 19, 10, 42, 766, DateTimeKind.Utc).AddTicks(3780),
                             ToCity = "Vlora",
                             ToCountry = "albania",
                             ToStreet = "Rruga e Kavajes",
@@ -6789,8 +6829,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("5777789e-c9e1-49a8-8d27-3ba044614e5f"),
-                            End = new DateTime(2024, 6, 30, 9, 7, 13, 749, DateTimeKind.Utc).AddTicks(5546),
+                            Id = new Guid("34fa370e-e198-4140-8ba9-c7392b7f9d52"),
+                            End = new DateTime(2024, 7, 11, 18, 10, 42, 766, DateTimeKind.Utc).AddTicks(3784),
                             FromCity = "Alam",
                             FromCountry = "egipt",
                             FromStreet = "Sharia Tahrir",
@@ -6799,7 +6839,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 171m,
                             PriceUnder3 = 38m,
                             Seats = 137,
-                            Start = new DateTime(2024, 6, 30, 7, 7, 13, 749, DateTimeKind.Utc).AddTicks(5546),
+                            Start = new DateTime(2024, 7, 11, 16, 10, 42, 766, DateTimeKind.Utc).AddTicks(3783),
                             ToCity = "Sheikh",
                             ToCountry = "egipt",
                             ToStreet = "Sharia Salah Salem",
@@ -6807,8 +6847,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("b1d8f724-b62b-4ab0-961f-6897a6ad3dab"),
-                            End = new DateTime(2024, 8, 5, 5, 7, 13, 749, DateTimeKind.Utc).AddTicks(5548),
+                            Id = new Guid("28655b5b-4dbc-4959-9003-3542b7a1ab3d"),
+                            End = new DateTime(2024, 8, 16, 14, 10, 42, 766, DateTimeKind.Utc).AddTicks(3786),
                             FromCity = "Kalabria",
                             FromCountry = "wlochy",
                             FromStreet = "Via del Corso",
@@ -6817,7 +6857,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 94m,
                             PriceUnder3 = 21m,
                             Seats = 94,
-                            Start = new DateTime(2024, 8, 5, 1, 7, 13, 749, DateTimeKind.Utc).AddTicks(5547),
+                            Start = new DateTime(2024, 8, 16, 10, 10, 42, 766, DateTimeKind.Utc).AddTicks(3786),
                             ToCity = "Turecka",
                             ToCountry = "turcja",
                             ToStreet = "Atatürk Caddesi",
@@ -6825,8 +6865,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("98ea0327-2c3e-4adb-bbcf-6ac8fe129b3c"),
-                            End = new DateTime(2024, 6, 21, 1, 7, 13, 749, DateTimeKind.Utc).AddTicks(5550),
+                            Id = new Guid("ba93d1a7-c680-41a9-aa39-5505cd0896d5"),
+                            End = new DateTime(2024, 7, 2, 10, 10, 42, 766, DateTimeKind.Utc).AddTicks(3789),
                             FromCity = "Luz",
                             FromCountry = "hiszpania",
                             FromStreet = "Calle Mayor",
@@ -6835,7 +6875,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 90m,
                             PriceUnder3 = 20m,
                             Seats = 74,
-                            Start = new DateTime(2024, 6, 20, 19, 7, 13, 749, DateTimeKind.Utc).AddTicks(5549),
+                            Start = new DateTime(2024, 7, 2, 4, 10, 42, 766, DateTimeKind.Utc).AddTicks(3788),
                             ToCity = "Durres",
                             ToCountry = "albania",
                             ToStreet = "Rruga Abdyl Frasheri",
@@ -6843,8 +6883,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("ad1a7758-5e5a-4696-a364-4bf14e7d8c8c"),
-                            End = new DateTime(2024, 8, 14, 13, 7, 13, 749, DateTimeKind.Utc).AddTicks(5552),
+                            Id = new Guid("80dfd165-79ec-42a6-b435-984d76cf9b1d"),
+                            End = new DateTime(2024, 8, 25, 22, 10, 42, 766, DateTimeKind.Utc).AddTicks(3791),
                             FromCity = "Riwiera",
                             FromCountry = "chorwacja",
                             FromStreet = "Maksimirska ulica",
@@ -6853,7 +6893,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 142m,
                             PriceUnder3 = 31m,
                             Seats = 100,
-                            Start = new DateTime(2024, 8, 14, 3, 7, 13, 749, DateTimeKind.Utc).AddTicks(5551),
+                            Start = new DateTime(2024, 8, 25, 12, 10, 42, 766, DateTimeKind.Utc).AddTicks(3791),
                             ToCity = "Peloponez",
                             ToCountry = "grecja",
                             ToStreet = "Leoforos Alexandras",
@@ -6861,8 +6901,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("d1052a48-c0ae-4bd9-8f50-db723ae9d690"),
-                            End = new DateTime(2024, 8, 21, 2, 7, 13, 749, DateTimeKind.Utc).AddTicks(5554),
+                            Id = new Guid("0ad9a7dc-c3db-4f52-b18d-bc2dd201944a"),
+                            End = new DateTime(2024, 9, 1, 11, 10, 42, 766, DateTimeKind.Utc).AddTicks(3794),
                             FromCity = "Alam",
                             FromCountry = "egipt",
                             FromStreet = "Sharia Tahrir",
@@ -6871,7 +6911,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 115m,
                             PriceUnder3 = 25m,
                             Seats = 175,
-                            Start = new DateTime(2024, 8, 20, 14, 7, 13, 749, DateTimeKind.Utc).AddTicks(5554),
+                            Start = new DateTime(2024, 8, 31, 23, 10, 42, 766, DateTimeKind.Utc).AddTicks(3793),
                             ToCity = "Maresme",
                             ToCountry = "hiszpania",
                             ToStreet = "Paseo del Prado",
@@ -6879,8 +6919,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("d96bd71f-b49a-448c-8682-af5d54e2b7c3"),
-                            End = new DateTime(2024, 7, 2, 3, 7, 13, 749, DateTimeKind.Utc).AddTicks(5556),
+                            Id = new Guid("5c63b837-40c5-4d2d-a44d-c3a23012d789"),
+                            End = new DateTime(2024, 7, 13, 12, 10, 42, 766, DateTimeKind.Utc).AddTicks(3796),
                             FromCity = "Almeria",
                             FromCountry = "hiszpania",
                             FromStreet = "Paseo del Prado",
@@ -6889,7 +6929,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 162m,
                             PriceUnder3 = 36m,
                             Seats = 60,
-                            Start = new DateTime(2024, 7, 1, 17, 7, 13, 749, DateTimeKind.Utc).AddTicks(5556),
+                            Start = new DateTime(2024, 7, 13, 2, 10, 42, 766, DateTimeKind.Utc).AddTicks(3796),
                             ToCity = "Marmaris",
                             ToCountry = "turcja",
                             ToStreet = "Bağdat Caddesi",
@@ -6897,8 +6937,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("2f63cfca-c34f-475d-867f-c0bfed938852"),
-                            End = new DateTime(2024, 8, 25, 18, 7, 13, 749, DateTimeKind.Utc).AddTicks(5558),
+                            Id = new Guid("38a2ced7-bd2a-4bd4-add0-14139fd53de6"),
+                            End = new DateTime(2024, 9, 6, 3, 10, 42, 766, DateTimeKind.Utc).AddTicks(3831),
                             FromCity = "Alam",
                             FromCountry = "egipt",
                             FromStreet = "Sharia Tahrir",
@@ -6907,7 +6947,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 98m,
                             PriceUnder3 = 21m,
                             Seats = 107,
-                            Start = new DateTime(2024, 8, 25, 15, 7, 13, 749, DateTimeKind.Utc).AddTicks(5557),
+                            Start = new DateTime(2024, 9, 6, 0, 10, 42, 766, DateTimeKind.Utc).AddTicks(3829),
                             ToCity = "Turecka",
                             ToCountry = "turcja",
                             ToStreet = "Atatürk Caddesi",
@@ -6915,8 +6955,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("2c4896c9-25b5-432a-b153-d76c1f5e994f"),
-                            End = new DateTime(2024, 6, 29, 19, 7, 13, 749, DateTimeKind.Utc).AddTicks(5559),
+                            Id = new Guid("5a3d0def-3db2-40b3-aa59-3232955a9ef7"),
+                            End = new DateTime(2024, 7, 11, 4, 10, 42, 766, DateTimeKind.Utc).AddTicks(3834),
                             FromCity = "Riwiera",
                             FromCountry = "chorwacja",
                             FromStreet = "Maksimirska ulica",
@@ -6925,7 +6965,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 200m,
                             PriceUnder3 = 44m,
                             Seats = 173,
-                            Start = new DateTime(2024, 6, 29, 13, 7, 13, 749, DateTimeKind.Utc).AddTicks(5559),
+                            Start = new DateTime(2024, 7, 10, 22, 10, 42, 766, DateTimeKind.Utc).AddTicks(3833),
                             ToCity = "Brava",
                             ToCountry = "hiszpania",
                             ToStreet = "Calle Mayor",
@@ -6933,8 +6973,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("97ab19f4-bc15-4748-9539-e20c64691fd0"),
-                            End = new DateTime(2024, 5, 31, 3, 7, 13, 749, DateTimeKind.Utc).AddTicks(5561),
+                            Id = new Guid("098ccf77-73e5-40be-a441-306fc4313371"),
+                            End = new DateTime(2024, 6, 11, 12, 10, 42, 766, DateTimeKind.Utc).AddTicks(3837),
                             FromCity = "Chania",
                             FromCountry = "grecja",
                             FromStreet = "Leoforos Vasilissis Sofias",
@@ -6943,7 +6983,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 67m,
                             PriceUnder3 = 15m,
                             Seats = 185,
-                            Start = new DateTime(2024, 5, 30, 21, 7, 13, 749, DateTimeKind.Utc).AddTicks(5561),
+                            Start = new DateTime(2024, 6, 11, 6, 10, 42, 766, DateTimeKind.Utc).AddTicks(3836),
                             ToCity = "Riwiera",
                             ToCountry = "chorwacja",
                             ToStreet = "Maksimirska ulica",
@@ -6951,8 +6991,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("1a57fb48-1730-412f-94a2-243deec45f29"),
-                            End = new DateTime(2024, 7, 2, 1, 7, 13, 749, DateTimeKind.Utc).AddTicks(5563),
+                            Id = new Guid("04329567-a23f-44b9-b062-1b23a86f550b"),
+                            End = new DateTime(2024, 7, 13, 10, 10, 42, 766, DateTimeKind.Utc).AddTicks(3839),
                             FromCity = "Vlora",
                             FromCountry = "albania",
                             FromStreet = "Rruga e Kavajes",
@@ -6961,7 +7001,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 171m,
                             PriceUnder3 = 38m,
                             Seats = 183,
-                            Start = new DateTime(2024, 7, 1, 20, 7, 13, 749, DateTimeKind.Utc).AddTicks(5563),
+                            Start = new DateTime(2024, 7, 13, 5, 10, 42, 766, DateTimeKind.Utc).AddTicks(3839),
                             ToCity = "Brava",
                             ToCountry = "hiszpania",
                             ToStreet = "Gran Vía",
@@ -6969,8 +7009,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("47d0f9c6-e982-4afa-aee5-e5656f230e1a"),
-                            End = new DateTime(2024, 6, 27, 22, 7, 13, 749, DateTimeKind.Utc).AddTicks(5565),
+                            Id = new Guid("64fd2a92-21c1-4ada-a73b-7cfc6392b356"),
+                            End = new DateTime(2024, 7, 9, 7, 10, 42, 766, DateTimeKind.Utc).AddTicks(3842),
                             FromCity = "Durres",
                             FromCountry = "albania",
                             FromStreet = "Rruga e Dibres",
@@ -6979,7 +7019,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 73m,
                             PriceUnder3 = 16m,
                             Seats = 51,
-                            Start = new DateTime(2024, 6, 27, 10, 7, 13, 749, DateTimeKind.Utc).AddTicks(5565),
+                            Start = new DateTime(2024, 7, 8, 19, 10, 42, 766, DateTimeKind.Utc).AddTicks(3841),
                             ToCity = "Alam",
                             ToCountry = "egipt",
                             ToStreet = "Sharia Tahrir",
@@ -6987,8 +7027,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("691eaeae-05c0-4fc7-b0a1-8499232c0f51"),
-                            End = new DateTime(2024, 8, 22, 16, 7, 13, 749, DateTimeKind.Utc).AddTicks(5567),
+                            Id = new Guid("8c59afe9-41a2-4291-94b9-6ae5d64d6a7e"),
+                            End = new DateTime(2024, 9, 3, 1, 10, 42, 766, DateTimeKind.Utc).AddTicks(3844),
                             FromCity = "Alam",
                             FromCountry = "egipt",
                             FromStreet = "Sharia Tahrir",
@@ -6997,7 +7037,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 263m,
                             PriceUnder3 = 58m,
                             Seats = 165,
-                            Start = new DateTime(2024, 8, 22, 13, 7, 13, 749, DateTimeKind.Utc).AddTicks(5567),
+                            Start = new DateTime(2024, 9, 2, 22, 10, 42, 766, DateTimeKind.Utc).AddTicks(3844),
                             ToCity = "Durres",
                             ToCountry = "albania",
                             ToStreet = "Bulevardi Bajram Curri",
@@ -7005,8 +7045,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("271cd4a1-0710-429f-85fd-10cb263ce2f3"),
-                            End = new DateTime(2024, 7, 18, 12, 7, 13, 749, DateTimeKind.Utc).AddTicks(5569),
+                            Id = new Guid("9e8d4a06-76de-46e4-9a29-39335dd1ca3a"),
+                            End = new DateTime(2024, 7, 29, 21, 10, 42, 766, DateTimeKind.Utc).AddTicks(3847),
                             FromCity = "Brava",
                             FromCountry = "hiszpania",
                             FromStreet = "Calle de Alcalá",
@@ -7015,7 +7055,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 179m,
                             PriceUnder3 = 39m,
                             Seats = 178,
-                            Start = new DateTime(2024, 7, 18, 10, 7, 13, 749, DateTimeKind.Utc).AddTicks(5568),
+                            Start = new DateTime(2024, 7, 29, 19, 10, 42, 766, DateTimeKind.Utc).AddTicks(3846),
                             ToCity = "Durres",
                             ToCountry = "albania",
                             ToStreet = "Bulevardi Bajram Curri",
@@ -7023,8 +7063,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("e6686c3e-e925-467b-9d16-7ebab944f887"),
-                            End = new DateTime(2024, 7, 10, 6, 7, 13, 749, DateTimeKind.Utc).AddTicks(5571),
+                            Id = new Guid("917e5e33-fa35-4180-8946-3d9c08fb56cf"),
+                            End = new DateTime(2024, 7, 21, 15, 10, 42, 766, DateTimeKind.Utc).AddTicks(3849),
                             FromCity = "Sheikh",
                             FromCountry = "egipt",
                             FromStreet = "Sharia Ramsis",
@@ -7033,7 +7073,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 57m,
                             PriceUnder3 = 12m,
                             Seats = 154,
-                            Start = new DateTime(2024, 7, 10, 0, 7, 13, 749, DateTimeKind.Utc).AddTicks(5570),
+                            Start = new DateTime(2024, 7, 21, 9, 10, 42, 766, DateTimeKind.Utc).AddTicks(3849),
                             ToCity = "Alam",
                             ToCountry = "egipt",
                             ToStreet = "Sharia Gamal Abdel Nasser",
@@ -7041,8 +7081,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("85403cea-2155-49a0-a9bd-ee09272f4244"),
-                            End = new DateTime(2024, 8, 20, 18, 7, 13, 749, DateTimeKind.Utc).AddTicks(5573),
+                            Id = new Guid("5b708768-cfc1-4eb4-9ab4-aba5e44a17f2"),
+                            End = new DateTime(2024, 9, 1, 3, 10, 42, 766, DateTimeKind.Utc).AddTicks(3852),
                             FromCity = "Brava",
                             FromCountry = "hiszpania",
                             FromStreet = "Gran Vía",
@@ -7051,7 +7091,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 66m,
                             PriceUnder3 = 14m,
                             Seats = 93,
-                            Start = new DateTime(2024, 8, 20, 8, 7, 13, 749, DateTimeKind.Utc).AddTicks(5573),
+                            Start = new DateTime(2024, 8, 31, 17, 10, 42, 766, DateTimeKind.Utc).AddTicks(3851),
                             ToCity = "Heraklion",
                             ToCountry = "grecja",
                             ToStreet = "Plateia Syntagmatos",
@@ -7059,8 +7099,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("63b69aba-869a-4f77-9a77-4ebd6db43209"),
-                            End = new DateTime(2024, 8, 3, 16, 7, 13, 749, DateTimeKind.Utc).AddTicks(5575),
+                            Id = new Guid("2ca77881-ab46-44c3-ae0f-30d1fc00c77a"),
+                            End = new DateTime(2024, 8, 15, 1, 10, 42, 766, DateTimeKind.Utc).AddTicks(3854),
                             FromCity = "Riwiera",
                             FromCountry = "chorwacja",
                             FromStreet = "Vukovarska ulica",
@@ -7069,7 +7109,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 177m,
                             PriceUnder3 = 39m,
                             Seats = 74,
-                            Start = new DateTime(2024, 8, 3, 13, 7, 13, 749, DateTimeKind.Utc).AddTicks(5575),
+                            Start = new DateTime(2024, 8, 14, 22, 10, 42, 766, DateTimeKind.Utc).AddTicks(3854),
                             ToCity = "Riwiera",
                             ToCountry = "chorwacja",
                             ToStreet = "Maksimirska ulica",
@@ -7077,8 +7117,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("0212d170-8ec3-45aa-bd3a-880186642a87"),
-                            End = new DateTime(2024, 6, 11, 1, 7, 13, 749, DateTimeKind.Utc).AddTicks(5577),
+                            Id = new Guid("433a08df-5b53-4b39-963f-e5ffe0e595f5"),
+                            End = new DateTime(2024, 6, 22, 10, 10, 42, 766, DateTimeKind.Utc).AddTicks(3857),
                             FromCity = "Nero",
                             FromCountry = "grecja",
                             FromStreet = "Leoforos Alexandras",
@@ -7087,7 +7127,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 260m,
                             PriceUnder3 = 57m,
                             Seats = 125,
-                            Start = new DateTime(2024, 6, 10, 17, 7, 13, 749, DateTimeKind.Utc).AddTicks(5576),
+                            Start = new DateTime(2024, 6, 22, 2, 10, 42, 766, DateTimeKind.Utc).AddTicks(3856),
                             ToCity = "Turecka",
                             ToCountry = "turcja",
                             ToStreet = "Atatürk Caddesi",
@@ -7095,8 +7135,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("1bdd9573-5c5a-4724-a5bc-badb7820af56"),
-                            End = new DateTime(2024, 6, 2, 12, 7, 13, 749, DateTimeKind.Utc).AddTicks(5579),
+                            Id = new Guid("fbc24228-8c49-408d-9186-68b279389795"),
+                            End = new DateTime(2024, 6, 13, 21, 10, 42, 766, DateTimeKind.Utc).AddTicks(3859),
                             FromCity = "Alam",
                             FromCountry = "egipt",
                             FromStreet = "Sharia Tahrir",
@@ -7105,7 +7145,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 54m,
                             PriceUnder3 = 12m,
                             Seats = 183,
-                            Start = new DateTime(2024, 6, 2, 6, 7, 13, 749, DateTimeKind.Utc).AddTicks(5578),
+                            Start = new DateTime(2024, 6, 13, 15, 10, 42, 766, DateTimeKind.Utc).AddTicks(3859),
                             ToCity = "Durres",
                             ToCountry = "albania",
                             ToStreet = "Bulevardi Bajram Curri",
@@ -7113,8 +7153,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("6c5ca391-af57-4387-9842-de0a2b8702ef"),
-                            End = new DateTime(2024, 6, 21, 1, 7, 13, 749, DateTimeKind.Utc).AddTicks(5581),
+                            Id = new Guid("d76203e7-1983-4c92-9dbd-bad2fdb78eff"),
+                            End = new DateTime(2024, 7, 2, 10, 10, 42, 766, DateTimeKind.Utc).AddTicks(3862),
                             FromCity = "Durres",
                             FromCountry = "albania",
                             FromStreet = "Rruga Abdyl Frasheri",
@@ -7123,7 +7163,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 123m,
                             PriceUnder3 = 27m,
                             Seats = 132,
-                            Start = new DateTime(2024, 6, 20, 21, 7, 13, 749, DateTimeKind.Utc).AddTicks(5580),
+                            Start = new DateTime(2024, 7, 2, 6, 10, 42, 766, DateTimeKind.Utc).AddTicks(3862),
                             ToCity = "Turecka",
                             ToCountry = "turcja",
                             ToStreet = "Atatürk Caddesi",
@@ -7131,8 +7171,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("2506b586-1e90-4e6a-ae9b-a98eec7093f6"),
-                            End = new DateTime(2024, 8, 15, 20, 7, 13, 749, DateTimeKind.Utc).AddTicks(5582),
+                            Id = new Guid("5adfa016-d261-4a5b-87bb-25c5427e74eb"),
+                            End = new DateTime(2024, 8, 27, 5, 10, 42, 766, DateTimeKind.Utc).AddTicks(3865),
                             FromCity = "Sheikh",
                             FromCountry = "egipt",
                             FromStreet = "Sharia Tahrir",
@@ -7141,7 +7181,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 210m,
                             PriceUnder3 = 46m,
                             Seats = 86,
-                            Start = new DateTime(2024, 8, 15, 9, 7, 13, 749, DateTimeKind.Utc).AddTicks(5582),
+                            Start = new DateTime(2024, 8, 26, 18, 10, 42, 766, DateTimeKind.Utc).AddTicks(3864),
                             ToCity = "Luz",
                             ToCountry = "hiszpania",
                             ToStreet = "Calle Mayor",
@@ -7149,8 +7189,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("db2d90fe-7ac7-411f-bec4-51a14a22eb04"),
-                            End = new DateTime(2024, 6, 24, 0, 7, 13, 749, DateTimeKind.Utc).AddTicks(5584),
+                            Id = new Guid("0fed87b2-b5b4-49d2-842c-fde61719b5a4"),
+                            End = new DateTime(2024, 7, 5, 9, 10, 42, 766, DateTimeKind.Utc).AddTicks(3867),
                             FromCity = "Nero",
                             FromCountry = "grecja",
                             FromStreet = "Leoforos Vasilissis Sofias",
@@ -7159,7 +7199,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 204m,
                             PriceUnder3 = 45m,
                             Seats = 169,
-                            Start = new DateTime(2024, 6, 23, 19, 7, 13, 749, DateTimeKind.Utc).AddTicks(5584),
+                            Start = new DateTime(2024, 7, 5, 4, 10, 42, 766, DateTimeKind.Utc).AddTicks(3867),
                             ToCity = "Kalabria",
                             ToCountry = "wlochy",
                             ToStreet = "Via Nazionale",
@@ -7167,8 +7207,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("f2dcd313-2323-4b7f-8918-4b4e95f56169"),
-                            End = new DateTime(2024, 8, 25, 5, 7, 13, 749, DateTimeKind.Utc).AddTicks(5586),
+                            Id = new Guid("9f8e8444-d76b-4487-908d-5980ca9800d9"),
+                            End = new DateTime(2024, 9, 5, 14, 10, 42, 766, DateTimeKind.Utc).AddTicks(3870),
                             FromCity = "Alam",
                             FromCountry = "egipt",
                             FromStreet = "Sharia Tahrir",
@@ -7177,7 +7217,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 110m,
                             PriceUnder3 = 24m,
                             Seats = 143,
-                            Start = new DateTime(2024, 8, 24, 23, 7, 13, 749, DateTimeKind.Utc).AddTicks(5586),
+                            Start = new DateTime(2024, 9, 5, 8, 10, 42, 766, DateTimeKind.Utc).AddTicks(3869),
                             ToCity = "Luz",
                             ToCountry = "hiszpania",
                             ToStreet = "Calle Mayor",
@@ -7185,8 +7225,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("f46c07c4-3f77-49c8-9c24-8876146cdad7"),
-                            End = new DateTime(2024, 6, 17, 6, 7, 13, 749, DateTimeKind.Utc).AddTicks(5588),
+                            Id = new Guid("44b44c61-43fc-47b9-b440-77adb4f7c77e"),
+                            End = new DateTime(2024, 6, 28, 15, 10, 42, 766, DateTimeKind.Utc).AddTicks(3872),
                             FromCity = "Olimpijska",
                             FromCountry = "grecja",
                             FromStreet = "Plateia Syntagmatos",
@@ -7195,7 +7235,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 230m,
                             PriceUnder3 = 51m,
                             Seats = 56,
-                            Start = new DateTime(2024, 6, 17, 1, 7, 13, 749, DateTimeKind.Utc).AddTicks(5588),
+                            Start = new DateTime(2024, 6, 28, 10, 10, 42, 766, DateTimeKind.Utc).AddTicks(3872),
                             ToCity = "Kalabria",
                             ToCountry = "wlochy",
                             ToStreet = "Via Veneto",
@@ -7203,8 +7243,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("90100a42-6019-437b-9228-b25b776ab589"),
-                            End = new DateTime(2024, 6, 29, 6, 7, 13, 749, DateTimeKind.Utc).AddTicks(5590),
+                            Id = new Guid("7f9043aa-c37b-4b6f-9c67-291fbd7e863b"),
+                            End = new DateTime(2024, 7, 10, 15, 10, 42, 766, DateTimeKind.Utc).AddTicks(3875),
                             FromCity = "Brava",
                             FromCountry = "hiszpania",
                             FromStreet = "Paseo del Prado",
@@ -7213,7 +7253,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 249m,
                             PriceUnder3 = 55m,
                             Seats = 158,
-                            Start = new DateTime(2024, 6, 28, 19, 7, 13, 749, DateTimeKind.Utc).AddTicks(5589),
+                            Start = new DateTime(2024, 7, 10, 4, 10, 42, 766, DateTimeKind.Utc).AddTicks(3874),
                             ToCity = "Riwiera",
                             ToCountry = "chorwacja",
                             ToStreet = "Maksimirska ulica",
@@ -7221,8 +7261,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("62554c5c-30c0-49d5-9f22-488478913aa1"),
-                            End = new DateTime(2024, 6, 16, 0, 7, 13, 749, DateTimeKind.Utc).AddTicks(5591),
+                            Id = new Guid("6d661ccf-dded-43f7-8fb3-525690b357e7"),
+                            End = new DateTime(2024, 6, 27, 9, 10, 42, 766, DateTimeKind.Utc).AddTicks(3877),
                             FromCity = "Brava",
                             FromCountry = "hiszpania",
                             FromStreet = "Gran Vía",
@@ -7231,7 +7271,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 172m,
                             PriceUnder3 = 38m,
                             Seats = 174,
-                            Start = new DateTime(2024, 6, 15, 16, 7, 13, 749, DateTimeKind.Utc).AddTicks(5591),
+                            Start = new DateTime(2024, 6, 27, 1, 10, 42, 766, DateTimeKind.Utc).AddTicks(3877),
                             ToCity = "Turecka",
                             ToCountry = "turcja",
                             ToStreet = "Bağdat Caddesi",
@@ -7239,8 +7279,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("b81a0882-ec07-4791-80f6-859fcee3797a"),
-                            End = new DateTime(2024, 6, 27, 9, 7, 13, 749, DateTimeKind.Utc).AddTicks(5593),
+                            Id = new Guid("bf16202a-c030-40a3-8298-b74fbb58ed9a"),
+                            End = new DateTime(2024, 7, 8, 18, 10, 42, 766, DateTimeKind.Utc).AddTicks(3880),
                             FromCity = "Durres",
                             FromCountry = "albania",
                             FromStreet = "Bulevardi Bajram Curri",
@@ -7249,7 +7289,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 250m,
                             PriceUnder3 = 55m,
                             Seats = 54,
-                            Start = new DateTime(2024, 6, 27, 2, 7, 13, 749, DateTimeKind.Utc).AddTicks(5593),
+                            Start = new DateTime(2024, 7, 8, 11, 10, 42, 766, DateTimeKind.Utc).AddTicks(3879),
                             ToCity = "Chania",
                             ToCountry = "grecja",
                             ToStreet = "Leoforos Vasilissis Sofias",
@@ -7257,8 +7297,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("9bdbcc64-b3a9-4f86-8529-358e91b46eb5"),
-                            End = new DateTime(2024, 7, 15, 15, 7, 13, 749, DateTimeKind.Utc).AddTicks(5595),
+                            Id = new Guid("a08e5d9f-5016-41de-a34d-5f75a3817c1e"),
+                            End = new DateTime(2024, 7, 27, 0, 10, 42, 766, DateTimeKind.Utc).AddTicks(3882),
                             FromCity = "Riwiera",
                             FromCountry = "chorwacja",
                             FromStreet = "Kapucinska ulica",
@@ -7267,7 +7307,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 265m,
                             PriceUnder3 = 59m,
                             Seats = 112,
-                            Start = new DateTime(2024, 7, 15, 6, 7, 13, 749, DateTimeKind.Utc).AddTicks(5595),
+                            Start = new DateTime(2024, 7, 26, 15, 10, 42, 766, DateTimeKind.Utc).AddTicks(3882),
                             ToCity = "Nero",
                             ToCountry = "grecja",
                             ToStreet = "Leoforos Alexandras",
@@ -7275,8 +7315,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("3e409392-1657-4dc2-8d34-83cee9152c1b"),
-                            End = new DateTime(2024, 6, 4, 23, 7, 13, 749, DateTimeKind.Utc).AddTicks(5597),
+                            Id = new Guid("c6912f8a-f389-4adc-b0d4-cdaeed319623"),
+                            End = new DateTime(2024, 6, 16, 8, 10, 42, 766, DateTimeKind.Utc).AddTicks(3885),
                             FromCity = "Peloponez",
                             FromCountry = "grecja",
                             FromStreet = "Leoforos Alexandras",
@@ -7285,7 +7325,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 174m,
                             PriceUnder3 = 38m,
                             Seats = 52,
-                            Start = new DateTime(2024, 6, 4, 18, 7, 13, 749, DateTimeKind.Utc).AddTicks(5597),
+                            Start = new DateTime(2024, 6, 16, 3, 10, 42, 766, DateTimeKind.Utc).AddTicks(3885),
                             ToCity = "Alam",
                             ToCountry = "egipt",
                             ToStreet = "Sharia Tahrir",
@@ -7293,8 +7333,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("04bbbefd-eb8f-4b4e-9d36-0ef983564791"),
-                            End = new DateTime(2024, 6, 29, 20, 7, 13, 749, DateTimeKind.Utc).AddTicks(5624),
+                            Id = new Guid("43f052a2-c6e4-4f1c-9de0-58b8bb087cc7"),
+                            End = new DateTime(2024, 7, 11, 5, 10, 42, 766, DateTimeKind.Utc).AddTicks(3888),
                             FromCity = "Riwiera",
                             FromCountry = "chorwacja",
                             FromStreet = "Trg bana Josipa Jelačića",
@@ -7303,7 +7343,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 169m,
                             PriceUnder3 = 37m,
                             Seats = 122,
-                            Start = new DateTime(2024, 6, 29, 11, 7, 13, 749, DateTimeKind.Utc).AddTicks(5622),
+                            Start = new DateTime(2024, 7, 10, 20, 10, 42, 766, DateTimeKind.Utc).AddTicks(3887),
                             ToCity = "Kalabria",
                             ToCountry = "wlochy",
                             ToStreet = "Via Nazionale",
@@ -7311,8 +7351,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("30b97752-ae37-4c74-abd1-c1b858e4184a"),
-                            End = new DateTime(2024, 6, 15, 6, 7, 13, 749, DateTimeKind.Utc).AddTicks(5626),
+                            Id = new Guid("3e41523c-a51b-4794-9bac-efcde7614ae0"),
+                            End = new DateTime(2024, 6, 26, 15, 10, 42, 766, DateTimeKind.Utc).AddTicks(3890),
                             FromCity = "Riwiera",
                             FromCountry = "chorwacja",
                             FromStreet = "Trg bana Josipa Jelačića",
@@ -7321,7 +7361,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 189m,
                             PriceUnder3 = 42m,
                             Seats = 130,
-                            Start = new DateTime(2024, 6, 14, 19, 7, 13, 749, DateTimeKind.Utc).AddTicks(5626),
+                            Start = new DateTime(2024, 6, 26, 4, 10, 42, 766, DateTimeKind.Utc).AddTicks(3890),
                             ToCity = "Durres",
                             ToCountry = "albania",
                             ToStreet = "Rruga Abdyl Frasheri",
@@ -7329,8 +7369,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("11cc22de-f02a-4a04-bb40-6065ff84cc77"),
-                            End = new DateTime(2024, 6, 18, 3, 7, 13, 749, DateTimeKind.Utc).AddTicks(5628),
+                            Id = new Guid("9d918ae7-471d-4f6a-a681-b9ec0498b467"),
+                            End = new DateTime(2024, 6, 29, 12, 10, 42, 766, DateTimeKind.Utc).AddTicks(3893),
                             FromCity = "Riwiera",
                             FromCountry = "chorwacja",
                             FromStreet = "Vukovarska ulica",
@@ -7339,7 +7379,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 117m,
                             PriceUnder3 = 26m,
                             Seats = 55,
-                            Start = new DateTime(2024, 6, 17, 15, 7, 13, 749, DateTimeKind.Utc).AddTicks(5628),
+                            Start = new DateTime(2024, 6, 29, 0, 10, 42, 766, DateTimeKind.Utc).AddTicks(3892),
                             ToCity = "Luz",
                             ToCountry = "hiszpania",
                             ToStreet = "Calle Mayor",
@@ -7347,8 +7387,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("aa34116a-0a79-4906-b47d-1fff74862895"),
-                            End = new DateTime(2024, 8, 15, 0, 7, 13, 749, DateTimeKind.Utc).AddTicks(5630),
+                            Id = new Guid("a423ff6c-a534-4cd0-9d6f-5502f0308995"),
+                            End = new DateTime(2024, 8, 26, 9, 10, 42, 766, DateTimeKind.Utc).AddTicks(3895),
                             FromCity = "Alam",
                             FromCountry = "egipt",
                             FromStreet = "Sharia Tahrir",
@@ -7357,7 +7397,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 204m,
                             PriceUnder3 = 45m,
                             Seats = 129,
-                            Start = new DateTime(2024, 8, 14, 16, 7, 13, 749, DateTimeKind.Utc).AddTicks(5629),
+                            Start = new DateTime(2024, 8, 26, 1, 10, 42, 766, DateTimeKind.Utc).AddTicks(3895),
                             ToCity = "Turecka",
                             ToCountry = "turcja",
                             ToStreet = "Bağdat Caddesi",
@@ -7365,8 +7405,8 @@ namespace transportservice.Migrations
                         },
                         new
                         {
-                            Id = new Guid("6ad76cc1-774e-4fac-a484-da71cb9133f5"),
-                            End = new DateTime(2024, 6, 3, 20, 7, 13, 749, DateTimeKind.Utc).AddTicks(5631),
+                            Id = new Guid("c07adb48-73e3-4d60-bdfc-facd7e16195c"),
+                            End = new DateTime(2024, 6, 15, 5, 10, 42, 766, DateTimeKind.Utc).AddTicks(3898),
                             FromCity = "Kalabria",
                             FromCountry = "wlochy",
                             FromStreet = "Via Veneto",
@@ -7375,7 +7415,7 @@ namespace transportservice.Migrations
                             PriceUnder18 = 215m,
                             PriceUnder3 = 47m,
                             Seats = 127,
-                            Start = new DateTime(2024, 6, 3, 18, 7, 13, 749, DateTimeKind.Utc).AddTicks(5631),
+                            Start = new DateTime(2024, 6, 15, 3, 10, 42, 766, DateTimeKind.Utc).AddTicks(3897),
                             ToCity = "Turecka",
                             ToCountry = "turcja",
                             ToStreet = "Atatürk Caddesi",
