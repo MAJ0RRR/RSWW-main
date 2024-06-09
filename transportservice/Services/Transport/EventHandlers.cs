@@ -122,7 +122,6 @@ public class SeatsChangedEventHandler
                 else
                 {
                     destination.Counter++;
-                    dbContext.PopularDestinations.Update(destination);
                 }
                 
                 if (type == null)
@@ -138,7 +137,6 @@ public class SeatsChangedEventHandler
                 else
                 {
                     type.Counter++;
-                    dbContext.PopularTransportTypes.Update(type);
                 }
             }
             await dbContext.SaveChangesAsync();
